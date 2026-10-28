@@ -20,7 +20,7 @@ import {
   BufferGeometry, Float32BufferAttribute, Mesh, InstancedMesh, MeshPhysicalMaterial, MeshStandardMaterial,
   MeshBasicMaterial, DoubleSide, CanvasTexture, RepeatWrapping, SRGBColorSpace, ACESFilmicToneMapping,
   PMREMGenerator, HemisphereLight, DirectionalLight, TubeGeometry, CatmullRomCurve3, QuadraticBezierCurve3,
-  CircleGeometry, PlaneGeometry, BoxGeometry, ShaderMaterial, Points, DynamicDrawUsage
+  CircleGeometry, PlaneGeometry, BoxGeometry, ShaderMaterial, Points, DynamicDrawUsage, Vector2, LatheGeometry, SplineCurve
 } from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
@@ -53,32 +53,53 @@ function rng(seed) {
    Geometry
    --------------------------------------------------------------------- */
 /* A basmati grain (or its husk) as a parametric surface along Y, length 1.
-   Slender (about 5:1), slightly bowed, flattened in section, with the small
-   embryo notch at the base of the milled grain and veins on the husk. */
-function grainGeometry({ segs, rings, husk = false, thetaStart = 0, thetaLen = TAU }) {
+   Milled grain: long near-parallel sides, a tapered tip, a blunter base with the
+   angled facet where the germ was milled away, a flattened section with shallow
+   grooves along both faces, a slight bow and twist, and gentle unevenness - no
+   two real grains are perfectly smooth. Husk: pointed, ribbed, with a keel.
+   `aThick` (0 at the thin edges/tips, 1 in the body) drives the translucency. */
+const angDist = (a, b) => Math.atan2(Math.sin(a - b), Math.cos(a - b));
+const bell = (d, w) => Math.exp(-(d / w) * (d / w));
+function grainGeometry({ segs, rings, husk = false, thetaStart = 0, thetaLen = TAU, seed = 1 }) {
   const L = husk ? 0.535 : 0.5;
-  const R = husk ? 0.106 : 0.097;
+  const R = husk ? 0.106 : 0.091;
+  const ph = seed * 1.7;
   const cols = segs + 1;
   const pos = new Float32Array((rings + 1) * cols * 3);
   const uv = new Float32Array((rings + 1) * cols * 2);
-  let k = 0, m = 0;
+  const thick = new Float32Array((rings + 1) * cols);
+  let k = 0, m = 0, t = 0;
   for (let i = 0; i <= rings; i++) {
-    const v = i / rings, u = -1 + 2 * v, au = Math.abs(u);
-    const r = husk
-      ? R * Math.pow(Math.max(0, 1 - Math.pow(au, 2.05)), 0.68)
-      : R * Math.pow(Math.max(0, 1 - Math.pow(au, u > 0 ? 2.3 : 2.9)), u > 0 ? 0.6 : 0.48);
+    const u = Math.sin((i / rings - 0.5) * Math.PI);          // rings bunch up at the tips
+    const au = Math.abs(u);
+    let r;
+    if (husk) r = R * Math.pow(Math.max(0, 1 - Math.pow(au, 2.1)), 0.7);
+    else {
+      r = u > 0
+        ? R * Math.pow(Math.max(0, 1 - Math.pow(au, 2.7)), 0.66)
+        : R * Math.pow(Math.max(0, 1 - Math.pow(au, 3.1)), 0.56);
+      r *= 1 + 0.03 * Math.sin(u * 2.4 + ph) + 0.012 * Math.sin(u * 7.3 + ph * 2);
+    }
     for (let j = 0; j <= segs; j++) {
-      const th = thetaStart + (thetaLen * j) / segs;
+      const th0 = thetaStart + (thetaLen * j) / segs;
+      const th = husk ? th0 : th0 + 0.1 * u;
       let rr = r;
-      if (husk) rr *= 0.985 + 0.05 * Math.pow(Math.abs(Math.cos(th * 2.5)), 14);
-      else {
-        rr *= 1 - 0.32 * Math.exp(-Math.pow((u + 0.87) / 0.075, 2)) * Math.pow(Math.max(0, Math.cos(th)), 3);
-        rr *= 1 + 0.008 * Math.sin(th * 5 + u * 4);
+      if (husk) {
+        rr *= 0.985 + 0.05 * Math.pow(Math.abs(Math.cos(th * 2.5)), 14);
+        rr *= 1 + 0.05 * bell(angDist(th, 0), 0.22);
+      } else {
+        const germ = smooth(clamp01((-0.7 - u) / 0.26));
+        rr *= 1 - 0.5 * germ * Math.pow(Math.max(0, Math.cos(th - 0.35)), 1.3);
+        rr *= 1 - 0.04 * bell(angDist(th, Math.PI / 2), 0.2) - 0.04 * bell(angDist(th, -Math.PI / 2), 0.2);
+        rr *= 1 - 0.02 * bell(angDist(th, 1.0), 0.1) - 0.02 * bell(angDist(th, -2.1), 0.1);
+        rr *= 1 + 0.012 * Math.sin(th * 3 + u * 5 + ph) * Math.cos(u * 1.3);
       }
-      pos[k++] = rr * Math.cos(th) + 0.018 * (1 - u * u);
+      const bow = 0.024 * (1 - u * u) + 0.006 * Math.sin(u * 3 + ph);
+      pos[k++] = rr * Math.cos(th) + bow;
       pos[k++] = u * L;
-      pos[k++] = rr * Math.sin(th) * (husk ? 0.84 : 0.8);
-      uv[m++] = j / segs; uv[m++] = v;
+      pos[k++] = rr * Math.sin(th) * (husk ? 0.84 : 0.76);
+      uv[m++] = j / segs; uv[m++] = (u + 1) / 2;
+      thick[t++] = clamp01(rr / R);
     }
   }
   const idx = [];
@@ -90,12 +111,13 @@ function grainGeometry({ segs, rings, husk = false, thetaStart = 0, thetaLen = T
   g.setIndex(idx);
   g.setAttribute("position", new Float32BufferAttribute(pos, 3));
   g.setAttribute("uv", new Float32BufferAttribute(uv, 2));
+  g.setAttribute("aThick", new Float32BufferAttribute(thick, 1));
   g.computeVertexNormals();
   const n = g.attributes.normal.array;
   if (thetaLen >= TAU - 1e-6) {
     for (let i = 0; i <= rings; i++) {         // weld the seam
       const a = i * cols * 3, b = (i * cols + segs) * 3;
-      for (let c = 0; c < 3; c++) { const s = (n[a + c] + n[b + c]) / 2; n[a + c] = n[b + c] = s; }
+      for (let c = 0; c < 3; c++) { const q = (n[a + c] + n[b + c]) / 2; n[a + c] = n[b + c] = q; }
     }
   }
   for (let j = 0; j <= segs; j++) {            // clean tips
@@ -104,6 +126,41 @@ function grainGeometry({ segs, rings, husk = false, thetaStart = 0, thetaLen = T
   }
   g.attributes.normal.needsUpdate = true;
   return g;
+}
+
+/* Light passing through the grain: wrap lighting plus back-light transmission,
+   stronger where the grain is thin (edges and tips) - what makes raw basmati
+   look pearly rather than painted. */
+function addTranslucency(mat, color, strength) {
+  const c = new Color(color);
+  const vec = `vec3(${c.r.toFixed(3)}, ${c.g.toFixed(3)}, ${c.b.toFixed(3)})`;
+  mat.customProgramCacheKey = () => "sss-" + color + strength;
+  mat.onBeforeCompile = (sh) => {
+    sh.vertexShader = sh.vertexShader
+      .replace("#include <common>", "#include <common>\nattribute float aThick;\nvarying float vThick;")
+      .replace("#include <begin_vertex>", "#include <begin_vertex>\nvThick = aThick;");
+    sh.fragmentShader = sh.fragmentShader
+      .replace("#include <common>", "#include <common>\nvarying float vThick;")
+      .replace("#include <lights_fragment_end>", `#include <lights_fragment_end>
+      {
+        vec3 V = normalize(vViewPosition);
+        float thin = clamp(1.0 - vThick, 0.0, 1.0);
+        vec3 sss = vec3(0.0);
+        #if NUM_DIR_LIGHTS > 0
+        for (int i = 0; i < NUM_DIR_LIGHTS; i++) {
+          vec3 Ld = directionalLights[i].direction;
+          float back = pow(clamp(dot(V, -normalize(Ld + normal * 0.5)), 0.0, 1.0), 3.0);
+          float ndl = dot(normal, Ld);
+          float wrap = clamp((ndl + 0.55) / 1.55, 0.0, 1.0) - clamp(ndl, 0.0, 1.0);
+          sss += directionalLights[i].color * (back * (0.35 + 1.7 * thin) + wrap * 0.7);
+        }
+        #endif
+        float fres = pow(1.0 - clamp(dot(V, normal), 0.0, 1.0), 2.2);
+        reflectedLight.directDiffuse += sss * ${vec} * diffuseColor.rgb * ${strength.toFixed(3)};
+        reflectedLight.indirectDiffuse += ${vec} * fres * (0.25 + 0.5 * thin) * ${strength.toFixed(3)};
+      }`);
+  };
+  return mat;
 }
 
 /* A leaf blade: a ribbon along a curve, widest a third of the way up. */
@@ -177,28 +234,59 @@ function canvasTex(w, h, draw, srgb) {
   t.anisotropy = 4;
   return t;
 }
+/* Turn a greyscale height canvas into a tangent-space normal map. */
+function normalFromHeight(src, strength) {
+  const w = src.width, h = src.height;
+  const hd = src.getContext("2d").getImageData(0, 0, w, h).data;
+  const c = document.createElement("canvas"); c.width = w; c.height = h;
+  const ctx = c.getContext("2d"), out = ctx.createImageData(w, h), o = out.data;
+  const H = (x, y) => hd[(((y + h) % h) * w + ((x + w) % w)) * 4] / 255;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const dx = (H(x + 1, y) - H(x - 1, y)) * strength, dy = (H(x, y + 1) - H(x, y - 1)) * strength;
+    const l = Math.hypot(dx, dy, 1), i = (y * w + x) * 4;
+    o[i] = (-dx / l * 0.5 + 0.5) * 255; o[i + 1] = (dy / l * 0.5 + 0.5) * 255; o[i + 2] = (1 / l * 0.5 + 0.5) * 255; o[i + 3] = 255;
+  }
+  ctx.putImageData(out, 0, 0);
+  const t = new CanvasTexture(c);
+  t.wrapS = t.wrapT = RepeatWrapping; t.anisotropy = 4;
+  return t;
+}
 function grainTextures() {
   const r = rng(3);
-  const bump = canvasTex(128, 256, (x, w, h) => {
-    x.fillStyle = "#808080"; x.fillRect(0, 0, w, h);
-    for (let i = 0; i < 70; i++) { x.fillStyle = `rgba(255,255,255,${0.08 + r() * 0.18})`; x.fillRect(r() * w, 0, 0.8 + r() * 1.6, h); }
-    for (let i = 0; i < 50; i++) { x.fillStyle = `rgba(0,0,0,${0.06 + r() * 0.1})`; x.fillRect(r() * w, r() * h, 0.8 + r() * 1.4, 6 + r() * 40); }
-    for (let i = 0; i < 400; i++) { x.fillStyle = `rgba(${r() < 0.5 ? "0,0,0" : "255,255,255"},${r() * 0.12})`; x.fillRect(r() * w, r() * h, 1, 1); }
-  });
-  /* Colour: pearly body, a chalky belly on one side, warmer translucent tips, faint streaks. */
-  const map = canvasTex(128, 256, (x, w, h) => {
-    x.fillStyle = "#FFFFFF"; x.fillRect(0, 0, w, h);
-    const belly = x.createRadialGradient(w * 0.5, h * 0.55, 2, w * 0.5, h * 0.55, h * 0.32);
-    belly.addColorStop(0, "rgba(255,255,255,1)"); belly.addColorStop(1, "rgba(255,255,255,0)");
+  /* Height: fine wavy striations along the length, faint fissures across it, tiny pits. */
+  const hc = document.createElement("canvas"); hc.width = 256; hc.height = 512;
+  const x = hc.getContext("2d"), w = 256, h = 512;
+  x.fillStyle = "#808080"; x.fillRect(0, 0, w, h);
+  for (let i = 0; i < 140; i++) {
+    const px = r() * w, a = 0.04 + r() * 0.12, wob = 0.6 + r() * 1.8, f = 2 + r() * 5;
+    x.strokeStyle = r() < 0.5 ? `rgba(255,255,255,${a})` : `rgba(0,0,0,${a})`;
+    x.lineWidth = 0.6 + r() * 2.2;
+    x.beginPath();
+    for (let y = 0; y <= h; y += 8) { const xx = px + Math.sin((y / h) * f * TAU + i) * wob; y ? x.lineTo(xx, y) : x.moveTo(xx, y); }
+    x.stroke();
+  }
+  for (let i = 0; i < 9; i++) {
+    x.strokeStyle = `rgba(0,0,0,${0.08 + r() * 0.1})`; x.lineWidth = 0.7;
+    const y = r() * h, x0 = r() * w;
+    x.beginPath(); x.moveTo(x0, y); x.quadraticCurveTo(x0 + 10, y + (r() - 0.5) * 6, x0 + 18 + r() * 30, y + (r() - 0.5) * 4); x.stroke();
+  }
+  for (let i = 0; i < 900; i++) { x.fillStyle = `rgba(0,0,0,${0.05 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.4 + r() * 0.9, 0, TAU); x.fill(); }
+  const normal = normalFromHeight(hc, 2.2);
+
+  /* Colour: creamy translucent body, a soft chalky-white belly, warmer tips, faint bran traces. */
+  const map = canvasTex(256, 512, (x, w, h) => {
+    x.fillStyle = "#ECE3CF"; x.fillRect(0, 0, w, h);
+    const belly = x.createRadialGradient(w * 0.5, h * 0.52, 4, w * 0.5, h * 0.52, h * 0.3);
+    belly.addColorStop(0, "rgba(255,253,247,.6)"); belly.addColorStop(1, "rgba(255,253,247,0)");
+    x.save(); x.scale(1, 1.6); x.fillStyle = belly; x.fillRect(0, 0, w, h); x.restore();
     const ends = x.createLinearGradient(0, 0, 0, h);
-    ends.addColorStop(0, "rgba(214,190,140,.75)"); ends.addColorStop(0.12, "rgba(232,214,176,.25)"); ends.addColorStop(0.3, "rgba(240,228,204,0)");
-    ends.addColorStop(0.75, "rgba(240,228,204,0)"); ends.addColorStop(0.9, "rgba(228,208,166,.3)"); ends.addColorStop(1, "rgba(210,184,132,.8)");
-    x.fillStyle = "#F1E9DA"; x.fillRect(0, 0, w, h);
-    x.fillStyle = belly; x.fillRect(0, 0, w, h);
+    ends.addColorStop(0, "rgba(196,170,120,.7)"); ends.addColorStop(0.1, "rgba(214,194,150,.25)"); ends.addColorStop(0.24, "rgba(230,214,180,0)");
+    ends.addColorStop(0.8, "rgba(230,214,180,0)"); ends.addColorStop(0.93, "rgba(214,194,150,.3)"); ends.addColorStop(1, "rgba(190,162,112,.75)");
     x.fillStyle = ends; x.fillRect(0, 0, w, h);
-    for (let i = 0; i < 60; i++) { x.fillStyle = `rgba(200,180,140,${0.05 + r() * 0.08})`; x.fillRect(r() * w, 0, 0.8 + r(), h); }
+    for (let i = 0; i < 70; i++) { x.fillStyle = `rgba(176,150,104,${0.03 + r() * 0.06})`; x.fillRect(r() * w, r() * h * 0.3, 0.8 + r() * 1.5, h * (0.3 + r() * 0.6)); }
+    for (let i = 0; i < 25; i++) { x.fillStyle = `rgba(120,96,60,${0.08 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.6 + r() * 0.8, 0, TAU); x.fill(); }
   }, true);
-  return { bump, map };
+  return { normal, map };
 }
 function huskTextures() {
   const r = rng(11);
@@ -314,6 +402,9 @@ const motesMaterial = (tex) => new ShaderMaterial({
 /* ---------------------------------------------------------------------
    Keyframes: how the scene looks at each point of the story
    --------------------------------------------------------------------- */
+/* The bowl in "Your kitchen" - a real-sized bowl of rice, so the grains read at true scale. */
+const BOWL = { x: 6.2, y: -3.2, z: 0.2, rim: 2.3, fill: 2.16, depth: 1.25 };
+const riceY = (rr) => BOWL.y + 1.25 + 0.5 * (1 - (rr / BOWL.fill) ** 2);
 const C_IVORY = "#F7F4EC", C_FIELD = "#ECEEE1", C_DARK = "#24432F", C_SAND = "#EFE8D8";
 
 function makeKeyframes(P) {
@@ -324,7 +415,7 @@ function makeKeyframes(P) {
     const right = v3(Math.cos(yaw), 0, -Math.sin(yaw));
     return pose(p, Y.clone().multiplyScalar(Math.cos(lean)).addScaledVector(right, Math.sin(lean)), twist);
   };
-  const kitchenP = v3(1.62, -2.5, 0.72);
+  const kitchenP = v3(BOWL.x - 0.15, riceY(0.2) + 0.03, BOWL.z + 0.35);
   const poses = {
     tip,
     studio: facing(tip.p.clone(), 0.35, -0.42, 1.25),
@@ -332,20 +423,19 @@ function makeKeyframes(P) {
     heap: pose(v3(0.98, -2.16, 0.22), v3(1, 0.12, 0.35), 0.4),
     mill: pose(v3(0.95, -1.9, 0.95), v3(1, 0.32, 0.12), 1.1),
     pack: pose(v3(0.95, -0.42, -0.12), v3(0.2, 1, 0.08), 0.3),
-    kitchen: pose(kitchenP, v3(1, 0.3, 0.55), 0.8),
-    finale: facing(kitchenP.clone().add(v3(-0.25, 0.85, 1.1)), 0.25, -1.1, 1.25)
+    kitchen: pose(kitchenP, v3(1, 0.07, 0.62), 2.2)
   };
   const base = {
     target: tip.p, yaw: 0, pitch: 0.1, frame: [3, 3],
     hero: "tip", husk: 0, huskVis: 1, ripe: 0.5, milled: 0, layout: "panicle", stem: 1, leaves: 1, bgP: 1,
-    water: 0, pack: 0, floor: 0, motes: 0.45, gold: 0, spin: 0, opacity: 1,
+    water: 0, pack: 0, packAt: 0, floor: 0, bowl: 0, motes: 0.45, gold: 0, spin: 0, opacity: 1,
     key: 2.6, keyColor: "#FFF1DA", rim: 1.2, rimColor: "#FFE2B0", hemi: 0.55, env: 0.75, exposure: 1.0, fog: C_IVORY
   };
   const k = (o) => Object.assign({}, base, o);
   return {
     poses,
     hero:       k({ hero: "studio", target: tip.p, yaw: 0.35, pitch: 0.06, frame: [0.4, 0.4], husk: 1, huskVis: 0, ripe: 0.45, milled: 1, layout: "seed", stem: 0, leaves: 0, bgP: 0, motes: 0.55, spin: 1,
-                    key: 3.4, keyColor: "#FFF3E0", rim: 3.2, rimColor: "#FFC98A", hemi: 0.3, env: 0.5, exposure: 1.0 }),
+                    key: 4.2, keyColor: "#FFF3E0", rim: 3.4, rimColor: "#FFC98A", hemi: 0.14, env: 0.32, exposure: 1.02 }),
     farmers:    k({ target: v3(1.0, 0.85, 0), yaw: 0.18, pitch: 0.05, frame: [3.0, 3.1], ripe: 0.32 }),
     practicesA: k({ target: v3(0.75, -0.05, 0.1), yaw: -0.3, pitch: 0.22, frame: [3.7, 4.3], ripe: 0.38, water: 1, fog: C_FIELD, motes: 0.35 }),
     practicesB: k({ target: v3(0.85, 0.1, 0.1), yaw: 0.4, pitch: 0.17, frame: [3.5, 4.1], ripe: 0.92, water: 1, fog: C_FIELD, motes: 0.4 }),
@@ -356,9 +446,9 @@ function makeKeyframes(P) {
     journey2:   k({ target: v3(0.95, -2.35, 0.1), yaw: 0.3, pitch: 0.42, frame: [2.9, 2.1], ripe: 1, hero: "heap", layout: "heap", stem: 0, leaves: 0, bgP: 0, fog: C_SAND, floor: 1, motes: 0.25 }),
     journey3:   k({ target: v3(0.95, -2.35, 0.2), yaw: -0.12, pitch: 0.36, frame: [2.5, 2.0], ripe: 1, hero: "mill", husk: 1, huskVis: 0.6, milled: 1, layout: "graded", stem: 0, leaves: 0, bgP: 0, fog: C_SAND, floor: 1, motes: 0.25 }),
     journey4:   k({ target: v3(0.95, -1.5, 0), yaw: 0.28, pitch: 0.12, frame: [2.6, 3.4], ripe: 1, hero: "pack", husk: 1, huskVis: 0, milled: 1, layout: "packed", stem: 0, leaves: 0, bgP: 0, pack: 1, fog: C_SAND, floor: 1, motes: 0.25 }),
-    journey5:   k({ target: v3(1.18, -1.85, 0.2), yaw: -0.22, pitch: 0.1, frame: [2.8, 2.95], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "packed", stem: 0, leaves: 0, bgP: 0, pack: 1, fog: C_SAND, floor: 1, motes: 0.3, key: 2.8 }),
-    closing:    k({ target: poses.finale.p, yaw: 0.25, pitch: 0.08, frame: [0.46, 0.46], ripe: 1, hero: "finale", husk: 1, huskVis: 0, milled: 1, layout: "packed", stem: 0, leaves: 0, bgP: 0, pack: 0, floor: 0, spin: 1, motes: 0.5, key: 3.4, keyColor: "#FFF3E0", rim: 3.2, rimColor: "#FFC98A", hemi: 0.3, env: 0.5 }),
-    end:        k({ target: poses.finale.p, yaw: 0.45, pitch: 0.08, frame: [0.6, 0.6], ripe: 1, hero: "finale", husk: 1, huskVis: 0, milled: 1, layout: "packed", stem: 0, leaves: 0, bgP: 0, pack: 0, floor: 0, spin: 1, motes: 0.3, opacity: 0, key: 3.4, keyColor: "#FFF3E0", rim: 3.2, rimColor: "#FFC98A", hemi: 0.3, env: 0.5 })
+    journey5:   k({ target: v3(BOWL.x - 1.25, BOWL.y + 1.9, BOWL.z - 0.5), yaw: -0.18, pitch: 0.3, frame: [7.6, 5.4], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, fog: C_SAND, motes: 0.3, key: 3.0, rim: 2.2 }),
+    closing:    k({ target: v3(BOWL.x - 1.0, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.28, pitch: 0.18, frame: [7.8, 6.3], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.35, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 }),
+    end:        k({ target: v3(BOWL.x - 1.0, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.4, pitch: 0.18, frame: [8.6, 6.9], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.3, opacity: 0, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 })
   };
 }
 
@@ -371,7 +461,7 @@ function makeLayouts(P, count, rand) {
   const set = (lay, i, p, q, s) => { p.toArray(lay.p, i * 3); q.toArray(lay.q, i * 4); lay.s[i] = s; };
   const randQ = () => new Quaternion().setFromAxisAngle(v3(rand() - 0.5, rand() - 0.5, rand() - 0.5).normalize(), rand() * TAU);
 
-  L.panicle = mk(); L.seed = mk(); L.fall = mk(); L.heap = mk(); L.graded = mk(); L.packed = mk();
+  L.panicle = mk(); L.seed = mk(); L.fall = mk(); L.heap = mk(); L.graded = mk(); L.packed = mk(); L.bowl = mk();
   const lanes = 7, packMouth = v3(0.95, -0.82, -0.22);
   for (let i = 0; i < count; i++) {
     const sl = P.slots[i];
@@ -385,6 +475,8 @@ function makeLayouts(P, count, rand) {
     set(L.graded, i, v3(0.95 + (lane - (lanes - 1) / 2) * 0.17, -2.6, 1.3 - n * 0.39 - (lane % 2) * 0.19),
       qDir(v3((rand() - 0.5) * 0.03, 0, -1), Math.PI / 2 + (rand() - 0.5) * 0.2), 0.95);
     set(L.packed, i, packMouth, qDir(v3(0.1, 1, 0)), 0);
+    const br = BOWL.fill * 0.85 * Math.sqrt(rand()), ba = rand() * TAU;
+    set(L.bowl, i, v3(BOWL.x + Math.cos(ba) * br, riceY(br) + 0.035 + rand() * 0.02, BOWL.z + Math.sin(ba) * br), qDir(v3(Math.cos(ba * 3 + i), (rand() - 0.5) * 0.25, Math.sin(ba * 3 + i)), rand() * TAU), 0.95);
   }
   L.packed.arc = 1;
   return L;
@@ -434,16 +526,15 @@ export function start({ canvas, story, onReady, onFail }) {
   /* Materials */
   const husk = huskTextures();
   const grainTex = grainTextures();
-  const heroGrainMat = new MeshPhysicalMaterial({
-    color: 0xFFFFFF, map: grainTex.map, roughness: 0.42, clearcoat: 0.5, clearcoatRoughness: 0.28,
-    sheen: 0.45, sheenColor: new Color(0xFFF0D2), sheenRoughness: 0.4,
-    bumpMap: grainTex.bump, bumpScale: 1.5, emissive: 0x3a2a12, emissiveIntensity: 0.05
-  });
-  /* A little light passing through the grain's edges - basmati is faintly translucent. */
-  heroGrainMat.onBeforeCompile = (sh) => {
-    sh.fragmentShader = sh.fragmentShader.replace("#include <emissivemap_fragment>",
-      "#include <emissivemap_fragment>\n float fr = pow(1.0 - abs(dot(normalize(vViewPosition), normal)), 2.4);\n totalEmissiveRadiance += vec3(1.0, 0.84, 0.58) * fr * 0.34;");
-  };
+  /* Raw milled basmati: satin rather than glossy, faintly translucent, creamy rather than white. */
+  const heroGrainMat = addTranslucency(new MeshPhysicalMaterial({
+    color: 0xFFFFFF, map: grainTex.map, normalMap: grainTex.normal, normalScale: new Vector2(0.9, 0.9),
+    roughness: 0.34, specularIntensity: 0.7, clearcoat: 0.3, clearcoatRoughness: 0.16,
+    sheen: 0.18, sheenColor: new Color(0xFFF3DE), sheenRoughness: 0.5
+  }), "#FFDDB0", 0.6);
+  const milledMat = addTranslucency(new MeshStandardMaterial({
+    color: 0xFFFFFF, map: grainTex.map, normalMap: grainTex.normal, normalScale: new Vector2(0.45, 0.45), roughness: 0.42
+  }), "#FFDDB0", 0.45);
   const huskColor = new Color();
   const heroHuskMat = new MeshPhysicalMaterial({ color: 0xC9984F, roughness: 0.62, map: husk.map, bumpMap: husk.bump, bumpScale: 1.4, sheen: 0.6, sheenColor: new Color(0xFFE6B8), sheenRoughness: 0.6, side: DoubleSide, transparent: true });
   const grainsMat = new MeshStandardMaterial({ color: 0xC9984F, roughness: 0.6, map: husk.map, bumpMap: husk.bump, bumpScale: 1.0 });
@@ -453,7 +544,7 @@ export function start({ canvas, story, onReady, onFail }) {
   const bgStemMat = new MeshStandardMaterial({ color: 0x8E9A55, roughness: 0.7, transparent: true });
 
   /* Hero grain + its two husk halves (they swing open on hinges at the base) */
-  const hq = lowEnd ? { segs: 36, rings: 48 } : { segs: 56, rings: 80 };
+  const hq = lowEnd ? { segs: 40, rings: 64 } : { segs: 72, rings: 120 };
   const hero = new Group();
   const heroGrain = new Mesh(grainGeometry(hq), heroGrainMat);
   hero.add(heroGrain);
@@ -479,11 +570,20 @@ export function start({ canvas, story, onReady, onFail }) {
     ribbon(new CatmullRomCurve3([v3(-0.03, -4.6, 0), v3(-0.7, -3.4, -0.4), v3(-1.5, -2.6, -0.5), v3(-2.1, -2.5, -0.3)]), 0.12)
   ]);
   const leaves = new Mesh(leafGeo, leafMat);
+  /* The travelling grains: paddy (husked) until milling, then milled grain. Both meshes share the
+     same transforms; each grain gets a slightly different tone, as no two grains are identical. */
   const instGeo = grainGeometry({ segs: lowEnd ? 12 : 16, rings: lowEnd ? 14 : 20, husk: true });
   const grains = new InstancedMesh(instGeo, grainsMat, COUNT);
-  grains.instanceMatrix.setUsage(DynamicDrawUsage);
-  grains.frustumCulled = false;
-  scene.add(stem, leaves, grains);
+  const milledGrains = new InstancedMesh(grainGeometry({ segs: lowEnd ? 12 : 16, rings: lowEnd ? 18 : 26, seed: 3 }), milledMat, COUNT);
+  const tint = new Color();
+  for (let i = 0; i < COUNT; i++) {
+    const v = 0.9 + rand() * 0.18;
+    grains.setColorAt(i, tint.setRGB(v, v * (0.96 + rand() * 0.06), v * (0.9 + rand() * 0.12)));
+    const w = 0.95 + rand() * 0.07;
+    milledGrains.setColorAt(i, tint.setRGB(w, w, w * (0.97 + rand() * 0.04)));
+  }
+  for (const im of [grains, milledGrains]) { im.instanceMatrix.setUsage(DynamicDrawUsage); im.frustumCulled = false; }
+  scene.add(stem, leaves, grains, milledGrains);
 
   /* Background panicles for depth (static, fade with the field) */
   const bg = new Group();
@@ -508,6 +608,59 @@ export function start({ canvas, story, onReady, onFail }) {
   const floor = new Mesh(new PlaneGeometry(4.2, 3.2), new MeshBasicMaterial({ map: softDot(), color: 0x6B5434, transparent: true, depthWrite: false, opacity: 0 }));
   floor.rotation.x = -Math.PI / 2; floor.position.set(0.95, -2.66, 0.05);
   scene.add(floor);
+
+  /* Your kitchen: a glazed bowl filled with rice at true scale (hundreds of grains) */
+  const bowlGroup = new Group();
+  const prof = new SplineCurve([
+    [0, 0.07], [0.9, 0.1], [1.6, 0.32], [2.08, 0.75], [2.27, 1.2], [2.31, 1.27], [2.38, 1.22],
+    [2.25, 0.8], [1.85, 0.32], [1.2, 0.06], [1.08, 0], [0.95, -0.02], [0, -0.02]
+  ].map(([a, b]) => new Vector2(a, b))).getPoints(90);
+  const bowlMat = new MeshPhysicalMaterial({ color: 0x2C4A3A, roughness: 0.32, clearcoat: 0.8, clearcoatRoughness: 0.12, side: DoubleSide, transparent: true });
+  const bowlGeo = new LatheGeometry(prof, lowEnd ? 64 : 110);
+  bowlGeo.scale(1, BOWL.depth, 1);
+  bowlGroup.add(new Mesh(bowlGeo, bowlMat));
+
+  /* A bed of rice under the loose grains, so the bowl reads as full rather than sprinkled. */
+  const bedProf = [];
+  for (let i = 0; i <= 24; i++) { const rr = (i / 24) * (BOWL.fill + 0.06); bedProf.push(new Vector2(rr, riceY(Math.min(rr, BOWL.fill)) - BOWL.y - 0.07 - (rr > BOWL.fill ? 0.12 : 0))); }
+  const bedGeo = new LatheGeometry(bedProf, lowEnd ? 48 : 80);
+  { const pa = bedGeo.attributes.position, uvA = bedGeo.attributes.uv;
+    for (let i = 0; i < pa.count; i++) uvA.setXY(i, pa.getX(i) / BOWL.fill * 1.6, pa.getZ(i) / BOWL.fill * 1.6); }
+  const bedTex = canvasTex(512, 512, (x, w, h) => {
+    const r = rng(21);
+    x.fillStyle = "#B9AD93"; x.fillRect(0, 0, w, h);
+    for (let i = 0; i < 2600; i++) {
+      const cx = r() * w, cy = r() * h, a = r() * Math.PI, l = 9 + r() * 4;
+      x.save(); x.translate(cx, cy); x.rotate(a);
+      x.fillStyle = "rgba(90,78,58,.35)"; x.beginPath(); x.ellipse(1, 1.2, l, 1.9, 0, 0, TAU); x.fill();
+      const v = 205 + r() * 45;
+      x.fillStyle = `rgb(${v},${v - 6},${v - 22})`; x.beginPath(); x.ellipse(0, 0, l, 1.8, 0, 0, TAU); x.fill();
+      x.restore();
+    }
+  }, true);
+  const bed = new Mesh(bedGeo, new MeshStandardMaterial({ map: bedTex, roughness: 0.7, transparent: true, side: DoubleSide }));
+  bed.position.set(BOWL.x, BOWL.y, BOWL.z);
+  bowlGroup.add(bed);
+  const RICE = lowEnd ? 420 : 800;
+  const riceGrains = new InstancedMesh(grainGeometry({ segs: 8, rings: 12, seed: 5 }), milledMat, RICE);
+  const riceDelay = new Float32Array(RICE), riceSize = new Float32Array(RICE);
+  const riceP = [], riceQ = [];
+  for (let i = 0; i < RICE; i++) {
+    const rr = BOWL.fill * Math.sqrt(rand()), a = rand() * TAU, layer = rand() * 0.02;
+    riceP.push(v3(BOWL.x + Math.cos(a) * rr, riceY(rr) - layer, BOWL.z + Math.sin(a) * rr));
+    riceQ.push(qDir(v3(Math.cos(a * 5 + i), (rand() - 0.5) * 0.35, Math.sin(a * 5 + i)), rand() * TAU));
+    riceSize[i] = GRAIN * (0.9 + rand() * 0.12);
+    riceDelay[i] = rand();
+    const w = 0.93 + rand() * 0.09;
+    riceGrains.setColorAt(i, tint.setRGB(w, w * 0.995, w * (0.96 + rand() * 0.05)));
+  }
+  riceGrains.frustumCulled = false;
+  bowlGroup.add(riceGrains);
+  const bowlShadow = new Mesh(new PlaneGeometry(7, 7), new MeshBasicMaterial({ map: softDot(), color: 0x6B5434, transparent: true, depthWrite: false, opacity: 0 }));
+  bowlShadow.rotation.x = -Math.PI / 2; bowlShadow.position.set(BOWL.x, BOWL.y - 0.03, BOWL.z);
+  scene.add(bowlShadow);
+  bowlGroup.children[0].position.set(BOWL.x, BOWL.y, BOWL.z);   // the lathe is built around the origin
+  scene.add(bowlGroup);
 
   /* The pack: a stand-up pouch with a label drawn from the content */
   const packGroup = new Group();
@@ -540,7 +693,7 @@ export function start({ canvas, story, onReady, onFail }) {
     target: new Vector3(), heroP: new Vector3(), heroQ: new Quaternion(), fog: new Color(), keyColor: new Color(), rimColor: new Color(),
     frame: [1, 1], fx: 0.5, fy: 0.5, fw: 1, fh: 1
   };
-  const NUM = ["yaw", "pitch", "husk", "huskVis", "ripe", "milled", "stem", "leaves", "bgP", "water", "pack", "floor", "motes", "gold", "spin", "opacity", "key", "rim", "hemi", "env", "exposure"];
+  const NUM = ["yaw", "pitch", "husk", "huskVis", "ripe", "milled", "stem", "leaves", "bgP", "water", "pack", "packAt", "floor", "bowl", "motes", "gold", "spin", "opacity", "key", "rim", "hemi", "env", "exposure"];
   const ca = new Color(), cb = new Color();
   function sample(t, kfs) {
     const n = kfs.length;
@@ -561,7 +714,7 @@ export function start({ canvas, story, onReady, onFail }) {
     S.layoutA = a.layout; S.layoutB = b.layout; S.f = f;
   }
 
-  const GREEN = new Color("#8AA552"), YELLOW = new Color("#BDB15E"), GOLD = new Color("#CB9A52"), MILLED = new Color("#EFE7D6");
+  const GREEN = new Color("#8AA552"), YELLOW = new Color("#BDB15E"), GOLD = new Color("#CB9A52");
   const STEM_G = new Color("#6E8C43"), STEM_S = new Color("#B8925A");
   const MOTE_IVORY = new Color("#FFF6E3"), MOTE_GOLD = new Color("#FFC978");
   const tmpM = new Matrix4(), tmpP = new Vector3(), tmpQ = new Quaternion(), qa = new Quaternion(), qb = new Quaternion(), tmpS = new Vector3();
@@ -570,21 +723,44 @@ export function start({ canvas, story, onReady, onFail }) {
   let lastLayoutKey = "";
   function updateInstances() {
     const A = LAY[S.layoutA], B = LAY[S.layoutB], f = S.f;
-    const k = S.layoutA + S.layoutB + f.toFixed(4);
+    const k = S.layoutA + S.layoutB + f.toFixed(4) + (S.milled < 0.5 ? "h" : "m");
     if (k === lastLayoutKey) return;
     lastLayoutKey = k;
     const arc = (A.arc || B.arc) ? 1 : 0;
+    grains.visible = S.milled < 0.5; milledGrains.visible = !grains.visible;
+    const target = grains.visible ? grains : milledGrains;
     for (let i = 0; i < COUNT; i++) {
       const d = delays[i] * 0.42;
       const fi = A === B ? 1 : smooth(clamp01((f - d) / 0.58));
       tmpP.set(lerp(A.p[i * 3], B.p[i * 3], fi), lerp(A.p[i * 3 + 1], B.p[i * 3 + 1], fi), lerp(A.p[i * 3 + 2], B.p[i * 3 + 2], fi));
-      if (arc) tmpP.y += Math.sin(Math.PI * fi) * 1.1;
+      if (arc) {
+        const dx = B.p[i * 3] - A.p[i * 3], dz = B.p[i * 3 + 2] - A.p[i * 3 + 2];
+        tmpP.y += Math.sin(Math.PI * fi) * (0.8 + 0.25 * Math.hypot(dx, dz));
+      }
       qa.fromArray(A.q, i * 4); qb.fromArray(B.q, i * 4);
       tmpQ.slerpQuaternions(qa, qb, fi);
       const s = lerp(A.s[i], B.s[i], arc && B.arc ? smooth(clamp01((fi - 0.55) / 0.45)) : fi) * GRAIN;
-      grains.setMatrixAt(i, tmpM.compose(tmpP, tmpQ, tmpS.set(s, s, s)));
+      target.setMatrixAt(i, tmpM.compose(tmpP, tmpQ, tmpS.set(s, s, s)));
     }
-    grains.instanceMatrix.needsUpdate = true;
+    target.instanceMatrix.needsUpdate = true;
+  }
+
+  /* The bowl fades in and fills grain by grain as "bowl" goes from 0 to 1. */
+  let lastBowl = -1;
+  const bm = new Matrix4(), bs = new Vector3();
+  function updateBowl() {
+    const b = S.bowl;
+    setVis(bowlGroup, b); setVis(bowlShadow, b);
+    bowlMat.opacity = smooth(clamp01(b * 2)); bowlMat.depthWrite = b > 0.6;
+    bed.material.opacity = smooth(clamp01((b - 0.35) * 2.5));
+    bowlShadow.material.opacity = b * 0.4;
+    if (Math.abs(b - lastBowl) < 1e-4) return;
+    lastBowl = b;
+    for (let i = 0; i < RICE; i++) {
+      const g = smooth(clamp01((b - 0.3 - riceDelay[i] * 0.5) / 0.2));
+      riceGrains.setMatrixAt(i, bm.compose(riceP[i], riceQ[i], bs.setScalar(riceSize[i] * g)));
+    }
+    riceGrains.instanceMatrix.needsUpdate = true;
   }
 
   function ripeColor(r, out) {
@@ -596,18 +772,24 @@ export function start({ canvas, story, onReady, onFail }) {
     ripeColor(S.ripe, huskColor);
     heroHuskMat.color.copy(huskColor);
     heroHuskMat.opacity = S.huskVis;
-    grainsMat.color.copy(huskColor).lerp(MILLED, S.milled);
+    grainsMat.color.copy(huskColor);
     /* Squared opacities: the plant fades in late and out early, so transitions stay uncluttered. */
     stemMat.color.copy(STEM_G).lerp(STEM_S, S.ripe); stemMat.opacity = S.stem * S.stem; setVis(stem, S.stem);
     leafMat.color.copy(STEM_G).lerp(STEM_S, S.ripe * 0.85); leafMat.opacity = S.leaves * S.leaves; setVis(leaves, S.leaves);
     bgMat.color.copy(huskColor); bgMat.opacity = S.bgP * S.bgP; bgStemMat.color.copy(stemMat.color); bgStemMat.opacity = S.bgP * S.bgP; setVis(bg, S.bgP);
     water.material.uniforms.uOpacity.value = S.water; water.material.uniforms.uTime.value = time; setVis(water, S.water);
     floor.material.opacity = S.floor * 0.32; setVis(floor, S.floor);
+    updateBowl();
     const po = S.pack * S.pack;
     packMats.forEach(m => { m.opacity = po; m.depthWrite = po > 0.95; });
     setVis(packGroup, S.pack);
-    packGroup.position.y = -1.85 - (1 - S.pack) * 0.5;
-    packGroup.rotation.y = lerp(-0.35, 0, S.pack);
+    const at = smooth(S.packAt), ps = lerp(1, 2.35, at);
+    packGroup.scale.setScalar(ps);
+    packGroup.position.set(
+      lerp(0.95, BOWL.x - 2.75, at),
+      lerp(-1.85 - (1 - S.pack) * 0.5, BOWL.y + 1.025 * ps, at),
+      lerp(-0.25, BOWL.z - 2.1, at));
+    packGroup.rotation.y = lerp(-0.35, 0, S.pack) + at * 0.32;
 
     motes.material.uniforms.uTime.value = time;
     motes.material.uniforms.uOpacity.value = S.motes * 0.55;
@@ -711,6 +893,14 @@ export function start({ canvas, story, onReady, onFail }) {
     }, { passive: true });
   }
 
+  /* Ambient motion (the slow turn, drifting motes, water ripples) runs while the reader is active
+     and eases to a stop 5 seconds after they stop - nothing moves on its own indefinitely
+     (WCAG 2.2.2), and the GPU rests while someone reads. */
+  const IDLE_MS = 5000;
+  let activeUntil = performance.now() + IDLE_MS, ambW = 1;
+  const wake = () => { activeUntil = performance.now() + IDLE_MS; };
+  ["scroll", "pointermove", "pointerdown", "touchstart", "keydown", "wheel"].forEach((ev) => addEventListener(ev, wake, { passive: true }));
+
   canvas.addEventListener("webglcontextlost", (e) => { e.preventDefault(); cancelAnimationFrame(raf); onFail && onFail("WebGL context lost"); });
 
   let raf = 0, last = performance.now(), time = 0, t = storyT(), ready = false;
@@ -720,7 +910,10 @@ export function start({ canvas, story, onReady, onFail }) {
     if (document.hidden) { last = now; return; }
     const dt = Math.min(0.1, (now - last) / 1000); last = now;
     const reduced = story.reduced();
-    const ambient = !reduced && !story.paused();
+    const ambient = !reduced && now < activeUntil;
+    ambW += ((ambient ? 1 : 0) - ambW) * (1 - Math.exp(-dt * 2.5));
+    if (ambW < 0.002) ambW = 0;
+    const animating = !reduced && ambW > 0;
     const kfs = story.keyframes;
     if (kfs.length < 2) return;
     if (story.version !== lastVersion) { lastVersion = story.version; needsRender = true; }
@@ -734,25 +927,26 @@ export function start({ canvas, story, onReady, onFail }) {
       if (Math.abs(target - t) < 1e-4) t = target;
     }
     const prevPx = pointer.x, prevPy = pointer.y;
-    if (ambient) {
-      pointer.x += (pointer.tx - pointer.x) * (1 - Math.exp(-dt * 3));
-      pointer.y += (pointer.ty - pointer.y) * (1 - Math.exp(-dt * 3));
-      time += dt;
-    } else { pointer.x = pointer.y = 0; }
+    if (reduced) pointer.x = pointer.y = 0;
+    else if (animating) {
+      pointer.x += (pointer.tx - pointer.x) * (1 - Math.exp(-dt * 3)) * ambW;
+      pointer.y += (pointer.ty - pointer.y) * (1 - Math.exp(-dt * 3)) * ambW;
+      time += dt * ambW;
+    }
 
     const moved = t !== prevT || pointer.x !== prevPx || pointer.y !== prevPy;
-    if (!ambient && !moved && !needsRender) return;   // render on demand when nothing animates
+    if (!animating && !moved && !needsRender) return;   // render on demand when nothing animates
     needsRender = false;
 
     sample(t, kfs);
     apply(time);
-    placeCamera(time, ambient);
+    placeCamera(time, !reduced);
     if (S.opacity > 0.001) renderer.render(scene, camera);
 
     if (!ready) { ready = true; onReady && onReady(); }
 
     /* Adaptive quality: step the resolution down if frames are consistently slow. */
-    if (ambient && sampled < 600) {
+    if (ambient && ambW > 0.99 && sampled < 600) {
       sampled++;
       slowFrames = dt > 0.026 ? slowFrames + 1 : Math.max(0, slowFrames - 1);
       if (slowFrames > 45 && dpr > 1) { dpr = Math.max(1, dpr - 0.25); renderer.setPixelRatio(dpr); renderer.setSize(W, H, false); slowFrames = 0; }

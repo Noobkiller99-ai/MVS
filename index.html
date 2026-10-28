@@ -85,15 +85,10 @@
       <a class="textlink" href="#practices" id="heroLink"></a>
     </div>
   </div>
-  <p class="scroll-cue" id="scrollCue" aria-hidden="true"><span class="scroll-line"></span><span class="scroll-text"></span></p>
 </section>
 
 <main id="main">
   <noscript><p>Please turn on JavaScript to see the full story of the farmers and practices behind this rice.</p></noscript>
-
-  <nav class="glance" aria-label="In this story">
-    <div class="wrap"><ol id="glance"></ol></div>
-  </nav>
 
   <!-- 01 The people -->
   <section class="chapter chapter--stage-left" id="farmers" aria-labelledby="farmersTitle" data-tone="light">
@@ -120,9 +115,7 @@
         <p class="lead" id="practicesLead"></p>
       </header>
       <div class="stage-col">
-        <div class="stage" data-stage="practices">
-          <nav class="p-index" aria-label="Jump to a practice"><ol id="practiceIndex"></ol></nav>
-        </div>
+        <div class="stage" data-stage="practices"></div>
       </div>
       <div class="chapter-body">
         <div class="p-intro reveal" id="practiceIntro"></div>
@@ -171,9 +164,11 @@
   <section class="closing" id="closing" aria-labelledby="closeTitle" data-tone="light">
     <div class="stage closing-stage" data-stage="closing"></div>
     <div class="wrap closing-copy">
+      <p class="eyebrow closing-kicker" id="closeKicker"></p>
       <h2 id="closeTitle" class="word-reveal"></h2>
       <p id="closeText" class="reveal"></p>
       <div class="cta-row reveal" id="closeCtas"></div>
+      <p class="share-status" id="shareStatus" role="status" aria-live="polite"></p>
     </div>
   </section>
 </main>
@@ -186,11 +181,6 @@
 </footer>
 
 <div class="floating-controls">
-  <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false" hidden>
-    <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><rect x="5" y="4" width="3.2" height="12" rx="1"/><rect x="11.8" y="4" width="3.2" height="12" rx="1"/></svg>
-    <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M6 4.2v11.6a.8.8 0 0 0 1.2.7l9.3-5.8a.8.8 0 0 0 0-1.4L7.2 3.5A.8.8 0 0 0 6 4.2Z"/></svg>
-    <span class="label">Pause motion</span>
-  </button>
   <button class="to-top" id="toTop" type="button" aria-label="Back to top">
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17V3M4 9l6-6 6 6"/></svg>
   </button>

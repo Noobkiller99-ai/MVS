@@ -28,7 +28,8 @@
     mill:'<path d="M4 21V10l5-3v3l5-3v3l6-3v14Z"/><path d="M8 21v-4h3v4"/>',
     pack:'<path d="M6 7h12l-1 14H7Z"/><path d="M8 7c0-2 1.5-4 4-4s4 2 4 4"/><path d="M9 13h6"/>',
     bowl:'<path d="M3 11h18c0 5-4 9-9 9s-9-4-9-9Z"/><path d="M8 8c0-1 1-1 1-2M12 8c0-1 1-1 1-2M16 8c0-1 1-1 1-2"/>',
-    mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'
+    mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    share:'<circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="m8.2 10.8 7.6-4.1M8.2 13.2l7.6 4.1"/>'
   };
   const icon = (k) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[k] || ""}</svg>`;
   const $ = (id) => document.getElementById(id);
@@ -39,7 +40,6 @@
   const safeUrl = (u) => /^(https:\/\/|assets\/)/.test(u || "") ? u : "";
   const pad = (n) => String(n).padStart(2, "0");
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
-  const ARROW = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v14M4 11l6 6 6-6"/></svg>';
   const get = (path) => path.split(".").reduce((o, k) => (o == null ? o : o[k]), C.chapters || {});
 
   /* Real photos: only shown when configured, and removed again if they fail to load. */
@@ -60,12 +60,6 @@
     $("heroLead").textContent = C.hero.lead;
     $("heroCta").querySelector("span").textContent = C.hero.cta;
     $("heroLink").textContent = C.hero.link;
-    if (has(C.hero.scrollCue)) $("scrollCue").querySelector(".scroll-text").textContent = C.hero.scrollCue;
-    else $("scrollCue").remove();
-
-    /* Glance */
-    $("glance").innerHTML = C.glance.map(g => `<li><a href="${esc(g.href)}"><span class="n">${esc(g.n)}</span><b>${esc(g.title)}</b>
-      <span class="arr">${ARROW}</span><span class="d">${esc(g.text)}</span></a></li>`).join("");
 
     /* 01 Farmers */
     $("farmersLead").textContent = C.farmersLead;
@@ -90,8 +84,6 @@
     /* 02 Practices */
     $("practicesLead").textContent = C.practicesLead;
     $("practiceIntro").innerHTML = `<h3>${esc(C.practiceIntro.title)}</h3><p>${esc(C.practiceIntro.text)}</p>`;
-    $("practiceIndex").innerHTML = C.practices.map((p, i) =>
-      `<li><a href="#practice-${esc(p.id)}"><span>${pad(i + 1)}</span>${esc(p.theme)}</a></li>`).join("");
     $("practiceList").innerHTML = C.practices.map((p, i) => `
       <article class="p-card reveal" id="practice-${esc(p.id)}" aria-labelledby="ph-${esc(p.id)}">
         <div class="p-top"><span class="p-theme">${icon(p.icon)}${esc(p.theme)}</span><span class="p-num" aria-hidden="true">${pad(i + 1)} / ${pad(C.practices.length)}</span></div>
@@ -121,6 +113,7 @@
     $("steps").before(meter);
 
     /* Closing - the heading is revealed word by word as you scroll */
+    if (has(C.closing.kicker)) $("closeKicker").textContent = C.closing.kicker; else $("closeKicker").remove();
     const title = $("closeTitle");
     title.setAttribute("aria-label", plain(C.closing.title));
     let em = false;
@@ -130,9 +123,13 @@
       return part.split(/(\s+)/).map(w => /^\s+$/.test(w) || !w ? w : (em ? `<em class="w" aria-hidden="true">${esc(w)}</em>` : `<span class="w" aria-hidden="true">${esc(w)}</span>`)).join("");
     }).join("");
     $("closeText").textContent = C.closing.text;
+    /* Gentle next steps: where to buy and contact appear only once they are filled in. */
     const mail = has(S.contactEmail) ? "mailto:" + S.contactEmail.trim() : "";
-    $("closeCtas").innerHTML = (mail ? `<a class="btn" href="${esc(mail)}">${icon("mail")}<span>Get in touch</span></a>` : "")
-      + `<a class="btn ${mail ? "ghost" : ""}" href="#top">Back to the top</a>`;
+    const buy = safeUrl(C.closing.buyUrl);
+    $("closeCtas").innerHTML =
+      (buy ? `<a class="btn" href="${esc(buy)}" rel="noopener" target="_blank">${icon("pack")}<span>${esc(C.closing.buyLabel || "Where to buy")}</span></a>` : "")
+      + `<button class="btn ${buy ? "ghost" : ""}" type="button" id="shareBtn">${icon("share")}<span>${esc(C.closing.shareLabel || "Share this story")}</span></button>`
+      + (mail ? `<a class="btn ghost" href="${esc(mail)}">${icon("mail")}<span>Get in touch</span></a>` : "");
 
     /* Footer: only show contact details that exist */
     const contact = [
@@ -157,7 +154,6 @@
     keyframes: [],
     content: C,
     reduced: () => RM.matches,
-    paused: () => root.classList.contains("motion-paused"),
     pinned: () => root.classList.contains("can-3d")
   };
   window.MVSStory = Story;
@@ -250,7 +246,7 @@
       $("top").setAttribute("tabindex", "-1"); $("top").focus({ preventScroll: true });
     });
 
-    /* Highlight the section on screen in the menu, and the practice in view in the index */
+    /* Highlight the section on screen in the menu */
     if ("IntersectionObserver" in window) {
       const spy = (links, attr) => {
         const targets = links.map(a => document.querySelector(a.getAttribute(attr))).filter(Boolean);
@@ -260,7 +256,6 @@
         targets.forEach(t => io.observe(t));
       };
       spy([...document.querySelectorAll("#navList a")], "href");
-      spy([...document.querySelectorAll("#practiceIndex a")], "href");
     }
   }
 
@@ -281,7 +276,7 @@
     if (RM.matches) { words.forEach(w => w.style.removeProperty("--o")); return; }
     const r = title.getBoundingClientRect(), vh = innerHeight;
     const atEnd = scrollY >= document.documentElement.scrollHeight - vh - 2;   // always finish at the bottom
-    const p = atEnd ? 1 : clamp((vh * 0.92 - r.top) / (vh * 0.5), 0, 1);
+    const p = atEnd ? 1 : clamp((vh * 0.95 - r.top) / (vh * 0.42), 0, 1);   // fully revealed by mid-screen
     words.forEach((w, i) => {
       const s = words.length <= 1 ? 0 : (i / (words.length - 1)) * SPAN, e = Math.min(1, s + WINDOW);
       const o = p <= s ? REST : p >= e ? 1 : REST + (1 - REST) * ((p - s) / (e - s));
@@ -340,22 +335,23 @@
   }
 
   /* ---------------------------------------------------------------------
-     Pause / play the ambient motion (WCAG 2.2.2). Remembered per viewer.
+     Share: the native share sheet where there is one, otherwise copy the link.
      --------------------------------------------------------------------- */
-  function initMotionToggle() {
-    const btn = $("motionToggle");
-    const label = btn.querySelector(".label");
-    const set = (paused) => {
-      root.classList.toggle("motion-paused", paused);
-      btn.setAttribute("aria-pressed", String(paused));
-      label.textContent = paused ? "Play motion" : "Pause motion";
-      try { localStorage.setItem("mvs-motion-paused", paused ? "1" : "0"); } catch (e) {}
-    };
-    let saved = false;
-    try { saved = localStorage.getItem("mvs-motion-paused") === "1"; } catch (e) {}
-    set(saved);
-    btn.addEventListener("click", () => set(!root.classList.contains("motion-paused")));
-    return btn;
+  function initShare() {
+    const btn = $("shareBtn"), status = $("shareStatus");
+    if (!btn) return;
+    const data = { title: document.title, text: C.closing.shareText || "", url: location.href.split("#")[0] };
+    btn.addEventListener("click", async () => {
+      try {
+        if (navigator.share) { await navigator.share(data); return; }
+        await navigator.clipboard.writeText(data.url);
+        status.textContent = "Link copied - thank you for sharing.";
+      } catch (e) {
+        if (e && e.name === "AbortError") return;
+        status.textContent = "Copy this link to share: " + data.url;
+      }
+      setTimeout(() => { status.textContent = ""; }, 5000);
+    });
   }
 
   /* ---------------------------------------------------------------------
@@ -364,11 +360,10 @@
   function disable3d(reason) {
     if (reason) console.warn("[MVS] 3D grain unavailable:", reason);
     root.classList.remove("can-3d", "has-3d");
-    $("motionToggle").hidden = true;
     computeKeyframes();
     onScroll();
   }
-  function load3d(toggle) {
+  function load3d() {
     if (!root.classList.contains("can-3d")) return;
     /* The single-file build (npm run build:standalone) inlines the scene as window.MVSGrainScene. */
     const url = new URL("grain-scene.js", SCRIPT_SRC || location.href).href;
@@ -376,7 +371,7 @@
     scene.then((m) => m.start({
       canvas: $("grainCanvas"),
       story: Story,
-      onReady: () => { root.classList.add("has-3d"); if (!RM.matches) toggle.hidden = false; },
+      onReady: () => root.classList.add("has-3d"),
       onFail: disable3d
     })).catch(disable3d);
   }
@@ -388,7 +383,7 @@
   initNav();
   initReveal();
   initJourneyLinks();
-  const toggle = initMotionToggle();
+  initShare();
   computeKeyframes();
   onScroll();
   addEventListener("scroll", onScroll, { passive: true });
@@ -404,7 +399,6 @@
   });
   RM.addEventListener && RM.addEventListener("change", () => {
     root.classList.toggle("reduced-motion", RM.matches);
-    if (RM.matches) toggle.hidden = true; else if (root.classList.contains("has-3d")) toggle.hidden = false;
     computeKeyframes(); onScroll();
   });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { computeKeyframes(); onScroll(); });
@@ -416,5 +410,5 @@
 
   /* Start the 3D scene once the browser is idle, so text and layout always come first. */
   const idle = window.requestIdleCallback || ((fn) => setTimeout(fn, 200));
-  idle(() => load3d(toggle), { timeout: 1200 });
+  idle(load3d, { timeout: 1200 });
 })();

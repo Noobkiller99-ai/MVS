@@ -26,15 +26,8 @@ window.MVS_CONTENT = {
     headline: "Every grain <em>has a story.</em>",
     lead: "Meet the farmers behind your rice. Discover the cultivation practices they follow and the people working alongside them.",
     cta: "Explore the journey",
-    link: "See the practices",
-    scrollCue: "Scroll to follow the grain"
+    link: "See the practices"
   },
-
-  glance: [
-    { n: "01", title: "The people",    text: "Who grows this rice, and how MVS works with them.", href: "#farmers" },
-    { n: "02", title: "The practices", text: "Seven everyday practices, and why each one matters.", href: "#practices" },
-    { n: "03", title: "The journey",   text: "How the rice travels from the field to your kitchen.", href: "#journey" }
-  ],
 
   /* Chapter headings (eyebrow number, eyebrow label, heading) */
   chapters: {
@@ -130,8 +123,13 @@ window.MVS_CONTENT = {
   ],
 
   closing: {
+    kicker: "Your part of the story",
     title: "Every grain carries <em>someone's season of work.</em>",
-    text: "Thank you for taking a moment to meet the people and practices behind your rice."
+    text: "Thank you for taking a moment to meet the people and practices behind your rice.",
+    shareLabel: "Share this story",
+    shareText: "Meet the farming families behind MVS Basmati.",   // used when sharing the page
+    buyLabel: "Where to buy",
+    buyUrl: ""            // e.g. "https://www.example.org/shop" - adds a "Where to buy" button
   },
 
   footer: {

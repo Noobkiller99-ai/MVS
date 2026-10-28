@@ -11,8 +11,8 @@ A single 3D basmati grain guides the story as you scroll:
 | 01 The people | The camera pulls back: the grain sits in its husk at the tip of a panicle |
 | 02 In the field | The panicle stands over rippling paddy water and ripens from green to gold as you read the seven practices |
 | 03 The reasons | The same panicle at dusk |
-| 04 Farm to pack | Pinned sequence: harvest (the grains fall) → collection (heap) → milling (the husk opens, grains line up graded) → packing (grains pour into the pack) → your kitchen |
-| Closing | The grain alone again |
+| 04 Farm to pack | Pinned sequence: harvest (the grains fall) → collection (heap) → milling (the husk opens, grains line up graded) → packing (grains pour into the pack) → your kitchen (the rice fills a bowl beside the pack) |
+| Closing | "Your part of the story": the pack and the bowl of rice, with gentle next steps (share the story, and where to buy or get in touch once those are filled in) |
 
 ## Run it
 
@@ -50,7 +50,9 @@ All words and facts live in **`assets/js/content.js`** (search for `EDIT CONTENT
 - **Only add facts you can stand behind.** Do not add farmer stories, certifications, traceability
   or environmental-impact figures without evidence and, for farmers, their consent.
 - Farmer photos: put them in `assets/photos/` and set `photo: { src: "assets/photos/name.jpg", alt: "..." }`.
-- Contact details (`site.contactEmail`, `contactPhone`, `website`) add "Get in touch" buttons and footer links when filled in.
+- Contact details (`site.contactEmail`, `contactPhone`, `website`) add a "Get in touch" button and footer links when filled in.
+- `closing.buyUrl` adds a "Where to buy" button at the end of the story. Leave it empty until there is a real shop or stockist page.
+- `closing.shareText` is the line used when someone shares the page. "Share this story" opens the phone's share sheet, or copies the link on a computer.
 - The pack label in the 3D scene is drawn from `site.brandName`, `site.partnerName`, `hero.deva` and `hero.headline`.
 
 ## Project structure
@@ -90,7 +92,8 @@ This bundles only the parts of three.js the scene uses into `assets/js/grain-sce
 - The whole story is in the HTML text. The canvas is decorative (`aria-hidden`).
 - **Reduced motion** (`prefers-reduced-motion`): the 3D scene switches between calm still states
   instead of animating. There are no entrance animations, idle motion or smooth scrolling.
-- A **Pause motion** button stops all ambient motion. The choice is remembered per visitor.
+- Ambient motion (the slow turn, drifting motes, water ripples) runs only while the visitor scrolls or moves.
+  It eases to a stop 5 seconds after they stop, so nothing moves on its own indefinitely (WCAG 2.2.2).
 - **No WebGL**, Data Saver, or a failed load: the page uses a drawn grain and a plain step-by-step journey.
 - Mobile: resolution is capped, and there is less geometry and fewer particles. Frames render only
   when something changes. Rendering pauses in background tabs, and resolution steps down if frames run slow.

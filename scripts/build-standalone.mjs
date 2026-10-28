@@ -18,19 +18,23 @@ const scene = await build({
 let css = await read("assets/css/site.css");
 for (const [, file] of css.matchAll(/url\(\.\.\/fonts\/([^)]+\.woff2)\)/g)) {
   const b64 = (await readFile(root + "assets/fonts/" + file)).toString("base64");
-  css = css.replace(`url(../fonts/${file})`, `url(data:font/woff2;base64,${b64})`);
+  css = css.replace(`url(../fonts/${file})`, () => `url(data:font/woff2;base64,${b64})`);
 }
 
+// Replacements use functions so "$&", "$'" etc. inside the inlined code are never treated as patterns.
+const content = safe(await read("assets/js/content.js"));
+const site = safe(await read("assets/js/site.js"));
+const sceneJs = safe(scene.outputFiles[0].text);
 let html = await read("index.html");
 html = html
   .replace('<html lang="en-IN" class="no-js">', '<html lang="en-IN" class="no-js" data-standalone>')
   .replace(/^<link rel="preload"[^\n]*\n/gm, "")
-  .replace('<link rel="stylesheet" href="assets/css/site.css">', `<style>\n${css}\n</style>`)
+  .replace('<link rel="stylesheet" href="assets/css/site.css">', () => `<style>\n${css}\n</style>`)
   .replace(/^<script src="assets\/js\/(content|site)\.js" defer><\/script>\n/gm, "")
-  .replace("</body>", [
-    `<script>\n${safe(await read("assets/js/content.js"))}\n</script>`,
-    `<script>\n${safe(scene.outputFiles[0].text)}\n</script>`,
-    `<script>\n${safe(await read("assets/js/site.js"))}\n</script>`,
+  .replace("</body>", () => [
+    `<script>\n${content}\n</script>`,
+    `<script>\n${sceneJs}\n</script>`,
+    `<script>\n${site}\n</script>`,
     "</body>"
   ].join("\n"));
 

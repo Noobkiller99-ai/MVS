@@ -42,7 +42,7 @@ for (const run of runs) {
   for (const s of stops) {
     await page.evaluate(y => window.scrollTo({ top: y, behavior: "instant" }), s.y);
     await page.waitForTimeout(run.reducedMotion ? 400 : 2200);
-    await page.screenshot({ path: `${OUT}${run.name}-${String(stops.indexOf(s)).padStart(2, "0")}-${s.key}.png` });
+    await page.screenshot({ timeout: 120000, path: `${OUT}${run.name}-${String(stops.indexOf(s)).padStart(2, "0")}-${s.key}.png` });
   }
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
   const summary = { run: run.name, has3d, keyframes: stops.length, overflowPx: overflow, errors };
