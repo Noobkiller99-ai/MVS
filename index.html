@@ -23,7 +23,7 @@
       var cv = d.createElement("canvas");
       var gl = cv.getContext("webgl2") || cv.getContext("webgl");
       var save = navigator.connection && navigator.connection.saveData;
-      if (gl && !save && location.protocol !== "file:") c.classList.add("can-3d");
+      if (gl && !save && (location.protocol !== "file:" || c.hasAttribute("data-standalone"))) c.classList.add("can-3d");
     } catch (e) {}
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) c.classList.add("reduced-motion");
   })(document);

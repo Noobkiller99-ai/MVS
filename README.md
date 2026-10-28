@@ -30,6 +30,18 @@ repository as it is (or just `index.html` and `assets/`) to any static host.
 The 3D grain is an ES module, so it only runs when the page is served over `http(s)://`. If you open
 `index.html` straight from disk, the story still reads fully, with a drawn grain in place of the 3D one.
 
+### Single-file version for review
+
+`dist/index.html` is the whole site in one file: styles, content, fonts and the 3D scene are inlined.
+Double-click it to open it in a browser, or attach it to an email. Regenerate it after any change:
+
+```bash
+npm run build:standalone
+```
+
+Deploy the multi-file version (`index.html` and `assets/`). It caches better and loads the 3D scene
+only after the text.
+
 ## Edit the content
 
 All words and facts live in **`assets/js/content.js`** (search for `EDIT CONTENT HERE`).
@@ -48,6 +60,7 @@ index.html                 page skeleton
 assets/css/site.css        all styles (brand tokens at the top)
 assets/js/content.js       all content - edit this
 assets/js/site.js          renders content, navigation, pinned journey, scroll reveals, 3D loader
+dist/index.html            the whole site in one file, for review (npm run build:standalone)
 assets/js/grain-scene.js   built 3D scene (generated - do not edit by hand)
 assets/fonts/              Newsreader, DM Sans, Noto Serif Devanagari (SIL OFL, licences included)
 src/grain-scene.js         source of the 3D scene (three.js)

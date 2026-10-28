@@ -370,8 +370,10 @@
   }
   function load3d(toggle) {
     if (!root.classList.contains("can-3d")) return;
+    /* The single-file build (npm run build:standalone) inlines the scene as window.MVSGrainScene. */
     const url = new URL("grain-scene.js", SCRIPT_SRC || location.href).href;
-    import(url).then((m) => m.start({
+    const scene = window.MVSGrainScene ? Promise.resolve(window.MVSGrainScene) : import(url);
+    scene.then((m) => m.start({
       canvas: $("grainCanvas"),
       story: Story,
       onReady: () => { root.classList.add("has-3d"); if (!RM.matches) toggle.hidden = false; },

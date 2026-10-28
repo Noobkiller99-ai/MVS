@@ -8,7 +8,8 @@
     "build": "esbuild src/grain-scene.js --bundle --format=esm --minify --target=es2020 --legal-comments=linked --outfile=assets/js/grain-scene.js",
     "watch": "npm run build -- --watch",
     "start": "node scripts/serve.mjs",
-    "test": "node scripts/smoke-test.mjs"
+    "test": "node scripts/smoke-test.mjs",
+    "build:standalone": "node scripts/build-standalone.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.25.0",
