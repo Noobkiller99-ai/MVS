@@ -1,0 +1,112 @@
+# MVS Basmati: Every grain has a story
+
+The farm-to-pack story website for MVS Basmati, grown with farming families who work alongside
+Manav Vikas Sansthan (MVS). People reach it from the QR code on the pack.
+
+A single 3D basmati grain guides the story as you scroll:
+
+| Chapter | What the grain does |
+|---|---|
+| Hero | A milled grain, close up, slowly turning |
+| 01 The people | The camera pulls back: the grain sits in its husk at the tip of a panicle |
+| 02 In the field | The panicle stands over rippling paddy water and ripens from green to gold as you read the seven practices |
+| 03 The reasons | The same panicle at dusk |
+| 04 Farm to pack | Pinned sequence: harvest (the grains fall) → collection (heap) → milling (the husk opens, grains line up graded) → packing (grains pour into the pack) → your kitchen |
+| Closing | The grain alone again |
+
+## Run it
+
+No build step is needed to view or edit the site. It is plain HTML, CSS and JavaScript.
+
+```bash
+npm start
+```
+
+Then open <http://localhost:8080>. This needs Node 18 or later, and nothing to install.
+
+Any static web server works too, for example `python3 -m http.server 8080`. To publish, upload the
+repository as it is (or just `index.html` and `assets/`) to any static host.
+
+The 3D grain is an ES module, so it only runs when the page is served over `http(s)://`. If you open
+`index.html` straight from disk, the story still reads fully, with a drawn grain in place of the 3D one.
+
+## Edit the content
+
+All words and facts live in **`assets/js/content.js`** (search for `EDIT CONTENT HERE`).
+
+- Leave a field as `""` and it disappears from the page.
+- **Only add facts you can stand behind.** Do not add farmer stories, certifications, traceability
+  or environmental-impact figures without evidence and, for farmers, their consent.
+- Farmer photos: put them in `assets/photos/` and set `photo: { src: "assets/photos/name.jpg", alt: "..." }`.
+- Contact details (`site.contactEmail`, `contactPhone`, `website`) add "Get in touch" buttons and footer links when filled in.
+- The pack label in the 3D scene is drawn from `site.brandName`, `site.partnerName`, `hero.deva` and `hero.headline`.
+
+## Project structure
+
+```
+index.html                 page skeleton
+assets/css/site.css        all styles (brand tokens at the top)
+assets/js/content.js       all content - edit this
+assets/js/site.js          renders content, navigation, pinned journey, scroll reveals, 3D loader
+assets/js/grain-scene.js   built 3D scene (generated - do not edit by hand)
+assets/fonts/              Newsreader, DM Sans, Noto Serif Devanagari (SIL OFL, licences included)
+src/grain-scene.js         source of the 3D scene (three.js)
+scripts/serve.mjs          tiny local server for `npm start`
+scripts/smoke-test.mjs     browser test (desktop, mobile, reduced motion, no WebGL)
+```
+
+## Change the 3D scene
+
+The scene source is `src/grain-scene.js`. Everything in it is procedural: the grain, husk, panicle,
+water and pack are generated in code, with no model files. Keyframes near the top of the file
+(`makeKeyframes`) control the camera, lighting, ripeness and layout for each chapter. After editing:
+
+```bash
+npm install
+```
+
+```bash
+npm run build
+```
+
+This bundles only the parts of three.js the scene uses into `assets/js/grain-scene.js`
+(about 150 KB gzipped). It loads after the page text, so it never delays reading.
+
+## Accessibility and performance
+
+- The whole story is in the HTML text. The canvas is decorative (`aria-hidden`).
+- **Reduced motion** (`prefers-reduced-motion`): the 3D scene switches between calm still states
+  instead of animating. There are no entrance animations, idle motion or smooth scrolling.
+- A **Pause motion** button stops all ambient motion. The choice is remembered per visitor.
+- **No WebGL**, Data Saver, or a failed load: the page uses a drawn grain and a plain step-by-step journey.
+- Mobile: resolution is capped, and there is less geometry and fewer particles. Frames render only
+  when something changes. Rendering pauses in background tabs, and resolution steps down if frames run slow.
+- Keyboard: skip link, visible focus, an Escape-closable menu, and links that jump to each journey step.
+  Colour contrast meets WCAG AA (checked with axe-core).
+
+## Test
+
+```bash
+npm start
+```
+
+```bash
+npm test
+```
+
+`npm test` needs Playwright. If it is not installed, run `npm i -D playwright`, then
+`npx playwright install chromium`. The test loads the site on desktop and mobile, with reduced
+motion and without WebGL. It scrolls through every story keyframe and saves screenshots to
+`test-output/`. It fails on console errors, horizontal overflow, or a 3D scene that does not start.
+
+## Credits
+
+- 3D: [three.js](https://threejs.org) (MIT).
+- Fonts: Newsreader, DM Sans and Noto Serif Devanagari (SIL Open Font License).
+- Two interaction patterns are adapted from [21st.dev](https://21st.dev) components and rewritten
+  in plain JavaScript:
+  - **Scroll Reveal Content A** (numbered steps with a filling progress line), used for the pinned farm-to-pack journey.
+  - **Scroll word reveal** from the Motion examples, used for the closing heading.
+- The design direction follows the UI UX Pro Max skill's "scroll-triggered storytelling" pattern
+  (progress indicator, readable without effects, reduced-motion final states), with MVS's existing
+  palette and typography.

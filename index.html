@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-IN" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Every grain has a story - MVS Basmati</title>
+<meta name="description" content="Meet the farming families behind your basmati, the practices they follow in the field, and how the rice travels from farm to pack.">
+<meta name="theme-color" content="#254638">
+<!--
+  MVS Basmati - farmer story website
+  All text and facts live in assets/js/content.js (search for "EDIT CONTENT HERE").
+  Empty fields are hidden automatically. Real photographs go in assets/photos/
+  and are switched on through that file. See README.md.
+-->
+<link rel="preload" href="assets/fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/dm-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css">
+<script>
+  /* Decide before first paint whether the 3D story can run, so the layout never jumps. */
+  (function (d) {
+    var c = d.documentElement; c.classList.remove("no-js"); c.classList.add("js");
+    try {
+      var cv = d.createElement("canvas");
+      var gl = cv.getContext("webgl2") || cv.getContext("webgl");
+      var save = navigator.connection && navigator.connection.saveData;
+      if (gl && !save && location.protocol !== "file:") c.classList.add("can-3d");
+    } catch (e) {}
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) c.classList.add("reduced-motion");
+  })(document);
+</script>
+<script src="assets/js/content.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- The 3D grain. Decorative: the whole story is told in the text. -->
+<canvas class="grain-canvas" id="grainCanvas" aria-hidden="true"></canvas>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Home - back to the top">
+      <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M16 29V13"/><path d="M16 13c0-4 2-7.5 5.5-9.5"/><ellipse cx="11.5" cy="12" rx="2" ry="4.6" transform="rotate(-28 11.5 12)"/><ellipse cx="20.5" cy="15" rx="2" ry="4.6" transform="rotate(28 20.5 15)"/><ellipse cx="11.5" cy="19.5" rx="2" ry="4.6" transform="rotate(-28 11.5 19.5)"/><ellipse cx="20.5" cy="22.5" rx="2" ry="4.6" transform="rotate(28 20.5 22.5)"/></svg>
+      <span class="brand-name"></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path class="i-open" d="M3 6h14M3 10h14M3 14h14"/><path class="i-close" d="M5 5l10 10M15 5 5 15"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="mainnav" id="mainNav" aria-label="Main">
+      <ul id="navList"></ul>
+    </nav>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+</header>
+
+<section class="hero" id="top" aria-labelledby="heroTitle" data-tone="light">
+  <div class="hero-stage stage" id="heroStage" aria-hidden="true">
+    <!-- Shown until the 3D grain is ready, and instead of it where 3D is unavailable. -->
+    <svg class="grain-fallback" viewBox="0 0 200 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="gfBody" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#D9CDB4"/><stop offset=".38" stop-color="#FBF7EE"/><stop offset=".62" stop-color="#F3ECDD"/><stop offset="1" stop-color="#C9BA9C"/>
+        </linearGradient>
+        <radialGradient id="gfGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF8EA"/><stop offset="1" stop-color="#FFF8EA" stop-opacity="0"/></radialGradient>
+        <linearGradient id="gfShine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+      </defs>
+      <ellipse cx="100" cy="260" rx="98" ry="250" fill="url(#gfGlow)"/>
+      <g transform="rotate(14 100 260)">
+        <path d="M100 38c26 0 38 70 38 168 0 112-12 248-38 276-27-28-39-164-39-276C61 108 74 38 100 38Z" fill="url(#gfBody)"/>
+        <path d="M86 92c-6 60-7 170-1 280" stroke="url(#gfShine)" stroke-width="7" stroke-linecap="round" fill="none"/>
+        <path d="M117 440c-6 14-11 24-17 30" stroke="#BFAE8E" stroke-width="2" stroke-linecap="round" fill="none" opacity=".6"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap hero-copy">
+    <p class="deva" id="heroDeva" lang="hi"></p>
+    <h1 id="heroTitle"></h1>
+    <p class="lead" id="heroLead"></p>
+    <div class="cta-row">
+      <a class="btn" href="#farmers" id="heroCta">
+        <span></span>
+        <svg viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v14M4 11l6 6 6-6"/></svg>
+      </a>
+      <a class="textlink" href="#practices" id="heroLink"></a>
+    </div>
+  </div>
+  <p class="scroll-cue" id="scrollCue" aria-hidden="true"><span class="scroll-line"></span><span class="scroll-text"></span></p>
+</section>
+
+<main id="main">
+  <noscript><p>Please turn on JavaScript to see the full story of the farmers and practices behind this rice.</p></noscript>
+
+  <nav class="glance" aria-label="In this story">
+    <div class="wrap"><ol id="glance"></ol></div>
+  </nav>
+
+  <!-- 01 The people -->
+  <section class="chapter chapter--stage-left" id="farmers" aria-labelledby="farmersTitle" data-tone="light">
+    <div class="wrap chapter-grid">
+      <header class="chapter-head reveal">
+        <p class="eyebrow"><span class="num" data-ch="farmers.num"></span> <span data-ch="farmers.label"></span></p>
+        <h2 id="farmersTitle" data-ch="farmers.title"></h2>
+        <p class="lead" id="farmersLead"></p>
+      </header>
+      <div class="stage-col"><div class="stage" data-stage="farmers"></div></div>
+      <div class="chapter-body">
+        <div id="farmerProfiles"></div>
+        <div class="mvs reveal" id="mvs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 In the field -->
+  <section class="chapter chapter--stage-left practices" id="practices" aria-labelledby="practicesTitle" data-tone="field">
+    <div class="wrap chapter-grid">
+      <header class="chapter-head reveal">
+        <p class="eyebrow"><span class="num" data-ch="practices.num"></span> <span data-ch="practices.label"></span></p>
+        <h2 id="practicesTitle" data-ch="practices.title"></h2>
+        <p class="lead" id="practicesLead"></p>
+      </header>
+      <div class="stage-col">
+        <div class="stage" data-stage="practices">
+          <nav class="p-index" aria-label="Jump to a practice"><ol id="practiceIndex"></ol></nav>
+        </div>
+      </div>
+      <div class="chapter-body">
+        <div class="p-intro reveal" id="practiceIntro"></div>
+        <div class="p-list" id="practiceList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 The reasons -->
+  <section class="chapter chapter--stage-right whysec" id="why" aria-labelledby="whyTitle" data-tone="dark">
+    <div class="wrap chapter-grid">
+      <header class="chapter-head reveal">
+        <p class="eyebrow"><span class="num" data-ch="why.num"></span> <span data-ch="why.label"></span></p>
+        <h2 id="whyTitle" data-ch="why.title"></h2>
+        <p class="lead" id="whyLead"></p>
+      </header>
+      <div class="stage-col"><div class="stage" data-stage="why"></div></div>
+      <div class="chapter-body">
+        <ol class="why-list" id="whyList"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 The journey: a pinned sequence, one step at a time -->
+  <section class="chapter journey" id="journey" aria-labelledby="journeyTitle" data-tone="sand">
+    <div class="wrap">
+      <header class="chapter-head journey-head reveal">
+        <p class="eyebrow"><span class="num" data-ch="journey.num"></span> <span data-ch="journey.label"></span></p>
+        <h2 id="journeyTitle" data-ch="journey.title"></h2>
+        <p class="lead" id="journeyLead"></p>
+      </header>
+    </div>
+    <div class="journey-track" id="journeyTrack">
+      <div class="journey-pin">
+        <div class="wrap journey-grid">
+          <div class="journey-panel">
+            <p class="journey-count" aria-hidden="true"><span id="journeyNow">1</span> / <span id="journeyTotal">6</span></p>
+            <ol class="steps" id="steps"></ol>
+          </div>
+          <div class="stage" data-stage="journey"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="closing" aria-labelledby="closeTitle" data-tone="light">
+    <div class="stage closing-stage" data-stage="closing"></div>
+    <div class="wrap closing-copy">
+      <h2 id="closeTitle" class="word-reveal"></h2>
+      <p id="closeText" class="reveal"></p>
+      <div class="cta-row reveal" id="closeCtas"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="wrap">
+    <div class="cols" id="footerCols"></div>
+    <div class="fine" id="footerFine"></div>
+  </div>
+</footer>
+
+<div class="floating-controls">
+  <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false" hidden>
+    <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><rect x="5" y="4" width="3.2" height="12" rx="1"/><rect x="11.8" y="4" width="3.2" height="12" rx="1"/></svg>
+    <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><path d="M6 4.2v11.6a.8.8 0 0 0 1.2.7l9.3-5.8a.8.8 0 0 0 0-1.4L7.2 3.5A.8.8 0 0 0 6 4.2Z"/></svg>
+    <span class="label">Pause motion</span>
+  </button>
+  <button class="to-top" id="toTop" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 17V3M4 9l6-6 6 6"/></svg>
+  </button>
+</div>
+</body>
+</html>
