@@ -1,0 +1,110 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "full-color: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads); no brand colour is left in this version",
+      "suggested_fix": "fine for a one-colour mark; otherwise give a part a colour that reads on this ground, or declare logo.device tile",
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "on-light-background: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "symbol-only: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "favicon-16: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "favicon-32: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.light-swap",
+      "component": "logo",
+      "severity": "info",
+      "measured": 2.92,
+      "threshold": null,
+      "message": "favicon-48: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+      "suggested_fix": null,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.thin-feature",
+      "component": "logo",
+      "severity": "info",
+      "measured": {
+        "stroke_px2": 1.4,
+        "gap_px2": 1.18
+      },
+      "threshold": ">= 1 px = 4.2 units (heuristic, uncalibrated)",
+      "message": "symbol at 24 px (min size): strokes/gaps thinner than 1 px (lost 1.4 px², clogged 1.18 px²); symbol-small.svg covers small sizes",
+      "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+    },
+    {
+      "id": "logo.small-size",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.43,
+        "gap_px2": 1.34
+      },
+      "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+      "message": "symbol-small at 16 px: features narrower than 1 px (lost 0.43 px², clogged 1.34 px²)",
+      "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+    },
+    {
+      "id": "logo.cliche",
+      "component": "logo",
+      "severity": "warn",
+      "measured": "initial-in-rounded-square",
+      "threshold": "detector heuristic, uncalibrated",
+      "message": "initial-in-rounded-square: seal: radiused tile + glyph name-devanagari",
+      "suggested_fix": "who on the shelf uses it, what second reading is this brand's? Justify in defaults_used[].why or change the idea"
+    }
+  ]
+}

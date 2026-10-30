@@ -1,0 +1,883 @@
+{
+  "schema": "brand-identity/extract@1",
+  "url": "http://localhost:8080/",
+  "requestedUrl": "http://localhost:8080/",
+  "extractedAt": "2026-10-30T12:31:25.537Z",
+  "rolesAreProposal": true,
+  "note": "Roles are a proposal measured from the rendered page. Confirm them with the user (fix by editing \"roles\"), then set \"rolesConfirmed\": true.",
+  "strategy": "tokens",
+  "roles": {
+    "background": "#f7f4ec",
+    "surface": "#ffffff",
+    "border": "#ded6c4",
+    "text": "#252b27",
+    "textMuted": "#535b55",
+    "primary": "#254638",
+    "onPrimary": "#f7f4ec",
+    "accent": "#7a4b26",
+    "link": "#254638"
+  },
+  "roleDetails": {
+    "background": {
+      "hex": "#f7f4ec",
+      "confidence": 0.94,
+      "level": "high",
+      "method": "largest painted background area",
+      "elements": 14,
+      "share": 0.89,
+      "alternatives": [
+        {
+          "hex": "#ffffff",
+          "share": 0.07,
+          "elements": 13
+        },
+        {
+          "hex": "#1c372c",
+          "share": 0.02,
+          "elements": 1
+        },
+        {
+          "hex": "#254638",
+          "share": 0.02,
+          "elements": 34
+        }
+      ]
+    },
+    "surface": {
+      "hex": "#ffffff",
+      "confidence": 0.9,
+      "level": "high",
+      "method": "second neutral background close to the page background",
+      "elements": 13,
+      "share": 0.07,
+      "alternatives": []
+    },
+    "border": {
+      "hex": "#ded6c4",
+      "confidence": 0.85,
+      "level": "high",
+      "method": "named token --line",
+      "elements": 28,
+      "share": 0.53,
+      "corroboration": [
+        "measurement agrees"
+      ],
+      "alternatives": [
+        {
+          "hex": "#ded6c4",
+          "share": 0.24,
+          "elements": 34
+        },
+        {
+          "hex": "#f7f4ec",
+          "share": 0.22,
+          "elements": 9
+        },
+        {
+          "hex": "#254638",
+          "share": 0.01,
+          "elements": 4
+        }
+      ]
+    },
+    "text": {
+      "hex": "#252b27",
+      "confidence": 0.87,
+      "level": "high",
+      "method": "named token --ink",
+      "elements": 18,
+      "share": 0.65,
+      "corroboration": [
+        "measurement agrees"
+      ],
+      "alternatives": [
+        {
+          "hex": "#535b55",
+          "share": 0.32,
+          "elements": 14
+        },
+        {
+          "hex": "#7a4b26",
+          "share": 0.03,
+          "elements": 8
+        },
+        {
+          "hex": "#4d6346",
+          "share": 0,
+          "elements": 1
+        }
+      ]
+    },
+    "textMuted": {
+      "hex": "#535b55",
+      "confidence": 0.9,
+      "level": "high",
+      "method": "named token --muted",
+      "elements": 14,
+      "share": 1,
+      "corroboration": [
+        "measurement agrees"
+      ],
+      "alternatives": []
+    },
+    "primary": {
+      "hex": "#254638",
+      "confidence": 0.89,
+      "level": "high",
+      "method": "button-like elements (area, above-the-fold x3)",
+      "elements": 2,
+      "share": 1,
+      "corroboration": [
+        "meta theme-color #254638"
+      ],
+      "alternatives": []
+    },
+    "onPrimary": {
+      "hex": "#f7f4ec",
+      "confidence": 0.75,
+      "level": "high",
+      "method": "text painted on #254638",
+      "elements": 8,
+      "share": 0.5,
+      "alternatives": [
+        {
+          "hex": "#d3cfbf",
+          "share": 0.5,
+          "elements": 4
+        }
+      ]
+    },
+    "accent": {
+      "hex": "#7a4b26",
+      "confidence": 0.75,
+      "level": "high",
+      "method": "heaviest chromatic colour >= 30° hue from primary",
+      "elements": 39,
+      "share": 0.98,
+      "alternatives": [
+        {
+          "hex": "#bc8b61",
+          "share": 0.02,
+          "elements": 0
+        }
+      ]
+    },
+    "link": {
+      "hex": "#254638",
+      "confidence": 0.97,
+      "level": "high",
+      "method": "links inside body copy",
+      "elements": 10,
+      "share": 1,
+      "alternatives": []
+    }
+  },
+  "extraRoles": {
+    "heading": "#254638"
+  },
+  "missingRoles": [
+    "surfaceAlt",
+    "onAccent",
+    "focus",
+    "success",
+    "warning",
+    "danger",
+    "info"
+  ],
+  "confirm": [],
+  "notes": [
+    "site has no dark scheme; dark previews recolour the light page with the palette's dark roles"
+  ],
+  "contrast": {
+    "text/background": 13.14,
+    "textMuted/background": 6.38,
+    "link/background": 9.5,
+    "onPrimary/primary": 9.5,
+    "primary/background": 9.5
+  },
+  "palette": [
+    {
+      "hex": "#f7f4ec",
+      "oklch": "oklch(96.7% 0.011 90)",
+      "score": 1843.36,
+      "areaShare": 0.9726,
+      "uses": {
+        "bg": 20192835,
+        "text": 318,
+        "border": 5362,
+        "svg": 554,
+        "gradient": 6696405
+      },
+      "elements": 14,
+      "members": [
+        "#f7f4ec",
+        "#f6f2e8"
+      ],
+      "roles": [
+        "background",
+        "onPrimary"
+      ]
+    },
+    {
+      "hex": "#efe8d8",
+      "oklch": "oklch(93.2% 0.023 87)",
+      "score": 239.37,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 595,
+        "border": 0,
+        "svg": 0,
+        "gradient": 5433289
+      },
+      "elements": 4,
+      "members": [
+        "#efe8d8",
+        "#ece6d6"
+      ],
+      "roles": []
+    },
+    {
+      "hex": "#ffffff",
+      "oklch": "oklch(100.0% 0.000 90)",
+      "score": 121.76,
+      "areaShare": 0.076,
+      "uses": {
+        "bg": 1577984,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 13,
+      "roles": [
+        "surface"
+      ]
+    },
+    {
+      "hex": "#252b27",
+      "oklch": "oklch(28.2% 0.011 156)",
+      "score": 119.82,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 2396,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 21,
+      "roles": [
+        "text"
+      ]
+    },
+    {
+      "hex": "#254638",
+      "oklch": "oklch(36.4% 0.046 165)",
+      "score": 112.58,
+      "areaShare": 0.0195,
+      "uses": {
+        "bg": 404742,
+        "text": 737,
+        "border": 176,
+        "svg": 3408,
+        "gradient": 1099508
+      },
+      "elements": 34,
+      "roles": [
+        "link",
+        "primary"
+      ]
+    },
+    {
+      "hex": "#eceee1",
+      "oklch": "oklch(94.4% 0.017 114)",
+      "score": 95.66,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 2479635
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#21402f",
+      "oklch": "oklch(34.2% 0.048 158)",
+      "score": 69.04,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 1789571
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#535b55",
+      "oklch": "oklch(46.2% 0.014 153)",
+      "score": 59.78,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 1196,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 16,
+      "roles": [
+        "textMuted"
+      ]
+    },
+    {
+      "hex": "#fff8ea",
+      "oklch": "oklch(98.1% 0.020 85)",
+      "score": 46.36,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 1201770
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#1c372c",
+      "oklch": "oklch(31.1% 0.039 166)",
+      "score": 41.33,
+      "areaShare": 0.0258,
+      "uses": {
+        "bg": 535590,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 1,
+      "roles": []
+    },
+    {
+      "hex": "#d3cfbf",
+      "oklch": "oklch(85.3% 0.022 95)",
+      "score": 34.93,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 699,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 7,
+      "roles": []
+    },
+    {
+      "hex": "#7a4b26",
+      "oklch": "oklch(45.9% 0.082 57)",
+      "score": 25.62,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 512,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 39,
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "hex": "#dcddcb",
+      "oklch": "oklch(89.2% 0.024 109)",
+      "score": 25.58,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 12789,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#f4eee1",
+      "oklch": "oklch(95.0% 0.018 86)",
+      "score": 12.5,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 0,
+        "gradient": 324000
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#ded6c4",
+      "oklch": "oklch(87.8% 0.026 87)",
+      "score": 11.77,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 5886,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 0,
+      "roles": [
+        "border"
+      ]
+    },
+    {
+      "hex": "#f3ddc3",
+      "oklch": "oklch(90.9% 0.042 72)",
+      "score": 5.16,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 103,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 4,
+      "roles": []
+    },
+    {
+      "hex": "#c2c7bc",
+      "oklch": "oklch(82.3% 0.016 127)",
+      "score": 4.07,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 81,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 2,
+      "roles": []
+    },
+    {
+      "hex": "#4d6346",
+      "oklch": "oklch(47.3% 0.053 138)",
+      "score": 2.52,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 50,
+        "border": 0,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 8,
+      "roles": []
+    },
+    {
+      "hex": "#e3c4a2",
+      "oklch": "oklch(83.8% 0.058 70)",
+      "score": 2.48,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 38,
+        "border": 0,
+        "svg": 1150,
+        "gradient": 0
+      },
+      "elements": 8,
+      "roles": []
+    },
+    {
+      "hex": "#000000",
+      "oklch": "oklch(0.0% 0.000 0)",
+      "score": 2,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 4000,
+        "gradient": 0
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#bc8b61",
+      "oklch": "oklch(67.5% 0.083 61)",
+      "score": 0.57,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 284,
+        "svg": 0,
+        "gradient": 0
+      },
+      "elements": 0,
+      "roles": []
+    },
+    {
+      "hex": "#bfae8e",
+      "oklch": "oklch(75.7% 0.048 83)",
+      "score": 0.55,
+      "areaShare": 0,
+      "uses": {
+        "bg": 0,
+        "text": 0,
+        "border": 0,
+        "svg": 1106,
+        "gradient": 0
+      },
+      "elements": 0,
+      "roles": []
+    }
+  ],
+  "tokens": {
+    "count": 20,
+    "used": 18,
+    "items": {
+      "--leaf-tint": {
+        "value": "#E4EADC",
+        "hex": "#e4eadc",
+        "alpha": 1,
+        "usedAs": {},
+        "roles": []
+      },
+      "--muted": {
+        "value": "#535B55",
+        "hex": "#535b55",
+        "alpha": 1,
+        "usedAs": {
+          "text": 8
+        },
+        "roles": [
+          "textMuted"
+        ]
+      },
+      "--leaf": {
+        "value": "#718665",
+        "hex": "#718665",
+        "alpha": 1,
+        "usedAs": {},
+        "roles": []
+      },
+      "--forest": {
+        "value": "#254638",
+        "hex": "#254638",
+        "alpha": 1,
+        "usedAs": {
+          "text": 15,
+          "background": 11,
+          "shadow": 1,
+          "border": 1
+        },
+        "roles": [
+          "link",
+          "primary"
+        ]
+      },
+      "--clay-light": {
+        "value": "#E3C4A2",
+        "hex": "#e3c4a2",
+        "alpha": 1,
+        "usedAs": {
+          "text": 4
+        },
+        "roles": []
+      },
+      "--gold-soft": {
+        "value": "#F3DDC3",
+        "hex": "#f3ddc3",
+        "alpha": 1,
+        "usedAs": {
+          "text": 1
+        },
+        "roles": []
+      },
+      "--line-dark": {
+        "value": "rgba(247,244,236,.18)",
+        "hex": "#f7f4ec",
+        "alpha": 0.18,
+        "usedAs": {
+          "border": 3
+        },
+        "roles": []
+      },
+      "--ivory": {
+        "value": "#F7F4EC",
+        "hex": "#f7f4ec",
+        "alpha": 1,
+        "usedAs": {
+          "background": 8,
+          "text": 9
+        },
+        "roles": [
+          "background",
+          "onPrimary"
+        ]
+      },
+      "--on-dark": {
+        "value": "#ECE6D6",
+        "hex": "#ece6d6",
+        "alpha": 1,
+        "usedAs": {
+          "text": 1
+        },
+        "roles": []
+      },
+      "--field": {
+        "value": "#ECEEE1",
+        "hex": "#eceee1",
+        "alpha": 1,
+        "usedAs": {
+          "background": 4
+        },
+        "roles": []
+      },
+      "--sand": {
+        "value": "#EFE8D8",
+        "hex": "#efe8d8",
+        "alpha": 1,
+        "usedAs": {
+          "background": 6
+        },
+        "roles": []
+      },
+      "--clay": {
+        "value": "#BC8B61",
+        "hex": "#bc8b61",
+        "alpha": 1,
+        "usedAs": {
+          "border": 3,
+          "background": 2
+        },
+        "roles": []
+      },
+      "--forest-2": {
+        "value": "#1C372C",
+        "hex": "#1c372c",
+        "alpha": 1,
+        "usedAs": {
+          "background": 2
+        },
+        "roles": []
+      },
+      "--white": {
+        "value": "#FFFFFF",
+        "hex": "#ffffff",
+        "alpha": 1,
+        "usedAs": {
+          "background": 2
+        },
+        "roles": [
+          "surface"
+        ]
+      },
+      "--forest-3": {
+        "value": "#21402F",
+        "hex": "#21402f",
+        "alpha": 1,
+        "usedAs": {
+          "background": 3
+        },
+        "roles": []
+      },
+      "--line": {
+        "value": "#DED6C4",
+        "hex": "#ded6c4",
+        "alpha": 1,
+        "usedAs": {
+          "shadow": 1,
+          "border": 8
+        },
+        "roles": [
+          "border"
+        ]
+      },
+      "--clay-ink": {
+        "value": "#7A4B26",
+        "hex": "#7a4b26",
+        "alpha": 1,
+        "usedAs": {
+          "text": 9
+        },
+        "roles": [
+          "accent"
+        ]
+      },
+      "--on-dark-muted": {
+        "value": "#D3CFBF",
+        "hex": "#d3cfbf",
+        "alpha": 1,
+        "usedAs": {
+          "text": 4
+        },
+        "roles": []
+      },
+      "--ink": {
+        "value": "#252B27",
+        "hex": "#252b27",
+        "alpha": 1,
+        "usedAs": {
+          "text": 2
+        },
+        "roles": [
+          "text"
+        ]
+      },
+      "--leaf-ink": {
+        "value": "#4D6346",
+        "hex": "#4d6346",
+        "alpha": 1,
+        "usedAs": {
+          "text": 3
+        },
+        "roles": []
+      }
+    }
+  },
+  "rolesDark": null,
+  "roleDetailsDark": null,
+  "fonts": {
+    "body": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "paragraph": "\"Noto Serif Devanagari\", \"Noto Sans Devanagari\", Mangal, serif",
+    "heading": "Newsreader, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+    "button": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "code": null,
+    "loaded": [
+      "Newsreader 400 normal",
+      "Newsreader 400 italic",
+      "Newsreader 500 normal",
+      "DM Sans 400 normal",
+      "DM Sans 500 normal",
+      "DM Sans 600 normal",
+      "DM Sans 700 normal",
+      "Noto Serif Devanagari 500 normal"
+    ],
+    "roles": {
+      "display": {
+        "family": "Newsreader",
+        "stack": "Newsreader, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+        "weight": 500,
+        "selectors": [
+          "h3",
+          "span.p-num",
+          "p.k",
+          "a.step-link",
+          "span.num",
+          "h2",
+          "span.n",
+          "em.w"
+        ]
+      },
+      "text": {
+        "family": "Noto Serif Devanagari",
+        "stack": "\"Noto Serif Devanagari\", \"Noto Sans Devanagari\", Mangal, serif",
+        "weight": 400,
+        "selectors": [
+          "p.deva"
+        ]
+      }
+    }
+  },
+  "logo": {
+    "kind": "svg",
+    "tag": "svg",
+    "src": null,
+    "alt": null,
+    "score": 8,
+    "box": {
+      "x": 164,
+      "y": 20,
+      "w": 28,
+      "h": 28
+    },
+    "svgColors": [
+      "#254638"
+    ],
+    "file": "logo.png",
+    "source": "logo.svg"
+  },
+  "favicon": null,
+  "signals": {
+    "title": "Every grain has a story - MVS Basmati",
+    "description": "Meet the farming families behind your basmati, the practices they follow in the field, and how the rice travels from farm to pack.",
+    "siteName": null,
+    "lang": "en-IN",
+    "themeColor": "#254638",
+    "colorScheme": null,
+    "generator": null,
+    "h1": [
+      "Every grain\nhas a story."
+    ],
+    "headings": [
+      "Meet the farmers",
+      "Practices that matter",
+      "Why these practices matter",
+      "From farm to pack",
+      "Every grain carries someone's season of work.",
+      "EXPLORE",
+      "IN PARTNERSHIP WITH"
+    ],
+    "nav": [
+      "MVS Basmati",
+      "The farmers",
+      "Practices",
+      "Why it matters",
+      "Farm to pack"
+    ],
+    "darkModeSupport": false
+  },
+  "shots": {
+    "desktop": "current/desktop.png",
+    "mobile": "current/mobile.png",
+    "full": "current/full.png",
+    "header": "current/header.png"
+  },
+  "imagePalette": [
+    {
+      "hex": "#f7f4eb",
+      "share": 0.414
+    },
+    {
+      "hex": "#f4efe3",
+      "share": 0.327
+    },
+    {
+      "hex": "#faf5e9",
+      "share": 0.161
+    },
+    {
+      "hex": "#e6e0d4",
+      "share": 0.057
+    },
+    {
+      "hex": "#aca99b",
+      "share": 0.022
+    },
+    {
+      "hex": "#495847",
+      "share": 0.02
+    }
+  ],
+  "status": "ok"
+}

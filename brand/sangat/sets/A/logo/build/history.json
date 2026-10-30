@@ -1,0 +1,22 @@
+[
+  {
+    "sha256": "c019635226e9965238fbc00862331ddaea0d5517385e9176f463af02a0636519",
+    "anchors": 16,
+    "defect": ""
+  },
+  {
+    "sha256": "f7072969231b4c21c0c8b18b8071a62ef122cda213975b6a2bd6ad4369b05c11",
+    "anchors": 22,
+    "defect": ""
+  },
+  {
+    "sha256": "4a0978103f02520390d5131c919a8bff790dab2b0382d30fe9da4e2c588c48f9",
+    "anchors": 19,
+    "defect": ""
+  },
+  {
+    "sha256": "a78e93129dcd159900b0b167bf5d7566b73a74d1f191df0db4576fc42e4df6fa",
+    "anchors": 19,
+    "defect": ""
+  }
+]

@@ -25,10 +25,13 @@ for (const [, file] of css.matchAll(/url\(\.\.\/fonts\/([^)]+\.woff2)\)/g)) {
 const content = safe(await read("assets/js/content.js"));
 const site = safe(await read("assets/js/site.js"));
 const sceneJs = safe(scene.outputFiles[0].text);
+const favicon = (await readFile(root + "assets/brand/icons/favicon.svg")).toString("base64");
 let html = await read("index.html");
 html = html
   .replace('<html lang="en-IN" class="no-js">', '<html lang="en-IN" class="no-js" data-standalone>')
   .replace(/^<link rel="preload"[^\n]*\n/gm, "")
+  .replace(/^<link rel="(icon|apple-touch-icon|manifest)"[^\n]*\n/gm, "")
+  .replace("</title>", () => `</title>\n<link rel="icon" href="data:image/svg+xml;base64,${favicon}">`)
   .replace('<link rel="stylesheet" href="assets/css/site.css">', () => `<style>\n${css}\n</style>`)
   .replace(/^<script src="assets\/js\/(content|site)\.js" defer><\/script>\n/gm, "")
   .replace("</body>", () => [

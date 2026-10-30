@@ -1,0 +1,260 @@
+{
+  "schema": "brand-identity/site-apply@1",
+  "url": "http://localhost:8080/",
+  "set": "C",
+  "name": "Mohar",
+  "slug": "c-mohar",
+  "identity": "/home/user/MVS/brand/sangat/sets/C/identity.json",
+  "mode": "light",
+  "pageScheme": "light",
+  "oldRoles": {
+    "background": "#f7f4ec",
+    "surface": "#ffffff",
+    "border": "#ded6c4",
+    "text": "#252b27",
+    "textMuted": "#535b55",
+    "primary": "#254638",
+    "onPrimary": "#f7f4ec",
+    "accent": "#7a4b26",
+    "link": "#254638"
+  },
+  "roles": {
+    "background": "#ffffff",
+    "surface": "#f9fbfa",
+    "surfaceAlt": "#f1f4f2",
+    "border": "#e4e7e5",
+    "text": "#131f18",
+    "textMuted": "#4c5951",
+    "primary": "#c99a4b",
+    "onPrimary": "#08120d",
+    "accent": "#8c9c80",
+    "onAccent": "#08120d",
+    "link": "#8f6128",
+    "focus": "#aa7a35",
+    "success": "#08795e",
+    "warning": "#a14b06",
+    "danger": "#b4312b",
+    "info": "#196aaf"
+  },
+  "oldFonts": {
+    "display": "Newsreader, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+    "text": "\"Noto Serif Devanagari\", \"Noto Sans Devanagari\", Mangal, serif",
+    "mono": null
+  },
+  "fonts": {
+    "display": {
+      "family": "Rozha One",
+      "location": {
+        "wght": 400
+      },
+      "variationSettings": null,
+      "static": true,
+      "files": [
+        "/root/.cache/brand-identity/fonts/google/ofl/rozhaone/RozhaOne-Regular.ttf"
+      ]
+    },
+    "text": {
+      "family": "Mukta",
+      "location": {
+        "wght": 400
+      },
+      "variationSettings": null,
+      "static": true,
+      "files": [
+        "/root/.cache/brand-identity/fonts/google/ofl/mukta/Mukta-Regular.ttf"
+      ]
+    }
+  },
+  "fontsLoaded": true,
+  "logoVariants": [
+    "full-color.svg",
+    "full-color-dark.svg",
+    "symbol-only.svg"
+  ],
+  "notes": [],
+  "layoutStress": {
+    "desktop": 8,
+    "mobile": 14
+  },
+  "viewports": {
+    "desktop": {
+      "contrastGuard": {
+        "checked": 138,
+        "fixed": 62,
+        "skippedUnmeasurable": 9,
+        "skippedBaseline": 31,
+        "samples": [
+          "a \"Skip to content\" #c99a4b/#c99a4b -> #08120d",
+          "span \"MVS Basmati\" #c99a4b/#ffffff -> #08120d",
+          "a \"The farmers\" #c99a4b/#ffffff -> #08120d",
+          "a \"Practices\" #c99a4b/#ffffff -> #08120d",
+          "a \"Why it matters\" #c99a4b/#ffffff -> #08120d",
+          "a \"Farm to pack\" #c99a4b/#ffffff -> #08120d",
+          "span \"Explore the journey\" #c99a4b/#c99a4b -> #08120d",
+          "span \"01\" #8c9c80/#ffffff -> #08120d"
+        ]
+      },
+      "fonts": {
+        "roles": {
+          "display": {
+            "family": "Rozha One",
+            "name": "__bi_display_c",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9782608695652174,
+            "xHeight": {
+              "old": 0.45,
+              "new": 0.46
+            },
+            "check": true,
+            "computed": "__bi_display_c",
+            "ok": true,
+            "applied": true
+          },
+          "text": {
+            "family": "Mukta",
+            "name": "__bi_text_c",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9787234042553191,
+            "xHeight": {
+              "old": 0.46,
+              "new": 0.47
+            },
+            "check": true,
+            "computed": "DM Sans",
+            "ok": true,
+            "applied": false
+          }
+        },
+        "displayMarked": 71,
+        "monoMarked": 0
+      },
+      "logo": {
+        "replaced": true,
+        "kind": "svg",
+        "scope": "logo",
+        "copies": 2,
+        "variant": "symbol-only.svg",
+        "ground": "light",
+        "oldBox": {
+          "w": 28,
+          "h": 28
+        },
+        "newBox": {
+          "w": 28,
+          "h": 28
+        },
+        "fill": 1
+      },
+      "layoutStress": {
+        "count": 8,
+        "overflow": 0,
+        "gainedLines": 8,
+        "samples": [
+          "h1 \"Every grain\" 1->2 lines",
+          "em \"has a story.\" 1->2 lines",
+          "h2 \"Meet the farmers\" 1->2 lines",
+          "p \"Basmati asks a lot of the peop\" 5->6 lines",
+          "h2 \"Practices that matter\" 1->2 lines",
+          "h3 \"Good basmati starts in the fie\" 1->2 lines",
+          "h3 \"Harvest and storage done well\" 1->2 lines",
+          "h2 \"Why these practices matter\" 2->3 lines"
+        ]
+      }
+    },
+    "mobile": {
+      "contrastGuard": {
+        "checked": 138,
+        "fixed": 85,
+        "skippedUnmeasurable": 9,
+        "skippedBaseline": 4,
+        "samples": [
+          "a \"Skip to content\" #c99a4b/#c99a4b -> #08120d",
+          "span \"MVS Basmati\" #c99a4b/#ffffff -> #08120d",
+          "span \"Menu\" #c99a4b/#ffffff -> #08120d",
+          "span \"Explore the journey\" #c99a4b/#c99a4b -> #08120d",
+          "span \"01\" #8c9c80/#ffffff -> #08120d",
+          "span \"The people\" #8c9c80/#ffffff -> #08120d",
+          "p \"Manav Vikas Sansthan (MV\" #dadedc/#c99a4b -> #08120d",
+          "p \"Practical advice on wate\" #dadedc/#c99a4b -> #08120d"
+        ]
+      },
+      "fonts": {
+        "roles": {
+          "display": {
+            "family": "Rozha One",
+            "name": "__bi_display_c",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9782608695652174,
+            "xHeight": {
+              "old": 0.45,
+              "new": 0.46
+            },
+            "check": true,
+            "computed": "__bi_display_c",
+            "ok": true,
+            "applied": true
+          },
+          "text": {
+            "family": "Mukta",
+            "name": "__bi_text_c",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9787234042553191,
+            "xHeight": {
+              "old": 0.46,
+              "new": 0.47
+            },
+            "check": true,
+            "computed": "DM Sans",
+            "ok": true,
+            "applied": false
+          }
+        },
+        "displayMarked": 71,
+        "monoMarked": 0
+      },
+      "logo": {
+        "replaced": true,
+        "kind": "svg",
+        "scope": "logo",
+        "copies": 2,
+        "variant": "symbol-only.svg",
+        "ground": "light",
+        "oldBox": {
+          "w": 28,
+          "h": 28
+        },
+        "newBox": {
+          "w": 28,
+          "h": 28
+        },
+        "fill": 1
+      },
+      "layoutStress": {
+        "count": 14,
+        "overflow": 0,
+        "gainedLines": 14,
+        "samples": [
+          "em \"has a story.\" 1->2 lines",
+          "h2 \"Meet the farmers\" 1->2 lines",
+          "h3 \"The families behind the harves\" 2->3 lines",
+          "p \"Basmati asks a lot of the peop\" 6->9 lines",
+          "b \"Guidance in the field\" 1->2 lines",
+          "h2 \"Practices that matter\" 1->2 lines",
+          "h3 \"Good basmati starts in the fie\" 1->2 lines",
+          "h3 \"Fertiliser matched to need\" 1->2 lines"
+        ]
+      }
+    }
+  },
+  "shots": {
+    "desktop": "c-mohar/desktop.png",
+    "mobile": "c-mohar/mobile.png",
+    "full": "c-mohar/full.png",
+    "header": "c-mohar/header.png"
+  },
+  "appliedAt": "2026-10-30T12:42:22.499Z"
+}

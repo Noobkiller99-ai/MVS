@@ -1,0 +1,104 @@
+{
+ "units": "wordmark: cap height 100, cap top y=0, baseline y=100, x from the pen origin; index = data-glyph",
+ "text": "SANGAT",
+ "glyphs": [
+  {
+   "index": 1,
+   "char": "S",
+   "x0": 8.08,
+   "x1": 80.49,
+   "pen_x": 0.0,
+   "advance": 83.69,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": [
+    [
+     49.4,
+     79.3
+    ]
+   ]
+  },
+  {
+   "index": 2,
+   "char": "A",
+   "x0": 100.46,
+   "x1": 213.26,
+   "pen_x": 103.51,
+   "advance": 104.27,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": []
+  },
+  {
+   "index": 3,
+   "char": "N",
+   "x0": 231.71,
+   "x1": 340.55,
+   "pen_x": 227.59,
+   "advance": 115.55,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": [
+    [
+     244.66,
+     260.21
+    ],
+    [
+     282.74,
+     307.33
+    ],
+    [
+     313.4,
+     327.78
+    ]
+   ]
+  },
+  {
+   "index": 4,
+   "char": "G",
+   "x0": 365.24,
+   "x1": 465.09,
+   "pen_x": 362.96,
+   "advance": 99.54,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": [
+    [
+     366.51,
+     389.24
+    ],
+    [
+     428.63,
+     453.51
+    ]
+   ]
+  },
+  {
+   "index": 5,
+   "char": "A",
+   "x0": 479.27,
+   "x1": 592.07,
+   "pen_x": 482.32,
+   "advance": 98.17,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": []
+  },
+  {
+   "index": 6,
+   "char": "T",
+   "x0": 601.58,
+   "x1": 695.83,
+   "pen_x": 600.3,
+   "advance": 96.8,
+   "cap_top": 0,
+   "baseline": 100,
+   "stems": [
+    [
+     638.11,
+     659.45
+    ]
+   ]
+  }
+ ]
+}

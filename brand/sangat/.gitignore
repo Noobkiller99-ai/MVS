@@ -1,0 +1,7 @@
+# Generated scene files that inline every image as base64 (rebuild with tools/*.py)
+brandbook/brandbook.html
+brandbook/brandbook-extension.pdf
+mockups/*.html
+applications/*.html
+__pycache__/
+tools/__pycache__/

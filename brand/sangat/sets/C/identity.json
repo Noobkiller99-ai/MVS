@@ -1,0 +1,485 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Sangat",
+    "tagline": "Sanjhi Soch, Sunehra Kal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "doc_lang": "en",
+    "sector": "Premium basmati rice (FMCG, packaged staples)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Every grain carries someone’s season of work.",
+        "hi": "हर दाने की अपनी कहानी"
+      },
+      "nav": [
+        "Our Story",
+        "The Farmers",
+        "From Farm to Pack"
+      ],
+      "cta": "Explore the journey"
+    }
+  },
+  "set": {
+    "id": "C",
+    "name": "Mohar",
+    "recommended": false,
+    "mechanism": "A trader's seal: संगत cut through a gold stamp is the mark, the high-contrast Indian display face is the seal's voice, and a night-forest ground lets the gold stamp carry the pack.",
+    "expression_move": "The gold Devanagari seal on a dark ground.",
+    "differs_by": "Heritage without monuments: a living craft instead of a palace, and dark forest instead of maroon; the only dark-ground premium pack on a light or red shelf."
+  },
+  "axes": {
+    "classic_contemporary": -2,
+    "quiet_loud": 2,
+    "warm_cool": -2,
+    "friend_authority": 0
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Rozha One",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {},
+      "features": [],
+      "case": "upper",
+      "tracking": 90,
+      "fallback": "Georgia, serif",
+      "file": null
+    },
+    "text": {
+      "family": "Mukta",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {},
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "The name in Devanagari, cut through a gold seal: Sangat stamped as a promise.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Sangat",
+      "role": "display",
+      "location": null,
+      "tracking": 90,
+      "case": "upper"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "seal": "accent",
+      "wordmark": "accent"
+    },
+    "tags": [
+      "rounded-square-tile"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 24,
+      "mm": 8
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "rounded-square-tile",
+      "why": "The square is the seal itself (a mohar is a stamp block); the Devanagari name is cut through it, so it is not an initial in an app tile."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "A trader's seal: संगत cut through a gold stamp is the mark, the high-contrast Indian display face is the seal's voice, and a night-forest ground lets the gold stamp carry the pack.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Category shelf (judgement, sites unreachable here): maroon/red + gold foil with monuments and crowns (India Gate, Daawat, Kohinoor, Lal Qilla), purple/navy script (Tilda), leaf-green kraft and badges (24 Mantra, Organic Tattva).",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "All faces are OFL Google Fonts designed with both Latin and Devanagari, so Hindi lines use the brand's own type rather than a fallback.",
+      "evidence": "measured",
+      "source": "brand.py fonts audit --langs en,hi"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "0fa2415ee6d3c1c9bd575a4c54caffcfc8f076e0ac528cdf885a67ffc6ed3ffb"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 8,
+      "info": 16
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.56,
+        "threshold": 3.0,
+        "message": "light: primary #c99a4b on background #ffffff is 2.56:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#c99a4b",
+          "to": "#aa7a35",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.79
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.accent-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.92,
+        "threshold": 3.0,
+        "message": "light: accent #8c9c80 on background #ffffff is 2.92:1, below 3.0:1 (accent fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.accent",
+          "from": "#8c9c80",
+          "to": "#728067",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 4.2
+        },
+        "roles": [
+          "light.accent",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.25,
+        "threshold": 3.0,
+        "message": "light: border #e4e7e5 on background #ffffff is 1.25:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#e4e7e5",
+          "to": "#6b766f",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.72
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.31,
+        "threshold": 3.0,
+        "message": "dark: link #c99a4b on text #f1f4f2 is 2.31:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#c99a4b",
+          "to": "#aa7a35",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.42
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.2,
+        "threshold": 3.0,
+        "message": "dark: border #4c5951 on background #13241b is 2.20:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#4c5951",
+          "to": "#6b766f",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.43
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.structure.greyscale.brand-2-brand-3",
+        "component": "palette",
+        "severity": "info",
+        "measured": 4.1,
+        "threshold": 15.0,
+        "message": "#c99a4b and #8c9c80 differ by only Delta L* 4.1; side by side in a logo they merge in greyscale/one-colour print",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2",
+          "brand-3"
+        ]
+      },
+      {
+        "id": "type.display.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Rozha One lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "299/319",
+        "threshold": "GF Latin Core",
+        "message": "Rozha One misses 20/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 20,
+        "threshold": null,
+        "message": "Rozha One: ~20 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Mukta lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "303/319",
+        "threshold": "GF Latin Core",
+        "message": "Mukta misses 16/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 29,
+        "threshold": null,
+        "message": "Mukta: ~29 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "full-color: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads); no brand colour is left in this version",
+        "suggested_fix": "fine for a one-colour mark; otherwise give a part a colour that reads on this ground, or declare logo.device tile",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "on-light-background: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "symbol-only: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "favicon-16: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "favicon-32: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.light-swap",
+        "component": "logo",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": null,
+        "message": "favicon-48: accent #8c9c80 is 2.92:1 on #ffffff; drawn in the light text colour #131f18 (a colour stays only where it reads)",
+        "suggested_fix": null,
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.thin-feature",
+        "component": "logo",
+        "severity": "info",
+        "measured": {
+          "stroke_px2": 1.4,
+          "gap_px2": 1.18
+        },
+        "threshold": ">= 1 px = 4.2 units (heuristic, uncalibrated)",
+        "message": "symbol at 24 px (min size): strokes/gaps thinner than 1 px (lost 1.4 px², clogged 1.18 px²); symbol-small.svg covers small sizes",
+        "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+      },
+      {
+        "id": "logo.small-size",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 0.43,
+          "gap_px2": 1.34
+        },
+        "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+        "message": "symbol-small at 16 px: features narrower than 1 px (lost 0.43 px², clogged 1.34 px²)",
+        "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+      },
+      {
+        "id": "logo.cliche",
+        "component": "logo",
+        "severity": "warn",
+        "measured": "initial-in-rounded-square",
+        "threshold": "detector heuristic, uncalibrated",
+        "message": "initial-in-rounded-square: seal: radiused tile + glyph name-devanagari",
+        "suggested_fix": "who on the shelf uses it, what second reading is this brand's? Justify in defaults_used[].why or change the idea"
+      },
+      {
+        "id": "default.gold-brass-accent",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (gold-brass-accent) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": null,
+    "dark_bg": "#13241B",
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": []
+  },
+  "card": {
+    "ground": "dark"
+  }
+}

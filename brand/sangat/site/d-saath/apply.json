@@ -1,0 +1,256 @@
+{
+  "schema": "brand-identity/site-apply@1",
+  "url": "http://localhost:8080/",
+  "set": "D",
+  "name": "Saath",
+  "slug": "d-saath",
+  "identity": "/home/user/MVS/brand/sangat/sets/D/identity.json",
+  "mode": "light",
+  "pageScheme": "light",
+  "oldRoles": {
+    "background": "#f7f4ec",
+    "surface": "#ffffff",
+    "border": "#ded6c4",
+    "text": "#252b27",
+    "textMuted": "#535b55",
+    "primary": "#254638",
+    "onPrimary": "#f7f4ec",
+    "accent": "#7a4b26",
+    "link": "#254638"
+  },
+  "roles": {
+    "background": "#f4f2ec",
+    "surface": "#ffffff",
+    "surfaceAlt": "#eae8e2",
+    "border": "#d4d1c7",
+    "text": "#101f1c",
+    "textMuted": "#4a5956",
+    "primary": "#16443d",
+    "onPrimary": "#ffffff",
+    "accent": "#b98a2e",
+    "onAccent": "#061210",
+    "link": "#16443d",
+    "focus": "#16443d",
+    "success": "#08795e",
+    "warning": "#905906",
+    "danger": "#b4312b",
+    "info": "#196aaf"
+  },
+  "oldFonts": {
+    "display": "Newsreader, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+    "text": "\"Noto Serif Devanagari\", \"Noto Sans Devanagari\", Mangal, serif",
+    "mono": null
+  },
+  "fonts": {
+    "display": {
+      "family": "Akshar",
+      "location": {
+        "wght": 560,
+        "CTRS": 0
+      },
+      "variationSettings": null,
+      "static": true,
+      "files": [
+        "/root/.cache/brand-identity/fonts/instances/Akshar-c73a38486e1ff9cb.ttf"
+      ]
+    },
+    "text": {
+      "family": "Akshar",
+      "location": {
+        "wght": 400,
+        "CTRS": 0
+      },
+      "variationSettings": null,
+      "static": true,
+      "files": [
+        "/root/.cache/brand-identity/fonts/instances/Akshar-76b13568d85708b2.ttf"
+      ]
+    }
+  },
+  "fontsLoaded": true,
+  "logoVariants": [
+    "full-color.svg",
+    "full-color-dark.svg",
+    "symbol-only.svg"
+  ],
+  "notes": [],
+  "layoutStress": {
+    "desktop": 5,
+    "mobile": 5
+  },
+  "viewports": {
+    "desktop": {
+      "contrastGuard": {
+        "checked": 138,
+        "fixed": 42,
+        "skippedUnmeasurable": 9,
+        "skippedBaseline": 28,
+        "samples": [
+          "a \"Skip to content\" #16443d/#16443d -> #ffffff",
+          "span \"Explore the journey\" #16443d/#16443d -> #ffffff",
+          "span \"01\" #b98a2e/#f4f2ec -> #061210",
+          "span \"The people\" #b98a2e/#f4f2ec -> #061210",
+          "h3 \"How MVS works with farme\" #101f1c/#16443d -> #ffffff",
+          "b \"Guidance in the field\" #101f1c/#16443d -> #ffffff",
+          "b \"Planning the season\" #101f1c/#16443d -> #ffffff",
+          "b \"A route to market\" #101f1c/#16443d -> #ffffff"
+        ]
+      },
+      "fonts": {
+        "roles": {
+          "display": {
+            "family": "Akshar",
+            "name": "__bi_display_d",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.8653846153846154,
+            "xHeight": {
+              "old": 0.45,
+              "new": 0.52
+            },
+            "check": true,
+            "computed": "__bi_display_d",
+            "ok": true,
+            "applied": true
+          },
+          "text": {
+            "family": "Akshar",
+            "name": "__bi_text_d",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9019607843137255,
+            "xHeight": {
+              "old": 0.46,
+              "new": 0.51
+            },
+            "check": true,
+            "computed": "DM Sans",
+            "ok": true,
+            "applied": false
+          }
+        },
+        "displayMarked": 71,
+        "monoMarked": 0
+      },
+      "logo": {
+        "replaced": true,
+        "kind": "svg",
+        "scope": "logo",
+        "copies": 2,
+        "variant": "symbol-only.svg",
+        "ground": "light",
+        "oldBox": {
+          "w": 28,
+          "h": 28
+        },
+        "newBox": {
+          "w": 17.7,
+          "h": 28
+        },
+        "fill": 0.63
+      },
+      "layoutStress": {
+        "count": 5,
+        "overflow": 0,
+        "gainedLines": 5,
+        "samples": [
+          "h1 \"Every grain\" 1->2 lines",
+          "em \"has a story.\" 1->2 lines",
+          "p \"Basmati asks a lot of the peop\" 5->6 lines",
+          "h2 \"Practices that matter\" 1->2 lines",
+          "h3 \"Good basmati starts in the fie\" 1->2 lines"
+        ]
+      }
+    },
+    "mobile": {
+      "contrastGuard": {
+        "checked": 138,
+        "fixed": 50,
+        "skippedUnmeasurable": 9,
+        "skippedBaseline": 2,
+        "samples": [
+          "a \"Skip to content\" #16443d/#16443d -> #ffffff",
+          "span \"Explore the journey\" #16443d/#16443d -> #ffffff",
+          "span \"01\" #b98a2e/#f4f2ec -> #061210",
+          "span \"The people\" #b98a2e/#f4f2ec -> #061210",
+          "h3 \"How MVS works with farme\" #101f1c/#16443d -> #ffffff",
+          "b \"Guidance in the field\" #101f1c/#16443d -> #ffffff",
+          "b \"Planning the season\" #101f1c/#16443d -> #ffffff",
+          "b \"A route to market\" #101f1c/#16443d -> #ffffff"
+        ]
+      },
+      "fonts": {
+        "roles": {
+          "display": {
+            "family": "Akshar",
+            "name": "__bi_display_d",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.8653846153846154,
+            "xHeight": {
+              "old": 0.45,
+              "new": 0.52
+            },
+            "check": true,
+            "computed": "__bi_display_d",
+            "ok": true,
+            "applied": true
+          },
+          "text": {
+            "family": "Akshar",
+            "name": "__bi_text_d",
+            "files": 1,
+            "loaded": 1,
+            "sizeAdjust": 0.9019607843137255,
+            "xHeight": {
+              "old": 0.46,
+              "new": 0.51
+            },
+            "check": true,
+            "computed": "DM Sans",
+            "ok": true,
+            "applied": false
+          }
+        },
+        "displayMarked": 71,
+        "monoMarked": 0
+      },
+      "logo": {
+        "replaced": true,
+        "kind": "svg",
+        "scope": "logo",
+        "copies": 2,
+        "variant": "symbol-only.svg",
+        "ground": "light",
+        "oldBox": {
+          "w": 28,
+          "h": 28
+        },
+        "newBox": {
+          "w": 17.7,
+          "h": 28
+        },
+        "fill": 0.63
+      },
+      "layoutStress": {
+        "count": 5,
+        "overflow": 0,
+        "gainedLines": 5,
+        "samples": [
+          "p \"Basmati asks a lot of the peop\" 6->7 lines",
+          "h2 \"Practices that matter\" 1->2 lines",
+          "h3 \"Good basmati starts in the fie\" 1->2 lines",
+          "h3 \"Fertiliser matched to need\" 1->2 lines",
+          "h3 \"Harvest and storage done well\" 1->2 lines"
+        ]
+      }
+    }
+  },
+  "shots": {
+    "desktop": "d-saath/desktop.png",
+    "mobile": "d-saath/mobile.png",
+    "full": "d-saath/full.png",
+    "header": "d-saath/header.png"
+  },
+  "appliedAt": "2026-10-30T12:42:44.745Z"
+}

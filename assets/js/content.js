@@ -6,7 +6,9 @@
    ===================================================================== */
 window.MVS_CONTENT = {
   site: {
-    brandName: "MVS Basmati",
+    brandName: "Sangat",
+    tagline: "Sanjhi Soch, Sunehra Kal",          // always exactly this; never in capitals
+    taglineHi: "साँझी सोच, सुनहरा कल",
     partnerName: "Manav Vikas Sansthan",
     contactEmail: "",     // e.g. "hello@example.org" - adds "Get in touch" buttons and a footer link
     contactPhone: "",     // e.g. "+91 00000 00000"
@@ -22,6 +24,7 @@ window.MVS_CONTENT = {
   ],
 
   hero: {
+    kicker: "Sangat premium basmati · with Manav Vikas Sansthan",
     deva: "हर दाने की अपनी कहानी",
     headline: "Every grain <em>has a story.</em>",
     lead: "Meet the farmers behind your rice. Discover the cultivation practices they follow and the people working alongside them.",
@@ -127,13 +130,13 @@ window.MVS_CONTENT = {
     title: "Every grain carries <em>someone's season of work.</em>",
     text: "Thank you for taking a moment to meet the people and practices behind your rice.",
     shareLabel: "Share this story",
-    shareText: "Meet the farming families behind MVS Basmati.",   // used when sharing the page
+    shareText: "Meet the farming families behind Sangat basmati.",   // used when sharing the page
     buyLabel: "Where to buy",
     buyUrl: ""            // e.g. "https://www.example.org/shop" - adds a "Where to buy" button
   },
 
   footer: {
-    about: "MVS Basmati is brought to you with Manav Vikas Sansthan (MVS), working alongside the farming families who grow it.",
+    about: "Sangat premium basmati is brought to you with Manav Vikas Sansthan (MVS), working alongside the farming families who grow it.",
     statutory: "Ingredients, nutrition and other statutory information are printed on the pack."
   }
 };

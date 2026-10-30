@@ -1,0 +1,17 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.role-tone",
+      "component": "logo",
+      "severity": "info",
+      "measured": "#896126",
+      "threshold": "#a07a35",
+      "message": "accent resolves to #896126 (UI tone); use brand-2 for #a07a35",
+      "suggested_fix": "data-color=\"brand-2\" (or logo.colors) for the exact brand colour",
+      "roles": [
+        "accent"
+      ]
+    }
+  ]
+}

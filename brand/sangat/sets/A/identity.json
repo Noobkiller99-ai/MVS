@@ -1,0 +1,441 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Sangat",
+    "tagline": "Sanjhi Soch, Sunehra Kal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "doc_lang": "en",
+    "sector": "Premium basmati rice (FMCG, packaged staples)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Every grain carries someone’s season of work.",
+        "hi": "हर दाने की अपनी कहानी"
+      },
+      "nav": [
+        "Our Story",
+        "The Farmers",
+        "From Farm to Pack"
+      ],
+      "cta": "Explore the journey"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Shirorekha",
+    "recommended": true,
+    "mechanism": "The Devanagari headline that joins letters into one word: a gold line holds three grains in the mark, gives the inscriptional capitals their hanging rule, and is the only gold in a forest-and-ivory palette.",
+    "expression_move": "The gold joining line: the single bright element in mark, layout and pack.",
+    "differs_by": "Category marks are crests, monuments and leaves on maroon or kraft; this is a script-derived abstract mark in deep forest with one line of gold, no illustration."
+  },
+  "axes": {
+    "classic_contemporary": -1,
+    "quiet_loud": 0,
+    "warm_cool": -1,
+    "friend_authority": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Tiro Devanagari Hindi",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400
+      ],
+      "location": {},
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "Georgia, serif",
+      "file": null
+    },
+    "text": {
+      "family": "Mukta",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {},
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "One line joins three grains into a single word: shirorekha, panicle and toran at once.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Sangat",
+      "role": "display",
+      "location": null,
+      "tracking": 160,
+      "case": "upper"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "shirorekha": "accent",
+      "grains": "primary",
+      "wordmark": "primary"
+    },
+    "tags": [
+      "abstract-geometric"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 20,
+      "mm": 7
+    },
+    "misuse": [
+      {
+        "do": "stretch"
+      },
+      {
+        "do": "recolour"
+      },
+      {
+        "do": "effects"
+      },
+      {
+        "do": "crowd"
+      },
+      {
+        "svg": "logo/misuse-1.svg",
+        "label": "Do not join the grains to the line"
+      },
+      {
+        "svg": "logo/misuse-2.svg",
+        "label": "Never add or remove grains: always three"
+      }
+    ]
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "cream-ground",
+      "why": "The brief asks for warm ivory, and ivory is the live Sangat site's ground (equity)."
+    },
+    {
+      "id": "gold-brass-accent",
+      "why": "The brief asks for a muted gold accent; it is held to one element (line, dot, grain or seal), never a frame or foil flood."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "The Devanagari headline that joins letters into one word: a gold line holds three grains in the mark, gives the inscriptional capitals their hanging rule, and is the only gold in a forest-and-ivory palette.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Category shelf (judgement, sites unreachable here): maroon/red + gold foil with monuments and crowns (India Gate, Daawat, Kohinoor, Lal Qilla), purple/navy script (Tilda), leaf-green kraft and badges (24 Mantra, Organic Tattva).",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "All faces are OFL Google Fonts designed with both Latin and Devanagari, so Hindi lines use the brand's own type rather than a fallback.",
+      "evidence": "measured",
+      "source": "brand.py fonts audit --langs en,hi"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "b3317cad69bc8ea0368d09c5ac57764907dbaff6f72f1d3258998bf4da0afe58"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 6,
+      "info": 11
+    },
+    "findings": [
+      {
+        "id": "palette.extended.distinct.ext-3-light.primary",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 7.22,
+        "threshold": 10.0,
+        "message": "ext-3 #13241b and light.primary #1e3a2f are only CIEDE2000 7.2 apart; as variants or chart series they will be confused",
+        "suggested_fix": {
+          "change": "ext-3",
+          "from": "#13241b",
+          "to": "#091911",
+          "how": "darken by OKLCH L -0.04, same hue"
+        },
+        "roles": [
+          "ext-3",
+          "light.primary"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-1",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.21,
+        "threshold": 3.0,
+        "message": "light: ext-1 #e7dcc4 is 1.21:1 on the light background #f6f1e5; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-1",
+          "from": "#e7dcc4",
+          "to": "#857c69",
+          "how": "use ext-1-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-1"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-2",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.5,
+        "threshold": 3.0,
+        "message": "light: ext-2 #8e9f86 is 2.50:1 on the light background #f6f1e5; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-2",
+          "from": "#8e9f86",
+          "to": "#73836c",
+          "how": "use ext-2-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-2"
+        ]
+      },
+      {
+        "id": "palette.extended.on.dark.ext-3",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 4.38,
+        "threshold": 4.5,
+        "message": "dark: text #ffffff on ext-3 #677e71 is 4.38:1: large labels only (>= 24 px or 18.5 px bold), not body text",
+        "suggested_fix": null,
+        "roles": [
+          "ext-3"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #d7d0bf on background #f6f1e5 is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d7d0bf",
+          "to": "#928b7b",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.0
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.33,
+        "threshold": 3.0,
+        "message": "dark: link #85a999 on text #f1f4f2 is 2.33:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#85a999",
+          "to": "#6b8e7f",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.27
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.2,
+        "threshold": 3.0,
+        "message": "dark: border #4c5951 on background #13241b is 2.20:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#4c5951",
+          "to": "#6b766f",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.43
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.harmony.primary-accent",
+        "component": "palette",
+        "severity": "info",
+        "measured": -0.51,
+        "threshold": -0.3,
+        "message": "Ou-Luo two-colour model scores #1e3a2f + #896126 at -0.51 (negative = less harmonious on a grey CRT test, no context): model signal only; the pairing table in references/pairing.md takes precedence",
+        "suggested_fix": null,
+        "roles": [
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "type.display.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Tiro Devanagari Hindi lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "243/319",
+        "threshold": "GF Latin Core",
+        "message": "Tiro Devanagari Hindi misses 76/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 33,
+        "threshold": null,
+        "message": "Tiro Devanagari Hindi: ~33 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "101/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Mukta lacks English auxiliary/punctuation characters: ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "303/319",
+        "threshold": "GF Latin Core",
+        "message": "Mukta misses 16/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 29,
+        "threshold": null,
+        "message": "Mukta: ~29 KB WOFF2 for the brief's characters (per weight file; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.role-tone",
+        "component": "logo",
+        "severity": "info",
+        "measured": "#896126",
+        "threshold": "#a07a35",
+        "message": "accent resolves to #896126 (UI tone); use brand-2 for #a07a35",
+        "suggested_fix": "data-color=\"brand-2\" (or logo.colors) for the exact brand colour",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "cream-ground",
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F6F1E5",
+    "dark_bg": "#13241B",
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": [
+      "#E7DCC4:Husk Sand:secondary surfaces, pack back panels",
+      "#8E9F86:Paddy Sage:quiet text and patterns on forest",
+      "#13241B:Night Forest:darkest ground, 5 kg pack base"
+    ]
+  },
+  "card": {
+    "ground": "light"
+  }
+}

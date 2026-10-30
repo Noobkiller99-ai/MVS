@@ -1,0 +1,362 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Sangat",
+    "tagline": "Sanjhi Soch, Sunehra Kal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "doc_lang": "en",
+    "sector": "Premium basmati rice (FMCG, packaged staples)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Every grain carries someone’s season of work.",
+        "hi": "हर दाने की अपनी कहानी"
+      },
+      "nav": [
+        "Our Story",
+        "The Farmers",
+        "From Farm to Pack"
+      ],
+      "cta": "Explore the journey"
+    }
+  },
+  "set": {
+    "id": "B",
+    "name": "Bindu",
+    "recommended": false,
+    "mechanism": "One golden point: the dot that romanises संगत as SAṄGAT sits over the N, and the same single point is the only colour in an ink-on-paper palette and the only mark the pack needs.",
+    "expression_move": "The golden bindu over the N; everything else is black-green ink on paper.",
+    "differs_by": "Against ornate, illustrated packs this is a pure typographic identity with one dot: the quietest pack on a loud shelf."
+  },
+  "axes": {
+    "classic_contemporary": 1,
+    "quiet_loud": -2,
+    "warm_cool": 0,
+    "friend_authority": 1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "single-family",
+    "display": {
+      "family": "Eczar",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        560
+      ],
+      "location": {
+        "wght": 560
+      },
+      "features": [],
+      "case": "upper",
+      "tracking": 130,
+      "fallback": "Georgia, serif",
+      "file": null
+    },
+    "text": {
+      "family": "Eczar",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "Georgia, serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "wordmark",
+    "concept": "SAṄGAT: the anusvara's romanised dot over the N, drawn as a golden bindu.",
+    "symbol": null,
+    "wordmark": {
+      "text": "Sangat",
+      "role": "display",
+      "location": null,
+      "tracking": 130,
+      "case": "upper"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal"
+    ],
+    "colors": {
+      "wordmark": "primary",
+      "bindu": "accent"
+    },
+    "tags": [],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 24,
+      "mm": 8
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [],
+  "rationale": [
+    {
+      "claim": "One golden point: the dot that romanises संगत as SAṄGAT sits over the N, and the same single point is the only colour in an ink-on-paper palette and the only mark the pack needs.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Category shelf (judgement, sites unreachable here): maroon/red + gold foil with monuments and crowns (India Gate, Daawat, Kohinoor, Lal Qilla), purple/navy script (Tilda), leaf-green kraft and badges (24 Mantra, Organic Tattva).",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "All faces are OFL Google Fonts designed with both Latin and Devanagari, so Hindi lines use the brand's own type rather than a fallback.",
+      "evidence": "measured",
+      "source": "brand.py fonts audit --langs en,hi"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "7c7918caf5b89f7a6e207d5e66e8030f20360b05259844c645b6190f19d7338f"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 6,
+      "info": 8
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.link-on-text",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.72,
+        "threshold": 3.0,
+        "message": "light: link #865612 on text #1c1c1c is 2.72:1, below 3.0:1 (links distinguishable from body text without underline (WCAG G183); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.link",
+          "from": "#865612",
+          "to": "#9e6b18",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.71
+        },
+        "roles": [
+          "light.link",
+          "light.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.35,
+        "threshold": 3.0,
+        "message": "light: border #dcd7cd on background #fbf8f2 is 1.35:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#dcd7cd",
+          "to": "#938f85",
+          "how": "darken by OKLCH L -0.23, same hue",
+          "ratio_after": 3.04
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.92,
+        "threshold": 3.0,
+        "message": "dark: link #b8862b on text #f3f3f3 is 2.92:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#b8862b",
+          "to": "#9e6b18",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 4.14
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.88,
+        "threshold": 3.0,
+        "message": "dark: border #414141 on background #0f0f0f is 1.88:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#414141",
+          "to": "#737373",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.04
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.harmony.primary-accent",
+        "component": "palette",
+        "severity": "info",
+        "measured": -0.53,
+        "threshold": -0.3,
+        "message": "Ou-Luo two-colour model scores #17231d + #9e6b18 at -0.53 (negative = less harmonious on a grey CRT test, no context): model signal only; the pairing table in references/pairing.md takes precedence",
+        "suggested_fix": null,
+        "roles": [
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "type.display+text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "93/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Eczar lacks English auxiliary/punctuation characters: Ĕ Ĭ Ŏ Ŭ ĕ ĭ ŏ ŭ ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display+text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "299/319",
+        "threshold": "GF Latin Core",
+        "message": "Eczar misses 20/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.display+text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 30,
+        "threshold": null,
+        "message": "Eczar: ~30 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.small-size",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 0.36,
+          "gap_px2": 0.72
+        },
+        "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+        "message": "symbol-small at 16 px: features narrower than 1 px (lost 0.36 px², clogged 0.72 px²)",
+        "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+      },
+      {
+        "id": "logo.role-tone",
+        "component": "logo",
+        "severity": "info",
+        "measured": "#9e6b18",
+        "threshold": "#b8862b",
+        "message": "accent resolves to #9e6b18 (UI tone); use brand-2 for #b8862b",
+        "suggested_fix": "data-color=\"brand-2\" (or logo.colors) for the exact brand colour",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "default.cream-ground",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (cream-ground) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "default.gold-brass-accent",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (gold-brass-accent) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "cream-ground",
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#FBF8F2",
+    "dark_bg": null,
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": []
+  },
+  "card": {
+    "ground": "light"
+  }
+}

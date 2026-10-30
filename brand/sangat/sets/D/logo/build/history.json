@@ -1,0 +1,12 @@
+[
+  {
+    "sha256": "72adeccd9e9331a68624ff1cbb4927c8091dd09e8bbaaa4eab33c6a5e10bcc8c",
+    "anchors": 6,
+    "defect": ""
+  },
+  {
+    "sha256": "1d6ff8aed7671fda8cd9b1928c897193d361dbd53a05ba4a3bc15c38c8020bbd",
+    "anchors": 10,
+    "defect": ""
+  }
+]

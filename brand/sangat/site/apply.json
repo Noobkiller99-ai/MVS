@@ -1,0 +1,210 @@
+{
+  "schema": "brand-identity/site-apply@1",
+  "createdAt": "2026-10-30T13:16:20+00:00",
+  "source": "site",
+  "url": "http://localhost:8080/",
+  "current": {
+    "desktop": "site/current/desktop.png",
+    "mobile": "site/current/mobile.png",
+    "full": "site/current/full.png",
+    "header": "site/current/header.png"
+  },
+  "sets": {
+    "A": {
+      "name": "Shirorekha",
+      "dir": "site/a-shirorekha",
+      "shots": {
+        "desktop": "site/a-shirorekha/desktop.png",
+        "mobile": "site/a-shirorekha/mobile.png",
+        "full": "site/a-shirorekha/full.png",
+        "header": "site/a-shirorekha/header.png"
+      },
+      "layoutStress": {
+        "desktop": 0,
+        "mobile": 0
+      },
+      "fontsLoaded": true,
+      "logo": {
+        "desktop": "full-color.svg",
+        "mobile": "full-color.svg"
+      },
+      "notes": [],
+      "findings": [
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "desktop: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "mobile: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        }
+      ]
+    },
+    "B": {
+      "name": "Bindu",
+      "dir": "site/b-bindu",
+      "shots": {
+        "desktop": "site/b-bindu/desktop.png",
+        "mobile": "site/b-bindu/mobile.png",
+        "full": "site/b-bindu/full.png",
+        "header": "site/b-bindu/header.png"
+      },
+      "layoutStress": {
+        "desktop": 10,
+        "mobile": 20
+      },
+      "fontsLoaded": true,
+      "logo": {
+        "desktop": "full-color.svg",
+        "mobile": "full-color.svg"
+      },
+      "notes": [],
+      "findings": [
+        {
+          "id": "site-layout-stress",
+          "component": "site",
+          "severity": "warn",
+          "measured": {
+            "desktop": 10,
+            "mobile": 20
+          },
+          "threshold": 0,
+          "message": "30 element(s) (desktop + mobile) overflow or gain lines with the new faces/logo (heuristic, uncalibrated): h1 \"Every grain\" 1->2 lines; em \"has a story.\" 1->2 lines; h2 \"Meet the farmers\" 1->2 lines",
+          "suggested_fix": "look at the screenshots; x-height is already matched with size-adjust, so this is the face's width - consider a narrower text face or a looser site layout"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "desktop: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "mobile: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        }
+      ]
+    },
+    "C": {
+      "name": "Mohar",
+      "dir": "site/c-mohar",
+      "shots": {
+        "desktop": "site/c-mohar/desktop.png",
+        "mobile": "site/c-mohar/mobile.png",
+        "full": "site/c-mohar/full.png",
+        "header": "site/c-mohar/header.png"
+      },
+      "layoutStress": {
+        "desktop": 8,
+        "mobile": 14
+      },
+      "fontsLoaded": true,
+      "logo": {
+        "desktop": "symbol-only.svg",
+        "mobile": "symbol-only.svg"
+      },
+      "notes": [],
+      "findings": [
+        {
+          "id": "site-layout-stress",
+          "component": "site",
+          "severity": "warn",
+          "measured": {
+            "desktop": 8,
+            "mobile": 14
+          },
+          "threshold": 0,
+          "message": "22 element(s) (desktop + mobile) overflow or gain lines with the new faces/logo (heuristic, uncalibrated): h1 \"Every grain\" 1->2 lines; em \"has a story.\" 1->2 lines; h2 \"Meet the farmers\" 1->2 lines",
+          "suggested_fix": "look at the screenshots; x-height is already matched with size-adjust, so this is the face's width - consider a narrower text face or a looser site layout"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "desktop: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "mobile: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        }
+      ]
+    },
+    "D": {
+      "name": "Saath",
+      "dir": "site/d-saath",
+      "shots": {
+        "desktop": "site/d-saath/desktop.png",
+        "mobile": "site/d-saath/mobile.png",
+        "full": "site/d-saath/full.png",
+        "header": "site/d-saath/header.png"
+      },
+      "layoutStress": {
+        "desktop": 5,
+        "mobile": 5
+      },
+      "fontsLoaded": true,
+      "logo": {
+        "desktop": "symbol-only.svg",
+        "mobile": "symbol-only.svg"
+      },
+      "notes": [],
+      "findings": [
+        {
+          "id": "site-layout-stress",
+          "component": "site",
+          "severity": "warn",
+          "measured": {
+            "desktop": 5,
+            "mobile": 5
+          },
+          "threshold": 0,
+          "message": "10 element(s) (desktop + mobile) overflow or gain lines with the new faces/logo (heuristic, uncalibrated): h1 \"Every grain\" 1->2 lines; em \"has a story.\" 1->2 lines; p \"Basmati asks a lot of the peop\" 5->6 lines",
+          "suggested_fix": "look at the screenshots; x-height is already matched with size-adjust, so this is the face's width - consider a narrower text face or a looser site layout"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "desktop: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        },
+        {
+          "id": "site-font-unused-text",
+          "component": "site",
+          "severity": "warn",
+          "measured": null,
+          "threshold": null,
+          "message": "mobile: the text face loaded but no text text on the site uses it (the site's family was not matched)",
+          "suggested_fix": "correct fonts in site/extract.json"
+        }
+      ]
+    }
+  }
+}

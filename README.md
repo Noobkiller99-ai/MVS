@@ -1,7 +1,11 @@
-# MVS Basmati: Every grain has a story
+# Sangat: Every grain has a story
 
-The farm-to-pack story website for MVS Basmati, grown with farming families who work alongside
-Manav Vikas Sansthan (MVS). People reach it from the QR code on the pack.
+The farm-to-pack story website for **Sangat** premium basmati (*Sanjhi Soch, Sunehra Kal*), grown with farming
+families who work alongside Manav Vikas Sansthan (MVS). People reach it from the QR code on the pack, which opens
+`story.html` (the QR landing page) and leads into the story.
+
+The full brand identity (strategy, logo, palette, type, packaging, applications and the guidelines PDF) lives in
+[`brand/sangat/`](brand/sangat/README.md).
 
 A single 3D basmati grain guides the story as you scroll:
 
@@ -53,7 +57,10 @@ All words and facts live in **`assets/js/content.js`** (search for `EDIT CONTENT
 - Contact details (`site.contactEmail`, `contactPhone`, `website`) add a "Get in touch" button and footer links when filled in.
 - `closing.buyUrl` adds a "Where to buy" button at the end of the story. Leave it empty until there is a real shop or stockist page.
 - `closing.shareText` is the line used when someone shares the page. "Share this story" opens the phone's share sheet, or copies the link on a computer.
-- The pack label in the 3D scene is drawn from `site.brandName`, `site.partnerName`, `hero.deva` and `hero.headline`.
+- The pack label in the 3D scene is the Sangat V1 pack front, drawn with the real logo outlines (`src/brand-paths.js`)
+  plus `site.tagline`, `site.taglineHi` and `site.partnerName`.
+- `site.tagline` is always exactly "Sanjhi Soch, Sunehra Kal" (never in capitals).
+- `story.html` is the QR landing page. Its batch fields are placeholders: fill them only with details MVS has confirmed.
 
 ## Project structure
 
@@ -64,7 +71,11 @@ assets/js/content.js       all content - edit this
 assets/js/site.js          renders content, navigation, pinned journey, scroll reveals, 3D loader
 dist/index.html            the whole site in one file, for review (npm run build:standalone)
 assets/js/grain-scene.js   built 3D scene (generated - do not edit by hand)
-assets/fonts/              Newsreader, DM Sans, Noto Serif Devanagari (SIL OFL, licences included)
+assets/fonts/              Tiro Devanagari Hindi, Mukta (SIL OFL, licences included)
+assets/brand/              logo SVGs, favicon and app icons, web manifest
+story.html                 QR landing page (the pack's QR code points here)
+src/brand-paths.js         logo outlines for the 3D pack label (generated from brand/sangat)
+brand/sangat/              the Sangat brand identity system and deliverables
 src/grain-scene.js         source of the 3D scene (three.js)
 scripts/serve.mjs          tiny local server for `npm start`
 scripts/smoke-test.mjs     browser test (desktop, mobile, reduced motion, no WebGL)
@@ -118,7 +129,7 @@ motion and without WebGL. It scrolls through every story keyframe and saves scre
 ## Credits
 
 - 3D: [three.js](https://threejs.org) (MIT).
-- Fonts: Newsreader, DM Sans and Noto Serif Devanagari (SIL Open Font License).
+- Fonts: Tiro Devanagari Hindi (Tiro Typeworks) and Mukta (Ek Type), SIL Open Font License 1.1.
 - Two interaction patterns are adapted from [21st.dev](https://21st.dev) components and rewritten
   in plain JavaScript:
   - **Scroll Reveal Content A** (numbered steps with a filling progress line), used for the pinned farm-to-pack journey.

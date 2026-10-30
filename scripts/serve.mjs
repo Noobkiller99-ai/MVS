@@ -25,4 +25,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404, { "Content-Type": "text/plain" }).end("Not found");
   }
-}).listen(PORT, () => console.log(`MVS Basmati running at http://localhost:${PORT}`));
+}).listen(PORT, () => console.log(`Sangat site running at http://localhost:${PORT}`));

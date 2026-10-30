@@ -1,0 +1,439 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Sangat",
+    "tagline": "Sanjhi Soch, Sunehra Kal",
+    "languages": [
+      "en",
+      "hi"
+    ],
+    "doc_lang": "en",
+    "sector": "Premium basmati rice (FMCG, packaged staples)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Every grain carries someone’s season of work.",
+        "hi": "हर दाने की अपनी कहानी"
+      },
+      "nav": [
+        "Our Story",
+        "The Farmers",
+        "From Farm to Pack"
+      ],
+      "cta": "Explore the journey"
+    }
+  },
+  "set": {
+    "id": "D",
+    "name": "Saath",
+    "recommended": false,
+    "mechanism": "Moving forward together: two grains lean forward side by side in the mark, the condensed contemporary sans leans on its verticals, and a cool monsoon green carries one golden grain a step ahead.",
+    "expression_move": "The golden grain a step ahead: motion in an otherwise upright system.",
+    "differs_by": "The category is static and ceremonial; this is the only contemporary, forward-moving mark and the only condensed sans on the shelf."
+  },
+  "axes": {
+    "classic_contemporary": 2,
+    "quiet_loud": 1,
+    "warm_cool": 1,
+    "friend_authority": -1
+  },
+  "components": {
+    "logo": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "single-family",
+    "display": {
+      "family": "Akshar",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        560
+      ],
+      "location": {
+        "wght": 560,
+        "CTRS": 0
+      },
+      "features": [],
+      "case": "upper",
+      "tracking": 140,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Akshar",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400,
+        "CTRS": 0
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": 10,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "Two basmati grains stride side by side; the golden one is a step ahead.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Sangat",
+      "role": "display",
+      "location": null,
+      "tracking": 140,
+      "case": "upper"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "grain-together": "primary",
+      "grain-ahead": "accent",
+      "wordmark": "primary"
+    },
+    "tags": [],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 1,
+      "inferred": true
+    },
+    "min_size": {
+      "px": 16,
+      "mm": 6
+    }
+  },
+  "palette": "palette.json",
+  "defaults_used": [],
+  "rationale": [
+    {
+      "claim": "Moving forward together: two grains lean forward side by side in the mark, the condensed contemporary sans leans on its verticals, and a cool monsoon green carries one golden grain a step ahead.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Category shelf (judgement, sites unreachable here): maroon/red + gold foil with monuments and crowns (India Gate, Daawat, Kohinoor, Lal Qilla), purple/navy script (Tilda), leaf-green kraft and badges (24 Mantra, Organic Tattva).",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "All faces are OFL Google Fonts designed with both Latin and Devanagari, so Hindi lines use the brand's own type rather than a fallback.",
+      "evidence": "measured",
+      "source": "brand.py fonts audit --langs en,hi"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "5d0713bf67b28fcf1ee734fbd29a4fbe17aa1bd74977696f041ad5c69e150139"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 13,
+      "info": 7
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.accent-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.78,
+        "threshold": 3.0,
+        "message": "light: accent #b98a2e on background #f4f2ec is 2.78:1, below 3.0:1 (accent fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.accent",
+          "from": "#b98a2e",
+          "to": "#9f6e1b",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.97
+        },
+        "roles": [
+          "light.accent",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.link-on-text",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.56,
+        "threshold": 3.0,
+        "message": "light: link #16443d on text #101f1c is 1.56:1, below 3.0:1 (links distinguishable from body text without underline (WCAG G183); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.link",
+          "from": "#16443d",
+          "to": "#4c8178",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.82
+        },
+        "roles": [
+          "light.link",
+          "light.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #d4d1c7 on background #f4f2ec is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d4d1c7",
+          "to": "#8f8c83",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.0
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.71,
+        "threshold": 3.0,
+        "message": "dark: link #6a9f96 on text #f1f4f3 is 2.71:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#6a9f96",
+          "to": "#4c8178",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 4.02
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.88,
+        "threshold": 3.0,
+        "message": "dark: border #344542 on background #061210 is 1.88:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#344542",
+          "to": "#687774",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 4.07
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.harmony.primary-accent",
+        "component": "palette",
+        "severity": "info",
+        "measured": -0.51,
+        "threshold": -0.3,
+        "message": "Ou-Luo two-colour model scores #16443d + #b98a2e at -0.51 (negative = less harmonious on a grey CRT test, no context): model signal only; the pairing table in references/pairing.md takes precedence",
+        "suggested_fix": null,
+        "roles": [
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "type.display+text.coverage.en_Latn.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "99/102",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Akshar lacks English auxiliary/punctuation characters: Ĕ ĕ ʻ",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display+text.coverage.hi_Deva.extended",
+        "component": "type",
+        "severity": "info",
+        "measured": "16/17",
+        "threshold": "100% auxiliary + punctuation",
+        "message": "Akshar lacks Hindi auxiliary/punctuation characters: ‌‍",
+        "suggested_fix": "fine if the brand never writes them (loanwords, names); else another family"
+      },
+      {
+        "id": "type.display+text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.978,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Akshar: I/l look alike at small sizes (IoU 0.98 at 48 px)",
+        "suggested_fix": "try ss01 'Alternates with Horizontal Bars', ss02 'Single Story a', ss03 'Diagonally Stemmed Y', ss04 'Alternate Ampersand'"
+      },
+      {
+        "id": "type.display+text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 36,
+        "threshold": null,
+        "message": "Akshar: ~36 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.78,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "full-color: accent #b98a2e on #f4f2ec is 2.78:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.78,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "on-light-background: accent #b98a2e on #f4f2ec is 2.78:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.contrast",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 2.78,
+        "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+        "message": "symbol-only: accent #b98a2e on #f4f2ec is 2.78:1",
+        "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+        "roles": [
+          "accent"
+        ]
+      },
+      {
+        "id": "logo.thin-feature",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 0.06,
+          "gap_px2": 2.58
+        },
+        "threshold": ">= 1 px = 6.2 units (heuristic, uncalibrated)",
+        "message": "symbol at 16 px (min size): strokes/gaps thinner than 1 px (lost 0.06 px², clogged 2.58 px²)",
+        "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+      },
+      {
+        "id": "logo.small-size",
+        "component": "logo",
+        "severity": "warn",
+        "measured": {
+          "stroke_px2": 0.11,
+          "gap_px2": 2.58
+        },
+        "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+        "message": "symbol at 16 px: features narrower than 1 px (lost 0.11 px², clogged 2.58 px²)",
+        "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+      },
+      {
+        "id": "logo.detail-creep",
+        "component": "logo",
+        "severity": "warn",
+        "measured": 10,
+        "threshold": "relative",
+        "message": "symbol anchors grew 6 -> 10 without a named defect",
+        "suggested_fix": "name the one defect this round fixes in logo.defect, or remove the addition"
+      },
+      {
+        "id": "default.cream-ground",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (cream-ground) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "default.gold-brass-accent",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "matches the AI-defaults list (gold-brass-accent) without a brief-grounded reason",
+        "suggested_fix": "justify it in defaults_used[] from the brief, or change it"
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–C"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–C differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.no-default-free-set",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": null,
+        "threshold": null,
+        "message": "every set uses at least one AI-defaults item; build one set without any",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "cream-ground",
+        "gold-brass-accent"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F4F2EC",
+    "dark_bg": null,
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": []
+  },
+  "card": {
+    "ground": "light"
+  }
+}

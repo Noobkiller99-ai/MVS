@@ -1,0 +1,50 @@
+{
+  "schema": "brand-identity/competitors@1",
+  "measuredAt": "2026-10-30T12:31:28.755Z",
+  "note": "Measured hex values approximate public websites; roles are unconfirmed proposals.",
+  "sites": [],
+  "errors": [
+    {
+      "url": "https://www.indiagate.com/",
+      "host": "indiagate.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.indiagate.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.daawat.com/",
+      "host": "daawat.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.daawat.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.tilda.com/",
+      "host": "tilda.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.tilda.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.24mantra.com/",
+      "host": "24mantra.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.24mantra.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://www.organictattva.com/",
+      "host": "organictattva.com",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://www.organictattva.com/",
+      "blocked": false
+    },
+    {
+      "url": "https://kohinoorfoods.in/",
+      "host": "kohinoorfoods.in",
+      "status": "error",
+      "error": "net::ERR_NAME_NOT_RESOLVED at http://kohinoorfoods.in/",
+      "blocked": false
+    }
+  ]
+}

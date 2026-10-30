@@ -1,5 +1,5 @@
 /* =====================================================================
-   MVS Basmati - the 3D grain that guides the story.
+   Sangat - the 3D grain that guides the story.
    Source file: bundled to assets/js/grain-scene.js with `npm run build`.
 
    One basmati grain travels through every chapter:
@@ -22,6 +22,7 @@ import {
   PMREMGenerator, HemisphereLight, DirectionalLight, TubeGeometry, CatmullRomCurve3, QuadraticBezierCurve3,
   CircleGeometry, PlaneGeometry, BoxGeometry, ShaderMaterial, Points, DynamicDrawUsage, Vector2, LatheGeometry, SplineCurve
 } from "three";
+import { WORDMARK, GRAINS } from "./brand-paths.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
@@ -316,42 +317,38 @@ function softDot() {
   });
 }
 
-/* The pack label, drawn from the page content (brand name, line, partner). */
+/* The pack label: the Sangat V1 "Forest Line" front (brand/sangat/packaging), drawn with the real logo outlines. */
 async function labelTexture(C) {
-  const fonts = ['500 120px "Newsreader"', 'italic 400 120px "Newsreader"', '600 40px "DM Sans"', '500 40px "Noto Serif Devanagari"'];
+  const fonts = ['400 120px "Tiro Devanagari Hindi"', '600 40px "Mukta"'];
   try {
     await Promise.race([Promise.all(fonts.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 1500))]);
   } catch (e) { /* fall back to system fonts */ }
-  const brand = (C.site.brandName || "").trim().split(/\s+/);
-  const big = brand.length > 1 ? brand.slice(1).join(" ") : brand[0] || "";
-  const small = brand.length > 1 ? brand[0] : "";
-  const line = String(C.hero.headline || "").replace(/<\/?em>/g, "");
+  const S = C.site;
   return canvasTex(600, 848, (x, w, h) => {
     const bg = x.createLinearGradient(0, 0, 0, h);
-    bg.addColorStop(0, "#2B5040"); bg.addColorStop(1, "#1E3A2E");
+    bg.addColorStop(0, "#21402F"); bg.addColorStop(1, "#1A3328");
     x.fillStyle = bg; x.fillRect(0, 0, w, h);
     const r = rng(5);
-    for (let i = 0; i < 2400; i++) { x.fillStyle = `rgba(255,255,255,${r() * 0.025})`; x.fillRect(r() * w, r() * h, 1, 1); }
-    x.strokeStyle = "rgba(227,196,162,.55)"; x.lineWidth = 2;
-    x.strokeRect(26, 26, w - 52, h - 52);
-    // a sprig of paddy
-    x.save(); x.translate(w / 2, 150); x.strokeStyle = "#D9B57E"; x.fillStyle = "rgba(227,196,162,.35)"; x.lineWidth = 2.4;
-    x.beginPath(); x.moveTo(-90, 34); x.quadraticCurveTo(0, -46, 96, 6); x.stroke();
-    for (let i = 0; i < 9; i++) {
-      const t = 0.2 + i * 0.09, px = lerp(-90, 96, t), py = 34 * (1 - t) * (1 - t) - 92 * t * (1 - t) + 6 * t * t;
-      x.save(); x.translate(px, py); x.rotate((i % 2 ? 0.9 : -0.6) + t * 0.6);
-      x.beginPath(); x.ellipse(0, -10, 4.2, 11, 0, 0, TAU); x.fill(); x.stroke(); x.restore();
-    }
-    x.restore();
+    for (let i = 0; i < 2400; i++) { x.fillStyle = `rgba(255,255,255,${r() * 0.022})`; x.fillRect(r() * w, r() * h, 1, 1); }
+    // The hanging line runs edge to edge; three grains hang from it.
+    x.fillStyle = "#C9A35A"; x.fillRect(0, 118, w, 22);
+    x.save(); x.translate(w / 2 - 75, 105); x.scale(1.5, 1.5);
+    x.fillStyle = "#F6F1E5"; x.fill(new Path2D(GRAINS.d)); x.restore();
+    // Wordmark (outlined), centred.
+    const ww = 380, k = ww / WORDMARK.w;
+    x.save(); x.translate(w / 2 - ww / 2 - WORDMARK.x * k, 330); x.scale(k, k);
+    x.fillStyle = "#F6F1E5"; x.fill(new Path2D(WORDMARK.d)); x.restore();
     x.textAlign = "center"; x.textBaseline = "alphabetic";
-    if (small) { x.fillStyle = "#E3C4A2"; x.font = '600 28px "DM Sans", sans-serif'; x.letterSpacing = "10px"; x.fillText(small.toUpperCase(), w / 2 + 5, 250); x.letterSpacing = "0px"; }
-    x.fillStyle = "#F7F4EC"; x.font = 'italic 400 132px "Newsreader", Georgia, serif'; x.fillText(big, w / 2, 380);
-    x.fillStyle = "#BC8B61"; x.fillRect(w / 2 - 40, 418, 80, 2);
-    if (C.hero.deva) { x.fillStyle = "#F3DDC3"; x.font = '500 30px "Noto Serif Devanagari", serif'; x.fillText(C.hero.deva, w / 2, 480); }
-    x.fillStyle = "#F7F4EC";
-    x.beginPath(); x.roundRect ? x.roundRect(60, 560, w - 120, 210, 18) : x.rect(60, 560, w - 120, 210); x.fill();
-    x.fillStyle = "#254638"; x.font = '500 38px "Newsreader", Georgia, serif'; x.fillText(line, w / 2, 650);
-    if (C.site.partnerName) { x.fillStyle = "#535B55"; x.font = '500 21px "DM Sans", sans-serif'; x.fillText("With " + C.site.partnerName, w / 2, 712); }
+    x.fillStyle = "#8E9F86"; x.font = '600 17px "Mukta", sans-serif'; x.letterSpacing = "5px";
+    x.fillText("PREMIUM BASMATI RICE", w / 2 + 2, 420); x.letterSpacing = "0px";
+    if (S.tagline) { x.fillStyle = "#F6F1E5"; x.font = '400 36px "Tiro Devanagari Hindi", Georgia, serif'; x.fillText(S.tagline, w / 2, 492); }
+    if (S.taglineHi) { x.fillStyle = "#C9A35A"; x.font = '400 27px "Tiro Devanagari Hindi", serif'; x.fillText(S.taglineHi, w / 2, 538); }
+    if (S.partnerName) {
+      x.fillStyle = "#8E9F86"; x.font = '600 13px "Mukta", sans-serif'; x.letterSpacing = "3.5px";
+      x.fillText(("In partnership with " + S.partnerName).toUpperCase(), w / 2 + 2, 700); x.letterSpacing = "0px";
+    }
+    x.textAlign = "left"; x.fillStyle = "#F6F1E5"; x.font = '600 44px "Mukta", sans-serif'; x.fillText("1 kg", 52, 790);
+    x.fillStyle = "#C9A35A"; x.beginPath(); x.arc(w - 64, 774, 9, 0, TAU); x.fill();
   }, true);
 }
 
@@ -405,7 +402,7 @@ const motesMaterial = (tex) => new ShaderMaterial({
 /* The bowl in "Your kitchen" - a real-sized bowl of rice, so the grains read at true scale. */
 const BOWL = { x: 6.2, y: -3.2, z: 0.2, rim: 2.3, fill: 2.16, depth: 1.25 };
 const riceY = (rr) => BOWL.y + 1.25 + 0.5 * (1 - (rr / BOWL.fill) ** 2);
-const C_IVORY = "#F7F4EC", C_FIELD = "#ECEEE1", C_DARK = "#24432F", C_SAND = "#EFE8D8";
+const C_IVORY = "#F6F1E5", C_FIELD = "#EDEADB", C_DARK = "#1E3A2F", C_SAND = "#E7DCC4";
 
 function makeKeyframes(P) {
   const tip = P.tip;
@@ -615,7 +612,7 @@ export function start({ canvas, story, onReady, onFail }) {
     [0, 0.07], [0.9, 0.1], [1.6, 0.32], [2.08, 0.75], [2.27, 1.2], [2.31, 1.27], [2.38, 1.22],
     [2.25, 0.8], [1.85, 0.32], [1.2, 0.06], [1.08, 0], [0.95, -0.02], [0, -0.02]
   ].map(([a, b]) => new Vector2(a, b))).getPoints(90);
-  const bowlMat = new MeshPhysicalMaterial({ color: 0x2C4A3A, roughness: 0.32, clearcoat: 0.8, clearcoatRoughness: 0.12, side: DoubleSide, transparent: true });
+  const bowlMat = new MeshPhysicalMaterial({ color: 0x1E3A2F, roughness: 0.32, clearcoat: 0.8, clearcoatRoughness: 0.12, side: DoubleSide, transparent: true });
   const bowlGeo = new LatheGeometry(prof, lowEnd ? 64 : 110);
   bowlGeo.scale(1, BOWL.depth, 1);
   bowlGroup.add(new Mesh(bowlGeo, bowlMat));
@@ -664,10 +661,10 @@ export function start({ canvas, story, onReady, onFail }) {
 
   /* The pack: a stand-up pouch with a label drawn from the content */
   const packGroup = new Group();
-  const sideMat = new MeshStandardMaterial({ color: 0x23412F, roughness: 0.5, metalness: 0.05, transparent: true });
+  const sideMat = new MeshStandardMaterial({ color: 0x1E3A2F, roughness: 0.5, metalness: 0.05, transparent: true });
   const labelMat = new MeshStandardMaterial({ color: 0xffffff, roughness: 0.45, transparent: true });
   const pack = new Mesh(new RoundedBoxGeometry(1.45, 2.05, 0.5, 4, 0.09), [sideMat, sideMat, sideMat, sideMat, labelMat, sideMat]);
-  const seal = new Mesh(new BoxGeometry(1.47, 0.09, 0.2), new MeshStandardMaterial({ color: 0x9C7048, roughness: 0.45, metalness: 0.25, transparent: true }));
+  const seal = new Mesh(new BoxGeometry(1.47, 0.09, 0.2), new MeshStandardMaterial({ color: 0xA07A35, roughness: 0.45, metalness: 0.25, transparent: true }));
   seal.position.y = 1.0;
   packGroup.add(pack, seal);
   packGroup.position.set(0.95, -1.85, -0.25);

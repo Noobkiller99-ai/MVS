@@ -1,0 +1,29 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.small-size",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.36,
+        "gap_px2": 0.72
+      },
+      "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+      "message": "symbol-small at 16 px: features narrower than 1 px (lost 0.36 px², clogged 0.72 px²)",
+      "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+    },
+    {
+      "id": "logo.role-tone",
+      "component": "logo",
+      "severity": "info",
+      "measured": "#9e6b18",
+      "threshold": "#b8862b",
+      "message": "accent resolves to #9e6b18 (UI tone); use brand-2 for #b8862b",
+      "suggested_fix": "data-color=\"brand-2\" (or logo.colors) for the exact brand colour",
+      "roles": [
+        "accent"
+      ]
+    }
+  ]
+}

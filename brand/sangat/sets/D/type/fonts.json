@@ -1,0 +1,27 @@
+{
+  "display": {
+    "family": "Akshar",
+    "file": "/root/.cache/brand-identity/fonts/instances/Akshar-c73a38486e1ff9cb.ttf",
+    "location": {
+      "wght": 560,
+      "CTRS": 0
+    },
+    "weights": [
+      560
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Akshar",
+    "file": "/root/.cache/brand-identity/fonts/instances/Akshar-76b13568d85708b2.ttf",
+    "location": {
+      "wght": 400,
+      "CTRS": 0
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": []
+  }
+}

@@ -1,0 +1,310 @@
+{
+ "colours": [
+  {
+   "id": "forest",
+   "name": "Sangat Forest",
+   "hex": "#1E3A2F",
+   "rgb": [
+    30,
+    58,
+    47
+   ],
+   "oklch": [
+    0.322,
+    0.04,
+    166.7
+   ],
+   "cmyk_start": [
+    84,
+    47,
+    62,
+    63
+   ],
+   "role": "Primary",
+   "usage": "Logo, headings, 1 kg pack ground, primary buttons",
+   "share": "40%"
+  },
+  {
+   "id": "ivory",
+   "name": "Basmati Ivory",
+   "hex": "#F6F1E5",
+   "rgb": [
+    246,
+    241,
+    229
+   ],
+   "oklch": [
+    0.959,
+    0.017,
+    88.0
+   ],
+   "cmyk_start": [
+    1,
+    3,
+    8,
+    3
+   ],
+   "role": "Background",
+   "usage": "Page ground, pack label panels, stationery",
+   "share": "35%"
+  },
+  {
+   "id": "husk",
+   "name": "Husk Sand",
+   "hex": "#E7DCC4",
+   "rgb": [
+    231,
+    220,
+    196
+   ],
+   "oklch": [
+    0.897,
+    0.034,
+    86.3
+   ],
+   "cmyk_start": [
+    2,
+    7,
+    17,
+    8
+   ],
+   "role": "Secondary",
+   "usage": "Secondary surfaces, back-of-pack panels, cards",
+   "share": "10%"
+  },
+  {
+   "id": "sage",
+   "name": "Paddy Sage",
+   "hex": "#8E9F86",
+   "rgb": [
+    142,
+    159,
+    134
+   ],
+   "oklch": [
+    0.682,
+    0.041,
+    135.6
+   ],
+   "cmyk_start": [
+    19,
+    10,
+    24,
+    31
+   ],
+   "role": "Secondary",
+   "usage": "Quiet text and patterns on forest, illustrations",
+   "share": "5%"
+  },
+  {
+   "id": "night",
+   "name": "Night Forest",
+   "hex": "#13241B",
+   "rgb": [
+    19,
+    36,
+    27
+   ],
+   "oklch": [
+    0.242,
+    0.029,
+    160.1
+   ],
+   "cmyk_start": [
+    90,
+    63,
+    77,
+    70
+   ],
+   "role": "Secondary",
+   "usage": "Darkest ground: 5 kg pack base, footer, dark mode",
+   "share": "5%"
+  },
+  {
+   "id": "gold",
+   "name": "Sunehra Gold",
+   "hex": "#A07A35",
+   "rgb": [
+    160,
+    122,
+    53
+   ],
+   "oklch": [
+    0.603,
+    0.098,
+    79.8
+   ],
+   "cmyk_start": [
+    10,
+    31,
+    70,
+    31
+   ],
+   "role": "Accent",
+   "usage": "The joining line, foil, the bindu story marker. One element per surface",
+   "share": "\u22643%"
+  },
+  {
+   "id": "gold-ui",
+   "name": "Sunehra Gold (UI)",
+   "hex": "#896126",
+   "rgb": [
+    137,
+    97,
+    38
+   ],
+   "oklch": [
+    0.523,
+    0.091,
+    73.7
+   ],
+   "cmyk_start": [
+    13,
+    39,
+    76,
+    38
+   ],
+   "role": "Accent (digital)",
+   "usage": "Gold on ivory for screens where 3:1 is needed (links, small rules)",
+   "share": "UI only"
+  },
+  {
+   "id": "gold-light",
+   "name": "Gold on Dark",
+   "hex": "#C9A35A",
+   "rgb": [
+    201,
+    163,
+    90
+   ],
+   "oklch": [
+    0.735,
+    0.102,
+    82.3
+   ],
+   "cmyk_start": [
+    5,
+    23,
+    57,
+    17
+   ],
+   "role": "Accent (on dark)",
+   "usage": "The line and bindu on forest / night grounds",
+   "share": "\u22643%"
+  },
+  {
+   "id": "ink",
+   "name": "Ink",
+   "hex": "#131F18",
+   "rgb": [
+    19,
+    31,
+    24
+   ],
+   "oklch": [
+    0.225,
+    0.022,
+    158.5
+   ],
+   "cmyk_start": [
+    85,
+    66,
+    77,
+    72
+   ],
+   "role": "Text",
+   "usage": "Body text on light grounds",
+   "share": "\u2014"
+  },
+  {
+   "id": "ink-muted",
+   "name": "Ink Muted",
+   "hex": "#4C5951",
+   "rgb": [
+    76,
+    89,
+    81
+   ],
+   "oklch": [
+    0.45,
+    0.021,
+    158.5
+   ],
+   "cmyk_start": [
+    44,
+    30,
+    39,
+    53
+   ],
+   "role": "Text",
+   "usage": "Secondary text on light grounds",
+   "share": "\u2014"
+  }
+ ],
+ "contrast": [
+  {
+   "pair": "Ink on Ivory",
+   "fg": "#131F18",
+   "bg": "#F6F1E5",
+   "ratio": 15.06,
+   "use": "body text"
+  },
+  {
+   "pair": "Forest on Ivory",
+   "fg": "#1E3A2F",
+   "bg": "#F6F1E5",
+   "ratio": 10.95,
+   "use": "body text"
+  },
+  {
+   "pair": "Ivory on Forest",
+   "fg": "#F6F1E5",
+   "bg": "#1E3A2F",
+   "ratio": 10.95,
+   "use": "body text"
+  },
+  {
+   "pair": "Ivory on Night",
+   "fg": "#F6F1E5",
+   "bg": "#13241B",
+   "ratio": 14.38,
+   "use": "body text"
+  },
+  {
+   "pair": "Gold-on-dark on Forest",
+   "fg": "#C9A35A",
+   "bg": "#1E3A2F",
+   "ratio": 5.21,
+   "use": "body text"
+  },
+  {
+   "pair": "Gold (print) on Ivory",
+   "fg": "#A07A35",
+   "bg": "#F6F1E5",
+   "ratio": 3.5,
+   "use": "large text / graphics"
+  },
+  {
+   "pair": "Gold UI on Ivory",
+   "fg": "#896126",
+   "bg": "#F6F1E5",
+   "ratio": 4.9,
+   "use": "body text"
+  },
+  {
+   "pair": "Sage on Forest",
+   "fg": "#8E9F86",
+   "bg": "#1E3A2F",
+   "ratio": 4.38,
+   "use": "large text / graphics"
+  },
+  {
+   "pair": "Ink muted on Husk",
+   "fg": "#4C5951",
+   "bg": "#E7DCC4",
+   "ratio": 5.41,
+   "use": "body text"
+  }
+ ],
+ "note": "CMYK values are uncalibrated starting builds; proof against the printer's profile (e.g. ISO Coated v2 / FOGRA39 for coated stock). Pantone references to be matched by the printer's drawdown; none are claimed here."
+}

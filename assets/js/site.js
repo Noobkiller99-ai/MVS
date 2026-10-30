@@ -1,5 +1,5 @@
 /* =====================================================================
-   MVS Basmati - page behaviour
+   Sangat - page behaviour
    Renders assets/js/content.js into the page, runs navigation, the pinned
    farm-to-pack sequence and scroll reveals, and tells the 3D grain scene
    (assets/js/grain-scene.js) where each chapter sits on the page.
@@ -56,6 +56,7 @@
 
     /* Hero */
     $("heroDeva").textContent = C.hero.deva;
+    $("heroTag").textContent = C.hero.kicker || "";
     $("heroTitle").innerHTML = rich(C.hero.headline);
     $("heroLead").textContent = C.hero.lead;
     $("heroCta").querySelector("span").textContent = C.hero.cta;
@@ -137,9 +138,9 @@
       has(S.contactPhone) ? `<li><a href="tel:${esc(S.contactPhone.replace(/[^+\d]/g, ""))}">${esc(S.contactPhone)}</a></li>` : "",
       safeUrl(S.website) ? `<li><a href="${esc(S.website)}" rel="noopener">${esc(S.website.replace(/^https:\/\//, ""))}</a></li>` : ""
     ].join("");
-    const logo = document.querySelector("#siteHeader .brand svg").outerHTML;
+    const logo = document.querySelector("#siteHeader .brand .logo").outerHTML;
     $("footerCols").innerHTML = `
-      <div><p class="brand">${logo}<span>${esc(S.brandName)}</span></p><p>${esc(C.footer.about)}</p></div>
+      <div><p class="brand">${logo}</p>${has(S.tagline) ? `<p class="tagline">${esc(S.tagline)}</p>` : ""}${has(S.taglineHi) ? `<p class="tagline-hi" lang="hi">${esc(S.taglineHi)}</p>` : ""}<p>${esc(C.footer.about)}</p></div>
       <div><h2>Explore</h2><ul>${C.nav.map(n => `<li><a href="${esc(n.href)}">${esc(n.label)}</a></li>`).join("")}</ul></div>
       <div><h2>${contact ? "Contact" : "In partnership with"}</h2>${contact ? `<ul>${contact}</ul>` : `<p>${esc(S.partnerName)}</p>`}</div>`;
     $("footerFine").innerHTML = `<span>© ${esc(S.year)} ${esc(S.brandName)}</span><span>${esc(C.footer.statutory)}</span>`;

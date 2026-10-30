@@ -1,0 +1,25 @@
+{
+  "display": {
+    "family": "Eczar",
+    "file": "/root/.cache/brand-identity/fonts/instances/Eczar-c7e96a2351b8e20b.ttf",
+    "location": {
+      "wght": 560
+    },
+    "weights": [
+      560
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Eczar",
+    "file": "/root/.cache/brand-identity/fonts/instances/Eczar-5ddffd66f9f7c780.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": []
+  }
+}

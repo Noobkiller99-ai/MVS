@@ -1,0 +1,74 @@
+{
+  "schema": "brand-identity/audit@1",
+  "findings": [
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 2.78,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "full-color: accent #b98a2e on #f4f2ec is 2.78:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 2.78,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "on-light-background: accent #b98a2e on #f4f2ec is 2.78:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.contrast",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 2.78,
+      "threshold": ">= 3.0:1 (WCAG 2.2 SC 1.4.11, practice)",
+      "message": "symbol-only: accent #b98a2e on #f4f2ec is 2.78:1",
+      "suggested_fix": "use a one-colour version on this ground, or declare logo.device tile|outline",
+      "roles": [
+        "accent"
+      ]
+    },
+    {
+      "id": "logo.thin-feature",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.06,
+        "gap_px2": 2.58
+      },
+      "threshold": ">= 1 px = 6.2 units (heuristic, uncalibrated)",
+      "message": "symbol at 16 px (min size): strokes/gaps thinner than 1 px (lost 0.06 px², clogged 2.58 px²)",
+      "suggested_fix": "add symbol_small_svg for small sizes, or raise logo.min_size.px (or thicken the thin part / widen the gap)"
+    },
+    {
+      "id": "logo.small-size",
+      "component": "logo",
+      "severity": "warn",
+      "measured": {
+        "stroke_px2": 0.11,
+        "gap_px2": 2.58
+      },
+      "threshold": "1 px (raster erosion test, heuristic, uncalibrated)",
+      "message": "symbol at 16 px: features narrower than 1 px (lost 0.11 px², clogged 2.58 px²)",
+      "suggested_fix": "add or simplify symbol-small.svg: fewer, bolder parts"
+    },
+    {
+      "id": "logo.detail-creep",
+      "component": "logo",
+      "severity": "warn",
+      "measured": 10,
+      "threshold": "relative",
+      "message": "symbol anchors grew 6 -> 10 without a named defect",
+      "suggested_fix": "name the one defect this round fixes in logo.defect, or remove the addition"
+    }
+  ]
+}

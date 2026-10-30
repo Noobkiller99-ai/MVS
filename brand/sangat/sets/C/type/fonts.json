@@ -1,0 +1,27 @@
+{
+  "display": {
+    "family": "Rozha One",
+    "file": "/root/.cache/brand-identity/fonts/google/ofl/rozhaone/RozhaOne-Regular.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Mukta",
+    "file": "/root/.cache/brand-identity/fonts/google/ofl/mukta/Mukta-Regular.ttf",
+    "location": {
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": [
+      "tnum"
+    ]
+  }
+}

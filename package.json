@@ -2,7 +2,7 @@
   "name": "mvs-basmati-story",
   "version": "2.0.0",
   "private": true,
-  "description": "MVS Basmati - farm-to-pack story website with a scroll-driven 3D grain.",
+  "description": "Sangat premium basmati - farm-to-pack story website with a scroll-driven 3D grain.",
   "type": "module",
   "scripts": {
     "build": "esbuild src/grain-scene.js --bundle --format=esm --minify --target=es2020 --legal-comments=linked --outfile=assets/js/grain-scene.js",
