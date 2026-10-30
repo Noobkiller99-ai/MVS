@@ -1,0 +1,6 @@
+kit: /home/user/MVS/brand/sangat/v2/sangat/kit/A (13 pages)
+pdf: /home/user/MVS/brand/sangat/v2/sangat/kit/A/sangat-guidelines.pdf
+fonts: /home/user/MVS/brand/sangat/v2/sangat/kit/A/fonts.md  tokens: 7 file(s)  logo: 17 variant(s)
+✘ logo-on-ground: logo's main part 2.24:1 against its ground #ffffff at div.body > div.work > div.cs > div.mk
+✘ logo-on-ground: logo's main part 2.08:1 against its ground #f9f6ee at div.body > div.mins > figure:nth-of-type(1) > div.mk
+✘ logo-on-ground: logo's main part 2.24:1 against its ground #ffffff at div.bc > div:nth-of-type(2) > div.card > div.mk

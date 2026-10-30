@@ -1,63 +1,63 @@
-# SANGAT · brand identity
+# SANGAT · brand identity (v2)
 
-**Sangat** premium basmati, with Manav Vikas Sansthan (MVS). Tagline: **Sanjhi Soch, Sunehra Kal**
-(साँझी सोच, सुनहरा कल).
+**Sangat** premium basmati rice, in partnership with Manav Vikas Sansthan (MVS). Tagline: **Sanjhi Soch, Sunehra
+Kal** (साँझी सोच, सुनहरा कल).
 
-The mark, **Shirorekha**: three whole basmati grains held by one golden line, the headline stroke that joins the
-letters of a Devanagari word. Separate grains, one shared line: *sangat*, togetherness, drawn as simply as it can be.
+The logo, built from the client's reference board: *Sangat* in Playfair Display SemiBold, with a hand-drawn swash
+**g** whose descender loops and runs under "at" (the shared path) and a **gold rice ear** growing out of its stem
+(the golden tomorrow). The symbol: two leaves (forest, sage) and the gold ear.
 
-Start with **`deliverables/sangat-brand-guidelines.pdf`** (28 pages: the brand-identity kit, then the system in use).
+Start with **`deliverables/sangat-brand-guidelines.pdf`** (20 pages).
 
 ## Folder map
 
 | Folder | What is in it |
 |---|---|
-| `deliverables/` | **Hand-over files.** Guidelines PDF; `logo/svg` (30 editable SVGs: horizontal, stacked, symbol, small symbol, wordmark × colour, reversed, black, white, forest, gold); `logo/png` (same, transparent, 2400 px); `logo/logo-test-sheet.png`; `digital/` (web icons + favicon.ico + webmanifest, design tokens, website logo files) |
-| `strategy.md` | Discovery, positioning, name map, competitor shelf map, voice, constraints |
-| `concepts/` | Phase 2: the four directions in greyscale and on a 1 kg pouch |
-| `evaluation.md`, `refine/` | Phase 8: scores, trade-offs, recommendation, two refinement rounds |
-| `sets/`, `sets.json`, `board.png`, `review.png`, `table.md` | brand-identity skill sets (A–D) with measured checks |
-| `kit/A/` | brand-identity kit for the chosen set: 13 guideline pages, logo variants, tokens, fonts note |
-| `system/` | Palette with CMYK (`palette.md`), typography, graphic language, photography direction, web integration, pattern and devices (`graphics/`), 10 icons (`icons/`) |
-| `packaging/` | 1 kg and 5 kg artwork for V1 Forest Line and V2 Grain Window: `*-artwork.svg` (flat, editable), `*-guides.svg/png` (trim, safe area, zip/handle zones), `*-front.svg/png` |
-| `mockups/` | Pack visualisations (both variations, both sizes), finishes call-out, retail shelf test |
-| `applications/` | Website desktop and mobile, QR landing page, stationery, social, monochrome uses |
-| `brandbook/` | Pages 14–28 of the guidelines as PNG |
-| `tools/` | The scripts that build all of the above (re-run after any change) |
+| `deliverables/` | **Hand-over files.** Guidelines PDF; `logo/svg/` 30 editable SVGs (primary with tagline, horizontal, stacked, wordmark, symbol × colour, colour-reversed, black, white, forest, gold) and `logo/png/` the same as transparent 2400 px PNGs; `logo/logo-test-sheet.png`; `digital/web-icons/` (favicon.svg/.ico, 16/32/48, apple-touch, 192/512, maskable) |
+| `packaging-v2/` | 1 kg and 5 kg artwork, two variations (V1 Ivory Landscape, V2 Forest Edition): `*-artwork.svg` (all panels, editable, live text), `*-guides.svg/png` (trim, bleed, safe area, seal/zip/handle zones), `*-front.png`, `*-back.png`, `*-front-mock.png` (window shows rice) |
+| `mockups-v2/` | Table scene (1 kg + 5 kg + bowl), the range, back panel with the QR strip, finishes, shelf test |
+| `applications-v2/` | Website desktop and mobile, QR landing page, stationery, social (incl. an SRP impact post), one-colour uses |
+| `system/` | Palette (HEX, RGB, CMYK starting builds, measured contrast), typography, graphic language, packaging spec, photography direction, web integration |
+| `sources/srp-vs-non-srp.md` | The client's SRP vs non-SRP figures, transcribed; the only source of the website's numbers |
+| `strategy.md` | Positioning, audience, name map, competitor shelf map, voice |
+| `brandbook-v2/` | Guidelines pages as PNG |
+| `v2/logo/` | Logo masters (colour and one-colour cuts) built by `tools/logo_v2.py`; `v2/fonts/` web fonts + OFL licences; `v2/explore/` construction renders |
+| `v2/sangat/` | brand-identity skill audit of v2 (font coverage and contrast checks, review card) |
+| `archive/v1-shirorekha/` | The first exploration (four directions, Shirorekha chosen then superseded by the client's board), kept for the record |
+| `tools/` | Scripts that build everything above |
 
 ## Rebuild
 
 ```bash
-python3 tools/make_sets.py && python3 ../../.claude/skills/brand-identity/scripts/brand.py build . --sets A
-python3 ../../.claude/skills/brand-identity/scripts/brand.py kit sets/A --full
-python3 tools/system.py          # palette, devices, icons
-python3 tools/packaging.py       # pack artwork
-python3 tools/export_logo.py     # logo files + web icons (+ copies into /assets/brand)
-python3 tools/mockups.py         # pack and shelf visualisations
-python3 tools/applications.py    # needs `npm start` running for story.html
-python3 tools/brandbook.py       # guidelines PDF
+python3 tools/logo_v2.py          # logo masters (needs fonttools, skia-pathops)
+python3 tools/export_v2.py        # deliverables logo files, web icons, website assets and fonts, 3D pack label
+python3 tools/system_v2.py        # palette.json / palette.md
+python3 tools/packaging_v2.py     # pack artwork and renders
+python3 tools/mockups_v2.py       # pack visualisations
+python3 tools/logo_tests_v2.py    # logo test sheet
+python3 tools/applications_v2.py  # needs `npm start` and a fresh `npm test`
+python3 tools/brandbook_v2.py     # guidelines PDF
 ```
 
-## How it was made, honestly
+## How it was made
 
-- **Skills used:** logo-design (library search, `svg_audit`, `concept_sheet`, `render_png`, `export_variants`),
-  brand-identity (`init`, `fonts`, `logos`, `build`, `kit`), illustrate (SVG track, contact sheets at 16–128 px on
-  light and dark for the mark, icons and pattern). No AI image generation: every mark, pattern and icon is hand-written
-  vector, so there is no third-party licence question on the artwork.
-- **Fonts:** Tiro Devanagari Hindi (Tiro Typeworks) and Mukta (Ek Type), both SIL OFL 1.1. The wordmark is outlined
-  Tiro capitals, tracked +160; the OFL allows this and the logo is not a font.
-- **Measured vs judged:** contrast, glyph coverage, licences, small-size renders and file validity are measured by the
-  skills' scripts. Scores in `evaluation.md` and every "reads as" statement are design judgement.
-- **One checker note:** the brand-identity kit reports `pdf-font-not-embedded` for Tiro Devanagari Hindi. This is a
-  false positive: the PDF embeds it as `FontFile2` under its PostScript name `TiroDevaHindi-Regular`, which the
-  checker does not match to the family name (verified with pypdf).
-- **Competitor research** could not reach competitor sites from this environment; the shelf map in `strategy.md` is
-  category knowledge, labelled as judgement.
+- **logo-design skill:** `svg_audit` on every master (wordmark 90/100: anchor count is high because the letters are
+  Playfair's own outlines), `render_png` for every PNG and the favicon.ico, construction checked at large size and
+  16–128 px.
+- **illustrate skill (SVG track):** the landscape, sweep, rice ears, farmer scene, sprig and icons are hand-written
+  vector; contact sheets at small sizes on light and dark. No image generation, so no third-party licence question.
+- **brand-identity skill:** font audits (Playfair and Inter fail Hindi coverage, so Hindi is set in Noto Serif
+  Devanagari, which passes) and a measured build of the kept palette and logo (`v2/sangat/table.md`). Its automatic
+  kit pages were not used: for a kept palette it assigned Sunehra Gold as the primary colour (gold covers and
+  buttons), which misrepresents the brand; the guidelines PDF is built by `tools/brandbook_v2.py` instead.
+- **Measured vs judged:** contrast ratios and font coverage are measured; layout and "reads as" statements are
+  judgement.
 
 ## Not production-ready yet
 
-Every pack, card and page here is design, not a print file. Before production: converter dielines (pack sizes are
-assumed), FSSAI labelling review, real nutrition and cooking data, MRP, batch and licence numbers, GS1 barcode, the QR
-URL, Pantone drawdowns and press proofs for foil/UV/deboss, a trademark search for SANGAT and the mark, and
-photography to `system/photography.md`. **No farmer, certification, traceability, origin or impact claim has been
-made**; add one only when MVS can stand behind it and, for people, with their consent.
+Every pack and page is design, not a print file. Before production: converter dielines (sizes are assumed), FSSAI
+labelling review, real nutrition, cooking, MRP, batch and licence data, GS1 barcode, the QR code from the final
+`story.html` URL, Pantone drawdowns and press proofs for foil, emboss and the window, a trademark search for SANGAT
+and the mark, and photography to `system/photography.md`. The SRP figures on the website come only from MVS's
+document; confirm its season, location and number of farms before the site goes live. "Naturally aromatic" and
+"thoughtfully grown" are pack lines to confirm. The back-panel farmer is an illustration, not a real person.

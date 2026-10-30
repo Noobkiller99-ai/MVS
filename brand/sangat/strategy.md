@@ -1,5 +1,11 @@
 # Sangat: brand strategy and positioning
 
+> **October 2026, v2:** the client chose the identity on their own reference board (the Sangat wordmark with a gold
+> rice ear, forest/ivory/gold palette, Playfair Display and Inter, the landscape pouch). The strategy below still
+> holds; the v1 visual exploration (Shirorekha and three other directions) is kept in `archive/v1-shirorekha/`.
+> Where this note's visual rules (for example "no leaves") differ from v2, the client's board wins.
+
+
 Status: working strategy for the identity build. Everything here is positioning and voice; it makes **no product,
 certification, farmer, traceability or impact claims**. Where a statement is my judgement rather than a
 measurement, it says so.

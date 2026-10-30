@@ -1,0 +1,51 @@
+{
+ "schema": "brand-identity/brief@1",
+ "brand": "Sangat",
+ "tagline": "Sanjhi Soch, Sunehra Kal",
+ "site": "http://localhost:8080/",
+ "languages": [
+  "en"
+ ],
+ "doc_lang": "en",
+ "numbers": false,
+ "components": {
+  "logo": "keep",
+  "type": "new",
+  "palette": "keep"
+ },
+ "sources": {
+  "logo": "source/logo-kit.svg",
+  "palette": "source/palette-kept.json"
+ },
+ "sets": 1,
+ "sector": "Premium basmati rice (FMCG, packaged staples)",
+ "audience": "Affluent urban Indian households and premium grocery shoppers who value quality, provenance and good design",
+ "attributes": [
+  "premium",
+  "authentic",
+  "warm",
+  "elegant",
+  "culturally rooted",
+  "purposeful"
+ ],
+ "competitors": [
+  "India Gate",
+  "Daawat",
+  "Kohinoor",
+  "Tilda",
+  "Fortune",
+  "24 Mantra Organic"
+ ],
+ "axes": [],
+ "copy": {
+  "sentence": {
+   "en": "Every grain has a story."
+  },
+  "nav": [
+   "The farmers",
+   "Practices",
+   "Why it matters"
+  ],
+  "cta": "Explore the journey"
+ }
+}

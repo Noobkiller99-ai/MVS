@@ -1,23 +1,25 @@
-# Sangat graphic language
+# Sangat graphic language (v2)
 
-The system is recognisable without the logo because three devices come from the same idea, togetherness made
-visible, and are used the same way everywhere. All artwork is hand-authored SVG (illustrate skill, SVG track):
-no generated imagery, no third-party licence questions.
+Everything is hand-authored vector (illustrate skill, SVG track): no stock and no generated imagery.
 
-| Device | File | Idea | Rules |
-|---|---|---|---|
-| **The hanging line (shirorekha)** | `graphics/divider-shirorekha.svg`, `graphics/frame-hanging.svg` | The line from the mark that holds separate things together | Gold, one per surface. Headlines and panels *hang* from it (content starts just below the line). Runs edge to edge on packs. |
-| **The bindu** | `graphics/bindu-marker.svg` | One golden point: "there is more here" (carried over from direction B) | Marks the QR code and story links only. Never decorative, never more than one per view. |
-| **The chatai weave** | `graphics/pattern-chatai-tile.svg` (seamless 40×40 tile) | The woven mat people sit on together for a shared meal (pangat), woven from basmati grains; cut like a Sanjhi paper stencil (carried over from direction C) | Gold on forest or forest on husk. Pack gussets, back panels, inner flaps, tissue, social backgrounds. Never behind body text. |
-| **The grain** | `graphics/grain-motif.svg` | The basmati grain drawn once, used everywhere (logo, icons, weave, website 3D) | Same geometry: slender, softly tapered, rounded tips. Never a pointed leaf shape. |
+| Device | Where | Rules |
+|---|---|---|
+| **The landscape** (`tools/packaging_v2.py: landscape()`) | Pack fronts, side gussets, social | Layered sage hills, round trees, one small farmhouse, ploughed fields in three greens. Calm, flat colour, no outlines. Day version on ivory; dusk version on forest (V2). |
+| **The sweep** | Pack fronts, web section edges | One Forest Green curve rising from bottom left to the right edge, edged with a fine gold line. Net quantity and the veg mark sit on it. |
+| **Gold rice ears** (`panicle()`) | On the sweep, the back illustration, accents | Arching ears with teardrop grains, bowing to the right; one long leaf blade on every second ear. Sunehra Gold on forest, Gold Deep on ivory. |
+| **The rice window** | V1 packs | The real rice, seen through a clear window shaped by the sweep; gold foil edge. |
+| **The tab** | Pack tops | A Forest Green (V1) or Sunehra Gold (V2) vertical tab from the top seal, carrying the symbol. |
+| **The paddy sprig** (`sprig()`) | QR strip, story page, web hero accents | Fine gold line drawing of a sprig; decorative, never behind body text. |
+| **Value icons** (`icon()`) | Back panel, web | Four line icons on a 24 grid, 1.4 stroke, rounded: Local farmers, Sustainable practices, Thriving communities, A brighter tomorrow. |
 
-## Icons (`icons/`)
+## The QR strip
 
-Ten icons on a 24-unit grid, built from the same grain and line: `together`, `water`, `soil`, `scout`, `season`,
-`harvest`, `milling`, `pack`, `kitchen`, `story`. Filled, not outline (the outline-icon look is the generic
-default). Use at 16–48 px in Sangat Forest on light or Basmati Ivory on dark. Tested at 16/24/48 px on both grounds.
+The client's strip runs the full width of the bottom of every back panel: Forest Green band, Hindi line, "Every
+grain / *has a story.*", the lead line, the gold sprig, an ivory "SCAN TO EXPLORE" card with the QR code and short
+URL, and a Forest Deep footer bar: FARMER STORIES • CULTIVATION PRACTICES • OUR JOURNEY. The QR code must be
+generated from the final HTTPS address of `story.html`, at least 20 × 20 mm with a 2 mm quiet zone, dark on white.
 
 ## What the language avoids
 
-Leaves, sprouts, globes, recycling arrows, hands holding plants, farmer silhouettes, monuments, crowns, ornate
-frames, kraft textures and certification-style badges.
+Monuments, crowns, palaces, maroon and red, certification-style badges, photographic farmers standing in for real
+people, and any graphic that implies a claim MVS has not confirmed.

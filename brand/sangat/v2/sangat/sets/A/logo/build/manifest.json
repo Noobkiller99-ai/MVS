@@ -1,0 +1,543 @@
+{
+  "schema": "brand-identity/logo-build@1",
+  "set": "A",
+  "kept": true,
+  "source": "/home/user/MVS/brand/sangat/v2/logo/lockup-horizontal.svg",
+  "dark_from": "derived one-colour white",
+  "dark_skipped": [],
+  "notes": [],
+  "type": "symbol+wordmark",
+  "font": {},
+  "masters": {
+    "primary": "master-primary.svg",
+    "kept-source": "master-kept-source.svg",
+    "symbol": "master-symbol.svg"
+  },
+  "versions": {
+    "full-color": {
+      "svg": "full-color.svg",
+      "png": "full-color.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#000000",
+          "area": 660.72
+        }
+      ]
+    },
+    "full-color-dark": {
+      "svg": "full-color-dark.svg",
+      "png": "full-color-dark.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#f9fbfa",
+          "area": 660.72
+        }
+      ]
+    },
+    "one-color-dark": {
+      "svg": "one-color-dark.svg",
+      "png": "one-color-dark.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#111f1a",
+          "area": 660.72
+        }
+      ]
+    },
+    "one-color-light": {
+      "svg": "one-color-light.svg",
+      "png": "one-color-light.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "dark",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#f9fbfa",
+          "area": 660.72
+        }
+      ]
+    },
+    "on-light-background": {
+      "svg": "on-light-background.svg",
+      "png": "on-light-background.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "light",
+      "ground": "#f9f6ee",
+      "ground_role": "background",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#000000",
+          "area": 660.72
+        }
+      ]
+    },
+    "on-dark-background": {
+      "svg": "on-dark-background.svg",
+      "png": "on-dark-background.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "dark",
+      "ground": "#0f3d2e",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#ffffff",
+          "area": 660.72
+        }
+      ]
+    },
+    "on-light-primary": {
+      "svg": "on-light-primary.svg",
+      "png": "on-light-primary.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "light",
+      "ground": "#c9a96b",
+      "ground_role": "primary",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#000000",
+          "area": 660.72
+        }
+      ]
+    },
+    "on-light-accent": {
+      "svg": "on-light-accent.svg",
+      "png": "on-light-accent.png",
+      "size": [
+        1024,
+        405
+      ],
+      "mode": "light",
+      "ground": "#634809",
+      "ground_role": "accent",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-1",
+            "path-2",
+            "path-3",
+            "path-4",
+            "path-5",
+            "path-6",
+            "path-7",
+            "rect-8"
+          ],
+          "hex": "#ffffff",
+          "area": 660.72
+        }
+      ]
+    },
+    "favicon-16": {
+      "svg": "favicon-16.svg",
+      "png": "favicon-16.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#000000",
+          "area": 229.14
+        }
+      ]
+    },
+    "favicon-32": {
+      "svg": "favicon-32.svg",
+      "png": "favicon-32.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#000000",
+          "area": 229.14
+        }
+      ]
+    },
+    "favicon-48": {
+      "svg": "favicon-48.svg",
+      "png": "favicon-48.png",
+      "size": [
+        48,
+        48
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#000000",
+          "area": 229.14
+        }
+      ]
+    },
+    "small-16-one-color-dark": {
+      "svg": "small-16-one-color-dark.svg",
+      "png": "small-16-one-color-dark.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#111f1a",
+          "area": 229.14
+        }
+      ]
+    },
+    "small-16-one-color-light": {
+      "svg": "small-16-one-color-light.svg",
+      "png": "small-16-one-color-light.png",
+      "size": [
+        16,
+        16
+      ],
+      "mode": "dark",
+      "ground": "#0f3d2e",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#f9fbfa",
+          "area": 229.14
+        }
+      ]
+    },
+    "small-32-one-color-dark": {
+      "svg": "small-32-one-color-dark.svg",
+      "png": "small-32-one-color-dark.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#111f1a",
+          "area": 229.14
+        }
+      ]
+    },
+    "small-32-one-color-light": {
+      "svg": "small-32-one-color-light.svg",
+      "png": "small-32-one-color-light.png",
+      "size": [
+        32,
+        32
+      ],
+      "mode": "dark",
+      "ground": "#0f3d2e",
+      "ground_role": "background",
+      "one_color": true,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#f9fbfa",
+          "area": 229.14
+        }
+      ]
+    },
+    "symbol-only": {
+      "svg": "symbol-only.svg",
+      "png": "symbol-only.png",
+      "size": [
+        763,
+        1024
+      ],
+      "mode": "light",
+      "ground": null,
+      "ground_role": null,
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#000000",
+          "area": 229.14
+        }
+      ]
+    },
+    "app-icon-512": {
+      "svg": "app-icon-512.svg",
+      "png": "app-icon-512.png",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "light",
+      "ground": "#c9a96b",
+      "ground_role": "primary",
+      "one_color": false,
+      "device": null,
+      "parts": [
+        {
+          "role": "raw:#000000",
+          "ids": [
+            "path-4",
+            "path-7",
+            "path-5",
+            "path-6"
+          ],
+          "hex": "#000000",
+          "area": 229.14
+        }
+      ]
+    }
+  },
+  "sources": {
+    "kept": {
+      "sha256": "eb5b3a5c67e038959f7044e4d8313ec88d208f96665c6348d5e0322759521111"
+    }
+  },
+  "primary": "kept",
+  "anchors": {},
+  "grounds": [
+    {
+      "mode": "light",
+      "ground": "background",
+      "on": "source colours if >= 3:1, else one colour"
+    },
+    {
+      "mode": "dark",
+      "ground": "background",
+      "on": "source colours if >= 3:1, else one colour"
+    },
+    {
+      "mode": "light",
+      "ground": "primary",
+      "on": "source colours if >= 3:1, else one colour"
+    },
+    {
+      "mode": "light",
+      "ground": "accent",
+      "on": "source colours if >= 3:1, else one colour"
+    }
+  ],
+  "icon_from": "kept symbol parts",
+  "app_icon": {
+    "tile": "primary",
+    "source": "kept symbol parts"
+  },
+  "dark": "/home/user/MVS/brand/sangat/v2/sangat/sets/A/logo/build/one-color-light.svg",
+  "measured": {
+    "kept-light": {
+      "ground": "#f9f6ee",
+      "colours": [
+        "#000000"
+      ],
+      "best_contrast": 19.44
+    },
+    "kept-dark": {
+      "ground": "#0f3d2e",
+      "colours": [
+        "#f9fbfa"
+      ],
+      "best_contrast": 11.7
+    }
+  }
+}

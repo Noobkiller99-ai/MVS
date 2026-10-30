@@ -1,58 +1,52 @@
-# Sangat on the website
+# Sangat on the website (v2)
 
-The identity is applied to the story site in the repository root (`index.html`, `story.html`, `assets/`). It sits
-around the 3D grain rather than competing with it: the grain is the story, the identity is the frame.
+The identity is applied to the story site in the repository root (`index.html`, `story.html`, `assets/`). It frames
+the 3D grain rather than competing with it.
 
-## Logo
+## Logo and icons
 
 | Where | File | Size | Notes |
 |---|---|---|---|
-| Header, desktop | inline SVG from `assets/brand/sangat-horizontal-colour.svg` | 26 px high | Grains and wordmark take `currentColor` (Sangat Forest); the line is `.ln` = `--clay` (Sunehra Gold) |
-| Header, mobile (< 880 px) | same | 22 px high | Never smaller than 20 px: below that use the symbol alone |
-| Footer (Night Forest) | same, copied by `site.js` | 30 px high | Ivory grains and wordmark, line in Gold on dark `#C9A35A` |
-| QR landing page | same | 24 px high | On the forest header band, with the hanging line running edge to edge beneath it |
-| Favicon | `assets/brand/icons/favicon.svg` / `.ico` | 16–48 px | The small cut (heavier line, fuller grains) |
-| App icon, home screen | `assets/brand/icons/icon-192/512.png`, `maskable-512.png`, `apple-touch-icon.png` | | Ivory mark on a Sangat Forest tile; `assets/brand/site.webmanifest` |
-| 3D pack label | `src/brand-paths.js` (generated) | | The real wordmark and grain outlines on the V1 Forest Line front |
+| Header | inline from `assets/brand/sangat-wordmark-colour.svg` | 46 px high desktop, 40 px mobile (ear to swash) | Letters take `currentColor` (Forest Green); the ear stays Sunehra Gold |
+| Footer (forest) | the same, copied by `site.js` | 58 px | Ivory letters, gold ear |
+| QR landing page | `sangat-wordmark-colour-reversed.svg` | 52 px | On the forest header |
+| Favicon | `assets/brand/icons/favicon.svg` / `.ico` | 16–48 px | Reversed symbol on a Forest Green rounded tile |
+| Home-screen icons | `icon-192/512.png`, `maskable-512.png`, `apple-touch-icon.png`, `site.webmanifest` | | |
+| 3D pack | `src/brand-assets.js` (generated) | | The V1 Ivory Landscape 1 kg front from the print artwork; pack proportions 180 × 280 |
 
-Clear space: the height of the hanging line on every side. Do not place the lockup over the 3D canvas without the
-header's ivory band behind it once the page scrolls (`.site-header.solid`).
+Never place the wordmark smaller than 32 px high on screen (the swash and ear stop reading); use the symbol below that.
 
 ## Colour tokens (`assets/css/site.css`, `:root`)
 
-The site keeps its original token names so every rule picked up the new palette:
-
-| Token | Sangat colour | HEX | Use on screen |
+| Token | Colour | HEX | Use |
 |---|---|---|---|
-| `--forest` | Sangat Forest | `#1E3A2F` | Headings, primary buttons, logo |
-| `--forest-2` | Night Forest | `#13241B` | Footer, darkest grounds |
-| `--ivory` | Basmati Ivory | `#F6F1E5` | Page ground |
-| `--sand` | Husk Sand | `#E7DCC4` | Cards, secondary sections |
-| `--leaf` | Paddy Sage | `#8E9F86` | Quiet text and rules on forest |
-| `--clay` | Sunehra Gold | `#A07A35` | The hanging line, progress bar, focus ring (graphics only) |
-| `--clay-ink` | Sunehra Gold (UI) | `#896126` | Gold text on ivory (4.9:1) |
-| `--clay-light` | Gold on dark | `#C9A35A` | Gold text and lines on forest (5.2:1) |
-| `--ink` / `--muted` | Ink / Ink muted | `#131F18` / `#4C5951` | Body text |
+| `--forest` | Forest Green | `#0F3D2E` | Headings, primary buttons, logo, "why" section |
+| `--forest-2` | Forest Deep | `#0A2E22` | Footer, darkest grounds |
+| `--ivory` | Ivory | `#F9F6EE` | Page ground |
+| `--sand` / `--field` | Ivory tints | `#EFEADF` / `#F1EEE4` | Journey and practices sections |
+| `--clay` / `--clay-light` | Sunehra Gold | `#C9A96B` | Rules, progress bar, focus ring, SRP bars, gold text on forest (5.4:1) |
+| `--clay-ink` | Earth Brown (UI) | `#7A5F3B` | Labels and italic headline halves on ivory (5.5:1) |
+| `--gold-soft` | Gold Light | `#E2CB97` | Italic headings on forest (7.7:1) |
+| `--leaf` / `--leaf-ink` | Sage Green | `#A7B89F` / `#5E6E58` | Quiet accents |
+| `--ink` / `--muted` | Ink | `#13231C` / `#4F5A52` | Body text |
+| `--line` | Stone | `#D9D4C8` | Rules and borders |
 
-The full token set for other builds is in `deliverables/digital/tokens/` (CSS, SCSS, DTCG JSON, Tailwind).
+## Type
 
-## Type hierarchy
+Playfair Display (400, 600, Italic) for headings and figures, Inter (400, 600) for text and UI, Noto Serif
+Devanagari for Hindi. Self-hosted WOFF2 in `assets/fonts/` with OFL licences; weight ranges in `@font-face` stop
+faux bold.
 
-Tiro Devanagari Hindi 400 (+ italic for the emphasised half of a headline) for h1–h3 and Hindi; Mukta 400/600 for
-everything else. Self-hosted WOFF2 in `assets/fonts/` with their OFL licences; each `@font-face` declares a weight
-range so no faux bold is ever synthesised. Labels: Mukta 600, capitals, +0.16 em.
+## "Why it matters": the SRP figures
 
-## Buttons, sections, patterns
-
-- **Buttons:** pill, Sangat Forest with ivory text, 54 px tall; secondary actions are text links. Focus: 3 px gold ring.
-- **Section grounds:** ivory for reading; Husk Sand for cards; Forest for the "why it matters" chapter; Night Forest
-  for the footer. Gold never fills a section; it is a line or a point.
-- **Patterns:** the chatai weave is for social backgrounds, the QR page and packaging. It is not used behind the
-  3D canvas or behind text on the site.
-- **The bindu** marks the QR code on packs and the "you scanned your pack" entry on `story.html`: one per view.
+Each reason card can carry a headline figure, an SRP vs non-SRP bar pair and two supporting facts; an expandable
+table lists the selected comparison rows with the source and calculation basis. All values live in
+`assets/js/content.js` (`why[].stat/bars/facts` and `srpComparison`) and come only from MVS's SRP vs non-SRP
+document (selected rows: water, crop protection, fertiliser, yield and income). Remove a figure there and it
+disappears from the page.
 
 ## QR storytelling
 
-Pack back → QR (with the bindu and "Scan to meet the people and practices behind your rice") → `story.html`:
-batch card (placeholders until MVS confirms each batch) → three routes into the story (farmers, practices, farm to
-pack) → the tagline. The QR URL itself is a placeholder until the production domain is chosen.
+Pack back → QR strip ("Every grain has a story", SCAN TO EXPLORE) → `story.html`: the same headline, the batch card
+(placeholders until MVS confirms each batch) and four routes: farmer stories, cultivation practices, why it matters
+(the SRP figures) and our journey; the footer bar repeats the strip's line.

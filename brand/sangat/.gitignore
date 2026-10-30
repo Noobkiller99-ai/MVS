@@ -1,7 +1,10 @@
 # Generated scene files that inline every image as base64 (rebuild with tools/*.py)
-brandbook/brandbook.html
-brandbook/brandbook-extension.pdf
-mockups/*.html
-applications/*.html
+archive/v1-shirorekha/brandbook/brandbook.html
+archive/v1-shirorekha/brandbook/brandbook-extension.pdf
+archive/v1-shirorekha/mockups/*.html
+archive/v1-shirorekha/applications/*.html
+mockups-v2/*.html
+applications-v2/*.html
+packaging-v2/_render/
 __pycache__/
 tools/__pycache__/

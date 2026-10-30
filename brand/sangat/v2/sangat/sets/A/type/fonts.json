@@ -1,0 +1,29 @@
+{
+  "display": {
+    "family": "Playfair Display",
+    "file": "/root/.cache/brand-identity/fonts/instances/PlayfairDisplay-4b4f7acd8364700f.ttf",
+    "location": {
+      "wght": 600
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": []
+  },
+  "text": {
+    "family": "Inter",
+    "file": "/root/.cache/brand-identity/fonts/instances/Inter-7dec7a62b3e802ad.ttf",
+    "location": {
+      "opsz": 16,
+      "wght": 400
+    },
+    "weights": [
+      400,
+      600
+    ],
+    "features": [
+      "tnum"
+    ]
+  }
+}

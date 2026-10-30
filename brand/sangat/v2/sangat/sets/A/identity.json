@@ -1,0 +1,529 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Sangat",
+    "tagline": "Sanjhi Soch, Sunehra Kal",
+    "languages": [
+      "en"
+    ],
+    "doc_lang": "en",
+    "sector": "Premium basmati rice (FMCG, packaged staples)",
+    "numbers": false,
+    "copy": {
+      "sentence": {
+        "en": "Every grain has a story."
+      },
+      "nav": [
+        "The farmers",
+        "Practices",
+        "Why it matters"
+      ],
+      "cta": "Explore the journey"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Sunehra Bali",
+    "recommended": true,
+    "mechanism": "A golden rice ear grows out of the g in Sangat: the shared word carries the golden tomorrow.",
+    "expression_move": "The gold ear and the swash g, the only flourish in a calm serif wordmark.",
+    "differs_by": "Category packs shout in maroon, red and yellow with monuments; Sangat is forest and ivory with one gold ear and a hand-drawn landscape."
+  },
+  "axes": {
+    "classic_contemporary": -1,
+    "quiet_loud": -1,
+    "warm_cool": -1,
+    "friend_authority": 0
+  },
+  "components": {
+    "logo": {
+      "mode": "keep",
+      "status": "fixed",
+      "source": "/home/user/MVS/brand/sangat/v2/logo/lockup-horizontal.svg",
+      "sha256": "eb5b3a5c67e038959f7044e4d8313ec88d208f96665c6348d5e0322759521111"
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "keep",
+      "status": "fixed",
+      "source": "source/palette-kept.json",
+      "sha256": "d3a7920a5c3bcbc6b6a0ea222dd8969381f7f3a81fb002f032542f7835033d68"
+    }
+  },
+  "type": {
+    "pairing_mode": "contrast",
+    "display": {
+      "family": "Playfair Display",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 600
+      },
+      "features": [],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "Georgia, serif",
+      "file": null
+    },
+    "text": {
+      "family": "Inter",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "opsz": 16
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": {
+    "type": "symbol+wordmark",
+    "concept": "Sangat in a high-contrast serif; a gold rice ear rises from the g and its swash runs under the word.",
+    "symbol": "logo/symbol.svg",
+    "wordmark": {
+      "text": "Sangat",
+      "role": "display",
+      "location": {
+        "wght": 620
+      },
+      "tracking": 6,
+      "case": "as-is"
+    },
+    "monogram": null,
+    "lockups": [
+      "horizontal",
+      "stacked"
+    ],
+    "colors": {
+      "wordmark": "primary",
+      "ear": "accent",
+      "leaf": "primary",
+      "second leaf": "brand-5"
+    },
+    "tags": [
+      "pictorial"
+    ],
+    "clear_space": {
+      "unit": "cap-height",
+      "multiple": 0.5,
+      "inferred": false
+    },
+    "min_size": {
+      "px": 24,
+      "mm": 10
+    },
+    "misuse": [
+      {
+        "do": "stretch"
+      },
+      {
+        "do": "recolour"
+      },
+      {
+        "do": "effects"
+      },
+      {
+        "do": "crowd"
+      }
+    ]
+  },
+  "palette": "palette.json",
+  "defaults_used": [
+    {
+      "id": "inter-text",
+      "why": "User request: named on the client's brand board (Inter / Source Sans) as the secondary face; it keeps the high-contrast Playfair the only voice."
+    }
+  ],
+  "rationale": [
+    {
+      "claim": "The client's reference board sets the identity: the Sangat wordmark with a gold ear, forest/ivory/gold palette, Playfair Display with Inter.",
+      "evidence": "practice"
+    },
+    {
+      "claim": "The ear grows from the g, the letter of togetherness in the middle of the word; the swash under 'at' is the shared path.",
+      "evidence": "judgement"
+    },
+    {
+      "claim": "Playfair has no Devanagari: Hindi is set in Noto Serif Devanagari (OFL), audited 100% for Hindi.",
+      "evidence": "measured"
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "logo",
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "bf83d4d6ba4439a5d4729380a6e77ae53fabe6fe2a3bcdf24dca46532c8a0b0a"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 13,
+      "info": 8
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.primary-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.08,
+        "threshold": 3.0,
+        "message": "light: primary #c9a96b on background #f9f6ee is 2.08:1, below 3.0:1 (primary fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.primary",
+          "from": "#c9a96b",
+          "to": "#9c7748",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.78
+        },
+        "roles": [
+          "light.primary",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.dark.surface-too-light",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 12.16,
+        "threshold": 15.8,
+        "message": "dark background #0f3d2e gives white only 12.16:1; Material asks >= 15.8:1 so raised surfaces still keep 4.5:1",
+        "suggested_fix": {
+          "change": "modes.dark.background",
+          "from": "#0f3d2e",
+          "to": "#00281b",
+          "how": "darken by OKLCH L -0.08, same hue"
+        },
+        "roles": [
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.distinct.dark.primary-accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.86,
+        "threshold": 10.0,
+        "message": "dark: primary #c9a96b and accent #caac67 are only CIEDE2000 1.9 apart; users may read one as the other",
+        "suggested_fix": {
+          "change": "modes.dark.primary",
+          "from": "#c9a96b",
+          "to": "#a98a4d",
+          "how": "darken by OKLCH L -0.10, same hue"
+        },
+        "roles": [
+          "dark.primary",
+          "dark.accent"
+        ]
+      },
+      {
+        "id": "palette.cvd.light.deutan.success-danger",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.03,
+        "threshold": 10.0,
+        "message": "light: success and danger collapse to CIEDE2000 8.0 for deutanopia (#706845 vs #786c26)",
+        "suggested_fix": {
+          "change": "modes.light.danger",
+          "from": "#b4312b",
+          "to": "#c44038",
+          "how": "never carry meaning by colour alone (icon/label); or lighten by OKLCH L +0.05, same hue"
+        },
+        "roles": [
+          "light.success",
+          "light.danger"
+        ]
+      },
+      {
+        "id": "palette.cvd.dark.protan.primary-accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.68,
+        "threshold": 10.0,
+        "message": "dark: primary and accent collapse to CIEDE2000 1.7 for protanopia (#b8a866 vs #bbab61)",
+        "suggested_fix": {
+          "change": "modes.dark.accent",
+          "from": "#caac67",
+          "to": "#f0d18b",
+          "how": "never carry meaning by colour alone (icon/label); or lighten by OKLCH L +0.11, same hue"
+        },
+        "roles": [
+          "dark.primary",
+          "dark.accent"
+        ]
+      },
+      {
+        "id": "palette.cvd.dark.deutan.primary-accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.25,
+        "threshold": 10.0,
+        "message": "dark: primary and accent collapse to CIEDE2000 1.2 for deutanopia (#bfb16d vs #c2b369)",
+        "suggested_fix": {
+          "change": "modes.dark.accent",
+          "from": "#caac67",
+          "to": "#a68843",
+          "how": "never carry meaning by colour alone (icon/label); or darken by OKLCH L -0.11, same hue"
+        },
+        "roles": [
+          "dark.primary",
+          "dark.accent"
+        ]
+      },
+      {
+        "id": "palette.cvd.dark.tritan.primary-accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 0.95,
+        "threshold": 10.0,
+        "message": "dark: primary and accent collapse to CIEDE2000 0.9 for tritanopia (#cfa1a6 vs #d0a4a8)",
+        "suggested_fix": {
+          "change": "modes.dark.accent",
+          "from": "#caac67",
+          "to": "#f0d18b",
+          "how": "never carry meaning by colour alone (icon/label); or lighten by OKLCH L +0.11, same hue"
+        },
+        "roles": [
+          "dark.primary",
+          "dark.accent"
+        ]
+      },
+      {
+        "id": "palette.cvd.dark.deutan.success-danger",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.49,
+        "threshold": 10.0,
+        "message": "dark: success and danger collapse to CIEDE2000 8.5 for deutanopia (#baae7d vs #d4cba7)",
+        "suggested_fix": {
+          "change": "modes.dark.danger",
+          "from": "#feb2a8",
+          "to": "#ffbcb1",
+          "how": "never carry meaning by colour alone (icon/label); or lighten by OKLCH L +0.03, same hue"
+        },
+        "roles": [
+          "dark.success",
+          "dark.danger"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.protan.ext-2-ext-3",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 8.89,
+        "threshold": 10.0,
+        "message": "ext-2 and ext-3 collapse to CIEDE2000 8.9 for protanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-2",
+          "ext-3"
+        ]
+      },
+      {
+        "id": "palette.extended.cvd.deutan.ext-2-ext-3",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 9.14,
+        "threshold": 10.0,
+        "message": "ext-2 and ext-3 collapse to CIEDE2000 9.1 for deutanopia; label variants and chart series, don't rely on colour alone",
+        "suggested_fix": null,
+        "roles": [
+          "ext-2",
+          "ext-3"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-2",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.94,
+        "threshold": 3.0,
+        "message": "light: ext-2 #a7b89f is 1.94:1 on the light background #f9f6ee; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-2",
+          "from": "#a7b89f",
+          "to": "#788671",
+          "how": "use ext-2-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-2"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-3",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.37,
+        "threshold": 3.0,
+        "message": "light: ext-3 #d9d4c8 is 1.37:1 on the light background #f9f6ee; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-3",
+          "from": "#d9d4c8",
+          "to": "#7c7970",
+          "how": "use ext-3-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-3"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #dad5c9 on background #f9f6ee is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#dad5c9",
+          "to": "#938e83",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.02
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.16,
+        "threshold": 3.0,
+        "message": "dark: link #c9a96b on text #f9fbfa is 2.16:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#c9a96b",
+          "to": "#9c7748",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 3.93
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.57,
+        "threshold": 3.0,
+        "message": "dark: border #6a7671 on background #0f3d2e is 2.57:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#6a7671",
+          "to": "#9aa4a0",
+          "how": "use neutral-400 (same scale)",
+          "ratio_after": 4.74
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.structure.greyscale.brand-7-brand-1",
+        "component": "palette",
+        "severity": "info",
+        "measured": 10.1,
+        "threshold": 15.0,
+        "message": "#634809 and #0f3d2e differ by only Delta L* 10.1; side by side in a logo they merge in greyscale/one-colour print",
+        "suggested_fix": null,
+        "roles": [
+          "brand-7",
+          "brand-1"
+        ]
+      },
+      {
+        "id": "type.display.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 41,
+        "threshold": null,
+        "message": "Playfair Display: ~41 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "type.text.coverage.gf-latin-core",
+        "component": "type",
+        "severity": "info",
+        "measured": "318/319",
+        "threshold": "GF Latin Core",
+        "message": "Inter misses 1/319 GF Latin Core codepoints (reach beyond the brief's languages)",
+        "suggested_fix": "matters only if the brand may add more Latin-script languages"
+      },
+      {
+        "id": "type.text.confusables",
+        "component": "type",
+        "severity": "warn",
+        "measured": 0.947,
+        "threshold": "0.9 (heuristic, uncalibrated)",
+        "message": "Inter: I/l look alike at small sizes (IoU 0.95 at 48 px)",
+        "suggested_fix": "try cv01 'Alternate one', cv02 'Open four', cv03 'Open six', cv04 'Open nine'"
+      },
+      {
+        "id": "type.text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 80,
+        "threshold": null,
+        "message": "Inter: ~80 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.kept",
+        "component": "logo",
+        "severity": "info",
+        "measured": null,
+        "threshold": null,
+        "message": "kept logo shown as is (lockup-horizontal.svg); dark: derived one-colour white",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": [
+        "inter-text"
+      ]
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": null,
+    "light_bg": "#F9F6EE",
+    "dark_bg": "#0F3D2E",
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": [
+      "#8B6F47:Earth Brown:tagline and labels on ivory",
+      "#A7B89F:Sage Green:second leaf, fields, quiet text on forest",
+      "#D9D4C8:Stone:rules, borders, secondary surfaces"
+    ]
+  }
+}

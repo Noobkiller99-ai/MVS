@@ -22,7 +22,7 @@ import {
   PMREMGenerator, HemisphereLight, DirectionalLight, TubeGeometry, CatmullRomCurve3, QuadraticBezierCurve3,
   CircleGeometry, PlaneGeometry, BoxGeometry, ShaderMaterial, Points, DynamicDrawUsage, Vector2, LatheGeometry, SplineCurve
 } from "three";
-import { WORDMARK, GRAINS } from "./brand-paths.js";
+import { PACK_LABEL } from "./brand-assets.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { RoundedBoxGeometry } from "three/addons/geometries/RoundedBoxGeometry.js";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
@@ -317,39 +317,14 @@ function softDot() {
   });
 }
 
-/* The pack label: the Sangat V1 "Forest Line" front (brand/sangat/packaging), drawn with the real logo outlines. */
-async function labelTexture(C) {
-  const fonts = ['400 120px "Tiro Devanagari Hindi"', '600 40px "Mukta"'];
-  try {
-    await Promise.race([Promise.all(fonts.map(f => document.fonts.load(f))), new Promise(r => setTimeout(r, 1500))]);
-  } catch (e) { /* fall back to system fonts */ }
-  const S = C.site;
-  return canvasTex(600, 848, (x, w, h) => {
-    const bg = x.createLinearGradient(0, 0, 0, h);
-    bg.addColorStop(0, "#21402F"); bg.addColorStop(1, "#1A3328");
-    x.fillStyle = bg; x.fillRect(0, 0, w, h);
-    const r = rng(5);
-    for (let i = 0; i < 2400; i++) { x.fillStyle = `rgba(255,255,255,${r() * 0.022})`; x.fillRect(r() * w, r() * h, 1, 1); }
-    // The hanging line runs edge to edge; three grains hang from it.
-    x.fillStyle = "#C9A35A"; x.fillRect(0, 118, w, 22);
-    x.save(); x.translate(w / 2 - 75, 105); x.scale(1.5, 1.5);
-    x.fillStyle = "#F6F1E5"; x.fill(new Path2D(GRAINS.d)); x.restore();
-    // Wordmark (outlined), centred.
-    const ww = 380, k = ww / WORDMARK.w;
-    x.save(); x.translate(w / 2 - ww / 2 - WORDMARK.x * k, 330); x.scale(k, k);
-    x.fillStyle = "#F6F1E5"; x.fill(new Path2D(WORDMARK.d)); x.restore();
-    x.textAlign = "center"; x.textBaseline = "alphabetic";
-    x.fillStyle = "#8E9F86"; x.font = '600 17px "Mukta", sans-serif'; x.letterSpacing = "5px";
-    x.fillText("PREMIUM BASMATI RICE", w / 2 + 2, 420); x.letterSpacing = "0px";
-    if (S.tagline) { x.fillStyle = "#F6F1E5"; x.font = '400 36px "Tiro Devanagari Hindi", Georgia, serif'; x.fillText(S.tagline, w / 2, 492); }
-    if (S.taglineHi) { x.fillStyle = "#C9A35A"; x.font = '400 27px "Tiro Devanagari Hindi", serif'; x.fillText(S.taglineHi, w / 2, 538); }
-    if (S.partnerName) {
-      x.fillStyle = "#8E9F86"; x.font = '600 13px "Mukta", sans-serif'; x.letterSpacing = "3.5px";
-      x.fillText(("In partnership with " + S.partnerName).toUpperCase(), w / 2 + 2, 700); x.letterSpacing = "0px";
-    }
-    x.textAlign = "left"; x.fillStyle = "#F6F1E5"; x.font = '600 44px "Mukta", sans-serif'; x.fillText("1 kg", 52, 790);
-    x.fillStyle = "#C9A35A"; x.beginPath(); x.arc(w - 64, 774, 9, 0, TAU); x.fill();
-  }, true);
+/* The pack label: the Sangat V1 "Ivory Landscape" 1 kg front, from the print artwork (brand/sangat/packaging-v2). */
+function labelTexture() {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(canvasTex(img.naturalWidth, img.naturalHeight, (x, w, h) => x.drawImage(img, 0, 0, w, h), true));
+    img.onerror = () => resolve(canvasTex(4, 4, (x, w, h) => { x.fillStyle = "#F9F6EE"; x.fillRect(0, 0, w, h); }, true));
+    img.src = PACK_LABEL;
+  });
 }
 
 /* ---------------------------------------------------------------------
@@ -402,7 +377,7 @@ const motesMaterial = (tex) => new ShaderMaterial({
 /* The bowl in "Your kitchen" - a real-sized bowl of rice, so the grains read at true scale. */
 const BOWL = { x: 6.2, y: -3.2, z: 0.2, rim: 2.3, fill: 2.16, depth: 1.25 };
 const riceY = (rr) => BOWL.y + 1.25 + 0.5 * (1 - (rr / BOWL.fill) ** 2);
-const C_IVORY = "#F6F1E5", C_FIELD = "#EDEADB", C_DARK = "#1E3A2F", C_SAND = "#E7DCC4";
+const C_IVORY = "#F9F6EE", C_FIELD = "#EEEBDF", C_DARK = "#0F3D2E", C_SAND = "#E9E3D4";
 
 function makeKeyframes(P) {
   const tip = P.tip;
@@ -612,7 +587,7 @@ export function start({ canvas, story, onReady, onFail }) {
     [0, 0.07], [0.9, 0.1], [1.6, 0.32], [2.08, 0.75], [2.27, 1.2], [2.31, 1.27], [2.38, 1.22],
     [2.25, 0.8], [1.85, 0.32], [1.2, 0.06], [1.08, 0], [0.95, -0.02], [0, -0.02]
   ].map(([a, b]) => new Vector2(a, b))).getPoints(90);
-  const bowlMat = new MeshPhysicalMaterial({ color: 0x1E3A2F, roughness: 0.32, clearcoat: 0.8, clearcoatRoughness: 0.12, side: DoubleSide, transparent: true });
+  const bowlMat = new MeshPhysicalMaterial({ color: 0x0F3D2E, roughness: 0.32, clearcoat: 0.8, clearcoatRoughness: 0.12, side: DoubleSide, transparent: true });
   const bowlGeo = new LatheGeometry(prof, lowEnd ? 64 : 110);
   bowlGeo.scale(1, BOWL.depth, 1);
   bowlGroup.add(new Mesh(bowlGeo, bowlMat));
@@ -661,16 +636,16 @@ export function start({ canvas, story, onReady, onFail }) {
 
   /* The pack: a stand-up pouch with a label drawn from the content */
   const packGroup = new Group();
-  const sideMat = new MeshStandardMaterial({ color: 0x1E3A2F, roughness: 0.5, metalness: 0.05, transparent: true });
+  const sideMat = new MeshStandardMaterial({ color: 0xEFE9DB, roughness: 0.5, metalness: 0.05, transparent: true });
   const labelMat = new MeshStandardMaterial({ color: 0xffffff, roughness: 0.45, transparent: true });
-  const pack = new Mesh(new RoundedBoxGeometry(1.45, 2.05, 0.5, 4, 0.09), [sideMat, sideMat, sideMat, sideMat, labelMat, sideMat]);
-  const seal = new Mesh(new BoxGeometry(1.47, 0.09, 0.2), new MeshStandardMaterial({ color: 0xA07A35, roughness: 0.45, metalness: 0.25, transparent: true }));
+  const pack = new Mesh(new RoundedBoxGeometry(1.32, 2.05, 0.5, 4, 0.09), [sideMat, sideMat, sideMat, sideMat, labelMat, sideMat]);
+  const seal = new Mesh(new BoxGeometry(1.34, 0.09, 0.2), new MeshStandardMaterial({ color: 0x0F3D2E, roughness: 0.5, metalness: 0.05, transparent: true }));
   seal.position.y = 1.0;
   packGroup.add(pack, seal);
   packGroup.position.set(0.95, -1.85, -0.25);
   scene.add(packGroup);
   const packMats = [sideMat, labelMat, seal.material];
-  labelTexture(C).then((t) => { labelMat.map = t; labelMat.needsUpdate = true; needsRender = true; });
+  labelTexture().then((t) => { labelMat.map = t; labelMat.needsUpdate = true; needsRender = true; });
 
   /* Floating motes / pollen */
   const MOTES = lowEnd ? 110 : 240;

@@ -2,309 +2,258 @@
  "colours": [
   {
    "id": "forest",
-   "name": "Sangat Forest",
-   "hex": "#1E3A2F",
+   "name": "Forest Green",
+   "hex": "#0F3D2E",
    "rgb": [
-    30,
-    58,
-    47
-   ],
-   "oklch": [
-    0.322,
-    0.04,
-    166.7
+    15,
+    61,
+    46
    ],
    "cmyk_start": [
-    84,
-    47,
-    62,
-    63
+    75,
+    0,
+    25,
+    76
    ],
    "role": "Primary",
-   "usage": "Logo, headings, 1 kg pack ground, primary buttons",
-   "share": "40%"
-  },
-  {
-   "id": "ivory",
-   "name": "Basmati Ivory",
-   "hex": "#F6F1E5",
-   "rgb": [
-    246,
-    241,
-    229
-   ],
-   "oklch": [
-    0.959,
-    0.017,
-    88.0
-   ],
-   "cmyk_start": [
-    1,
-    3,
-    8,
-    3
-   ],
-   "role": "Background",
-   "usage": "Page ground, pack label panels, stationery",
+   "usage": "Logo, headings, pack tab, back panel, the sweep, buttons",
    "share": "35%"
   },
   {
-   "id": "husk",
-   "name": "Husk Sand",
-   "hex": "#E7DCC4",
+   "id": "ivory",
+   "name": "Ivory",
+   "hex": "#F9F6EE",
    "rgb": [
-    231,
-    220,
-    196
-   ],
-   "oklch": [
-    0.897,
-    0.034,
-    86.3
+    249,
+    246,
+    238
    ],
    "cmyk_start": [
-    2,
-    7,
-    17,
-    8
+    0,
+    1,
+    4,
+    2
    ],
-   "role": "Secondary",
-   "usage": "Secondary surfaces, back-of-pack panels, cards",
-   "share": "10%"
-  },
-  {
-   "id": "sage",
-   "name": "Paddy Sage",
-   "hex": "#8E9F86",
-   "rgb": [
-    142,
-    159,
-    134
-   ],
-   "oklch": [
-    0.682,
-    0.041,
-    135.6
-   ],
-   "cmyk_start": [
-    19,
-    10,
-    24,
-    31
-   ],
-   "role": "Secondary",
-   "usage": "Quiet text and patterns on forest, illustrations",
-   "share": "5%"
-  },
-  {
-   "id": "night",
-   "name": "Night Forest",
-   "hex": "#13241B",
-   "rgb": [
-    19,
-    36,
-    27
-   ],
-   "oklch": [
-    0.242,
-    0.029,
-    160.1
-   ],
-   "cmyk_start": [
-    90,
-    63,
-    77,
-    70
-   ],
-   "role": "Secondary",
-   "usage": "Darkest ground: 5 kg pack base, footer, dark mode",
-   "share": "5%"
+   "role": "Background",
+   "usage": "Page and pack ground, cards on forest",
+   "share": "40%"
   },
   {
    "id": "gold",
    "name": "Sunehra Gold",
-   "hex": "#A07A35",
+   "hex": "#C9A96B",
    "rgb": [
-    160,
-    122,
-    53
-   ],
-   "oklch": [
-    0.603,
-    0.098,
-    79.8
+    201,
+    169,
+    107
    ],
    "cmyk_start": [
-    10,
-    31,
-    70,
-    31
+    0,
+    16,
+    47,
+    21
    ],
    "role": "Accent",
-   "usage": "The joining line, foil, the bindu story marker. One element per surface",
-   "share": "\u22643%"
+   "usage": "The rice ear, foil, rules, gold text on forest; never small text on ivory",
+   "share": "8%"
   },
   {
-   "id": "gold-ui",
-   "name": "Sunehra Gold (UI)",
-   "hex": "#896126",
+   "id": "earth",
+   "name": "Earth Brown",
+   "hex": "#8B6F47",
    "rgb": [
-    137,
-    97,
-    38
-   ],
-   "oklch": [
-    0.523,
-    0.091,
-    73.7
+    139,
+    111,
+    71
    ],
    "cmyk_start": [
-    13,
-    39,
-    76,
-    38
+    0,
+    20,
+    49,
+    45
    ],
-   "role": "Accent (digital)",
-   "usage": "Gold on ivory for screens where 3:1 is needed (links, small rules)",
-   "share": "UI only"
+   "role": "Secondary",
+   "usage": "Tagline and large labels on ivory, roofs and soil in illustration",
+   "share": "5%"
+  },
+  {
+   "id": "sage",
+   "name": "Sage Green",
+   "hex": "#A7B89F",
+   "rgb": [
+    167,
+    184,
+    159
+   ],
+   "cmyk_start": [
+    9,
+    0,
+    14,
+    28
+   ],
+   "role": "Secondary",
+   "usage": "Second leaf of the symbol, hills, quiet text on forest",
+   "share": "7%"
+  },
+  {
+   "id": "stone",
+   "name": "Stone",
+   "hex": "#D9D4C8",
+   "rgb": [
+    217,
+    212,
+    200
+   ],
+   "cmyk_start": [
+    0,
+    2,
+    8,
+    15
+   ],
+   "role": "Neutral",
+   "usage": "Rules, borders, secondary surfaces",
+   "share": "5%"
+  },
+  {
+   "id": "forest-deep",
+   "name": "Forest Deep",
+   "hex": "#0A2E22",
+   "rgb": [
+    10,
+    46,
+    34
+   ],
+   "cmyk_start": [
+    78,
+    0,
+    26,
+    82
+   ],
+   "role": "Support",
+   "usage": "QR strip footer, darkest grounds",
+   "share": "-"
   },
   {
    "id": "gold-light",
-   "name": "Gold on Dark",
-   "hex": "#C9A35A",
+   "name": "Gold Light",
+   "hex": "#E2CB97",
    "rgb": [
-    201,
-    163,
-    90
-   ],
-   "oklch": [
-    0.735,
-    0.102,
-    82.3
+    226,
+    203,
+    151
    ],
    "cmyk_start": [
-    5,
-    23,
-    57,
-    17
+    0,
+    10,
+    33,
+    11
    ],
-   "role": "Accent (on dark)",
-   "usage": "The line and bindu on forest / night grounds",
-   "share": "\u22643%"
+   "role": "Support",
+   "usage": "Highlights in the ear, italic headlines on forest",
+   "share": "-"
+  },
+  {
+   "id": "earth-ui",
+   "name": "Earth Brown (UI)",
+   "hex": "#7A5F3B",
+   "rgb": [
+    122,
+    95,
+    59
+   ],
+   "cmyk_start": [
+    0,
+    22,
+    52,
+    52
+   ],
+   "role": "Support",
+   "usage": "Earth Brown for small text on ivory (4.5:1 needs this tone)",
+   "share": "-"
   },
   {
    "id": "ink",
    "name": "Ink",
-   "hex": "#131F18",
+   "hex": "#13231C",
    "rgb": [
     19,
-    31,
-    24
-   ],
-   "oklch": [
-    0.225,
-    0.022,
-    158.5
+    35,
+    28
    ],
    "cmyk_start": [
-    85,
-    66,
-    77,
-    72
+    46,
+    0,
+    20,
+    86
    ],
    "role": "Text",
-   "usage": "Body text on light grounds",
-   "share": "\u2014"
-  },
-  {
-   "id": "ink-muted",
-   "name": "Ink Muted",
-   "hex": "#4C5951",
-   "rgb": [
-    76,
-    89,
-    81
-   ],
-   "oklch": [
-    0.45,
-    0.021,
-    158.5
-   ],
-   "cmyk_start": [
-    44,
-    30,
-    39,
-    53
-   ],
-   "role": "Text",
-   "usage": "Secondary text on light grounds",
-   "share": "\u2014"
+   "usage": "Body text on ivory",
+   "share": "-"
   }
  ],
  "contrast": [
   {
-   "pair": "Ink on Ivory",
-   "fg": "#131F18",
-   "bg": "#F6F1E5",
-   "ratio": 15.06,
-   "use": "body text"
+   "fg": "Ink",
+   "fg_hex": "#13231C",
+   "bg": "Ivory",
+   "bg_hex": "#F9F6EE",
+   "ratio": 15.13
   },
   {
-   "pair": "Forest on Ivory",
-   "fg": "#1E3A2F",
-   "bg": "#F6F1E5",
-   "ratio": 10.95,
-   "use": "body text"
+   "fg": "Forest Green",
+   "fg_hex": "#0F3D2E",
+   "bg": "Ivory",
+   "bg_hex": "#F9F6EE",
+   "ratio": 11.26
   },
   {
-   "pair": "Ivory on Forest",
-   "fg": "#F6F1E5",
-   "bg": "#1E3A2F",
-   "ratio": 10.95,
-   "use": "body text"
+   "fg": "Ivory",
+   "fg_hex": "#F9F6EE",
+   "bg": "Forest Green",
+   "bg_hex": "#0F3D2E",
+   "ratio": 11.26
   },
   {
-   "pair": "Ivory on Night",
-   "fg": "#F6F1E5",
-   "bg": "#13241B",
-   "ratio": 14.38,
-   "use": "body text"
+   "fg": "Sunehra Gold",
+   "fg_hex": "#C9A96B",
+   "bg": "Forest Green",
+   "bg_hex": "#0F3D2E",
+   "ratio": 5.43
   },
   {
-   "pair": "Gold-on-dark on Forest",
-   "fg": "#C9A35A",
-   "bg": "#1E3A2F",
-   "ratio": 5.21,
-   "use": "body text"
+   "fg": "Gold Light",
+   "fg_hex": "#E2CB97",
+   "bg": "Forest Green",
+   "bg_hex": "#0F3D2E",
+   "ratio": 7.66
   },
   {
-   "pair": "Gold (print) on Ivory",
-   "fg": "#A07A35",
-   "bg": "#F6F1E5",
-   "ratio": 3.5,
-   "use": "large text / graphics"
+   "fg": "Sage Green",
+   "fg_hex": "#A7B89F",
+   "bg": "Forest Green",
+   "bg_hex": "#0F3D2E",
+   "ratio": 5.79
   },
   {
-   "pair": "Gold UI on Ivory",
-   "fg": "#896126",
-   "bg": "#F6F1E5",
-   "ratio": 4.9,
-   "use": "body text"
+   "fg": "Earth Brown (UI)",
+   "fg_hex": "#7A5F3B",
+   "bg": "Ivory",
+   "bg_hex": "#F9F6EE",
+   "ratio": 5.51
   },
   {
-   "pair": "Sage on Forest",
-   "fg": "#8E9F86",
-   "bg": "#1E3A2F",
-   "ratio": 4.38,
-   "use": "large text / graphics"
+   "fg": "Earth Brown",
+   "fg_hex": "#8B6F47",
+   "bg": "Ivory",
+   "bg_hex": "#F9F6EE",
+   "ratio": 4.36
   },
   {
-   "pair": "Ink muted on Husk",
-   "fg": "#4C5951",
-   "bg": "#E7DCC4",
-   "ratio": 5.41,
-   "use": "body text"
+   "fg": "Sunehra Gold",
+   "fg_hex": "#C9A96B",
+   "bg": "Ivory",
+   "bg_hex": "#F9F6EE",
+   "ratio": 2.08
   }
- ],
- "note": "CMYK values are uncalibrated starting builds; proof against the printer's profile (e.g. ISO Coated v2 / FOGRA39 for coated stock). Pantone references to be matched by the printer's drawdown; none are claimed here."
+ ]
 }
