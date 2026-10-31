@@ -4,7 +4,7 @@ Everything is hand-authored vector (illustrate skill, SVG track): no stock and n
 
 | Device | Where | Rules |
 |---|---|---|
-| **The landscape** (`art/sangat-landscape.svg`, `-transparent.svg`) | Pack fronts and backs, side panels, stationery, social | The client's master illustration, traced to an editable layered vector (`tools/landscape_vector.py`): sky, mountains and mist, trees, farmhouse, rice fields, foreground leaves and hill, rice ears. Never redrawn, recoloured or cut: placed at its own 2:1 proportion, bottom-aligned; narrow panels show a section cropped by the panel edge. |
+| **The landscape** (`art/sangat-landscape.svg`, `-transparent.svg`) | Pack fronts and backs, side panels, stationery, social | The client's master illustration, traced to an editable layered vector (`tools/landscape_vector.py`): sky, mountains and mist, trees, farmhouse, rice fields, foreground leaves and hill, rice ears. Never redrawn or recoloured: placed at its own 2:1 proportion, bottom-aligned. On pack fronts it is set at the board's scale (43% of the panel height, anchored bottom-left) with the board's clear rice window over its right end (`tools/window_v3.py`); narrow panels show a section cropped by the panel edge. |
 | **Etched ears** | Pack front corners | Faint gold line ears, about 20% opacity, framing the wordmark (board detail). |
 | **The tab** | Pack tops | A Forest Green (V1) or Sunehra Gold (V2) vertical tab from the top seal, carrying the symbol. |
 | **The paddy sprig** (`sprig()`) | QR strip, story page, web hero accents | Fine gold line drawing of a sprig; decorative, never behind body text. |

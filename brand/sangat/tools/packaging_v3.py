@@ -17,6 +17,7 @@ rice). NOT PRINT-READY: assumed sizes, live text, placeholders for every regulat
 """
 import math, os, random, re
 import packaging_v2 as P2
+import window_v3
 from packaging_v2 import (C, esc, text, lines, panicle, tree, farmer_scene, icon, sprig, qr_strip, guides, render,
                           BLEED, TOP_CLEAR)
 
@@ -90,6 +91,45 @@ def landscape(x, y, w, h, mode="day", window=False, rice=False, pid="L", net=Non
     return img
 
 
+def rice_window(ox, w, h, pid, rice):
+    """The board's clear window, placed by window_v3 (fractions of the front panel). rice=True fills it with basmati
+    for mockups; the print artwork leaves it clear (hatched and labelled), as a converter expects."""
+    k = w / 180
+    d = window_v3.window_path(ox, 0, w, h)
+    cid = f"win-{pid}"
+    g = [f'<clipPath id="{cid}"><path d="{d}"/></clipPath>']
+    xs = [ox + u * w for u, _ in window_v3.outline()]
+    ys = [v * h for _, v in window_v3.outline()]
+    bx0, bx1, by0, by1 = min(xs), max(xs), min(ys), max(ys)
+    if rice:
+        rnd = random.Random(19)
+        L = 7.5 * k
+        n = int((bx1 - bx0) * (by1 - by0) / (L * L * 0.1))
+        grains = []
+        for _ in range(n):
+            cx, cy = rnd.uniform(bx0 - L, bx1 + L), rnd.uniform(by0 - L, by1 + L)
+            ang = rnd.gauss(-35, 40)
+            col = rnd.choice(["#FFFFFF", "#FBF8F1", "#F6F0E2", "#F1E9D6", "#FDFBF6"])
+            rl = L * rnd.uniform(0.85, 1.15)
+            grains.append(f'<ellipse cx="{cx:.2f}" cy="{cy:.2f}" rx="{rl / 2:.2f}" ry="{rl * 0.12:.2f}" '
+                          f'transform="rotate({ang:.0f} {cx:.2f} {cy:.2f})" fill="{col}" stroke="#CDBF9F" stroke-width="{0.12 * k:.2f}"/>')
+        g.append(f'<g clip-path="url(#{cid})"><rect x="{bx0:.2f}" y="{by0:.2f}" width="{bx1 - bx0:.2f}" height="{by1 - by0:.2f}" fill="#E8DEC7"/>'
+                 + "".join(grains) +
+                 f'<rect x="{bx0:.2f}" y="{by0:.2f}" width="{bx1 - bx0:.2f}" height="{by1 - by0:.2f}" fill="url(#sheen-{pid})"/></g>'
+                 f'<linearGradient id="sheen-{pid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".22"/>'
+                 f'<stop offset=".5" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#7A5F3B" stop-opacity=".12"/></linearGradient>')
+    else:
+        hatch = "".join(f'<line x1="{bx0 + i * 2.2 * k:.2f}" y1="{by0:.2f}" x2="{bx0 + i * 2.2 * k - (by1 - by0) * 0.5:.2f}" y2="{by1:.2f}" '
+                        f'stroke="#D9D4C8" stroke-width="{0.25 * k:.2f}"/>' for i in range(int((bx1 - bx0 + (by1 - by0)) / (2.2 * k)) + 2))
+        cx, cy = ox + 0.86 * w, 0.66 * h
+        g.append(f'<path d="{d}" fill="#FFFFFF"/><g clip-path="url(#{cid})">{hatch}</g>'
+                 + text(cx, cy, "CLEAR WINDOW", 2.6 * k, C["earth"], weight=600, anchor="middle", extra=f' transform="rotate(-62 {cx:.2f} {cy:.2f})"'))
+    left, field = window_v3.rims(ox, 0, w, h)
+    g.append(f'<path d="{left}" fill="none" stroke="{C["gold"]}" stroke-width="{0.55 * k:.2f}" stroke-linecap="round"/>'
+             f'<path d="{field}" fill="none" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}" stroke-linecap="round" opacity=".8"/>')
+    return "".join(g)
+
+
 def front(v, size, ox, w, h, pid, rice=False):
     k = w / 180
     dark = v == "v2"
@@ -104,29 +144,22 @@ def front(v, size, ox, w, h, pid, rice=False):
     g.append(f'<rect x="{ox + w / 2 - tw / 2:.2f}" y="0" width="{tw:.2f}" height="{tab_h:.2f}" fill="{C["gold"] if dark else C["forest"]}"/>')
     sym, _, _ = place("symbol-mono.svg", ox + w / 2, tab_h - 24 * k, h=18 * k, anchor="tc", flat=C["forest"] if dark else C["gold"])
     g.append(sym)
-    top = tab_h + 12 * k
-    tg = []
-    wm, ww, wh = place("wordmark.svg", ox + w / 2, top, w=128 * k, anchor="tc", recolour=REV if dark else None)
-    tg.append(wm)
-    y = top + wh + 6 * k
-    tg.append(text(ox + w / 2, y, "Sanjhi Soch, Sunehra Kal", 4.6 * k, warm, family=SERIF, anchor="middle", ls=0.35 * k))
-    y += 11 * k
-    tg.append(text(ox + w / 2, y, "PREMIUM", 3.4 * k, warm, family=SERIF, anchor="middle", ls=0.9 * k))
-    y += 7.6 * k
-    tg.append(text(ox + w / 2, y, "BASMATI RICE", 7.0 * k, ink, family=SERIF, anchor="middle", ls=0.85 * k))
-    y += 3.6 * k
-    tg.append(f'<line x1="{ox + w / 2 - 33 * k:.2f}" y1="{y:.2f}" x2="{ox + w / 2 + 33 * k:.2f}" y2="{y:.2f}" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}"/>')
-    y += 6 * k
-    tg.append(text(ox + w / 2, y, "NATURALLY AROMATIC", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
-    y += 4.6 * k
-    tg.append(text(ox + w / 2, y, "THOUGHTFULLY GROWN", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
-    # centre the text block between the tab and the top of the landscape's tree
-    tree_top = h - w / 2 + 0.1 * (w / 2)
-    dy = max(0.0, ((tab_h + tree_top - 6 * k) - (top + y)) / 2)
-    g.append(f'<g transform="translate(0 {dy:.2f})">' + "".join(tg) + "</g>")
+    # positions measured on the board's pack fronts, as fractions of the panel height
+    wm, ww, wh = place("wordmark.svg", ox + w / 2, 0.252 * h, h=0.132 * h, anchor="tc", recolour=REV if dark else None)
+    g.append(wm)
+    g.append(text(ox + w / 2, 0.41 * h, "Sanjhi Soch, Sunehra Kal", 5.3 * k, warm, family=SERIF, anchor="middle", ls=0.4 * k))
+    g.append(text(ox + w / 2, 0.468 * h, "PREMIUM", 4.2 * k, warm, family=SERIF, anchor="middle", ls=1.2 * k))
+    g.append(text(ox + w / 2, 0.508 * h, "BASMATI RICE", 8.0 * k, ink, family=SERIF, anchor="middle", ls=0.9 * k))
+    g.append(f'<line x1="{ox + w * 0.29:.2f}" y1="{0.533 * h:.2f}" x2="{ox + w * 0.71:.2f}" y2="{0.533 * h:.2f}" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}"/>')
+    g.append(text(ox + w / 2, 0.567 * h, "NATURALLY AROMATIC", 3.4 * k, ink, family=SERIF, anchor="middle", ls=0.8 * k))
+    g.append(text(ox + w / 2, 0.594 * h, "THOUGHTFULLY GROWN", 3.4 * k, ink, family=SERIF, anchor="middle", ls=0.8 * k))
     net = "1 kg" if size == "1kg" else "5 kg"
-    g.append(landscape(ox, h - w / 2, w, w / 2, mode="day", pid=pid))
-    g.append(text(ox + w - 9 * k, h - 8 * k, net, 9 * k, C["ivory"], family=SERIF, anchor="end"))
+    # the landscape at the board's scale: 43% of the panel height, its own 2:1 aspect, anchored bottom-left;
+    # the panel crops its right end, which sits under the rice window
+    art_h = 0.43 * h
+    g.append(landscape(ox, h - art_h, w, art_h, mode="day", align="xMinYMax", fit="slice"))
+    g.append(rice_window(ox, w, h, pid, rice))
+    g.append(text(ox + 0.71 * w, h - 0.03 * h, net, 9 * k, C["ivory"], family=SERIF, anchor="middle"))
     vx, vy = ox + 11 * k, h - 7 * k
     g.append(f'<rect x="{vx - 4.5 * k:.2f}" y="{vy - 4.5 * k:.2f}" width="{4.5 * k:.2f}" height="{4.5 * k:.2f}" fill="#FFFFFF" stroke="#1E8A3B" stroke-width="{0.45 * k:.2f}"/>'
              f'<circle cx="{vx - 2.25 * k:.2f}" cy="{vy - 2.25 * k:.2f}" r="{1.25 * k:.2f}" fill="#1E8A3B"/>')
