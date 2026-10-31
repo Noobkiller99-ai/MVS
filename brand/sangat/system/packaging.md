@@ -30,13 +30,16 @@ confirmed by MVS; no certification, origin or impact claim is printed on the pac
 
 ## The landscape and the clear rice window
 
-The front carries the board's transparent section: a clear, leaf-shaped window showing the rice. Its outline and
-position were measured on the client's exact brand board (5 kg front panel, board pixels x 1108–1432, y 44–530) and
-stored as fractions of the front panel in `tools/window_v3.py`, so the 1 kg and 5 kg fronts place it identically:
-the tip beside BASMATI RICE at 93% across and 47% down, down the right edge, along the top of the field to a point
-at 53% across and 92% down, with a gold rim on its left edge.
+The front carries the board's transparent section: a large clear window that grows out of the landscape, as on the
+client's reference. Its geometry comes from the artwork itself (`tools/window_v3.py`):
 
-The master landscape is placed at the board's scale (43% of the panel height, its own 2:1 aspect, anchored
-bottom-left); the panel crops its right end, which is under the window. The illustration itself is not redrawn or
-recoloured. In the print artwork the window is shown clear (hatched and labelled CLEAR WINDOW); the `-front-mock.png`
-renders fill it with rice. The window film, its seal margins and registration need the converter's dieline.
+- **Upper edge (gold rim):** the hill crest traced from the master illustration, stretched from where the crest starts
+  low in the fields up to the tip beside BASMATI RICE (93% across, 47% down, as on the board).
+- **Lower edge:** follows the same crest inside the hill, widening towards the pack's right edge.
+- **In front of it:** the artwork's own foreground rice ears (`art/sangat-landscape-ears.svg`, the rice-ears layer
+  alone), so they cross the rice as on the reference.
+
+The landscape is set at half the panel height (its own 2:1 aspect, bottom-aligned), with 8% cropped off its left so
+the tree and farmhouse stay and the hill rises to mid-pack. The illustration is not redrawn or recoloured. Print
+artwork shows the window clear (hatched, labelled CLEAR WINDOW); `-front-mock.png` renders fill it with rice. The
+window film, seal margins and registration need the converter's dieline.

@@ -52,7 +52,8 @@ Pack back → QR strip ("Every grain has a story", SCAN TO EXPLORE) → `story.h
 
 ## Closing chapter
 
-The pack and bowl are framed in the closing stage above the words. From the moment the stage is centred they scroll
+The pack and bowl are framed in the closing stage above the words, the pack to the left of the bowl and turned to
+the camera so its rice window stays in view. From the moment the stage is centred they scroll
 up with it and fade out (`site.js`, the `end` keyframe), so they never sit behind "Every grain carries someone's
 season of work."
 

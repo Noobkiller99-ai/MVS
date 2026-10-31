@@ -444,8 +444,8 @@ function makeKeyframes(P) {
     journey3:   k({ target: v3(0.95, -2.35, 0.2), yaw: -0.12, pitch: 0.36, frame: [2.5, 2.0], ripe: 1, hero: "mill", husk: 1, huskVis: 0.6, milled: 1, layout: "graded", stem: 0, leaves: 0, bgP: 0, fog: C_SAND, floor: 1, motes: 0.25 }),
     journey4:   k({ target: v3(0.95, -1.5, 0), yaw: 0.28, pitch: 0.12, frame: [2.6, 3.4], ripe: 1, hero: "pack", husk: 1, huskVis: 0, milled: 1, layout: "packed", stem: 0, leaves: 0, bgP: 0, pack: 1, fog: C_SAND, floor: 1, motes: 0.25 }),
     journey5:   k({ target: v3(BOWL.x - 1.25, BOWL.y + 1.9, BOWL.z - 0.5), yaw: -0.18, pitch: 0.3, frame: [7.6, 5.4], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, fog: C_SAND, motes: 0.3, key: 3.0, rim: 2.2 }),
-    closing:    k({ target: v3(BOWL.x - 1.0, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.28, pitch: 0.18, frame: [7.8, 6.3], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.35, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 }),
-    end:        k({ target: v3(BOWL.x - 1.0, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.4, pitch: 0.18, frame: [8.6, 6.9], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.3, opacity: 0, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 })
+    closing:    k({ target: v3(BOWL.x - 1.85, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.28, pitch: 0.18, frame: [9.4, 6.3], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.35, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 }),
+    end:        k({ target: v3(BOWL.x - 1.85, BOWL.y + 2.4, BOWL.z - 0.4), yaw: 0.4, pitch: 0.18, frame: [10.2, 6.9], ripe: 1, hero: "kitchen", husk: 1, huskVis: 0, milled: 1, layout: "bowl", stem: 0, leaves: 0, bgP: 0, pack: 1, packAt: 1, bowl: 1, motes: 0.3, opacity: 0, key: 3.2, keyColor: "#FFF3E0", rim: 2.6, rimColor: "#FFC98A", hemi: 0.4, env: 0.6 })
   };
 }
 
@@ -783,10 +783,10 @@ export function start({ canvas, story, onReady, onFail }) {
     const at = smooth(S.packAt), ps = lerp(1, 2.35, at);
     packGroup.scale.setScalar(ps);
     packGroup.position.set(
-      lerp(0.95, BOWL.x - 2.75, at),
+      lerp(0.95, BOWL.x - 4.35, at),
       lerp(-1.85 - (1 - S.pack) * 0.5, BOWL.y + 1.025 * ps, at),
-      lerp(-0.25, BOWL.z - 2.1, at));
-    packGroup.rotation.y = lerp(-0.35, 0, S.pack) + at * 0.32;
+      lerp(-0.25, BOWL.z - 1.7, at));
+    packGroup.rotation.y = lerp(-0.35, 0, S.pack) + at * 0.16;   // face the camera: the rice window on the right of the front stays clear of the bowl
 
     motes.material.uniforms.uTime.value = time;
     motes.material.uniforms.uOpacity.value = S.motes * 0.55;

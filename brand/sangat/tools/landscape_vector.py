@@ -9,6 +9,7 @@ bleeds 3 px under the layers drawn after it, so no hairline gaps open between th
 Outputs (art/):
   sangat-landscape.svg              full artwork, sky included, viewBox 0 0 1774 887 (the source's aspect ratio)
   sangat-landscape-transparent.svg  the same without the sky layer (transparent where the sky was)
+  sangat-landscape-ears.svg         the foreground rice-ears layer alone (drawn over the pack's clear window)
   sangat-landscape*.png             reference renders; landscape-check.png (source | vector | difference)
 """
 import io, json, os
@@ -147,6 +148,9 @@ def main():
     clear = svg(groups, size, skip=("sky",))
     open(os.path.join(ART, "sangat-landscape.svg"), "w").write(full)
     open(os.path.join(ART, "sangat-landscape-transparent.svg"), "w").write(clear)
+    # the foreground rice ears on their own, so a pack's clear window can sit behind them
+    ears = svg(groups, size, skip=tuple(n for n in REGIONS if n != "rice-ears"))
+    open(os.path.join(ART, "sangat-landscape-ears.svg"), "w").write(ears)
     w, h = size
     for name, s in (("sangat-landscape", full), ("sangat-landscape-transparent", clear)):
         cairosvg.svg2png(bytestring=s.encode(), write_to=os.path.join(ART, f"{name}.png"), output_width=w * 2, output_height=h * 2)

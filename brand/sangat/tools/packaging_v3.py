@@ -91,15 +91,16 @@ def landscape(x, y, w, h, mode="day", window=False, rice=False, pid="L", net=Non
     return img
 
 
-def rice_window(ox, w, h, pid, rice):
+def rice_window(ox, w, h, pid, rice, art=None):
     """The board's clear window, placed by window_v3 (fractions of the front panel). rice=True fills it with basmati
     for mockups; the print artwork leaves it clear (hatched and labelled), as a converter expects."""
     k = w / 180
-    d = window_v3.window_path(ox, 0, w, h)
+    d = window_v3.window_path(ox, 0, w, h, art)
     cid = f"win-{pid}"
     g = [f'<clipPath id="{cid}"><path d="{d}"/></clipPath>']
-    xs = [ox + u * w for u, _ in window_v3.outline()]
-    ys = [v * h for _, v in window_v3.outline()]
+    ol = [((x - ox) / w, y / h) for x, y in window_v3.geometry(ox, w, h, art)[2]]
+    xs = [ox + u * w for u, _ in ol]
+    ys = [v * h for _, v in ol]
     bx0, bx1, by0, by1 = min(xs), max(xs), min(ys), max(ys)
     if rice:
         rnd = random.Random(19)
@@ -115,18 +116,22 @@ def rice_window(ox, w, h, pid, rice):
                           f'transform="rotate({ang:.0f} {cx:.2f} {cy:.2f})" fill="{col}" stroke="#CDBF9F" stroke-width="{0.12 * k:.2f}"/>')
         g.append(f'<g clip-path="url(#{cid})"><rect x="{bx0:.2f}" y="{by0:.2f}" width="{bx1 - bx0:.2f}" height="{by1 - by0:.2f}" fill="#E8DEC7"/>'
                  + "".join(grains) +
-                 f'<rect x="{bx0:.2f}" y="{by0:.2f}" width="{bx1 - bx0:.2f}" height="{by1 - by0:.2f}" fill="url(#sheen-{pid})"/></g>'
+                 f'<rect x="{bx0:.2f}" y="{by0:.2f}" width="{bx1 - bx0:.2f}" height="{by1 - by0:.2f}" fill="url(#sheen-{pid})"/>'
+                 f'<path d="{window_v3.rims(ox, 0, w, h, art)[0]}" fill="none" stroke="#3A2E1A" stroke-opacity=".18" stroke-width="{2.2 * k:.2f}" transform="translate(0 {0.9 * k:.2f})"/></g>'
                  f'<linearGradient id="sheen-{pid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".22"/>'
                  f'<stop offset=".5" stop-color="#FFFFFF" stop-opacity="0"/><stop offset="1" stop-color="#7A5F3B" stop-opacity=".12"/></linearGradient>')
     else:
         hatch = "".join(f'<line x1="{bx0 + i * 2.2 * k:.2f}" y1="{by0:.2f}" x2="{bx0 + i * 2.2 * k - (by1 - by0) * 0.5:.2f}" y2="{by1:.2f}" '
                         f'stroke="#D9D4C8" stroke-width="{0.25 * k:.2f}"/>' for i in range(int((bx1 - bx0 + (by1 - by0)) / (2.2 * k)) + 2))
-        cx, cy = ox + 0.86 * w, 0.66 * h
+        cx, cy = ox + 0.8 * w, 0.78 * h
         g.append(f'<path d="{d}" fill="#FFFFFF"/><g clip-path="url(#{cid})">{hatch}</g>'
-                 + text(cx, cy, "CLEAR WINDOW", 2.6 * k, C["earth"], weight=600, anchor="middle", extra=f' transform="rotate(-62 {cx:.2f} {cy:.2f})"'))
-    left, field = window_v3.rims(ox, 0, w, h)
-    g.append(f'<path d="{left}" fill="none" stroke="{C["gold"]}" stroke-width="{0.55 * k:.2f}" stroke-linecap="round"/>'
-             f'<path d="{field}" fill="none" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}" stroke-linecap="round" opacity=".8"/>')
+                 + text(cx, cy, "CLEAR WINDOW", 2.6 * k, C["earth"], weight=600, anchor="middle", extra=f' transform="rotate(-38 {cx:.2f} {cy:.2f})"'))
+    left, field = window_v3.rims(ox, 0, w, h, art)
+    g.append(f'<path d="{left}" fill="none" stroke="{C["gold"]}" stroke-width="{0.6 * k:.2f}" stroke-linecap="round"/>'
+             f'<path d="{field}" fill="none" stroke="{C["gold"]}" stroke-width="{0.4 * k:.2f}" stroke-linecap="round" opacity=".85"/>')
+    # the artwork's own foreground rice ears pass in front of the window, as on the board
+    ax, ay, aw = art or (ox, h - w / 2, w)
+    g.append(f'<image href="{ART_URL}sangat-landscape-ears.svg" x="{ax:.2f}" y="{ay:.2f}" width="{aw:.2f}" height="{aw / 2:.2f}"/>')
     return "".join(g)
 
 
@@ -154,16 +159,19 @@ def front(v, size, ox, w, h, pid, rice=False):
     g.append(text(ox + w / 2, 0.567 * h, "NATURALLY AROMATIC", 3.4 * k, ink, family=SERIF, anchor="middle", ls=0.8 * k))
     g.append(text(ox + w / 2, 0.594 * h, "THOUGHTFULLY GROWN", 3.4 * k, ink, family=SERIF, anchor="middle", ls=0.8 * k))
     net = "1 kg" if size == "1kg" else "5 kg"
-    # the landscape at the board's scale: 43% of the panel height, its own 2:1 aspect, anchored bottom-left;
-    # the panel crops its right end, which sits under the rice window
-    art_h = 0.43 * h
-    g.append(landscape(ox, h - art_h, w, art_h, mode="day", align="xMinYMax", fit="slice"))
-    g.append(rice_window(ox, w, h, pid, rice))
+    # the landscape at half the panel height (its own 2:1 aspect, bottom-aligned), shifted so the panel crops 8% off
+    # its left and the rest off its right: the tree and farmhouse stay, the hill rises to mid-pack as on the board,
+    # and the rice window grows out of that hill
+    aw = h
+    art = (ox - 0.08 * aw, h - aw / 2, aw)
+    g.append(f'<image href="{ART_URL}sangat-landscape-transparent.svg" x="{art[0]:.2f}" y="{art[1]:.2f}" width="{aw:.2f}" height="{aw / 2:.2f}"/>')
+    g.append(rice_window(ox, w, h, pid, rice, art))
     g.append(text(ox + 0.71 * w, h - 0.03 * h, net, 9 * k, C["ivory"], family=SERIF, anchor="middle"))
     vx, vy = ox + 11 * k, h - 7 * k
     g.append(f'<rect x="{vx - 4.5 * k:.2f}" y="{vy - 4.5 * k:.2f}" width="{4.5 * k:.2f}" height="{4.5 * k:.2f}" fill="#FFFFFF" stroke="#1E8A3B" stroke-width="{0.45 * k:.2f}"/>'
              f'<circle cx="{vx - 2.25 * k:.2f}" cy="{vy - 2.25 * k:.2f}" r="{1.25 * k:.2f}" fill="#1E8A3B"/>')
-    return "".join(g)
+    return (f'<clipPath id="fp-{pid}"><rect x="{ox}" y="0" width="{w}" height="{h}"/></clipPath>'
+            f'<g clip-path="url(#fp-{pid})">' + "".join(g) + "</g>")
 
 
 def back(v, size, ox, w, h):

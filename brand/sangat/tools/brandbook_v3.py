@@ -117,12 +117,12 @@ page("5 · Graphic language", "The landscape, unchanged.",
      "and a transparent variant) and is never redrawn, recoloured or cut: it is placed at its own 2:1 proportion, bottom-aligned.",
      f"""<div class="two" style="grid-template-columns:1.6fr 1fr">{img("art/sangat-landscape.png", "")}
      <div><div class="icons">{icons}</div><h4 style="margin-top:40px">Rules</h4><p>Full width at the bottom of a surface; on ivory and on forest use the
-     transparent variant so the ground shows through the sky. On pack fronts it is set at the board's scale (43% of the panel height), anchored bottom-left; the rice window, measured on the board, covers its right end. Panels narrower than the artwork show a section of it, cropped by the panel edge, never squeezed.
+     transparent variant so the ground shows through the sky. On pack fronts it is set at half the panel height; the rice window's gold rim is the hill crest's own curve, and the foreground ears pass in front of it. Panels narrower than the artwork show a section of it, cropped by the panel edge, never squeezed.
      Text sits on the ivory above it, or small (net quantity, veg mark) on its darkest foreground corners. Etched ears, line icons and the QR sprig are the only
      other drawings.</p></div></div>""")
 
 page("6.1 · Packaging · V1 Ivory Landscape · 1 kg", "The board, made print-ready in structure.",
-     "Back · front · base gusset, laid out to the board: the clear rice window on the front is placed exactly where the board puts it, over the master landscape. The back ends in the QR strip; nutrition and legal text sit on the base gusset. "
+     "Back · front · base gusset, laid out to the board: the clear rice window grows out of the master landscape's hill, as on the reference, with the artwork's rice ears in front of it. The back ends in the QR strip; nutrition and legal text sit on the base gusset. "
      "Magenta: assumed trim, top seal and zip; blue: safe area. Every regulatory item is a labelled placeholder.",
      img("packaging-v3/v1-ivory-landscape-1kg-guides.png", ""))
 page("6.2 · Packaging · V1 Ivory Landscape · 5 kg", "Side · front · side · back.",
