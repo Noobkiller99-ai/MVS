@@ -7,6 +7,9 @@ families who work alongside Manav Vikas Sansthan (MVS). People reach it from the
 The full brand identity (strategy, logo, palette, type, packaging, applications and the guidelines PDF) lives in
 [`brand/sangat/`](brand/sangat/README.md).
 
+The 25 second launch reel ("A grain. A journey. A Sangat.", 1080 x 1920) is a Remotion project in
+[`film/`](film/docs/sangat/README.md); the finished MP4 and poster are in `film/deliverables/sangat/`.
+
 A single 3D basmati grain guides the story as you scroll:
 
 | Chapter | What the grain does |

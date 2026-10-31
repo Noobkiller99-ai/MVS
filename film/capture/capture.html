@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Sangat film: renders the website's 3D grain scene (assets/js/grain-scene.js) frame by frame for the film.
+     Driven by capture.mjs; open with ?shot=<name> to preview the first frame of a shot. -->
+<style>html,body{margin:0;width:1080px;height:1920px;overflow:hidden}
+body{background:var(--bg)}canvas{display:block;width:1080px;height:1920px}</style>
+</head><body><canvas id="c"></canvas>
+<script type="module">
+import { start } from "/assets/js/grain-scene.js";
+import { SHOTS } from "./shots.js";
+const name = new URLSearchParams(location.search).get("shot") || "beginning";
+const shot = SHOTS[name];
+document.body.style.setProperty("--bg", shot.background);
+const story = {
+  content: {}, reduced: () => false, version: 1,
+  keyframes: shot.keys.map((key) => ({ key, y: 0, ease: "linear", fx: shot.fx ?? 0.5, fy: shot.fy ?? 0.5, fw: 1, fh: 1 })),
+  capture: { keyframes: shot.define || {} }
+};
+const scene = start({ canvas: document.getElementById("c"), story });
+window.__render = (frame) => {
+  const u = frame / (shot.frames - 1);
+  const e = shot.ease ? shot.ease(u) : u;
+  scene.renderAt(e * (shot.keys.length - 1), shot.time0 + (frame / 30) * shot.timeRate);
+};
+window.__frames = shot.frames;
+await new Promise((r) => setTimeout(r, 1500));     // let the pack label texture load
+window.__render(0);
+window.__ready = true;
+</script></body></html>

@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 test-output/
 __pycache__/
+
+# video-shotcraft ships Mixkit music and SFX that its own ATTRIBUTION.md files say are NOT covered by its
+# Apache-2.0 licence (some sources unverified). They stay local; see .claude/skills/video-shotcraft/AUDIO-NOT-COMMITTED.md
+.claude/skills/video-shotcraft/**/*.mp3

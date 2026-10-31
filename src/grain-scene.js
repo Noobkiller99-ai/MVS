@@ -518,6 +518,15 @@ export function start({ canvas, story, onReady, onFail }) {
   const COUNT = P.slots.length;
   const LAY = makeLayouts(P, COUNT, rand);
   const KF = makeKeyframes(P);
+  /* Film capture only (film/capture): extra or patched keyframes for shots the site never shows. */
+  if (story.capture && story.capture.keyframes) {
+    for (const [name, o] of Object.entries(story.capture.keyframes)) {
+      const v = Object.assign({}, KF[o.base || "hero"], o);
+      if (Array.isArray(o.target)) v.target = v3(o.target[0], o.target[1], o.target[2]);
+      delete v.base;
+      KF[name] = v;
+    }
+  }
   const delays = Float32Array.from({ length: COUNT }, () => rand());
 
   /* Materials */
@@ -950,6 +959,14 @@ export function start({ canvas, story, onReady, onFail }) {
     }
   }
   if (/[?&]debug\b/.test(location.search)) window.__mvs = { scene, hero, grains, stem, leaves, packGroup, S, LAY };
+  /* Film capture: no loop; the capture page renders exact story positions at exact times. */
+  if (story.capture) {
+    resize();
+    return {
+      renderAt(t, tm) { sample(t, story.keyframes); apply(tm); placeCamera(tm, false); renderer.render(scene, camera); },
+      stop() {}
+    };
+  }
   raf = requestAnimationFrame(frame);
   return { stop: () => cancelAnimationFrame(raf) };
 }
