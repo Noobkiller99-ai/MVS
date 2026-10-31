@@ -1,15 +1,15 @@
-# Sangat typography (v2)
+# Sangat typography (v3)
 
-Three open-licence families, as on the client's brand board (Playfair Display + Inter), with a Devanagari
-companion because Playfair and Inter have no Hindi (measured with the brand-identity skill: `fonts audit`
+Open-licence families matching the client's brand board (Playfair Display primary, Inter secondary; the board's calmer
+tagline/pack serif matched to Libre Caslon Text), with a Devanagari companion because Playfair and Inter have no Hindi (measured with the brand-identity skill: `fonts audit`
 fails Playfair and Inter on Hindi base letters; Noto Serif Devanagari passes 100%).
 
 | Role | Family | Weights | Use |
 |---|---|---|---|
-| Wordmark | **Playfair Display** (Claus Eggers Sørensen, OFL-1.1), customised | SemiBold 620, outlined | Never retype the logo: use the supplied files (custom swash g and gold ear). |
+| Wordmark | Customised Playfair, **traced from the client's brand board** (`tools/trace_v3.py`) | outlined artwork | Never retype the logo: use the supplied files (swash g and gold ear). |
 | Display / headlines | Playfair Display | 400, 600, Italic 400 | Headlines in sentence case; the second half of a headline in Italic, often in Gold Light on forest or Earth Brown on ivory ("Every grain / *has a story.*"). |
-| Product name on pack | Playfair Display | 400, tracked +190 | BASMATI RICE in capitals; the only long capital setting in Playfair. |
-| Tagline | Playfair Display | 400, tracked +150 | Always "Sanjhi Soch, Sunehra Kal", Title Case, never in capitals, Earth Brown on ivory / Gold on forest. |
+| Editorial serif | **Libre Caslon Text** (Impallari Type, OFL-1.1) | 400 | The board's tagline and pack lines: PREMIUM / BASMATI RICE / NATURALLY AROMATIC · THOUGHTFULLY GROWN, "A shared journey…", "Good food grows from shared thinking." Matched to the board by measured overlap (fit_tagline_v3.py). |
+| Tagline | Libre Caslon Text | 400, tracked +120 | Always "Sanjhi Soch, Sunehra Kal", Title Case, never in capitals, Earth Brown on ivory / Gold on forest. In the logo it is outlined at the board's own letter positions. |
 | Text / UI | **Inter** (Rasmus Andersson, OFL-1.1) | 400, 600 | Body, buttons, navigation, nutrition and legal panels; `tnum` for figures. |
 | Labels | Inter 600 | capitals, +0.16 em | PREMIUM, NET QUANTITY, SCAN TO EXPLORE, small section labels. |
 | Hindi | **Noto Serif Devanagari** (Google, OFL-1.1) | 400, 500 | हर दाने की अपनी कहानी, साँझी सोच, सुनहरा कल. Set about 10% smaller than the Latin beside it. |
@@ -28,7 +28,7 @@ fails Playfair and Inter on Hindi base letters; Noto Serif Devanagari passes 100
 
 ## Licences
 
-All three are SIL Open Font License 1.1: free for print, packaging, web, apps and PDF embedding. The outlined
+All four are SIL Open Font License 1.1: free for print, packaging, web, apps and PDF embedding. The outlined
 wordmark is artwork, not a font. Web files (WOFF2, from Fontsource) and licences are in `/assets/fonts/` and
 `v2/fonts/`. Brand-identity measured a warning worth knowing: Inter's I and l look alike at small sizes; avoid
 setting codes such as batch numbers in Inter capitals-only without spacing.

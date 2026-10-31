@@ -91,8 +91,13 @@ function grainGeometry({ segs, rings, husk = false, thetaStart = 0, thetaLen = T
       } else {
         const germ = smooth(clamp01((-0.7 - u) / 0.26));
         rr *= 1 - 0.5 * germ * Math.pow(Math.max(0, Math.cos(th - 0.35)), 1.3);
-        rr *= 1 - 0.04 * bell(angDist(th, Math.PI / 2), 0.2) - 0.04 * bell(angDist(th, -Math.PI / 2), 0.2);
-        rr *= 1 - 0.02 * bell(angDist(th, 1.0), 0.1) - 0.02 * bell(angDist(th, -2.1), 0.1);
+        // the germ scar: a small, slightly sunken notch on one side of the base
+        rr *= 1 - 0.12 * bell(u + 0.86, 0.06) * bell(angDist(th, 0.35), 0.35);
+        // a fine dorsal crease and the faint ventral line that run the length of a milled grain
+        rr *= 1 - 0.06 * bell(angDist(th, Math.PI / 2), 0.1) - 0.04 * bell(angDist(th, -Math.PI / 2), 0.12);
+        // four shallow longitudinal grooves (where the bran layers met), fading towards the tips
+        const fade = 1 - Math.pow(au, 6);
+        for (const g0 of [0.62, -0.62, 2.52, -2.52]) rr *= 1 - 0.04 * fade * bell(angDist(th, g0 + 0.05 * Math.sin(u * 3 + ph)), 0.07);
         rr *= 1 + 0.012 * Math.sin(th * 3 + u * 5 + ph) * Math.cos(u * 1.3);
       }
       const bow = 0.024 * (1 - u * u) + 0.006 * Math.sin(u * 3 + ph);
@@ -254,38 +259,58 @@ function normalFromHeight(src, strength) {
 }
 function grainTextures() {
   const r = rng(3);
-  /* Height: fine wavy striations along the length, faint fissures across it, tiny pits. */
-  const hc = document.createElement("canvas"); hc.width = 256; hc.height = 512;
-  const x = hc.getContext("2d"), w = 256, h = 512;
+  /* Height (512 x 1024): fine wavy striations along the length, the faint grooves, hairline fissures across the
+     grain, tiny pits, and a shallow germ scar at the base. */
+  const w = 512, h = 1024;
+  const hc = document.createElement("canvas"); hc.width = w; hc.height = h;
+  const x = hc.getContext("2d");
   x.fillStyle = "#808080"; x.fillRect(0, 0, w, h);
-  for (let i = 0; i < 140; i++) {
-    const px = r() * w, a = 0.04 + r() * 0.12, wob = 0.6 + r() * 1.8, f = 2 + r() * 5;
+  for (let i = 0; i < 260; i++) {
+    const px = r() * w, a = 0.05 + r() * 0.13, wob = 0.8 + r() * 2.6, f = 2 + r() * 5;
     x.strokeStyle = r() < 0.5 ? `rgba(255,255,255,${a})` : `rgba(0,0,0,${a})`;
-    x.lineWidth = 0.6 + r() * 2.2;
+    x.lineWidth = 0.6 + r() * 2.4;
     x.beginPath();
-    for (let y = 0; y <= h; y += 8) { const xx = px + Math.sin((y / h) * f * TAU + i) * wob; y ? x.lineTo(xx, y) : x.moveTo(xx, y); }
+    for (let y = 0; y <= h; y += 10) { const xx = px + Math.sin((y / h) * f * TAU + i) * wob; y ? x.lineTo(xx, y) : x.moveTo(xx, y); }
     x.stroke();
   }
-  for (let i = 0; i < 9; i++) {
-    x.strokeStyle = `rgba(0,0,0,${0.08 + r() * 0.1})`; x.lineWidth = 0.7;
-    const y = r() * h, x0 = r() * w;
-    x.beginPath(); x.moveTo(x0, y); x.quadraticCurveTo(x0 + 10, y + (r() - 0.5) * 6, x0 + 18 + r() * 30, y + (r() - 0.5) * 4); x.stroke();
+  for (const gx of [0.1, 0.4, 0.6, 0.9]) {            // the grooves, as soft darker bands
+    const g = x.createLinearGradient(gx * w - 10, 0, gx * w + 10, 0);
+    g.addColorStop(0, "rgba(0,0,0,0)"); g.addColorStop(0.5, "rgba(0,0,0,.16)"); g.addColorStop(1, "rgba(0,0,0,0)");
+    x.fillStyle = g; x.fillRect(gx * w - 10, h * 0.08, 20, h * 0.84);
   }
-  for (let i = 0; i < 900; i++) { x.fillStyle = `rgba(0,0,0,${0.05 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.4 + r() * 0.9, 0, TAU); x.fill(); }
-  const normal = normalFromHeight(hc, 2.2);
+  for (let i = 0; i < 22; i++) {                      // hairline fissures across the grain
+    x.strokeStyle = `rgba(0,0,0,${0.08 + r() * 0.12})`; x.lineWidth = 0.8;
+    const y = h * (0.12 + r() * 0.76), x0 = r() * w;
+    x.beginPath(); x.moveTo(x0, y); x.quadraticCurveTo(x0 + 16, y + (r() - 0.5) * 8, x0 + 30 + r() * 60, y + (r() - 0.5) * 6); x.stroke();
+  }
+  for (let i = 0; i < 2200; i++) { x.fillStyle = `rgba(0,0,0,${0.04 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.4 + r() * 1.1, 0, TAU); x.fill(); }
+  const scar = x.createRadialGradient(w * 0.42, h * 0.035, 1, w * 0.42, h * 0.035, 34);
+  scar.addColorStop(0, "rgba(0,0,0,.35)"); scar.addColorStop(1, "rgba(0,0,0,0)");
+  x.fillStyle = scar; x.fillRect(0, 0, w, 90);
+  const normal = normalFromHeight(hc, 4.2);
 
-  /* Colour: creamy translucent body, a soft chalky-white belly, warmer tips, faint bran traces. */
-  const map = canvasTex(256, 512, (x, w, h) => {
+  /* Colour: creamy translucent body, a soft chalky-white belly, warmer tips, the germ scar, faint bran traces. */
+  const map = canvasTex(w, h, (x, w, h) => {
     x.fillStyle = "#ECE3CF"; x.fillRect(0, 0, w, h);
-    const belly = x.createRadialGradient(w * 0.5, h * 0.52, 4, w * 0.5, h * 0.52, h * 0.3);
-    belly.addColorStop(0, "rgba(255,253,247,.6)"); belly.addColorStop(1, "rgba(255,253,247,0)");
+    const belly = x.createRadialGradient(w * 0.5, h * 0.52, 6, w * 0.5, h * 0.52, h * 0.3);
+    belly.addColorStop(0, "rgba(255,253,247,.62)"); belly.addColorStop(1, "rgba(255,253,247,0)");
     x.save(); x.scale(1, 1.6); x.fillStyle = belly; x.fillRect(0, 0, w, h); x.restore();
+    const chalk = x.createRadialGradient(w * 0.3, h * 0.44, 4, w * 0.3, h * 0.44, w * 0.22);   // a faint chalky patch
+    chalk.addColorStop(0, "rgba(255,255,252,.42)"); chalk.addColorStop(1, "rgba(255,255,252,0)");
+    x.fillStyle = chalk; x.fillRect(0, 0, w, h);
     const ends = x.createLinearGradient(0, 0, 0, h);
-    ends.addColorStop(0, "rgba(196,170,120,.7)"); ends.addColorStop(0.1, "rgba(214,194,150,.25)"); ends.addColorStop(0.24, "rgba(230,214,180,0)");
+    ends.addColorStop(0, "rgba(196,170,120,.72)"); ends.addColorStop(0.1, "rgba(214,194,150,.26)"); ends.addColorStop(0.24, "rgba(230,214,180,0)");
     ends.addColorStop(0.8, "rgba(230,214,180,0)"); ends.addColorStop(0.93, "rgba(214,194,150,.3)"); ends.addColorStop(1, "rgba(190,162,112,.75)");
     x.fillStyle = ends; x.fillRect(0, 0, w, h);
-    for (let i = 0; i < 70; i++) { x.fillStyle = `rgba(176,150,104,${0.03 + r() * 0.06})`; x.fillRect(r() * w, r() * h * 0.3, 0.8 + r() * 1.5, h * (0.3 + r() * 0.6)); }
-    for (let i = 0; i < 25; i++) { x.fillStyle = `rgba(120,96,60,${0.08 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.6 + r() * 0.8, 0, TAU); x.fill(); }
+    for (let i = 0; i < 160; i++) { x.fillStyle = `rgba(176,150,104,${0.04 + r() * 0.08})`; x.fillRect(r() * w, r() * h * 0.3, 0.8 + r() * 1.8, h * (0.3 + r() * 0.6)); }
+    for (let i = 0; i < 26; i++) {                     // bran streaks near the base
+      x.fillStyle = `rgba(150,118,72,${0.08 + r() * 0.12})`;
+      x.fillRect(r() * w, h * (0.02 + r() * 0.1), 0.8 + r() * 1.4, h * (0.03 + r() * 0.08));
+    }
+    const germ = x.createRadialGradient(w * 0.42, h * 0.035, 2, w * 0.42, h * 0.035, 30);
+    germ.addColorStop(0, "rgba(140,108,62,.75)"); germ.addColorStop(1, "rgba(140,108,62,0)");
+    x.fillStyle = germ; x.fillRect(0, 0, w, 80);
+    for (let i = 0; i < 50; i++) { x.fillStyle = `rgba(120,96,60,${0.06 + r() * 0.12})`; x.beginPath(); x.arc(r() * w, r() * h, 0.6 + r() * 1.1, 0, TAU); x.fill(); }
   }, true);
   return { normal, map };
 }
@@ -500,7 +525,7 @@ export function start({ canvas, story, onReady, onFail }) {
   const grainTex = grainTextures();
   /* Raw milled basmati: satin rather than glossy, faintly translucent, creamy rather than white. */
   const heroGrainMat = addTranslucency(new MeshPhysicalMaterial({
-    color: 0xFFFFFF, map: grainTex.map, normalMap: grainTex.normal, normalScale: new Vector2(0.9, 0.9),
+    color: 0xFFFFFF, map: grainTex.map, normalMap: grainTex.normal, normalScale: new Vector2(1.15, 1.15),
     roughness: 0.34, specularIntensity: 0.7, clearcoat: 0.3, clearcoatRoughness: 0.16,
     sheen: 0.18, sheenColor: new Color(0xFFF3DE), sheenRoughness: 0.5
   }), "#FFDDB0", 0.6);
@@ -516,7 +541,7 @@ export function start({ canvas, story, onReady, onFail }) {
   const bgStemMat = new MeshStandardMaterial({ color: 0x8E9A55, roughness: 0.7, transparent: true });
 
   /* Hero grain + its two husk halves (they swing open on hinges at the base) */
-  const hq = lowEnd ? { segs: 40, rings: 64 } : { segs: 72, rings: 120 };
+  const hq = lowEnd ? { segs: 64, rings: 80 } : { segs: 128, rings: 160 };
   const hero = new Group();
   const heroGrain = new Mesh(grainGeometry(hq), heroGrainMat);
   hero.add(heroGrain);

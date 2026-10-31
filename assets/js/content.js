@@ -24,7 +24,7 @@ window.MVS_CONTENT = {
   ],
 
   hero: {
-    kicker: "Sangat premium basmati · with Manav Vikas Sansthan",
+    kicker: "Sangat premium basmati",
     deva: "हर दाने की अपनी कहानी",
     headline: "Every grain <em>has a story.</em>",
     lead: "Meet the farmers behind your rice. Discover the cultivation practices they follow and the people working alongside them.",
@@ -107,58 +107,25 @@ window.MVS_CONTENT = {
       why: "It helps protect the health of farming families and the people they work with." }
   ],
 
-  whyLead: "Behind each practice is a simple reason, and the field numbers show what it adds up to. These figures compare farms following Sustainable Rice Platform (SRP) practices with farms that do not.",
+  whyLead: "Farms that follow Sustainable Rice Platform (SRP) practices, compared with farms that do not.",
 
-  /* Why it matters. Figures come ONLY from MVS's SRP vs non-SRP comparison (srpComparison below).
-     stat: the headline; bars: SRP vs non-SRP; facts: supporting lines. Remove any figure MVS cannot stand behind. */
+  /* Why it matters: one figure per reason, from MVS's SRP vs non-SRP comparison only
+     (brand/sangat/sources/srp-vs-non-srp.md). Keep it to what a buyer will read; remove a reason to hide it. */
   why: [
-    { title: "Water", text: "Rice needs a lot of water, and the water a farm draws on is shared with its neighbours. Irrigating with care aims to make every watering count.",
-      stat: { value: "19.7%", label: "less water for every kilo of rice" },
+    { title: "Water", stat: "19.7%", label: "less water for every kilo of rice",
       bars: { unit: "litres per kg of rice", srp: 1490, non: 1855 },
-      facts: ["2.6 fewer irrigations per acre: 14.6 instead of 17.2", "About 5.26 lakh litres of water saved per acre"] },
-    { title: "Crop protection", text: "Checking fields before acting, and using crop-protection products only when they are needed, protects the crop, beneficial insects and the people in the field.",
-      stat: { value: "36.8%", label: "less insecticide per acre" },
-      bars: { unit: "ml-g of insecticide per acre", srp: 96, non: 152 },
-      facts: ["30% fewer insecticide sprays: 1.4 instead of 2.0", "11.9% less pesticide in total for every quintal of rice"] },
-    { title: "Fertiliser", text: "Feeding the crop what it needs, when it needs it, means less fertiliser lost to the soil and water around the field.",
-      stat: { value: "21.8%", label: "less nitrogen for every kilo of rice" },
+      note: "Fewer irrigations: 14.6 per acre instead of 17.2." },
+    { title: "Crop protection", stat: "36.8%", label: "less insecticide",
+      bars: { unit: "ml-g per acre", srp: 96, non: 152 },
+      note: "Fields are checked before spraying: 1.4 sprays instead of 2.0." },
+    { title: "Fertiliser", stat: "21.8%", label: "less nitrogen for every kilo of rice",
       bars: { unit: "g of nitrogen per kg of rice", srp: 27.4, non: "35.0" },
-      facts: ["No DAP used, against 20 kg per acre on non-SRP farms", "17.2% less fertiliser in total for every kilo of rice"] },
-    { title: "Soil and air", text: "Returning straw to the land instead of burning it keeps organic matter in the soil and smoke out of the air that villages breathe." },
-    { title: "Livelihoods", text: "Spending less on fertiliser and sprays, while harvesting a little more, leaves more with the farming family at the end of the season.",
-      stat: { value: "₹5,323", label: "more net return per acre for the farmer" },
+      note: "And no DAP at all, against 20 kg per acre." },
+    { title: "Livelihoods", stat: "₹5,323", label: "more net return per acre for the farmer",
       bars: { unit: "net return, ₹ per acre", srp: 60130, non: 54807, money: true },
-      facts: ["5.7% more paddy per acre: 29.6 quintals instead of 28.0", "12.5% lower cost to grow a kilo of rice: ₹7.30 instead of ₹8.34"] }
+      note: "With 5.7% more paddy from every acre." }
   ],
-
-  /* The comparison table under "Why it matters" (selected rows of MVS's SRP vs non-SRP data).
-     Each row: [parameter, unit, SRP, non-SRP, change]. */
-  srpComparison: {
-    title: "SRP and non-SRP farms, side by side",
-    summary: "See the full comparison",
-    columns: ["", "Unit", "SRP", "Non-SRP", "Difference"],
-    groups: [
-      { name: "Water", rows: [
-        ["Irrigations", "per acre", "14.6", "17.2", "15.1% fewer"],
-        ["Water used", "litres per kg rice", "1,490", "1,855", "19.7% less"],
-        ["Water productivity", "kg rice per m³", "0.671", "0.539", "24.5% higher"] ] },
-      { name: "Crop protection", rows: [
-        ["Insecticide", "ml-g per acre", "96", "152", "36.8% less"],
-        ["Insecticide sprays", "number", "1.4", "2.0", "30.0% fewer"],
-        ["Total pesticide", "ml-g per quintal rice", "38.1", "43.3", "11.9% less"] ] },
-      { name: "Fertiliser", rows: [
-        ["Nitrogen (N)", "g per kg rice", "27.4", "35.0", "21.8% less"],
-        ["Phosphorus (P₂O₅)", "kg per acre", "2.6", "9.2", "72.2% less"],
-        ["DAP", "kg per acre", "0", "20", "none used"],
-        ["Total fertiliser", "g per kg rice", "75.6", "91.3", "17.2% less"] ] },
-      { name: "Yield and income", rows: [
-        ["Paddy yield", "quintals per acre", "29.6", "28.0", "5.7% more"],
-        ["Cost of cultivation", "₹ per kg rice", "7.30", "8.34", "12.5% lower"],
-        ["Net return", "₹ per acre", "60,130", "54,807", "9.7% higher"],
-        ["Benefit : cost", "ratio", "5.16", "4.52", "14.4% higher"] ] }
-    ],
-    source: "Source: SRP vs non-SRP field comparison by Manav Vikas Sansthan (MVS). Milled rice assumes 67% recovery (FCI out-turn ratio); water = irrigations × 5 cm × 1 acre (2,02,343 litres per irrigation). SRP: the Sustainable Rice Platform standard for sustainable rice cultivation."
-  },
+  whySource: "Source: MVS field comparison of SRP and non-SRP farms.",
 
   journeyLead: "From a field in the growing season to a bowl on your table, this is how the rice travels.",
   journey: [

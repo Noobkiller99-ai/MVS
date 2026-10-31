@@ -1,13 +1,14 @@
-# Sangat graphic language (v2)
+# Sangat graphic language (v3)
 
 Everything is hand-authored vector (illustrate skill, SVG track): no stock and no generated imagery.
 
 | Device | Where | Rules |
 |---|---|---|
-| **The landscape** (`tools/packaging_v2.py: landscape()`) | Pack fronts, side gussets, social | Layered sage hills, round trees, one small farmhouse, ploughed fields in three greens. Calm, flat colour, no outlines. Day version on ivory; dusk version on forest (V2). |
+| **The landscape** (`tools/packaging_v3.py: landscape()`) | Pack fronts, side gussets, social | As on the board: misty mountains, a big tree, round trees, one small farmhouse, terraced fields in three greens. Calm, flat colour, no outlines. Day version on ivory; dusk version on forest (V2). |
 | **The sweep** | Pack fronts, web section edges | One Forest Green curve rising from bottom left to the right edge, edged with a fine gold line. Net quantity and the veg mark sit on it. |
 | **Gold rice ears** (`panicle()`) | On the sweep, the back illustration, accents | Arching ears with teardrop grains, bowing to the right; one long leaf blade on every second ear. Sunehra Gold on forest, Gold Deep on ivory. |
-| **The rice window** | V1 packs | The real rice, seen through a clear window shaped by the sweep; gold foil edge. |
+| **The rice window** | V1 packs | The real rice, seen through a leaf-shaped clear window cut into the sweep; gold foil edges. |
+| **Etched ears** | Pack front corners | Faint gold line ears, about 20% opacity, framing the wordmark (board detail). |
 | **The tab** | Pack tops | A Forest Green (V1) or Sunehra Gold (V2) vertical tab from the top seal, carrying the symbol. |
 | **The paddy sprig** (`sprig()`) | QR strip, story page, web hero accents | Fine gold line drawing of a sprig; decorative, never behind body text. |
 | **Value icons** (`icon()`) | Back panel, web | Four line icons on a 24 grid, 1.4 stroke, rounded: Local farmers, Sustainable practices, Thriving communities, A brighter tomorrow. |

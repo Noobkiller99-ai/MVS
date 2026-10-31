@@ -3,8 +3,11 @@ archive/v1-shirorekha/brandbook/brandbook.html
 archive/v1-shirorekha/brandbook/brandbook-extension.pdf
 archive/v1-shirorekha/mockups/*.html
 archive/v1-shirorekha/applications/*.html
-mockups-v2/*.html
-applications-v2/*.html
-packaging-v2/_render/
+mockups-v3/*.html
+applications-v3/*.html
+packaging-v3/_render/
+archive/v2-redraw/mockups-v2/*.html
+archive/v2-redraw/applications-v2/*.html
+archive/v2-redraw/packaging-v2/_render/
 __pycache__/
 tools/__pycache__/

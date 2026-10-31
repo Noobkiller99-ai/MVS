@@ -1,4 +1,4 @@
-# Sangat on the website (v2)
+# Sangat on the website (v3)
 
 The identity is applied to the story site in the repository root (`index.html`, `story.html`, `assets/`). It frames
 the 3D grain rather than competing with it.
@@ -7,12 +7,12 @@ the 3D grain rather than competing with it.
 
 | Where | File | Size | Notes |
 |---|---|---|---|
-| Header | inline from `assets/brand/sangat-wordmark-colour.svg` | 46 px high desktop, 40 px mobile (ear to swash) | Letters take `currentColor` (Forest Green); the ear stays Sunehra Gold |
-| Footer (forest) | the same, copied by `site.js` | 58 px | Ivory letters, gold ear |
+| Header | inline from `assets/brand/sangat-wordmark-colour.svg` | 50 px high desktop, 42 px mobile (ear to swash) | Letters take `currentColor` (Forest Green); the ear stays Sunehra Gold |
+| Footer (forest) | the same, copied by `site.js` | 64 px | Ivory letters, gold ear |
 | QR landing page | `sangat-wordmark-colour-reversed.svg` | 52 px | On the forest header |
 | Favicon | `assets/brand/icons/favicon.svg` / `.ico` | 16–48 px | Reversed symbol on a Forest Green rounded tile |
 | Home-screen icons | `icon-192/512.png`, `maskable-512.png`, `apple-touch-icon.png`, `site.webmanifest` | | |
-| 3D pack | `src/brand-assets.js` (generated) | | The V1 Ivory Landscape 1 kg front from the print artwork; pack proportions 180 × 280 |
+| 3D pack | `src/brand-assets.js` (generated) | | The V1 Ivory Landscape 1 kg front from `packaging-v3`; pack proportions 180 × 280 |
 
 Never place the wordmark smaller than 32 px high on screen (the swash and ear stop reading); use the symbol below that.
 
@@ -33,17 +33,16 @@ Never place the wordmark smaller than 32 px high on screen (the swash and ear st
 
 ## Type
 
-Playfair Display (400, 600, Italic) for headings and figures, Inter (400, 600) for text and UI, Noto Serif
-Devanagari for Hindi. Self-hosted WOFF2 in `assets/fonts/` with OFL licences; weight ranges in `@font-face` stop
+Playfair Display (400, 600, Italic) for headings and figures, Libre Caslon Text for the tagline, Inter (400, 600)
+for text and UI, Noto Serif Devanagari for Hindi. Self-hosted WOFF2 in `assets/fonts/` with OFL licences; weight ranges in `@font-face` stop
 faux bold.
 
 ## "Why it matters": the SRP figures
 
-Each reason card can carry a headline figure, an SRP vs non-SRP bar pair and two supporting facts; an expandable
-table lists the selected comparison rows with the source and calculation basis. All values live in
-`assets/js/content.js` (`why[].stat/bars/facts` and `srpComparison`) and come only from MVS's SRP vs non-SRP
-document (selected rows: water, crop protection, fertiliser, yield and income). Remove a figure there and it
-disappears from the page.
+Four reasons (Water, Crop protection, Fertiliser, Livelihoods), one figure each: the headline number, an SRP vs
+non-SRP bar pair and one line of context, with a single source line under the list. No tables and no "see more".
+Soil is not shown because the MVS document has no soil figure. Values live in `assets/js/content.js`
+(`why[]`, `whySource`) and come only from `brand/sangat/sources/srp-vs-non-srp.md`.
 
 ## QR storytelling
 

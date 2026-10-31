@@ -105,22 +105,14 @@
       const max = Math.max(b.srp, b.non);
       const row = (label, v, cls) => `<div class="cmp-row ${cls}"><span class="cmp-k">${label}</span>` +
         `<span class="cmp-bar"><i style="width:${(v / max * 100).toFixed(1)}%"></i></span><span class="cmp-v">${esc(num(v, b.money))}</span></div>`;
-      return `<div class="cmp" role="img" aria-label="${esc(`SRP ${num(b.srp, b.money)}, non-SRP ${num(b.non, b.money)} ${b.unit}`)}">` +
-        row("SRP", b.srp, "srp") + row("Non-SRP", b.non, "non") + `<p class="cmp-unit">${esc(b.unit)}</p></div>`;
+      return `<div class="cmp" role="img" aria-label="${esc(`SRP ${num(b.srp, b.money)}, non-SRP ${num(b.non, b.money)}, ${b.unit}`)}">` +
+        row("SRP", b.srp, "is-srp") + row("Non-SRP", b.non, "is-non") + `<p class="cmp-unit">${esc(b.unit)}</p></div>`;
     };
     $("whyList").innerHTML = C.why.map((w, i) =>
-      `<li class="reveal"><span class="n" aria-hidden="true">${pad(i + 1)}</span><div><h3>${esc(w.title)}</h3><p>${esc(w.text)}</p>` +
-      (w.stat ? `<div class="stat"><p class="stat-v">${esc(w.stat.value)}</p><p class="stat-l">${esc(w.stat.label)}</p>${bars(w.bars)}` +
-        (w.facts && w.facts.length ? `<ul class="stat-facts">${w.facts.map(f => `<li>${esc(f)}</li>`).join("")}</ul>` : "") + `</div>` : "") +
-      `</div></li>`).join("");
-    const S2 = C.srpComparison;
-    if (S2 && S2.groups && S2.groups.length) {
-      $("srpTable").innerHTML = `<details class="srp-table"><summary><span>${esc(S2.summary)}</span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></summary>` +
-        `<h3>${esc(S2.title)}</h3><div class="srp-scroll"><table><thead><tr>${S2.columns.map((c, i) => `<th scope="col"${i > 1 ? ' class="r"' : ""}>${esc(c)}</th>`).join("")}</tr></thead>` +
-        S2.groups.map(g => `<tbody><tr class="g"><th scope="rowgroup" colspan="5">${esc(g.name)}</th></tr>` +
-          g.rows.map(r => `<tr><th scope="row">${esc(r[0])}</th><td>${esc(r[1])}</td><td class="r srp-v">${esc(r[2])}</td><td class="r">${esc(r[3])}</td><td class="r d">${esc(r[4])}</td></tr>`).join("") + `</tbody>`).join("") +
-        `</table></div><p class="srp-src">${esc(S2.source)}</p></details>`;
-    }
+      `<li class="reveal"><span class="n" aria-hidden="true">${pad(i + 1)}</span><div class="why-card">` +
+      `<h3>${esc(w.title)}</h3><p class="stat-v">${esc(w.stat)}</p><p class="stat-l">${esc(w.label)}</p>${bars(w.bars)}` +
+      (has(w.note) ? `<p class="stat-note">${esc(w.note)}</p>` : "") + `</div></li>`).join("");
+    $("whySource").textContent = C.whySource || "";
 
     /* 04 Journey */
     $("journeyLead").textContent = C.journeyLead;

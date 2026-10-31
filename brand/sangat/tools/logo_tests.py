@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Logo test sheet (illustrate skill contact sheet): every layout on light and dark, one-colour, greyscale, and the
+"""Logo test sheet (illustrate skill contact sheet), v3 masters: every layout on light and dark, one-colour, greyscale, and the
 symbol and favicon at 16-128 px. Writes deliverables/logo/logo-test-sheet.png."""
 import base64, os, re, subprocess
 

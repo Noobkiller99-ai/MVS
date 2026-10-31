@@ -7,6 +7,7 @@
 @font-face{font-family:"Playfair Display";src:url(../fonts/playfair-display-latin-400-normal.woff2) format("woff2");font-weight:300 500;font-style:normal;font-display:swap}
 @font-face{font-family:"Playfair Display";src:url(../fonts/playfair-display-latin-600-normal.woff2) format("woff2");font-weight:600 900;font-style:normal;font-display:swap}
 @font-face{font-family:"Playfair Display";src:url(../fonts/playfair-display-latin-400-italic.woff2) format("woff2");font-weight:300 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Libre Caslon Text";src:url(../fonts/libre-caslon-text-latin-400-normal.woff2) format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
 @font-face{font-family:"Inter";src:url(../fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:300 500;font-display:swap}
 @font-face{font-family:"Inter";src:url(../fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600 800;font-display:swap}
 @font-face{font-family:"Noto Serif Devanagari";src:url(../fonts/noto-serif-devanagari-devanagari-400-normal.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF}
@@ -23,6 +24,7 @@
   --serif:"Playfair Display", Georgia, "Times New Roman", serif;
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --deva:"Noto Serif Devanagari", "Noto Sans Devanagari", "Mangal", serif;
+  --caslon:"Libre Caslon Text", Georgia, serif;   /* tagline and editorial lines, as on the brand board */
   --radius:22px; --gutter:clamp(18px, 4.5vw, 44px); --max:1200px; --head:68px;
   --ease-out:cubic-bezier(.2,.7,.2,1);
   --stage-h:min(58svh, 520px);
@@ -61,8 +63,8 @@ html:not(.can-3d) .grain-canvas{display:none}
 .site-header .bar{display:flex;align-items:center;justify-content:space-between;height:var(--head)}
 .site-header.solid,.site-header.open{background:rgba(249,246,238,.94);box-shadow:0 1px 0 var(--line);-webkit-backdrop-filter:saturate(1.2) blur(12px);backdrop-filter:saturate(1.2) blur(12px)}
 .brand{display:flex;gap:10px;align-items:center;color:inherit;text-decoration:none;font:400 1.18rem/1.2 var(--serif);min-height:44px}
-.brand .logo{height:46px;width:auto;margin-top:-6px}
-@media (max-width:879px){.brand .logo{height:40px}}
+.brand .logo{height:50px;width:auto;margin-top:2px}
+@media (max-width:879px){.brand .logo{height:42px}}
 .mainnav ul{list-style:none;margin:0;padding:0;display:flex;gap:30px}
 .mainnav a{color:inherit;font:500 .93rem/1 var(--sans);text-decoration:none;padding:14px 0;position:relative;display:block}
 .mainnav a::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;background:var(--clay);transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease-out)}
@@ -208,39 +210,20 @@ blockquote.quote cite{display:block;font:500 .85rem/1.4 var(--sans);font-style:n
 .why-list .n{font:italic 400 1.1rem/1.5 var(--serif);color:var(--clay-light)}
 .why-list h3{font-size:clamp(1.8rem,3.2vw,2.4rem);font-style:italic;font-weight:400;color:var(--gold-soft);margin-bottom:10px}
 .why-list p{color:var(--on-dark);margin:0;max-width:34em}
-/* SRP figures (MVS field comparison) */
-.stat{margin-top:22px;padding:20px 22px 18px;border:1px solid var(--line-dark);border-radius:16px;background:rgba(249,246,238,.04);max-width:34em}
-.why-list .stat-v{font:600 clamp(2.4rem,5vw,3.4rem)/1 var(--serif);color:var(--clay-light);margin:0;font-variant-numeric:lining-nums}
-.why-list .stat-l{font:500 1.02rem/1.4 var(--sans);color:var(--ivory);margin:6px 0 16px}
-.cmp{display:grid;gap:8px}
+/* SRP figures (MVS field comparison): one figure per reason */
+.why-card h3{font:600 .78rem/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;font-style:normal;color:var(--clay-light);margin:0 0 10px}
+.why-list .stat-v{font:600 clamp(2.8rem,6vw,4.2rem)/1 var(--serif);color:var(--ivory);margin:0;font-variant-numeric:lining-nums;letter-spacing:-.01em}
+.why-list .stat-l{font:italic 400 clamp(1.15rem,2vw,1.35rem)/1.35 var(--serif);color:var(--gold-soft);margin:6px 0 18px}
+.cmp{display:grid;gap:8px;max-width:30em}
 .cmp-row{display:grid;grid-template-columns:5.2rem 1fr auto;gap:12px;align-items:center;font-size:.9rem}
 .cmp-k{color:var(--on-dark-muted);font-weight:600;letter-spacing:.04em}
-.cmp-bar{height:10px;border-radius:99px;background:rgba(249,246,238,.08);overflow:hidden}
+.cmp-bar{height:8px;border-radius:99px;background:rgba(249,246,238,.08);overflow:hidden}
 .cmp-bar i{display:block;height:100%;border-radius:99px;background:var(--clay)}
-.cmp-row.non .cmp-bar i{background:rgba(167,184,159,.55)}
+.cmp-row.is-non .cmp-bar i{background:rgba(167,184,159,.5)}
 .cmp-v{font-variant-numeric:tabular-nums;color:var(--ivory);min-width:4.5rem;text-align:right}
-.why-list .cmp-unit{font-size:.8rem;color:var(--on-dark-muted);margin:2px 0 0}
-.stat-facts{list-style:none;margin:14px 0 0;padding:12px 0 0;border-top:1px solid var(--line-dark);display:grid;gap:6px}
-.why-list .stat-facts li{display:block;border:0;position:relative;padding:0 0 0 18px;color:var(--on-dark);font-size:.95rem;line-height:1.5}
-.stat-facts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--clay)}
-.srp-table{margin-top:28px;border:1px solid var(--line-dark);border-radius:16px;background:rgba(10,46,34,.55)}
-.srp-table summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;min-height:56px;
-  font:600 .95rem/1.2 var(--sans);color:var(--clay-light)}
-.srp-table summary::-webkit-details-marker{display:none}
-.srp-table summary svg{width:20px;height:20px;transition:transform .2s}
-.srp-table[open] summary svg{transform:rotate(180deg)}
-.srp-table h3{font:400 1.5rem/1.2 var(--serif);color:var(--ivory);margin:0 22px 12px}
-.srp-scroll{overflow-x:auto;padding:0 22px}
-.srp-table table{border-collapse:collapse;width:100%;min-width:520px;font-size:.9rem;font-variant-numeric:tabular-nums}
-.srp-table th,.srp-table td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line-dark);color:var(--on-dark);font-weight:400}
-.srp-table thead th{font:600 .72rem/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted)}
-.srp-table tr.g th{font:italic 400 1.05rem/1.3 var(--serif);color:var(--gold-soft);padding-top:16px}
-.srp-table tbody th[scope="row"]{color:var(--ivory)}
-.srp-table .r{text-align:right}
-.srp-table .srp-v{color:var(--clay-light);font-weight:600}
-.srp-table .d{color:var(--ivory);white-space:nowrap}
-.srp-table td:nth-child(2){color:var(--on-dark-muted)}
-.srp-src{font-size:.82rem;line-height:1.55;color:var(--on-dark-muted);margin:14px 22px 20px;max-width:none}
+.why-list .cmp-unit{font-size:.78rem;color:var(--on-dark-muted);margin:0}
+.why-list .stat-note{margin:14px 0 0;color:var(--on-dark);font-size:.98rem}
+.why-source{font-size:.8rem;color:var(--on-dark-muted);margin:22px 0 0}
 
 /* ---------- 04 Journey (pinned on capable devices) ---------- */
 .journey{background:linear-gradient(180deg,var(--sand) 0%, var(--sand) calc(100% - 30vh), var(--ivory) 100%);padding-bottom:0}
@@ -316,8 +299,8 @@ html:not(.can-3d) .journey-grid{display:block}
 @media (min-width:860px){.site-footer .cols{grid-template-columns:1.5fr 1fr 1fr}}
 .site-footer h2{font:600 .72rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--clay-light);margin:0 0 14px}
 .site-footer .brand{color:var(--ivory);margin:0 0 10px}
-.site-footer .brand .logo{height:58px}
-.site-footer .tagline{font:400 1.2rem/1.3 var(--serif);color:var(--ivory);margin:0 0 2px}
+.site-footer .brand .logo{height:64px}
+.site-footer .tagline{font:400 1.1rem/1.3 var(--caslon);letter-spacing:.12em;color:var(--clay-light);margin:4px 0 2px}
 .site-footer .tagline-hi{font:400 1rem/1.5 var(--deva);color:var(--clay-light);margin:0 0 16px}
 .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
 .site-footer a{color:var(--ivory);display:inline-block;padding:6px 0}
@@ -364,7 +347,7 @@ noscript p{background:var(--sand);padding:16px;border-radius:12px;margin:90px va
 /* Mobile: the grain shares the full width with the text, so text blocks become full-bleed
    "paper" layers in their section's colour and the grain passes behind them. */
 @media (max-width:899px){
-  .can-3d .chapter-head,.can-3d .p-intro,.can-3d .why-list>li,.can-3d .srp-table,.can-3d .closing-copy{
+  .can-3d .chapter-head,.can-3d .p-intro,.can-3d .why-list>li,.can-3d .why-source,.can-3d .closing-copy{
     background:var(--paper);box-shadow:0 0 0 100vmax var(--paper);clip-path:inset(0 -100vmax)}
   #farmers{--paper:var(--ivory)}
   .practices{--paper:var(--field);background:linear-gradient(180deg,#F6F2E8 0,var(--field) 72px,var(--field) calc(100% - 36vh),var(--forest-3) 100%)}
