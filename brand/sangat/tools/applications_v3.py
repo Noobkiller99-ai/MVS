@@ -34,10 +34,10 @@ def png(path):
     return "data:image/png;base64," + base64.b64encode(open(path, "rb").read()).decode()
 
 
-def land(w, h, mode="day", align="xMidYMid"):
-    """The pack landscape at its own proportions (1000 x 600), cropped to fill a w x h box."""
-    return (f'<svg viewBox="0 120 1000 480" style="display:block;width:100%;height:100%" preserveAspectRatio="{align} slice">'
-            f'{landscape(0, 0, 1000, 600, mode=mode, pid=f"a{w}{h}{mode}")}</svg>')
+def land(w, h, mode="day", align="xMidYMax"):
+    """The client's master landscape, unmodified, filling a w x h box (cropped by the box, aspect kept)."""
+    return (f'<svg viewBox="0 0 {w} {h}" style="display:block;width:100%;height:100%">'
+            f'{landscape(0, 0, w, h, fit="slice", align=align)}</svg>')
 
 
 FONT_CSS = f"""

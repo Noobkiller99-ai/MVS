@@ -133,8 +133,8 @@
     title.setAttribute("aria-label", plain(C.closing.title));
     let em = false;
     title.innerHTML = C.closing.title.split(/(<\/?em>)/).map(part => {
-      if (part === "<em>") { em = true; return ""; }
-      if (part === "</em>") { em = false; return ""; }
+      if (part === "<em>") { em = true; return '<span class="l2">'; }
+      if (part === "</em>") { em = false; return "</span>"; }
       return part.split(/(\s+)/).map(w => /^\s+$/.test(w) || !w ? w : (em ? `<em class="w" aria-hidden="true">${esc(w)}</em>` : `<span class="w" aria-hidden="true">${esc(w)}</span>`)).join("");
     }).join("");
     $("closeText").textContent = C.closing.text;
@@ -227,7 +227,8 @@
     const closingStage = q('[data-stage="closing"]');
     const closeY = centerScroll(closingStage);
     add("closing", closeY, closingStage);
-    add("end", Math.max(closeY + vh * 0.3, docTop($("siteFooter")) - vh * 0.55), closingStage);
+    /* The pack and bowl leave with their stage: they scroll up and fade out before the closing words reach them. */
+    add("end", closeY + closingStage.offsetHeight * 0.55, closingStage, "linear");
 
     /* Keep keyframes inside the scrollable range and strictly increasing. */
     let prev = -Infinity;

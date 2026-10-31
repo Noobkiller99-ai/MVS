@@ -12,7 +12,7 @@ the 3D grain rather than competing with it.
 | QR landing page | `sangat-wordmark-colour-reversed.svg` | 52 px | On the forest header |
 | Favicon | `assets/brand/icons/favicon.svg` / `.ico` | 16–48 px | Reversed symbol on a Forest Green rounded tile |
 | Home-screen icons | `icon-192/512.png`, `maskable-512.png`, `apple-touch-icon.png`, `site.webmanifest` | | |
-| 3D pack | `src/brand-assets.js` (generated) | | The V1 Ivory Landscape 1 kg front from `packaging-v3`; pack proportions 180 × 280 |
+| 3D pack | `src/brand-assets.js` (generated) | | The V1 Ivory Landscape 1 kg front from `packaging-v3`, carrying the client's master landscape; pack proportions 180 × 280 |
 
 Never place the wordmark smaller than 32 px high on screen (the swash and ear stop reading); use the symbol below that.
 
@@ -49,3 +49,19 @@ Soil is not shown because the MVS document has no soil figure. Values live in `a
 Pack back → QR strip ("Every grain has a story", SCAN TO EXPLORE) → `story.html`: the same headline, the batch card
 (placeholders until MVS confirms each batch) and four routes: farmer stories, cultivation practices, why it matters
 (the SRP figures) and our journey; the footer bar repeats the strip's line.
+
+## Closing chapter
+
+The pack and bowl are framed in the closing stage above the words. From the moment the stage is centred they scroll
+up with it and fade out (`site.js`, the `end` keyframe), so they never sit behind "Every grain carries someone's
+season of work."
+
+## Hallmark polish (October 2026)
+
+Run with the Hallmark skill at polish depth (keep the brand, layout and words). Fixed: every colour through a
+`:root` token, `overflow-x: clip` on html and body, labels in sentence case untracked, the dot-joined meta line on
+the QR page, the to-top button visible without JavaScript, focus rings at 3:1 or better (forest on light, gold on
+dark), the skip link no longer parked 999 px off-screen, the QR page capped at 640 px, balanced headings, button
+`:active` and `:disabled` states, a solid header instead of glass. Recorded in the stamp at the top of `site.css`:
+two waivers (38iii, the hero's coloured second line; 80, the no-WebGL fallback grain) and one dismissal (40, the
+gradient hand-off bands hold no text). Before: 46 FAIL, 69 REFLEX. After: 0 FAIL, 0 REFLEX, render tier included.

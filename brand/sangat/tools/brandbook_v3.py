@@ -111,22 +111,25 @@ page("4 · Typography", "As on the board: Playfair Display, with Inter.",
 
 icons = "".join(f'<figure>{icon(k)}<figcaption>{t}</figcaption></figure>' for k, t in
                 [("farmers", "Local farmers"), ("practices", "Sustainable practices"), ("communities", "Thriving communities"), ("tomorrow", "A brighter tomorrow")])
-page("5 · Graphic language", "A landscape, a sweep and golden ears.",
-     "As on the board, drawn flat in the brand colours: misty mountains, a big tree, one farmhouse, terraced fields; the forest sweep with "
-     "its fine gold edge and the leaf-shaped rice window; arching gold rice ears; etched ears at the corners; four line icons on a 24 grid.",
-     f"""<div class="two" style="grid-template-columns:1.4fr 1fr">{img("packaging-v3/v1-ivory-landscape-1kg-front.png", "max-height:100%;object-fit:cover;object-position:bottom;height:560px;width:100%")}
-     <div><div class="icons">{icons}</div><h4 style="margin-top:40px">Rules</h4><p>The landscape always sits at the bottom of a surface; the sweep rises left to right;
-     ears bow to the right; one farmhouse, never a crowd. No outlines, no gradients in print artwork, no stock imagery.</p></div></div>""")
+page("5 · Graphic language", "The landscape, unchanged.",
+     "The client's master illustration is the brand's one picture: mountains, the farmhouse, terraced rice fields and the "
+     "foreground rice ears. It is reproduced as an editable, layered vector (art/sangat-landscape.svg, seven named layers, "
+     "and a transparent variant) and is never redrawn, recoloured or cut: it is placed at its own 2:1 proportion, bottom-aligned.",
+     f"""<div class="two" style="grid-template-columns:1.6fr 1fr">{img("art/sangat-landscape.png", "")}
+     <div><div class="icons">{icons}</div><h4 style="margin-top:40px">Rules</h4><p>Full width at the bottom of a surface; on ivory and on forest use the
+     transparent variant so the ground shows through the sky. Panels narrower than the artwork show a section of it, cropped by the panel edge, never squeezed.
+     Text sits on the ivory above it, or small (net quantity, veg mark) on its darkest foreground corners. Etched ears, line icons and the QR sprig are the only
+     other drawings.</p></div></div>""")
 
 page("6.1 · Packaging · V1 Ivory Landscape · 1 kg", "The board, made print-ready in structure.",
-     "Back · front · base gusset, laid out to the board. The back ends in the QR strip; nutrition and legal text sit on the base gusset. "
+     "Back · front · base gusset, laid out to the board, with the master landscape on front and back. The back ends in the QR strip; nutrition and legal text sit on the base gusset. "
      "Magenta: assumed trim, top seal and zip; blue: safe area. Every regulatory item is a labelled placeholder.",
      img("packaging-v3/v1-ivory-landscape-1kg-guides.png", ""))
 page("6.2 · Packaging · V1 Ivory Landscape · 5 kg", "Side · front · side · back.",
      "One side carries 'Good food grows from shared thinking.' as on the board, the other the nutrition and legal panel; the handle "
      "die-cut runs through the tab; nothing important sits above 52 mm.", img("packaging-v3/v1-ivory-landscape-5kg-guides.png", ""))
-page("6.3 · Packaging · V2 Forest Edition", "The same story at dusk.",
-     "Forest ground, gold tab, the landscape in deep greens, no window: for gifting, festive packs or the 5 kg.",
+page("6.3 · Packaging · V2 Forest Edition", "The same landscape on forest.",
+     "Forest ground and gold tab, with the same master landscape: for gifting, festive packs or the 5 kg.",
      f"""<div class="two" style="grid-template-columns:2.1fr 1fr">{img("packaging-v3/v2-forest-edition-1kg-guides.png", "")}{img("packaging-v3/v2-forest-edition-5kg-front.png", "")}</div>""")
 page("6.4 · The QR strip", "Every grain has a story.",
      "The client's strip runs the full width of the bottom of every back panel, set in the brand fonts: the Hindi line, the headline, "

@@ -1,0 +1,20 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "polish",
+  "scope": "site",
+  "theme": "brand (Sangat board)",
+  "prompt": "premium basmati brand story site with a 3D grain",
+  "waived": [
+   "38iii",
+   "80"
+  ],
+  "pages": [
+   "/",
+   "/story.html"
+  ],
+  "before": "46 FAIL, 69 REFLEX",
+  "after": "0 FAIL, 0 REFLEX",
+  "date": "2026-10-31"
+ }
+]

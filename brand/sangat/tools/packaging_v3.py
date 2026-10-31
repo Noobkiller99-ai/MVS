@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Sangat packaging v3: laid out to the client's exact brand board, with the traced v3 logo.
 
+Landscape: the client's master illustration (art/sangat-landscape*.svg, traced by landscape_vector.py), placed
+unmodified (uniform scale, its own aspect ratio) and linked, never redrawn.
 Front (board): ivory paper, forest tab with the gold symbol, the wordmark, the tagline, PREMIUM / BASMATI RICE /
-NATURALLY AROMATIC · THOUGHTFULLY GROWN in Libre Caslon caps, faint etched rice ears at the edges, then the landscape
-(mountains, a big tree, farmhouse, terraced fields), the forest sweep with gold rice ears and the leaf-shaped rice
-window, and the net quantity on the green.
+NATURALLY AROMATIC · THOUGHTFULLY GROWN in Libre Caslon caps, faint etched rice ears at the edges, then the master
+landscape full width at the bottom, with the net quantity and veg mark set over its foreground.
 Back (board): "A shared journey / for a brighter tomorrow", the board's copy, a curved ivory band with the four value
-icons, the farmer scene, a compact legal panel, and the client's QR strip along the bottom.
-Sides (5 kg): symbol, "Good food grows from shared thinking.", rule, landscape.
+icons, the master landscape, and the client's QR strip along the bottom.
+Sides (5 kg): symbol, "Good food grows from shared thinking.", rule, a section of the landscape; the other side
+carries the legal panel.
 V2 Forest Edition keeps every element on a forest ground (gold tab, dusk landscape, no window).
 
 Outputs packaging-v3/: <v>-<size>-artwork.svg, -guides.svg/png, -front.png, -back.png, -front-mock.png (window shows
@@ -61,102 +63,31 @@ def etched(x, y, s, flip=False, opacity=0.35):
     return f'<g opacity="{opacity}" transform="{tr}">{g}</g>'
 
 
-def mountains(mode):
-    if mode == "day":
-        return (f'<path d="M0 230L90 150L150 190L240 110L330 196L420 140L500 205L600 120L700 190L790 130L880 200L1000 150V600H0Z" fill="#C3CBC0" opacity=".85"/>'
-                f'<path d="M0 262L120 196L210 240L320 176L430 246L560 190L690 250L820 200L1000 236V600H0Z" fill="#AEBAA8"/>')
-    return (f'<path d="M0 230L90 150L150 190L240 110L330 196L420 140L500 205L600 120L700 190L790 130L880 200L1000 150V600H0Z" fill="#2F584A"/>'
-            f'<path d="M0 262L120 196L210 240L320 176L430 246L560 190L690 250L820 200L1000 236V600H0Z" fill="#284E3F"/>')
+ART_DIR = os.path.join(W, "art")
+ART_URL = "file://" + ART_DIR + "/"      # renders; saved artwork files link to ../art/ instead
 
 
-def landscape(x, y, w, h, mode="day", window=False, rice=False, pid="L", net=None):
-    """Board landscape in a 1000 x 600 box (scaled uniformly to w, anchored at the bottom, clipped to w x h)."""
-    s = w / 1000
-    sy = min(max(s, h / 600), s * 1.3)
-    oy = y + h - 600 * sy
-    day = mode == "day"
-    far = C["sage_l"] if day else "#2C5444"
-    f1, f2, f3 = (C["field1"], C["field2"], C["field3"]) if day else ("#3B6650", "#2F5B46", "#25503D")
-    t1, t2 = (C["tree"], C["tree2"]) if day else ("#1A3D2F", "#163628")
-    sweep, ear = (C["forest"], C["gold"]) if day else (C["forest_d"], C["gold"])
-    g = [mountains(mode)]
-    g.append(f'<path d="M0 300C140 268 300 284 420 300C560 318 720 272 1000 290V600H0Z" fill="{far}"/>')
-    g.append(tree(118, 318, 46, t1, t2, "#3A3326" if day else t2))                      # the big tree, left
-    for tx, ty, r in [(470, 312, 14), (500, 316, 11), (845, 300, 18), (880, 306, 13), (655, 308, 10)]:
-        g.append(tree(tx, ty, r, t1, t2, t2))
-    g.append(f'<rect x="300" y="296" width="44" height="26" fill="{C["wall"] if day else "#C9BFA6"}"/>'
-             f'<path d="M293 298L322 276L351 298Z" fill="{C["roof"] if day else C["gold_d"]}"/>'
-             f'<rect x="317" y="306" width="9" height="16" fill="{C["roof"] if day else C["gold_d"]}"/>')
-    g.append(f'<path d="M0 352C200 330 470 336 1000 362V600H0Z" fill="{f1}"/>')
-    for i in range(7):
-        yy = 362 + i * 13
-        g.append(f'<path d="M0 {yy}C220 {yy - 20} 520 {yy - 9} 1000 {yy + 20}" fill="none" stroke="{f2}" stroke-width="2.2" opacity=".55"/>')
-    g.append(f'<path d="M0 440C260 408 600 420 1000 446V600H0Z" fill="{f2}"/>')
-    for i in range(6):
-        yy = 452 + i * 15
-        g.append(f'<path d="M0 {yy}C260 {yy - 24} 600 {yy - 9} 1000 {yy + 22}" fill="none" stroke="{f3}" stroke-width="2.4" opacity=".6"/>')
-    # the sweep (green) rising to the right edge; the rice window cut into it; a right field band below the window
-    top = "M0 600V430C210 470 440 420 640 300C780 216 900 168 1000 150V600Z"
-    g.append(f'<path d="{top}" fill="{sweep}"/>')
-    g.append(f'<path d="M0 430C210 470 440 420 640 300C780 216 900 168 1000 150" fill="none" stroke="{ear}" stroke-width="3"/>')
-    defs = ""
-    if window:
-        win = "M520 600C600 470 760 310 1000 178V330C900 380 820 470 790 600Z"
-        defs = f'<clipPath id="win-{pid}"><path d="{win}"/></clipPath>'
-        if rice:
-            rnd = random.Random(11)
-            gs = []
-            for _ in range(1100):
-                cx, cy = rnd.uniform(500, 1010), rnd.uniform(160, 610)
-                gs.append(f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rnd.uniform(15, 19):.1f}" ry="3.6" transform="rotate({rnd.uniform(0, 180):.0f} {cx:.1f} {cy:.1f})" '
-                          f'fill="{rnd.choice(["#FFFFFF", "#F6F1E4", "#EDE5D2", "#FBF8F1"])}" stroke="#D8CDB4" stroke-width=".8"/>')
-            g.append(f'<path d="{win}" fill="#E9DFC8"/><g clip-path="url(#win-{pid})">{"".join(gs)}</g>')
-        else:
-            g.append(f'<path d="{win}" fill="#FFFFFF"/><g clip-path="url(#win-{pid})">' +
-                     "".join(f'<line x1="{480 + i * 22}" y1="120" x2="{280 + i * 22}" y2="640" stroke="#D9D4C8" stroke-width="3"/>' for i in range(34)) +
-                     "</g>" + text(780, 380, "CLEAR WINDOW", 16, C["earth"], weight=600, anchor="middle", extra=' transform="rotate(-42 780 380)"'))
-        g.append(f'<path d="M520 600C600 470 760 310 1000 178" fill="none" stroke="{C["gold"]}" stroke-width="4"/>'
-                 f'<path d="M790 600C820 470 900 380 1000 330" fill="none" stroke="{C["gold"]}" stroke-width="4"/>')
-        # field strokes on the right band
-        for i in range(4):
-            g.append(f'<path d="M{830 + i * 30} 600C{850 + i * 30} 520 {920 + i * 18} 450 1000 {400 + i * 40}" fill="none" stroke="#1D5240" stroke-width="3" opacity=".7"/>')
-    for px, py, L, ang, dr, lf in [(20, 612, 230, 4, 0.30, True), (85, 612, 275, 10, 0.36, False),
-                                   (150, 612, 235, 15, 0.40, True), (215, 612, 185, 20, 0.42, False)]:
-        g.append(panicle(px, py, L, ang, dr, ear, n=12, leaf=(C["gold_d"] if day else "#8E7446") if lf else None))
-    if net:
-        g.append(text(net[0], 560, net[1], 54, C["ivory"], family=SERIF, anchor="middle"))
-    return (f'<clipPath id="clip-{pid}"><rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}"/></clipPath>'
-            f'<g clip-path="url(#clip-{pid})"><g transform="translate({x:.2f} {oy:.2f}) scale({s:.5f} {sy:.5f})"><defs>{defs}</defs>{"".join(g)}</g></g>')
-
-
-def farmer_scene_v3(x, y, w, h, cid):
-    """Back-panel scene as on the board: mountains, trees, a paddy field at harvest and a farmer (a generic
-    illustration, not a specific person), drawn on a 1000 x 560 board and cropped to fill w x h."""
-    g = [f'<rect width="1000" height="560" fill="#ECE5D3"/>', mountains("day").replace("V600H0Z", "V560H0Z"),
-         f'<path d="M0 300C140 268 300 284 420 300C560 318 720 272 1000 290V560H0Z" fill="{C["sage_l"]}"/>',
-         tree(120, 318, 40, C["tree"], C["tree2"], "#3A3326"), tree(240, 314, 26, C["tree"], C["tree2"], C["tree2"]),
-         tree(780, 304, 30, C["tree"], C["tree2"], C["tree2"]), tree(870, 310, 22, C["tree"], C["tree2"], C["tree2"]),
-         f'<path d="M0 352C200 330 470 336 1000 362V560H0Z" fill="#C9B979"/>']
-    for i in range(7):
-        yy = 364 + i * 16
-        g.append(f'<path d="M0 {yy}C220 {yy - 18} 520 {yy - 8} 1000 {yy + 18}" fill="none" stroke="#B3A35E" stroke-width="2.4" opacity=".6"/>')
-    fx, fy, S = 520, 330, 2.1
-    fig = [f'<path d="M{-13} {6}C{-15} {-14} {15} {-14} {13} {6}L{11} {44}H{-11}Z" fill="#EDE6D6"/>',
-           f'<circle cx="0" cy="-18" r="7.5" fill="{C["earth"]}"/>',
-           f'<ellipse cx="0" cy="-23" rx="18" ry="4.4" fill="{C["gold_d"]}"/>',
-           f'<path d="M-8 -24C-7 -33 7 -33 8 -24Z" fill="#8F6E3E"/>',
-           f'<path d="M10 -2L26 14L22 18L7 6Z" fill="#EDE6D6"/>',
-           f'<path d="M24 14C34 8 40 16 36 24" fill="none" stroke="{C["stone"]}" stroke-width="2.4" stroke-linecap="round"/>',
-           f'<path d="M-12 0L-22 18L-18 21L-7 6Z" fill="#E2D9C4"/>']
-    g.append(f'<g transform="translate({fx} {fy}) scale({S})">{"".join(fig)}</g>')
-    for i in range(40):
-        px = -10 + i * 26.5
-        g.append(panicle(px, 572, 90 + (i * 7) % 40, 6 + (i * 13) % 16, 0.32, C["gold_d"] if i % 3 else C["gold"], n=8))
-    g.append(f'<path d="M0 520C200 506 520 512 1000 528V560H0Z" fill="#A99649"/>')
-    s = max(w / 1000, h / 560)
-    ox, oy = x + (w - 1000 * s) / 2, y + (h - 560 * s) * 0.55
-    return (f'<clipPath id="{cid}"><rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}"/></clipPath>'
-            f'<g clip-path="url(#{cid})"><g transform="translate({ox:.2f} {oy:.2f}) scale({s:.5f})">{"".join(g)}</g></g>')
+def landscape(x, y, w, h, mode="day", window=False, rice=False, pid="L", net=None, align="xMidYMax", fit="meet"):
+    """The client's master landscape (art/sangat-landscape-transparent.svg), placed unmodified: uniform scale and its
+    own 2:1 aspect ratio. fit "meet" shows all of it, bottom-aligned in the box; fit "slice" fills the box and the
+    box crops it (sides, social tiles). The transparent variant sits on ivory and on forest alike. mode, window, rice,
+    pid and net are kept for older callers and ignored: nothing is drawn into the illustration."""
+    href = f"{ART_URL}sangat-landscape-transparent.svg"
+    if fit == "meet":
+        iw = min(w, 2 * h)
+        ih = iw / 2
+    else:
+        iw = max(w, 2 * h)
+        ih = iw / 2
+    ix = x + (0 if align.startswith("xMin") else (w - iw) if align.startswith("xMax") else (w - iw) / 2)
+    iy = y + h - ih if align.endswith("YMax") else y + (h - ih) / 2
+    img = f'<image href="{href}" x="{ix:.2f}" y="{iy:.2f}" width="{iw:.2f}" height="{ih:.2f}"/>'
+    if fit == "slice":
+        _uid[0] += 1
+        cid = f"art{_uid[0]}"
+        img = (f'<clipPath id="{cid}"><rect x="{x:.2f}" y="{y:.2f}" width="{w:.2f}" height="{h:.2f}"/></clipPath>'
+               f'<g clip-path="url(#{cid})">{img}</g>')
+    return img
 
 
 def front(v, size, ox, w, h, pid, rice=False):
@@ -174,25 +105,29 @@ def front(v, size, ox, w, h, pid, rice=False):
     sym, _, _ = place("symbol-mono.svg", ox + w / 2, tab_h - 24 * k, h=18 * k, anchor="tc", flat=C["forest"] if dark else C["gold"])
     g.append(sym)
     top = tab_h + 12 * k
+    tg = []
     wm, ww, wh = place("wordmark.svg", ox + w / 2, top, w=128 * k, anchor="tc", recolour=REV if dark else None)
-    g.append(wm)
+    tg.append(wm)
     y = top + wh + 6 * k
-    g.append(text(ox + w / 2, y, "Sanjhi Soch, Sunehra Kal", 4.6 * k, warm, family=SERIF, anchor="middle", ls=0.35 * k))
+    tg.append(text(ox + w / 2, y, "Sanjhi Soch, Sunehra Kal", 4.6 * k, warm, family=SERIF, anchor="middle", ls=0.35 * k))
     y += 11 * k
-    g.append(text(ox + w / 2, y, "PREMIUM", 3.4 * k, warm, family=SERIF, anchor="middle", ls=0.9 * k))
+    tg.append(text(ox + w / 2, y, "PREMIUM", 3.4 * k, warm, family=SERIF, anchor="middle", ls=0.9 * k))
     y += 7.6 * k
-    g.append(text(ox + w / 2, y, "BASMATI RICE", 7.0 * k, ink, family=SERIF, anchor="middle", ls=0.85 * k))
+    tg.append(text(ox + w / 2, y, "BASMATI RICE", 7.0 * k, ink, family=SERIF, anchor="middle", ls=0.85 * k))
     y += 3.6 * k
-    g.append(f'<line x1="{ox + w / 2 - 33 * k:.2f}" y1="{y:.2f}" x2="{ox + w / 2 + 33 * k:.2f}" y2="{y:.2f}" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}"/>')
+    tg.append(f'<line x1="{ox + w / 2 - 33 * k:.2f}" y1="{y:.2f}" x2="{ox + w / 2 + 33 * k:.2f}" y2="{y:.2f}" stroke="{C["gold"]}" stroke-width="{0.35 * k:.2f}"/>')
     y += 6 * k
-    g.append(text(ox + w / 2, y, "NATURALLY AROMATIC", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
+    tg.append(text(ox + w / 2, y, "NATURALLY AROMATIC", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
     y += 4.6 * k
-    g.append(text(ox + w / 2, y, "THOUGHTFULLY GROWN", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
-    ly = y - (34 if size == "1kg" else 10) * k
+    tg.append(text(ox + w / 2, y, "THOUGHTFULLY GROWN", 2.9 * k, ink, family=SERIF, anchor="middle", ls=0.75 * k))
+    # centre the text block between the tab and the top of the landscape's tree
+    tree_top = h - w / 2 + 0.1 * (w / 2)
+    dy = max(0.0, ((tab_h + tree_top - 6 * k) - (top + y)) / 2)
+    g.append(f'<g transform="translate(0 {dy:.2f})">' + "".join(tg) + "</g>")
     net = "1 kg" if size == "1kg" else "5 kg"
-    g.append(landscape(ox, ly, w, h - ly, mode="dusk" if dark else "day", window=(v == "v1"), rice=rice, pid=pid,
-                       net=(445 if v == "v1" else 800, net)))
-    vx, vy = ox + w - 10 * k, h - 10 * k
+    g.append(landscape(ox, h - w / 2, w, w / 2, mode="day", pid=pid))
+    g.append(text(ox + w - 9 * k, h - 8 * k, net, 9 * k, C["ivory"], family=SERIF, anchor="end"))
+    vx, vy = ox + 11 * k, h - 7 * k
     g.append(f'<rect x="{vx - 4.5 * k:.2f}" y="{vy - 4.5 * k:.2f}" width="{4.5 * k:.2f}" height="{4.5 * k:.2f}" fill="#FFFFFF" stroke="#1E8A3B" stroke-width="{0.45 * k:.2f}"/>'
              f'<circle cx="{vx - 2.25 * k:.2f}" cy="{vy - 2.25 * k:.2f}" r="{1.25 * k:.2f}" fill="#1E8A3B"/>')
     return "".join(g)
@@ -225,7 +160,7 @@ def back(v, size, ox, w, h):
         g.append(text(cx, y + 17 * k, a, 2.2 * k, C["forest"], family=SERIF, anchor="middle", ls=0.3 * k))
         g.append(text(cx, y + 20.2 * k, b, 2.2 * k, C["forest"], family=SERIF, anchor="middle", ls=0.3 * k))
     y += band_h
-    g.append(farmer_scene_v3(ox, y, w, fh, cid=f"fs3-{v}-{size}"))
+    g.append(landscape(ox, y, w, fh, mode="day", align="xMidYMax"))
     y += fh
     g.append(qr_strip(ox, h - strip_h, w, strip_h))
     return "".join(g)
@@ -272,7 +207,7 @@ def legal_side(v, ox, w, h, pid):
     sym, _, _ = place("symbol.svg", ox + w / 2, 66, h=24 * k, anchor="tc", recolour=REV if dark else None)
     g.append(sym)
     g.append(legal_panel(ox + 6 * k, 104, w - 12 * k, 170, "5kg", 1.0))
-    g.append(landscape(ox - w * 0.8, h - 150, w * 2.6, 150, mode="dusk" if dark else "day", pid=pid))
+    g.append(landscape(ox, h - 150, w, 150, mode="dusk" if dark else "day", align="xMaxYMax", fit="slice"))
     return f'<g clip-path="url(#cl-{pid})"><clipPath id="cl-{pid}"><rect x="{ox}" y="0" width="{w}" height="{h}"/></clipPath>{"".join(g)}</g>'
 
 
@@ -286,7 +221,7 @@ def side(v, ox, w, h, pid):
     g.append(lines(ox + w / 2, 136, ["Good food", "grows from", "shared", "thinking."], 8.6 * k, ink, lead=1.32, family=SERIF, anchor="middle"))
     g.append(f'<line x1="{ox + w / 2 - 8 * k:.2f}" y1="182" x2="{ox + w / 2 + 8 * k:.2f}" y2="182" stroke="{C["gold"]}" stroke-width="0.5"/>')
     g.append(text(ox + w / 2, 196, "साँझी सोच, सुनहरा कल", 4.2 * k, C["gold"] if dark else C["earth"], family="Noto Serif Devanagari", anchor="middle"))
-    g.append(landscape(ox - w * 0.8, h - 190, w * 2.6, 190, mode="dusk" if dark else "day", pid=pid))
+    g.append(landscape(ox, h - 190, w, 190, mode="dusk" if dark else "day", align="xMinYMax", fit="slice"))
     return f'<g clip-path="url(#cs-{pid})"><clipPath id="cs-{pid}"><rect x="{ox}" y="0" width="{w}" height="{h}"/></clipPath>{"".join(g)}</g>'
 
 
@@ -330,12 +265,14 @@ def main():
         for size in ("1kg", "5kg"):
             body, tw, th, zones, boxes, items = sheet(v, size)
             base = os.path.join(OUT, f"{v}-{vname}-{size}")
-            note = (f"<!-- Sangat {v.upper()} {vname} {size} (v3, laid out to the client's brand board). NOT PRINT-READY: "
+            note = (f"<!-- Sangat {v.upper()} {vname} {size} (v3, laid out to the client's brand board; landscape = the client's "
+                    f"master illustration, linked from ../art/). NOT PRINT-READY: "
                     f"assumed panel sizes, live text (Libre Caslon Text, Playfair Display, Inter, Noto Serif Devanagari; OFL) "
                     f"to be outlined at prepress, regulatory, QR and URL content are placeholders. -->")
-            open(base + "-artwork.svg", "w").write(wrap(note + body, f"{-BLEED} {-BLEED} {tw + 2 * BLEED} {th + 2 * BLEED}", tw + 2 * BLEED, th + 2 * BLEED))
+            rel = lambda t: t.replace(ART_URL, "../art/")
+            open(base + "-artwork.svg", "w").write(rel(wrap(note + body, f"{-BLEED} {-BLEED} {tw + 2 * BLEED} {th + 2 * BLEED}", tw + 2 * BLEED, th + 2 * BLEED)))
             gd = wrap(note + body + guides(size, tw, th, zones, items), f"-6 -6 {tw + 12} {th + 12}", tw + 12, th + 12)
-            open(base + "-guides.svg", "w").write(gd)
+            open(base + "-guides.svg", "w").write(rel(gd))
             px = 1800 / (tw + 12)
             jobs.append({"html": f'<html><body style="margin:0">{gd.replace(f"width=\"{tw + 12}mm\" height=\"{th + 12}mm\"", f"width=\"{(tw + 12) * px:.0f}\" height=\"{(th + 12) * px:.0f}\"")}</body></html>',
                          "png": base + "-guides.png", "w": int((tw + 12) * px), "h": int((th + 12) * px)})

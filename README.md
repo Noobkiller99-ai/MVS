@@ -46,6 +46,18 @@ npm run build:standalone
 Deploy the multi-file version (`index.html` and `assets/`). It caches better and loads the 3D scene
 only after the text.
 
+## Design checks (Hallmark)
+
+The site was polished with the Hallmark skill (`.claude/skills/hallmark`). Its stamp, waivers and dismissals sit at
+the top of `assets/css/site.css` and `story.html`; the run log is `.hallmark/log.json`. To re-check after a change,
+with `npm start` running:
+
+```bash
+node .claude/skills/hallmark/scripts/sloplint.mjs assets/css/site.css --url http://localhost:8080/ --genre editorial --render
+```
+
+The render tier needs `puppeteer-core` and Chrome (`CHROME_PATH`).
+
 ## Edit the content
 
 All words and facts live in **`assets/js/content.js`** (search for `EDIT CONTENT HERE`).

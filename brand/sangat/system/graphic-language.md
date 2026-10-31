@@ -4,10 +4,7 @@ Everything is hand-authored vector (illustrate skill, SVG track): no stock and n
 
 | Device | Where | Rules |
 |---|---|---|
-| **The landscape** (`tools/packaging_v3.py: landscape()`) | Pack fronts, side gussets, social | As on the board: misty mountains, a big tree, round trees, one small farmhouse, terraced fields in three greens. Calm, flat colour, no outlines. Day version on ivory; dusk version on forest (V2). |
-| **The sweep** | Pack fronts, web section edges | One Forest Green curve rising from bottom left to the right edge, edged with a fine gold line. Net quantity and the veg mark sit on it. |
-| **Gold rice ears** (`panicle()`) | On the sweep, the back illustration, accents | Arching ears with teardrop grains, bowing to the right; one long leaf blade on every second ear. Sunehra Gold on forest, Gold Deep on ivory. |
-| **The rice window** | V1 packs | The real rice, seen through a leaf-shaped clear window cut into the sweep; gold foil edges. |
+| **The landscape** (`art/sangat-landscape.svg`, `-transparent.svg`) | Pack fronts and backs, side panels, stationery, social | The client's master illustration, traced to an editable layered vector (`tools/landscape_vector.py`): sky, mountains and mist, trees, farmhouse, rice fields, foreground leaves and hill, rice ears. Never redrawn, recoloured or cut: placed at its own 2:1 proportion, bottom-aligned; narrow panels show a section cropped by the panel edge. |
 | **Etched ears** | Pack front corners | Faint gold line ears, about 20% opacity, framing the wordmark (board detail). |
 | **The tab** | Pack tops | A Forest Green (V1) or Sunehra Gold (V2) vertical tab from the top seal, carrying the symbol. |
 | **The paddy sprig** (`sprig()`) | QR strip, story page, web hero accents | Fine gold line drawing of a sprig; decorative, never behind body text. |

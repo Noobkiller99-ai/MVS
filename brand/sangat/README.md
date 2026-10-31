@@ -16,6 +16,7 @@ Start with **`deliverables/sangat-brand-guidelines.pdf`** (20 pages, v3).
 | Folder | What is in it |
 |---|---|
 | `deliverables/` | **Hand-over files.** Guidelines PDF; `logo/svg/` 30 editable SVGs (primary with tagline, horizontal, stacked, wordmark, symbol × colour, colour-reversed, black, white, forest, gold) and `logo/png/` the same as transparent 2400 px PNGs; `logo/logo-test-sheet.png`; `digital/web-icons/` (favicon.svg/.ico, 16/32/48, apple-touch, 192/512, maskable) |
+| `art/` | **The landscape master**: the client's illustration as an editable layered SVG (`sangat-landscape.svg`, seven named layers) and a transparent variant (`-transparent.svg`), PNG renders, the supplied source in `art/source/`, and `landscape-check.png/json` (source, vector, difference; 23.1 dB PSNR) |
 | `packaging-v3/` | 1 kg and 5 kg artwork laid out to the board, two variations (V1 Ivory Landscape, V2 Forest Edition): `*-artwork.svg` (all panels, editable), `*-guides.svg/png` (trim, bleed, safe area, seal/zip/handle zones), `*-front.png`, `*-back.png` (with the QR strip), `*-front-mock.png` (window shows rice) |
 | `mockups-v3/` | Table scene (1 kg + 5 kg + bowl), the range, back panel with the QR strip, finishes, shelf test |
 | `applications-v3/` | Website desktop and mobile, QR landing page, stationery, social (incl. an SRP impact post), one-colour uses |
@@ -35,6 +36,7 @@ Start with **`deliverables/sangat-brand-guidelines.pdf`** (20 pages, v3).
 ```bash
 python3 tools/trace_v3.py         # trace the board into colour layers (needs potracer, scipy)
 python3 tools/logo_v3.py          # logo masters: colour + one-colour, all layouts
+python3 tools/landscape_vector.py # landscape master: layered SVG + transparent variant (needs vtracer, scipy)
 python3 tools/export_v3.py        # deliverables logo files, web icons, website logo/fonts/pack label
 python3 tools/system_v2.py        # palette.json / palette.md
 python3 tools/packaging_v3.py     # pack artwork and renders

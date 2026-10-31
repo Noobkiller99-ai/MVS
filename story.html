@@ -15,6 +15,8 @@
   Never add farmer names, places, certifications or figures that have not been confirmed and consented to.
 -->
 <style>
+/* Hallmark · check · genre: editorial · theme: brand (Sangat board) · built: the project · redesign: polish */
+/* Hallmark · waive 38iii · the coloured line appears once on the page, in the hero (h1 .l2, display:block) · the pack's QR strip sets "has a story." as its signature second line in gold, and this page is where that QR lands */
 @font-face{font-family:"Playfair Display";src:url(assets/fonts/playfair-display-latin-400-normal.woff2) format("woff2");font-weight:300 500;font-display:swap}
 @font-face{font-family:"Playfair Display";src:url(assets/fonts/playfair-display-latin-600-normal.woff2) format("woff2");font-weight:600 900;font-display:swap}
 @font-face{font-family:"Playfair Display";src:url(assets/fonts/playfair-display-latin-400-italic.woff2) format("woff2");font-weight:300 900;font-style:italic;font-display:swap}
@@ -22,23 +24,27 @@
 @font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:300 500;font-display:swap}
 @font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600 800;font-display:swap}
 @font-face{font-family:"Noto Serif Devanagari";src:url(assets/fonts/noto-serif-devanagari-devanagari-400-normal.woff2) format("woff2");font-weight:300 700;font-display:swap;unicode-range:U+0900-097F,U+200C-200D,U+25CC,U+A8E0-A8FF}
-:root{--forest:#0F3D2E;--forest-d:#0A2E22;--ivory:#F9F6EE;--stone:#D9D4C8;--sage:#A7B89F;--gold:#C9A96B;--gold-l:#E2CB97;--earth:#7A5F3B;
+:root{--forest:#0F3D2E;--forest-d:#0A2E22;--ivory:#F9F6EE;--stone:#D9D4C8;--sage:#A7B89F;--gold:#C9A96B;--gold-l:#E2CB97;--earth:#7A5F3B;--paper:#FFFDF8;--on-dark:#DDE3D8;--on-dark-muted:#D3D7CC;--shadow:rgba(15,61,46,.08);--caslon:"Libre Caslon Text",Georgia,serif;
   --ink:#13231C;--muted:#4F5A52;--serif:"Playfair Display",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--deva:"Noto Serif Devanagari",serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--ivory);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
+html{overflow-x:clip}
+body{overflow-x:clip;margin:0;background:var(--ivory);color:var(--ink);font:400 1.0625rem/1.6 var(--sans)}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-.top{background:var(--forest);color:var(--ivory);padding:14px 20px 0}
+:focus-visible{outline:3px solid var(--forest);outline-offset:3px;border-radius:6px}
+.top,.hero,.bar,footer{--pad:max(20px,calc((100% - 640px) / 2))}
+.top :focus-visible,.hero :focus-visible,.bar :focus-visible,footer :focus-visible{outline-color:var(--gold)}
+.top{background:var(--forest);color:var(--ivory);padding:14px var(--pad) 0}
 .top .logo{height:52px;width:auto;display:block}
-.hero{background:var(--forest);color:var(--ivory);padding:22px 20px 44px;position:relative;overflow:hidden}
+.hero{background:var(--forest);color:var(--ivory);padding:22px var(--pad) 44px;position:relative;overflow:hidden}
 .hero .hi{font:500 1.15rem/1.4 var(--deva);color:var(--gold-l);margin:0 0 8px}
 h1{font:600 clamp(2.5rem,11vw,3.6rem)/1.02 var(--serif);margin:0 0 16px;letter-spacing:-.01em}
-h1 em{display:block;font-weight:400;color:var(--gold-l)}
-.hero p{color:#DDE3D8;margin:0;max-width:30em}
+h1{text-wrap:balance}
+h1 .l2{display:block;font-weight:400;color:var(--gold-l)}
+.hero p{color:var(--on-dark);margin:0;max-width:30em}
 .hero svg.sprig{position:absolute;right:-30px;bottom:6px;width:280px;opacity:.55}
 main{max-width:640px;margin:0 auto;padding:0 20px}
-.batch{margin:-20px 0 0;position:relative;background:#fff;border:1px solid var(--stone);border-radius:18px;padding:20px;box-shadow:0 10px 30px rgba(15,61,46,.08)}
-.batch h2,.next h2{font:600 .75rem/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--earth);margin:0 0 12px}
+.batch{margin:-20px 0 0;position:relative;background:var(--paper);border:1px solid var(--stone);border-radius:18px;padding:20px}
+.batch h2,.next h2{font:600 .9rem/1.3 var(--sans);color:var(--earth);margin:0 0 12px}
 .batch dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.95rem}
 .batch dt{color:var(--muted)}
 .batch dd{margin:0;font-variant-numeric:tabular-nums}
@@ -54,10 +60,14 @@ main{max-width:640px;margin:0 auto;padding:0 20px}
 .tag{text-align:center;padding:36px 0 44px}
 .tag svg{width:auto;height:96px;margin:0 auto 14px;display:block}
 .tag p{margin:0}
-.tag .en{font:400 1.3rem/1.3 "Libre Caslon Text",Georgia,serif;color:var(--earth);letter-spacing:.12em}
+.tag .en{font:400 1.3rem/1.3 var(--caslon);color:var(--earth);letter-spacing:.12em}
 .tag .hi2{font:400 1.05rem/1.6 var(--deva);color:var(--earth)}
-.bar{background:var(--forest-d);color:var(--gold-l);text-align:center;font:600 .7rem/1.4 var(--sans);letter-spacing:.18em;padding:16px 12px}
-footer{background:var(--forest);color:#D3D7CC;font-size:.88rem;padding:24px 20px 32px;text-align:center}
+.bar{background:var(--forest-d);color:var(--gold-l);font:600 .9rem/1.4 var(--sans);padding:16px 12px}
+.bar ul{list-style:none;margin:0 auto;padding:0;display:flex;flex-wrap:wrap;justify-content:center;max-width:640px}
+.bar li{padding:4px 16px}
+.bar li+li{border-left:1px solid var(--gold)}
+a:active{opacity:.8}
+footer{background:var(--forest);color:var(--on-dark-muted);font-size:.88rem;padding:24px 20px 32px;text-align:center}
 footer p{margin:0 0 6px}
 </style>
 </head>
@@ -69,7 +79,7 @@ footer p{margin:0 0 6px}
 </header>
 <section class="hero">
   <p class="hi" lang="hi">हर दाने की अपनी कहानी</p>
-  <h1>Every grain <em>has a story.</em></h1>
+  <h1><span class="l1">Every grain</span> <span class="l2">has a story.</span></h1>
   <p>Meet the farmers. Discover the practices behind your rice, grown by farming families who work alongside Manav Vikas Sansthan (MVS).</p>
   <svg class="sprig" viewBox="0 0 600 160" fill="none" stroke="#C9A96B" stroke-width="2" aria-hidden="true"><path d="M0 120C120 70 260 40 420 52C500 58 560 80 600 112"/><ellipse cx="120" cy="61" rx="10" ry="5" transform="rotate(-14 120 61)"/><ellipse cx="147" cy="75" rx="10" ry="5" transform="rotate(32 147 75)"/><ellipse cx="174" cy="52" rx="10" ry="5" transform="rotate(-14 174 52)"/><ellipse cx="201" cy="65" rx="10" ry="5" transform="rotate(32 201 65)"/><ellipse cx="228" cy="43" rx="10" ry="5" transform="rotate(-14 228 43)"/><ellipse cx="255" cy="57" rx="10" ry="5" transform="rotate(32 255 57)"/><ellipse cx="282" cy="36" rx="10" ry="5" transform="rotate(-14 282 36)"/><ellipse cx="309" cy="52" rx="10" ry="5" transform="rotate(32 309 52)"/><ellipse cx="336" cy="32" rx="10" ry="5" transform="rotate(-14 336 32)"/><ellipse cx="363" cy="50" rx="10" ry="5" transform="rotate(32 363 50)"/><ellipse cx="390" cy="32" rx="10" ry="5" transform="rotate(-14 390 32)"/><ellipse cx="417" cy="50" rx="10" ry="5" transform="rotate(32 417 50)"/><ellipse cx="444" cy="34" rx="10" ry="5" transform="rotate(-14 444 34)"/><ellipse cx="471" cy="54" rx="10" ry="5" transform="rotate(32 471 54)"/><ellipse cx="498" cy="39" rx="10" ry="5" transform="rotate(-14 498 39)"/><ellipse cx="525" cy="61" rx="10" ry="5" transform="rotate(32 525 61)"/><ellipse cx="552" cy="47" rx="10" ry="5" transform="rotate(-14 552 47)"/><ellipse cx="579" cy="69" rx="10" ry="5" transform="rotate(32 579 69)"/></svg>
 </section>
@@ -98,7 +108,7 @@ footer p{margin:0 0 6px}
     <p class="hi2" lang="hi">साँझी सोच, सुनहरा कल</p>
   </section>
 </main>
-<div class="bar">FARMER STORIES • CULTIVATION PRACTICES • OUR JOURNEY</div>
+<nav class="bar" aria-label="What the story covers"><ul><li>Farmer stories</li><li>Cultivation practices</li><li>Our journey</li></ul></nav>
 <footer>
   <p>Sangat premium basmati, in partnership with Manav Vikas Sansthan (MVS).</p>
   <p>Ingredients, nutrition and other statutory information are printed on the pack.</p>
