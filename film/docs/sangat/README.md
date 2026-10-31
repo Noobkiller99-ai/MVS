@@ -121,7 +121,7 @@ Pass the same `--props` to `render-supersampled.sh` by adding them to `REMOTION_
 
 ## Checks run on the final render
 
-- ffprobe: 1080 x 1920, 30/1 fps, 750 video frames, 25.0 s video stream.
+- ffprobe: 1080 x 1920, 30/1 fps, 750 video frames, 25.000 s, yuv420p, BT.709; AAC 48 kHz stereo; -16.3 LUFS integrated, -3.0 dBFS peak.
 - A half-second frame strip of the finished file reviewed beat by beat (the storyboard strip).
 - `npm run typecheck` passes.
 - No em-dashes in on-screen copy, code or docs; every time interpolation clamps; TOTAL_FRAMES computed.
