@@ -1,0 +1,26 @@
+{
+ "psnr_db": 23.12,
+ "mean_abs_error": 8.62,
+ "tracer": "vtracer colour, stacked, spline",
+ "settings": {
+  "filter_speckle": 4,
+  "color_precision": 7,
+  "layer_difference": 12,
+  "corner_threshold": 60,
+  "length_threshold": 4.0,
+  "max_iterations": 10,
+  "splice_threshold": 45,
+  "path_precision": 1
+ },
+ "paths_per_layer": {
+  "sky": 174,
+  "mountains": 2915,
+  "trees": 3486,
+  "farmhouse": 351,
+  "fields": 2149,
+  "foliage": 9444,
+  "rice-ears": 2332
+ },
+ "kb_full": 7430,
+ "kb_transparent": 7358
+}

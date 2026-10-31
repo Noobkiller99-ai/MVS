@@ -2,3 +2,6 @@ node_modules/
 .DS_Store
 test-output/
 __pycache__/
+.env
+.env.local
+.remotion/

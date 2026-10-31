@@ -1,18 +1,32 @@
 {
-  "name": "mvs-basmati-story",
-  "version": "2.0.0",
+  "name": "sangat-launch-film",
+  "version": "1.0.0",
   "private": true,
-  "description": "Sangat premium basmati - farm-to-pack story website with a scroll-driven 3D grain.",
+  "description": "Sangat Premium Indian Basmati Rice — Brand Launch Film (Remotion + React + TypeScript + NVIDIA NVENC)",
   "type": "module",
   "scripts": {
-    "build": "esbuild src/grain-scene.js --bundle --format=esm --minify --target=es2020 --legal-comments=linked --outfile=assets/js/grain-scene.js",
-    "watch": "npm run build -- --watch",
-    "start": "node scripts/serve.mjs",
-    "test": "node scripts/smoke-test.mjs",
-    "build:standalone": "node scripts/build-standalone.mjs"
+    "build:web": "esbuild src/grain-scene.js --bundle --format=esm --minify --target=es2020 --legal-comments=linked --outfile=assets/js/grain-scene.js",
+    "watch:web": "npm run build:web -- --watch",
+    "start:web": "node scripts/serve.mjs",
+    "test:web": "node scripts/smoke-test.mjs",
+    "video:dev": "remotion studio src/video/index.ts",
+    "video:render": "remotion render src/video/index.ts SangatFilm renders/sangat-launch-film.mp4 --pixel-format=yuv420p --color-space=bt709",
+    "video:render:test": "remotion render src/video/index.ts SangatFilm renders/test-5s.mp4 --frames=0-149 --pixel-format=yuv420p --color-space=bt709",
+    "video:still": "remotion still src/video/index.ts SangatFilm thumbnails/poster.png --frame=680"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "@remotion/google-fonts": "^4.0.539",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.539",
+    "three": "0.185.1"
   },
   "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.0",
     "esbuild": "^0.25.0",
-    "three": "0.185.1"
+    "typescript": "^5.4.0"
   }
 }
