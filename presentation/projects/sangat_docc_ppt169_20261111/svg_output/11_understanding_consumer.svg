@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT III · UNDERSTANDING THE CONSUMER</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Buyers choose the cooking outcome first —
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">the story comes second.</tspan></text>
+  </g>
+  <g id="photo-shelf" data-pptx-bounds="56 196 186 290">
+    <image id="ph06" href="../images/ph06_rice_competition.jpg" x="56" y="200" width="186" height="248" preserveAspectRatio="xMidYMid slice"/>
+    <text x="56" y="470" font-size="14" fill="#5F655F">Shelf and pack study</text>
+  </g>
+  <g id="photo-premium" data-pptx-bounds="250 196 186 290">
+    <image id="ph07" href="../images/ph07_premium_competition.jpg" x="250" y="200" width="186" height="248" preserveAspectRatio="xMidYMid slice"/>
+    <text x="250" y="470" font-size="14" fill="#5F655F">Premium retail models</text>
+  </g>
+  <g id="photo-consumer" data-pptx-bounds="444 196 196 290">
+    <image id="phx-s11" href="../images/phx_s11_consumer_interview.png" x="444" y="200" width="186" height="248" preserveAspectRatio="xMidYMid slice"/>
+    <text x="444" y="470" font-size="14" fill="#5F655F">Consumer conversations</text>
+  </g>
+  <g id="what-we-did" data-pptx-bounds="56 498 584 162">
+    <text x="56" y="518" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT WE DID</text>
+    <line x1="56" y1="530" x2="630" y2="530" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="560" font-size="16" fill="#292D2A">Grocery and premium-store visits; a study of competitor
+      <tspan x="56" dy="24">products, packs and premium positioning; conversations</tspan>
+      <tspan x="56" dy="24">with consumers and retailers on how they buy basmati and</tspan>
+      <tspan x="56" dy="24">how they see sustainably grown food.</tspan></text>
+  </g>
+  <g id="switching" data-pptx-bounds="672 196 552 168">
+    <text x="672" y="214" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">THE SWITCHING PROBLEM</text>
+    <line x1="672" y1="226" x2="1224" y2="226" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="672" y="258" font-size="18" fill="#292D2A">A household that already buys premium basmati
+      <tspan x="672" dy="27">knows how its rice will cook. A new brand is a small</tspan>
+      <tspan x="672" dy="27">but real risk when guests are coming or a family</tspan>
+      <tspan x="672" dy="27">meal depends on it. <tspan font-weight="600" fill="#103F30">Product confidence</tspan> is the barrier.</tspan></text>
+  </g>
+  <g id="quality-cues" data-pptx-bounds="672 376 552 134">
+    <text x="672" y="394" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT BUYERS JUDGE FIRST</text>
+    <g fill="#EDE5D3">
+      <rect x="672" y="408" width="128" height="40" rx="4"/>
+      <rect x="808" y="408" width="200" height="40" rx="4"/>
+      <rect x="1016" y="408" width="208" height="40" rx="4"/>
+      <rect x="672" y="456" width="200" height="40" rx="4"/>
+      <rect x="880" y="456" width="128" height="40" rx="4"/>
+      <rect x="1016" y="456" width="208" height="40" rx="4"/>
+    </g>
+    <g font-size="15" font-weight="600" fill="#103F30" text-anchor="middle">
+      <text x="736" y="433">Aroma</text>
+      <text x="908" y="433">Grain length and quality</text>
+      <text x="1120" y="433">Texture after cooking</text>
+      <text x="772" y="481">Cooking consistency</text>
+      <text x="944" y="481">Price</text>
+      <text x="1120" y="481">Trust in the brand</text>
+    </g>
+  </g>
+  <g id="implication" data-pptx-bounds="672 520 552 146">
+    <rect x="672" y="524" width="552" height="136" fill="#103F30"/>
+    <text x="696" y="556" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">IMPLICATION FOR SANGAT</text>
+    <text x="696" y="594" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#F6F1E5">Meet the category’s quality cues first —
+      <tspan x="696" dy="30" font-style="italic" fill="#E2CB97">then invite buyers to learn how the</tspan>
+      <tspan x="696" dy="30" font-style="italic" fill="#E2CB97">rice is grown.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Exploratory market research; MVS project report §6</text>
+    <text x="1224" y="692" text-anchor="end">11 / 22</text>
+  </g>
+</svg>

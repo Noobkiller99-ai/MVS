@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <rect id="forest-field" data-pptx-role="decoration" x="0" y="0" width="560" height="720" fill="#103F30"/>
+  <g id="header" data-pptx-bounds="56 36 480 196">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">ACT IV · VISUAL IDENTITY</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#F6F1E5">One identity system:
+      <tspan x="56" dy="46" font-style="italic" fill="#E2CB97">forest, ivory and a</tspan>
+      <tspan x="56" dy="46" font-style="italic" fill="#E2CB97">golden ear of rice.</tspan></text>
+  </g>
+  <g id="wordmark-note" data-pptx-bounds="56 250 480 106">
+    <text x="56" y="276" font-size="17" fill="#E9E3D3">A customised Playfair-style wordmark with a
+      <tspan x="56" dy="25">golden rice-ear motif and a sweeping underline,</tspan>
+      <tspan x="56" dy="25">in primary, horizontal, stacked, wordmark and</tspan>
+      <tspan x="56" dy="25">symbol-only versions.</tspan></text>
+  </g>
+  <g id="values" data-pptx-bounds="56 376 360 290">
+    <text x="56" y="396" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">BRAND VALUES</text>
+    <g stroke="#2E5A47" stroke-width="1">
+      <line x1="56" y1="408" x2="416" y2="408"/>
+      <line x1="56" y1="470" x2="416" y2="470"/>
+      <line x1="56" y1="532" x2="416" y2="532"/>
+      <line x1="56" y1="594" x2="416" y2="594"/>
+    </g>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#F6F1E5">
+      <text x="56" y="436">Togetherness</text>
+      <text x="56" y="498">Care</text>
+      <text x="56" y="560">Craft and consistency</text>
+      <text x="56" y="622">Honesty</text>
+    </g>
+    <g font-size="13" fill="#A7B89F">
+      <text x="56" y="456">Farmers, MVS and households</text>
+      <text x="56" y="518">Respect people and resources; no pity stories</text>
+      <text x="56" y="580">Specification, cooking, pack quality</text>
+      <text x="56" y="642">Say only what records support</text>
+    </g>
+  </g>
+  <g id="symbol" data-pptx-bounds="430 420 110 246">
+    <image id="logo-sym" href="../images/logo_symbol_gold.png" x="438" y="430" width="96" height="201" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <g id="logo-board" data-pptx-bounds="600 36 624 360">
+    <image id="logo-board-img" href="../images/image_003.png" x="600" y="40" width="624" height="351" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <g id="palette" data-pptx-bounds="600 404 624 124">
+    <text x="600" y="424" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">COLOUR</text>
+    <rect x="600" y="436" width="148" height="52" fill="#0F3D2E"/>
+    <rect x="758" y="436" width="148" height="52" fill="#F9F6EE" stroke="#D6CDB8" stroke-width="1"/>
+    <rect x="916" y="436" width="148" height="52" fill="#C9A96B"/>
+    <rect x="1074" y="436" width="148" height="52" fill="#8B6F47"/>
+    <g font-size="13" fill="#292D2A">
+      <text x="600" y="508"><tspan font-weight="600">Forest Green</tspan>  #0F3D2E</text>
+      <text x="758" y="508"><tspan font-weight="600">Ivory</tspan>  #F9F6EE</text>
+      <text x="916" y="508"><tspan font-weight="600">Sunehra Gold</tspan>  #C9A96B</text>
+      <text x="1074" y="508"><tspan font-weight="600">Earth Brown</tspan>  #8B6F47</text>
+    </g>
+  </g>
+  <g id="type-specimens" data-pptx-bounds="600 540 624 126">
+    <text x="600" y="560" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">TYPOGRAPHY</text>
+    <line x1="600" y1="572" x2="1224" y2="572" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="600" y="630" font-family="'Playfair Display', Georgia, serif" font-size="46" fill="#103F30">Aa</text>
+    <text x="680" y="606" font-size="16" font-weight="600" fill="#103F30">Playfair Display</text>
+    <text x="680" y="628" font-size="14" fill="#5F655F">Expressive brand moments</text>
+    <text x="916" y="630" font-size="46" fill="#103F30">Aa</text>
+    <text x="996" y="606" font-size="16" font-weight="600" fill="#103F30">Inter</text>
+    <text x="996" y="628" font-size="14" fill="#5F655F">Information and utility</text>
+    <text x="600" y="658" font-size="13" fill="#5F655F">Forest anchors, ivory breathes, gold is a restrained accent.</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="600 674 624 26" font-size="12" fill="#5F655F">
+    <text x="600" y="692">MVS project report §8.6, §9; Sangat brand guidelines</text>
+    <text x="1224" y="692" text-anchor="end">14 / 22</text>
+  </g>
+</svg>

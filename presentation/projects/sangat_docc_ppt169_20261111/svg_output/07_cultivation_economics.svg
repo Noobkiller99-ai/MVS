@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="capFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A2E22" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A2E22" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 108">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · THE ECONOMICS BEHIND CULTIVATION</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Sustainable practice has to <tspan font-style="italic" fill="#795C43">pay for the farmer.</tspan></text>
+  </g>
+  <g id="photo-fgd" data-pptx-bounds="56 160 400 232">
+    <image id="ph08" href="../images/ph08_farmer_group_discussion.jpg" x="56" y="164" width="400" height="224" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="56" y="318" width="400" height="70" fill="url(#capFade)"/>
+    <text x="72" y="374" font-size="13" fill="#F6F1E5">Group discussion with basmati farmers</text>
+  </g>
+  <g id="photo-practices" data-pptx-bounds="56 400 400 232">
+    <image id="ph09" href="../images/ph09_sustainable_practices.jpg" x="56" y="404" width="400" height="224" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="56" y="558" width="400" height="70" fill="url(#capFade)"/>
+    <text x="72" y="614" font-size="13" fill="#F6F1E5">Understanding sustainable cultivation practices</text>
+  </g>
+  <g id="farmer-themes" data-pptx-bounds="488 160 296 460">
+    <text x="488" y="182" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT FARMERS WEIGH</text>
+    <line x1="488" y1="194" x2="784" y2="194" stroke="#D6CDB8" stroke-width="1"/>
+    <g font-size="16" font-weight="600" fill="#103F30">
+      <text x="488" y="224">Basmati or Parmal</text>
+      <text x="488" y="294">Input and lease costs</text>
+      <text x="488" y="364">Pesticide use</text>
+      <text x="488" y="434">Price uncertainty</text>
+      <text x="488" y="504">Arthiyas</text>
+      <text x="488" y="574">Risk of changing practice</text>
+    </g>
+    <g font-size="14" fill="#5F655F">
+      <text x="488" y="246">Which paddy to grow, and its yield</text>
+      <text x="488" y="316">Cost of cultivating, and of leased land</text>
+      <text x="488" y="386">How much is applied, and at what cost</text>
+      <text x="488" y="456">No MSP for basmati; market-led price</text>
+      <text x="488" y="526">Dependence on commission agents</text>
+      <text x="488" y="596">Whether a new method pays off</text>
+    </g>
+  </g>
+  <g id="srp-comparison" data-pptx-bounds="816 160 408 468">
+    <text x="816" y="182" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">MVS DATA · SRP vs NON-SRP, PER ACRE</text>
+    <line x1="816" y1="194" x2="1224" y2="194" stroke="#D6CDB8" stroke-width="1"/>
+    <rect x="816" y="208" width="12" height="12" fill="#103F30"/>
+    <text x="834" y="219" font-size="13" fill="#292D2A">SRP practice</text>
+    <rect x="934" y="208" width="12" height="12" fill="#CFC5AE"/>
+    <text x="952" y="219" font-size="13" fill="#292D2A">Non-SRP</text>
+    <g id="row-irrigation">
+      <text x="816" y="258" font-size="15" font-weight="600" fill="#292D2A">Irrigations</text>
+      <text x="1224" y="258" text-anchor="end" font-size="15" font-weight="600" fill="#103F30">−15.1%</text>
+      <rect x="816" y="268" width="220.7" height="14" fill="#103F30"/>
+      <rect x="816" y="288" width="260" height="14" fill="#CFC5AE"/>
+      <text x="1044.7" y="280" font-size="13" fill="#292D2A">14.6</text>
+      <text x="1084" y="300" font-size="13" fill="#5F655F">17.2</text>
+    </g>
+    <g id="row-cost">
+      <text x="816" y="350" font-size="15" font-weight="600" fill="#292D2A">Cost of cultivation</text>
+      <text x="1224" y="350" text-anchor="end" font-size="15" font-weight="600" fill="#103F30">−7.5%</text>
+      <rect x="816" y="360" width="240.5" height="14" fill="#103F30"/>
+      <rect x="816" y="380" width="260" height="14" fill="#CFC5AE"/>
+      <text x="1064.5" y="372" font-size="13" fill="#292D2A">₹14,477</text>
+      <text x="1084" y="392" font-size="13" fill="#5F655F">₹15,653</text>
+    </g>
+    <g id="row-fertiliser">
+      <text x="816" y="442" font-size="15" font-weight="600" fill="#292D2A">Fertiliser cost</text>
+      <text x="1224" y="442" text-anchor="end" font-size="15" font-weight="600" fill="#103F30">−23.6%</text>
+      <rect x="816" y="452" width="198.7" height="14" fill="#103F30"/>
+      <rect x="816" y="472" width="260" height="14" fill="#CFC5AE"/>
+      <text x="1022.7" y="464" font-size="13" fill="#292D2A">₹2,545</text>
+      <text x="1084" y="484" font-size="13" fill="#5F655F">₹3,331</text>
+    </g>
+    <g id="row-return">
+      <text x="816" y="534" font-size="15" font-weight="600" fill="#292D2A">Net return</text>
+      <text x="1224" y="534" text-anchor="end" font-size="15" font-weight="600" fill="#103F30">+9.7%</text>
+      <rect x="816" y="544" width="260" height="14" fill="#103F30"/>
+      <rect x="816" y="564" width="237" height="14" fill="#CFC5AE"/>
+      <text x="1084" y="556" font-size="13" fill="#292D2A">₹60,130</text>
+      <text x="1061" y="576" font-size="13" fill="#5F655F">₹54,807</text>
+    </g>
+    <text x="816" y="604" font-size="12" fill="#5F655F">Source: MVS SRP vs non-SRP comparison. Season, location and
+      <tspan x="816" dy="16">number of farms not stated — read as directional.</tspan></text>
+  </g>
+  <g id="takeaway" data-pptx-bounds="488 632 736 38">
+    <rect x="488" y="634" width="736" height="34" fill="#103F30"/>
+    <text x="504" y="657" font-size="15" fill="#F6F1E5">Practices must be <tspan font-weight="600" fill="#E2CB97">environmentally responsible and economically viable.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Themes from farmer discussions are qualitative; MVS figures are per acre</text>
+    <text x="1224" y="692" text-anchor="end">07 / 22</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 640 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT I · ENTERING THE DEVELOPMENT ECOSYSTEM</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">MVS: an ecosystem,
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">not just an organisation.</tspan></text>
+  </g>
+  <g id="stats" data-pptx-bounds="56 200 640 114">
+    <line x1="56" y1="204" x2="696" y2="204" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="256" font-family="'Playfair Display', Georgia, serif" font-size="46" fill="#103F30">1996</text>
+    <text x="56" y="284" font-size="14" fill="#5F655F">Founded as a non-profit</text>
+    <text x="232" y="256" font-family="'Playfair Display', Georgia, serif" font-size="46" fill="#103F30">5</text>
+    <text x="232" y="284" font-size="14" fill="#5F655F">States: Punjab, Himachal Pradesh, Haryana,
+      <tspan x="232" dy="18">Uttarakhand and Meghalaya</tspan></text>
+    <line x1="56" y1="318" x2="696" y2="318" stroke="#D6CDB8" stroke-width="1"/>
+  </g>
+  <g id="focus-areas" data-pptx-bounds="56 322 640 120">
+    <text x="56" y="352" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHERE MVS WORKS</text>
+    <text x="56" y="382" font-size="18" fill="#292D2A">Women empowerment · sustainable agriculture · water
+      <tspan x="56" dy="27">conservation · climate resilience · education · rural</tspan>
+      <tspan x="56" dy="27">development — with farmers, rural households and SHGs.</tspan></text>
+  </g>
+  <g id="programmes" data-pptx-bounds="56 446 640 92">
+    <rect x="56" y="446" width="640" height="92" fill="#EDE5D3"/>
+    <rect x="56" y="446" width="4" height="92" fill="#C6A65A"/>
+    <text x="80" y="476" font-size="16" font-weight="600" fill="#103F30">PRANA and PRERANA</text>
+    <text x="80" y="502" font-size="16" fill="#292D2A">PRERANA strengthens women-led institutions and farm and non-farm
+      <tspan x="80" dy="22">livelihoods; both programme teams facilitated our field interactions.</tspan></text>
+  </g>
+  <g id="evolution" data-pptx-bounds="56 554 640 112">
+    <text x="56" y="574" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">HOW OUR UNDERSTANDING EVOLVED</text>
+    <g id="p03-ev-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="homePlate" data-pptx-frame="56 588 206 40" fill="#103F30" stroke="none">
+      <path d="M 56 588 L 242 588 L 262 608 L 242 628 L 56 628 Z"/>
+    </g>
+    <g id="p03-ev-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="268 588 212 40" fill="#2E5A47" stroke="none">
+      <path d="M 268 588 L 460 588 L 480 608 L 460 628 L 268 628 L 288 608 Z"/>
+    </g>
+    <g id="p03-ev-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="486 588 210 40" fill="#C6A65A" stroke="none">
+      <path d="M 486 588 L 676 588 L 696 608 L 676 628 L 486 628 L 506 608 Z"/>
+    </g>
+    <g font-size="15" font-weight="600" text-anchor="middle">
+      <text x="152" y="613" fill="#F6F1E5">An NGO profile</text>
+      <text x="377" y="613" fill="#F6F1E5">Its programmes</text>
+      <text x="594" y="613" fill="#103F30">Its people</text>
+    </g>
+    <text x="56" y="656" font-size="14" fill="#5F655F">We learned most from the relationships field teams have built with farmers and women.</text>
+  </g>
+  <g id="photo" data-pptx-bounds="744 164 480 434">
+    <image id="phx-s03" href="../images/phx_s03_mvs_orientation.png" x="744" y="168" width="480" height="360" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="744" y="540" width="24" height="2" fill="#C6A65A"/>
+    <text x="744" y="566" font-size="14" fill="#5F655F">Orientation and programme exposure with the
+      <tspan x="744" dy="20">MVS team</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Source: MVS project report, §2 and Acknowledgement</text>
+    <text x="1224" y="692" text-anchor="end">03 / 22</text>
+  </g>
+</svg>

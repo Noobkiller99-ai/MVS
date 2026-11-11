@@ -1,0 +1,540 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "early",
+  "target": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "99e607c89af52bc8f5c3eb61c319331feeff4b806eaec5bf66810a5afa3672ee",
+    "file_count": 5,
+    "files": [
+      {
+        "file": "01_cover.svg",
+        "sha256": "3844817f4a94b2edcb09ea43cee84f2707cdb7c229374c0f03b6222f041d1d7e"
+      },
+      {
+        "file": "02_our_journey.svg",
+        "sha256": "5c5747999e16eb7b40689dfe90c056a26297cb676ed2b73af0e6b147b3b76178"
+      },
+      {
+        "file": "03_understanding_mvs.svg",
+        "sha256": "1ae6c95b7a92887b5eecd97f0df4b96a3f282d15ec53af8a2e43ffc8bc35edd3"
+      },
+      {
+        "file": "04_chandpur.svg",
+        "sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+      },
+      {
+        "file": "05_fatehgarh_sahib.svg",
+        "sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+      }
+    ]
+  },
+  "summary": {
+    "total": 5,
+    "passed": 0,
+    "warnings": 3,
+    "errors": 2
+  },
+  "issue_types": {
+    "Other": 2
+  },
+  "categories": {
+    "blocking": {
+      "count": 2,
+      "issues": [
+        {
+          "file": "02_our_journey.svg",
+          "message": "<text> (x=732, y=390; text='Stores, consumers, r…') exceeds <g id=\"stage-5\"> data-pptx-bounds on the horizontal axis: content (732.0, 378.1)-(899.7, 414.9), container (728.0, 240.0)-(888.0, 436.0), overflow horizontal 7.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.0 px per Latin char at 14px incl. headroom; ≈20 chars fit in 160 px"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "message": "<text> (x=56, y=382; text='Women empowerment · …') exceeds <g id=\"focus-areas\"> data-pptx-bounds on the vertical axis: content (56.0, 366.7)-(583.7, 442.3), container (56.0, 326.0)-(696.0, 430.0), overflow horizontal 0.0%, vertical 11.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+        }
+      ]
+    },
+    "introduced": {
+      "count": 9,
+      "issues": [
+        {
+          "file": "01_cover.svg",
+          "message": "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (3 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): team:text-anchor None -> 'middle'; text[19]:text-anchor 'middle' -> None; text[20]:text-anchor 'middle' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)"
+        },
+        {
+          "file": "01_cover.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "01_cover.svg",
+          "message": "<text> (x=640, y=358; text='Launching a Sustaina…') exceeds <g id=\"title\"> data-pptx-bounds on the vertical axis: content (325.9, 325.7)-(954.1, 417.3), container (240.0, 300.0)-(1040.0, 416.0), overflow horizontal 0.0%, vertical 1.1% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+        },
+        {
+          "file": "02_our_journey.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "02_our_journey.svg",
+          "message": "<text> (x=228, y=390; text='Chandpur, Fatehgarh …') exceeds <g id=\"stage-2\"> data-pptx-bounds on the horizontal axis: content (228.0, 378.1)-(385.3, 414.9), container (224.0, 240.0)-(384.0, 436.0), overflow horizontal 0.8%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.7 px per Latin char at 14px incl. headroom; ≈18 chars fit in 160 px"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "message": "<text> (x=232, y=284; text='States: Punjab, Hima…') exceeds <g id=\"stats\"> data-pptx-bounds on the vertical axis: content (232.0, 272.1)-(554.5, 306.9), container (56.0, 200.0)-(696.0, 304.0), overflow horizontal 0.0%, vertical 2.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+        },
+        {
+          "file": "04_chandpur.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "05_fatehgarh_sahib.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {
+      "#2E5A47": [
+        "03_understanding_mvs.svg"
+      ],
+      "#C9C3B0": [
+        "01_cover.svg"
+      ],
+      "#E2CB97": [
+        "01_cover.svg",
+        "04_chandpur.svg"
+      ]
+    },
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 5,
+    "totals": {
+      "text_elements": 85,
+      "image_placements": 14,
+      "icons": 0,
+      "svg_geometry_elements": 26,
+      "preset_shapes": 10,
+      "page_frame_elements": 6,
+      "marker_uses": 0,
+      "inline_emphasis_runs": 1,
+      "gradient_uses": 1,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 5,
+      "icons": 0,
+      "presets": 2,
+      "charts": 0,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 1,
+      "gradient_uses": 1,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "relationship_pages": 16,
+    "geometry_elements": {
+      "circle": 0,
+      "ellipse": 0,
+      "line": 10,
+      "path": 0,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 16
+    },
+    "preset_names": {
+      "chevron": 9,
+      "homePlate": 1
+    },
+    "native_objects": {
+      "chart": 0,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 0
+    },
+    "image_page_max_frame_share_range": [
+      0.0358,
+      0.325
+    ]
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_cover.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/01_cover.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (3 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): team:text-anchor None -> 'middle'; text[19]:text-anchor 'middle' -> None; text[20]:text-anchor 'middle' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)",
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif",
+        "<text> (x=640, y=358; text='Launching a Sustaina…') exceeds <g id=\"title\"> data-pptx-bounds on the vertical axis: content (325.9, 325.7)-(954.1, 417.3), container (240.0, 300.0)-(1040.0, 416.0), overflow horizontal 0.0%, vertical 1.1% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 4,
+          "images": {
+            "placements": 2,
+            "files": [
+              "art_landscape.png",
+              "logo_primary_reversed.png"
+            ],
+            "max_frame_share": 0.325
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 1,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#C9C3B0",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "3844817f4a94b2edcb09ea43cee84f2707cdb7c229374c0f03b6222f041d1d7e"
+    },
+    {
+      "file": "02_our_journey.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/02_our_journey.svg",
+      "exists": true,
+      "errors": [
+        "<text> (x=732, y=390; text='Stores, consumers, r…') exceeds <g id=\"stage-5\"> data-pptx-bounds on the horizontal axis: content (732.0, 378.1)-(899.7, 414.9), container (728.0, 240.0)-(888.0, 436.0), overflow horizontal 7.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.0 px per Latin char at 14px incl. headroom; ≈20 chars fit in 160 px"
+      ],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif",
+        "<text> (x=228, y=390; text='Chandpur, Fatehgarh …') exceeds <g id=\"stage-2\"> data-pptx-bounds on the horizontal axis: content (228.0, 378.1)-(385.3, 414.9), container (224.0, 240.0)-(384.0, 436.0), overflow horizontal 0.8%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.7 px per Latin char at 14px incl. headroom; ≈18 chars fit in 160 px"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 36,
+          "images": {
+            "placements": 5,
+            "files": [
+              "ph01_field_immersion_household.jpg",
+              "ph03_poplar_nursery.jpg",
+              "ph06_rice_competition.jpg",
+              "ph10_farmer_discussion.jpg",
+              "ph11_pau_gate.jpg"
+            ],
+            "max_frame_share": 0.0358
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 5,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 7,
+            "preset_names": {
+              "chevron": 7
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 36,
+        "tspan_elements": 15
+      },
+      "passed": false,
+      "source_sha256": "5c5747999e16eb7b40689dfe90c056a26297cb676ed2b73af0e6b147b3b76178"
+    },
+    {
+      "file": "03_understanding_mvs.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/03_understanding_mvs.svg",
+      "exists": true,
+      "errors": [
+        "<text> (x=56, y=382; text='Women empowerment · …') exceeds <g id=\"focus-areas\"> data-pptx-bounds on the vertical axis: content (56.0, 366.7)-(583.7, 442.3), container (56.0, 326.0)-(696.0, 430.0), overflow horizontal 0.0%, vertical 11.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+      ],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif",
+        "<text> (x=232, y=284; text='States: Punjab, Hima…') exceeds <g id=\"stats\"> data-pptx-bounds on the vertical axis: content (232.0, 272.1)-(554.5, 306.9), container (56.0, 200.0)-(696.0, 304.0), overflow horizontal 0.0%, vertical 2.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 18,
+          "images": {
+            "placements": 1,
+            "files": [
+              "phx_s03_mvs_orientation.png"
+            ],
+            "max_frame_share": 0.1875
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 5,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 3,
+            "preset_names": {
+              "chevron": 2,
+              "homePlate": 1
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 18,
+        "tspan_elements": 6,
+        "contextual_values": {
+          "colors": [
+            "#2E5A47"
+          ]
+        }
+      },
+      "passed": false,
+      "source_sha256": "1ae6c95b7a92887b5eecd97f0df4b96a3f282d15ec53af8a2e43ffc8bc35edd3"
+    },
+    {
+      "file": "04_chandpur.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/04_chandpur.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 3,
+            "files": [
+              "ph01_field_immersion_household.jpg",
+              "phx_s04_beauty_parlour.png",
+              "phx_s04_pickle_maker.png"
+            ],
+            "max_frame_share": 0.2552
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 4,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 6,
+        "contextual_values": {
+          "colors": [
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+    },
+    {
+      "file": "05_fatehgarh_sahib.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/05_fatehgarh_sahib.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 16,
+          "images": {
+            "placements": 3,
+            "files": [
+              "ph02_field_immersion_plantation.jpg",
+              "ph03_poplar_nursery.jpg",
+              "phx_s05_akshay_sir.png"
+            ],
+            "max_frame_share": 0.2089
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 16,
+        "tspan_elements": 8
+      },
+      "passed": true,
+      "source_sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+    }
+  ]
+}

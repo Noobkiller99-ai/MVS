@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 512 160">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT IV · DIGITAL STORYTELLING AND QR CONCEPT</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">A QR story that says only
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">what records support.</tspan></text>
+  </g>
+  <g id="journey" data-pptx-bounds="56 206 512 196">
+    <text x="56" y="222" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">THE CONSUMER JOURNEY · CONCEPT</text>
+    <g id="p16-step-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="homePlate" data-pptx-frame="56 236 168 48" fill="#103F30" stroke="none">
+      <path d="M 56 236 L 200 236 L 224 260 L 200 284 L 56 284 Z"/>
+    </g>
+    <g id="p16-step-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="224 236 168 48" fill="#2E5A47" stroke="none">
+      <path d="M 224 236 L 368 236 L 392 260 L 368 284 L 224 284 L 248 260 Z"/>
+    </g>
+    <g id="p16-step-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="392 236 168 48" fill="#C6A65A" stroke="none">
+      <path d="M 392 236 L 536 236 L 560 260 L 536 284 L 392 284 L 416 260 Z"/>
+    </g>
+    <g font-size="15" font-weight="600" text-anchor="middle">
+      <text x="134" y="265" fill="#F6F1E5">Scan the pack</text>
+      <text x="308" y="265" fill="#F6F1E5">Story page</text>
+      <text x="476" y="265" fill="#103F30">What is known</text>
+    </g>
+    <g font-size="14" fill="#5F655F">
+      <text x="56" y="316">QR area on the
+        <tspan x="56" dy="19">back panel</tspan></text>
+      <text x="232" y="316">Mobile-first page:
+        <tspan x="232" dy="19">what MVS does</tspan></text>
+      <text x="400" y="316">Documented practices;
+        <tspan x="400" dy="19">product or batch facts</tspan></text>
+    </g>
+    <text x="56" y="384" font-size="15" fill="#292D2A">It links buyers to MVS’s work and the journey behind the rice.</text>
+  </g>
+  <g id="device-board" data-pptx-bounds="596 36 628 372">
+    <image id="web-mobile" href="../images/app_website_mobile.png" x="596" y="40" width="628" height="335" preserveAspectRatio="xMidYMid meet"/>
+    <text x="596" y="398" font-size="13" fill="#5F655F">Website and QR landing-page direction — prototype design</text>
+  </g>
+  <g id="concept-is" data-pptx-bounds="56 428 572 236">
+    <rect x="56" y="432" width="572" height="228" fill="#EDE5D3"/>
+    <text x="84" y="468" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT WE DESIGNED</text>
+    <text x="84" y="506" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">A design concept and website direction</text>
+    <text x="84" y="540" font-size="16" fill="#292D2A">A mobile story page that explains MVS’s work and the
+      <tspan x="84" dy="24">practices that are documented, in plain language. The</tspan>
+      <tspan x="84" dy="24">QR code in the concept is a placeholder, to be replaced</tspan>
+      <tspan x="84" dy="24">with a tested HTTPS destination before printing.</tspan></text>
+  </g>
+  <g id="concept-not" data-pptx-bounds="652 428 572 236">
+    <rect x="652" y="432" width="572" height="228" fill="#103F30"/>
+    <text x="680" y="468" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">WHAT IT IS NOT — YET</text>
+    <text x="680" y="506" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#F6F1E5">Not an operational traceability system</text>
+    <text x="680" y="540" font-size="16" fill="#E9E3D3">A programme-level farmer story does not prove that a
+      <tspan x="680" dy="24">named farmer grew the rice in a given packet. Farm-level</tspan>
+      <tspan x="680" dy="24">traceability can be promised only if chain-of-custody</tspan>
+      <tspan x="680" dy="24">records support it.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">MVS project report §10.3</text>
+    <text x="1224" y="692" text-anchor="end">16 / 22</text>
+  </g>
+</svg>

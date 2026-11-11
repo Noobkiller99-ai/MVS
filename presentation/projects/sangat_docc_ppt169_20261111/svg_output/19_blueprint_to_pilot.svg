@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT V · FROM BLUEPRINT TO PILOT</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">The next step is not to communicate louder —
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">it is to validate more carefully.</tspan></text>
+  </g>
+  <g id="phase-product" data-pptx-bounds="56 196 252 356">
+    <text x="56" y="216" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">01 · BEFORE LAUNCH</text>
+    <text x="56" y="248" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">Prove the product</text>
+    <line x1="56" y1="264" x2="304" y2="264" stroke="#795C43" stroke-width="1"/>
+    <g font-size="15" fill="#292D2A">
+      <text x="56" y="296">Product specification and
+        <tspan x="56" dy="20">batch consistency</tspan></text>
+      <text x="56" y="358">Farm, season and sourcing
+        <tspan x="56" dy="20">records</tspan></text>
+      <text x="56" y="420">SRP status and approved
+        <tspan x="56" dy="20">claim wording</tspan></text>
+      <text x="56" y="482">Packaging compliance;
+        <tspan x="56" dy="20">every placeholder replaced</tspan></text>
+    </g>
+  </g>
+  <g id="p19-arrow-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="rightArrow" data-pptx-frame="318 300 24 36" fill="#C6A65A" stroke="none">
+<path d="M 318 309 L 330 309 L 330 300 L 342 318 L 330 336 L 330 327 L 318 327 Z"/>
+</g>
+  <g id="phase-proposition" data-pptx-bounds="352 196 252 356">
+    <text x="352" y="216" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">02 · IN THE PILOT</text>
+    <text x="352" y="248" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">Prove the proposition</text>
+    <line x1="352" y1="264" x2="600" y2="264" stroke="#795C43" stroke-width="1"/>
+    <g font-size="15" fill="#292D2A">
+      <text x="352" y="296">Consumer comprehension
+        <tspan x="352" dy="20">of the message</tspan></text>
+      <text x="352" y="358">Paid trial, including
+        <tspan x="352" dy="20">cooking parity</tspan></text>
+      <text x="352" y="420">Repeat behaviour</text>
+      <text x="352" y="482">Retailer acceptance</text>
+    </g>
+  </g>
+  <g id="p19-arrow-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="rightArrow" data-pptx-frame="608 300 24 36" fill="#C6A65A" stroke="none">
+<path d="M 608 309 L 620 309 L 620 300 L 632 318 L 620 336 L 620 327 L 608 327 Z"/>
+</g>
+  <g id="phase-model" data-pptx-bounds="644 196 252 356">
+    <text x="644" y="216" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">03 · THE NUMBERS</text>
+    <text x="644" y="248" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">Prove the model</text>
+    <line x1="644" y1="264" x2="892" y2="264" stroke="#795C43" stroke-width="1"/>
+    <g font-size="15" fill="#292D2A">
+      <text x="644" y="296">Supply volumes and
+        <tspan x="644" dy="20">landed cost</tspan></text>
+      <text x="644" y="358">Fulfilment cost and
+        <tspan x="644" dy="20">retailer margin</tspan></text>
+      <text x="644" y="420">Working-capital
+        <tspan x="644" dy="20">requirement</tspan></text>
+      <text x="644" y="482">Contribution margin</text>
+    </g>
+  </g>
+  <g id="p19-arrow-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="rightArrow" data-pptx-frame="904 300 32 36" fill="#C6A65A" stroke="none">
+<path d="M 904 309 L 920 309 L 920 300 L 936 318 L 920 336 L 920 327 L 904 327 Z"/>
+</g>
+  <g id="decision-gate" data-pptx-bounds="944 196 280 370">
+    <text x="952" y="216" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">04 · DECISION</text>
+    <g id="p19-gate" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="flowChartDecision" data-pptx-frame="952 232 248 160" fill="#103F30" stroke="none">
+      <path d="M 952 312 L 1076 232 L 1200 312 L 1076 392 Z"/>
+    </g>
+    <text x="1076" y="306" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="2" fill="#C6A65A">DECISION GATE</text>
+    <text x="1076" y="332" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#F6F1E5">Go · adjust · stop</text>
+    <g font-size="14" fill="#292D2A">
+      <text x="952" y="430"><tspan font-weight="600" fill="#103F30">Go</tspan> — build on the foundation;
+        <tspan x="952" dy="19">Delhi NCR could follow</tspan></text>
+      <text x="952" y="484"><tspan font-weight="600" fill="#795C43">Adjust</tspan> — let the pilot show
+        <tspan x="952" dy="19">what needs to change</tspan></text>
+      <text x="952" y="538"><tspan font-weight="600" fill="#5F655F">Stop</tspan> — if the evidence does
+        <tspan x="952" dy="19">not support the proposition</tspan></text>
+    </g>
+  </g>
+  <g id="first-step" data-pptx-bounds="56 572 1168 94">
+    <rect x="56" y="576" width="1168" height="90" fill="#103F30"/>
+    <text x="80" y="606" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">IMMEDIATE PRIORITY</text>
+    <text x="80" y="640" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#F6F1E5">Appoint one accountable brand owner and a small cross-functional working group.</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Bounded pilot in Chandigarh–Mohali–Panchkula; record negative as well as positive feedback · MVS project report §13–15</text>
+    <text x="1224" y="692" text-anchor="end">19 / 22</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 420 240">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · FATEHGARH SAHIB</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Fatehgarh Sahib:
+      <tspan x="56" dy="46">entering the</tspan>
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">agricultural</tspan>
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">ecosystem.</tspan></text>
+  </g>
+  <g id="narrative" data-pptx-bounds="56 288 420 126">
+    <text x="56" y="312" font-size="18" fill="#292D2A">At the Harit Punjab Plantation Nursery,
+      <tspan x="56" dy="27"><tspan font-weight="600" fill="#103F30">Akshay Sir</tspan> walked us through nursery</tspan>
+      <tspan x="56" dy="27">processes, the initiatives under way, the</tspan>
+      <tspan x="56" dy="27">stakeholders involved and their outcomes.</tspan></text>
+  </g>
+  <g id="observed" data-pptx-bounds="56 428 420 170">
+    <text x="56" y="446" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">FIRST EXPOSURE TO</text>
+    <line x1="56" y1="458" x2="476" y2="458" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="488" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">01</text>
+    <text x="96" y="488" font-size="16" fill="#292D2A">Nursery processes, saplings and inputs</text>
+    <line x1="56" y1="504" x2="476" y2="504" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="534" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">02</text>
+    <text x="96" y="534" font-size="16" fill="#292D2A">Farming practices on the ground</text>
+    <line x1="56" y1="550" x2="476" y2="550" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="580" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">03</text>
+    <text x="96" y="580" font-size="16" fill="#292D2A">MVS’s role alongside farmers</text>
+  </g>
+  <g id="learning" data-pptx-bounds="56 606 420 60">
+    <text x="56" y="630" font-family="'Playfair Display', Georgia, serif" font-size="20" font-style="italic" fill="#103F30">Long before a grain is sold, many hands
+      <tspan x="56" dy="26">and decisions have already shaped it.</tspan></text>
+  </g>
+  <g id="photo-nursery" data-pptx-bounds="508 36 332 630">
+    <image id="ph03" href="../images/ph03_poplar_nursery.jpg" x="508" y="40" width="332" height="580" preserveAspectRatio="xMidYMid slice"/>
+    <text x="508" y="646" font-size="14" fill="#5F655F">Harit Punjab Plantation Nursery</text>
+  </g>
+  <g id="photo-plantation" data-pptx-bounds="856 36 368 302">
+    <image id="ph02" href="../images/ph02_field_immersion_plantation.jpg" x="856" y="40" width="368" height="268" preserveAspectRatio="xMidYMid slice"/>
+    <text x="856" y="330" font-size="14" fill="#5F655F">Walking the poplar plantation rows</text>
+  </g>
+  <g id="photo-akshay" data-pptx-bounds="856 346 368 320">
+    <image id="phx-s05" href="../images/phx_s05_akshay_sir.png" x="856" y="352" width="368" height="276" preserveAspectRatio="xMidYMid slice"/>
+    <text x="856" y="646" font-size="14" fill="#5F655F">Nursery walkthrough with Akshay Sir</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Team field visit, Fatehgarh Sahib</text>
+    <text x="1224" y="692" text-anchor="end">05 / 22</text>
+  </g>
+</svg>

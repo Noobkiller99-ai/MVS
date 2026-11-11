@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="cover" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="landFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#103F30" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#103F30" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#103F30" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#103F30"/>
+  <image id="landscape" data-pptx-role="background" href="../images/art_landscape.png" x="0" y="486" width="1280" height="234" preserveAspectRatio="xMidYMax slice"/>
+  <rect id="landscape-fade" data-pptx-role="decoration" x="0" y="486" width="1280" height="120" fill="url(#landFade)"/>
+  <g id="kicker" data-pptx-bounds="56 36 1168 32">
+    <text x="640" y="58" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="3" fill="#C6A65A">DoCC FINAL ACADEMIC SUBMISSION</text>
+  </g>
+  <g id="logo" data-pptx-bounds="430 74 420 216">
+    <image href="../images/logo_primary_reversed.png" x="440" y="80" width="400" height="206" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+  <g id="title" data-pptx-bounds="240 300 800 120">
+    <rect x="610" y="306" width="60" height="2" fill="#C6A65A"/>
+    <text x="640" y="358" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#F6F1E5">Launching a Sustainable Basmati
+      <tspan x="640" dy="46" font-style="italic" fill="#E2CB97">Rice Brand for MVS</tspan></text>
+  </g>
+  <g id="team" data-pptx-bounds="240 426 800 60" text-anchor="middle">
+    <text x="640" y="446" font-size="18" font-weight="600" fill="#F6F1E5">Ashish Satpathy  |  Janardhan Reddy Bogireddy</text>
+    <text x="640" y="474" font-size="14" fill="#C9C3B0">SPJIMR  ·  Development of Corporate Citizenship  ·  2026  ·  with Manav Vikas Sansthan</text>
+  </g>
+</svg>

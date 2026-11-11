@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · COMMUNITY LIVELIHOODS AND WOMEN’S PARTICIPATION</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Women’s livelihoods: from skills
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">to sustained income.</tspan></text>
+  </g>
+  <g id="photo-shg" data-pptx-bounds="56 196 332 290">
+    <image id="phx-s09-shg" href="../images/phx_s09_shg_meeting.png" x="56" y="200" width="332" height="249" preserveAspectRatio="xMidYMid slice"/>
+    <text x="56" y="472" font-size="14" fill="#5F655F">SHG interaction</text>
+  </g>
+  <g id="photo-entrepreneur" data-pptx-bounds="400 196 188 290">
+    <image id="phx-s09-women" href="../images/phx_s09_women_entrepreneur.png" x="400" y="200" width="188" height="249" preserveAspectRatio="xMidYMid slice"/>
+    <text x="400" y="472" font-size="14" fill="#5F655F">Women’s livelihoods</text>
+  </g>
+  <g id="insight" data-pptx-bounds="56 500 532 160">
+    <rect x="56" y="504" width="532" height="156" fill="#103F30"/>
+    <text x="80" y="536" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">THE LEARNING</text>
+    <text x="80" y="574" font-family="'Playfair Display', Georgia, serif" font-size="24" fill="#F6F1E5">Skill development alone may not be
+      <tspan x="80" dy="32">enough without <tspan font-style="italic" fill="#E2CB97">market access and</tspan></tspan>
+      <tspan x="80" dy="32" font-style="italic" fill="#E2CB97">economic opportunity.</tspan></text>
+  </g>
+  <g id="observations" data-pptx-bounds="624 196 600 316">
+    <text x="624" y="214" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT OUR INTERACTIONS SHOWED</text>
+    <line x1="624" y1="228" x2="1224" y2="228" stroke="#D6CDB8" stroke-width="1"/>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">
+      <text x="624" y="262">01</text>
+      <text x="624" y="332">02</text>
+      <text x="624" y="402">03</text>
+      <text x="624" y="472">04</text>
+    </g>
+    <g font-size="16" font-weight="600" fill="#103F30">
+      <text x="664" y="260">Entrepreneurial skills already exist</text>
+      <text x="664" y="330">Income generation is the hard part</text>
+      <text x="664" y="400">Access to markets</text>
+      <text x="664" y="470">Collective institutions</text>
+    </g>
+    <g font-size="14" fill="#5F655F">
+      <text x="664" y="282">Service and food-making skills are already earning, as in Chandpur.</text>
+      <text x="664" y="352">Turning a skill into regular earnings remains a challenge.</text>
+      <text x="664" y="422">Reach to buyers shapes what a skill can earn.</text>
+      <text x="664" y="492">SHGs and women-led groups give individual effort scale.</text>
+    </g>
+    <line x1="624" y1="298" x2="1224" y2="298" stroke="#D6CDB8" stroke-width="1"/>
+    <line x1="624" y1="368" x2="1224" y2="368" stroke="#D6CDB8" stroke-width="1"/>
+    <line x1="624" y1="438" x2="1224" y2="438" stroke="#D6CDB8" stroke-width="1"/>
+  </g>
+  <g id="pathway" data-pptx-bounds="624 520 600 140">
+    <text x="624" y="536" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">THE CONVERSION PATH · OUR READING</text>
+    <g id="p09-path-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="homePlate" data-pptx-frame="624 548 150 48" fill="#103F30" stroke="none">
+      <path d="M 624 548 L 750 548 L 774 572 L 750 596 L 624 596 Z"/>
+    </g>
+    <g id="p09-path-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="774 548 150 48" fill="#2E5A47" stroke="none">
+      <path d="M 774 548 L 900 548 L 924 572 L 900 596 L 774 596 L 798 572 Z"/>
+    </g>
+    <g id="p09-path-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="924 548 150 48" fill="#795C43" stroke="none">
+      <path d="M 924 548 L 1050 548 L 1074 572 L 1050 596 L 924 596 L 948 572 Z"/>
+    </g>
+    <g id="p09-path-4" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="1074 548 150 48" fill="#C6A65A" stroke="none">
+      <path d="M 1074 548 L 1200 548 L 1224 572 L 1200 596 L 1074 596 L 1098 572 Z"/>
+    </g>
+    <g font-size="16" font-weight="600" text-anchor="middle">
+      <text x="694" y="578" fill="#F6F1E5">Skills</text>
+      <text x="855" y="578" fill="#F6F1E5">SHGs</text>
+      <text x="1005" y="578" fill="#F6F1E5">Markets</text>
+      <text x="1155" y="578" fill="#103F30">Livelihood</text>
+    </g>
+    <g font-size="13" fill="#5F655F" text-anchor="middle">
+      <text x="694" y="622">Individual capability</text>
+      <text x="855" y="622">Collective institution</text>
+      <text x="1005" y="622">Market linkage</text>
+      <text x="1155" y="622">Sustained income</text>
+    </g>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Team interactions with SHG members and women in the communities</text>
+    <text x="1224" y="692" text-anchor="end">09 / 22</text>
+  </g>
+</svg>

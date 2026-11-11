@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="capFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A2E22" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0A2E22" stop-opacity="0.80"/>
+    </linearGradient>
+  </defs>
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 464 240">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · INSTITUTIONAL EXPOSURE</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Punjab Agricultural
+      <tspan x="56" dy="46">University: where</tspan>
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">research meets</tspan>
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">the field.</tspan></text>
+  </g>
+  <g id="visit" data-pptx-bounds="56 288 464 116">
+    <text x="56" y="312" font-size="18" fill="#292D2A">Facilitated by the MVS project coordinator,
+      <tspan x="56" dy="27">the visit showed us MVS-related projects,</tspan>
+      <tspan x="56" dy="27">agricultural equipment and operations —</tspan>
+      <tspan x="56" dy="27">rice milling, processing and packing.</tspan></text>
+  </g>
+  <g id="why" data-pptx-bounds="56 418 464 104">
+    <rect x="56" y="422" width="4" height="96" fill="#C6A65A"/>
+    <text x="76" y="446" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHY IT MATTERED FOR SANGAT</text>
+    <text x="76" y="476" font-family="'Playfair Display', Georgia, serif" font-size="20" font-style="italic" fill="#103F30">Milling, grading and packing are the
+      <tspan x="76" dy="26">steps a consistent branded rice relies on.</tspan></text>
+  </g>
+  <g id="photo-gate" data-pptx-bounds="528 36 228 232">
+    <image id="ph11" href="../images/ph11_pau_gate.jpg" x="528" y="40" width="228" height="228" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="528" y="208" width="228" height="60" fill="url(#capFade)"/>
+    <text x="540" y="256" font-size="13" fill="#F6F1E5">PAU campus, Ludhiana</text>
+  </g>
+  <g id="photo-agro" data-pptx-bounds="528 276 228 248">
+    <image id="ph15" href="../images/ph15_pau_agro_processing.jpg" x="528" y="276" width="228" height="244" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="528" y="460" width="228" height="60" fill="url(#capFade)"/>
+    <text x="540" y="508" font-size="13" fill="#F6F1E5">Agro-processing complex</text>
+  </g>
+  <g id="photo-milling-equipment" data-pptx-bounds="764 36 228 488">
+    <image id="ph12" href="../images/ph12_pau_milling_equipment.jpg" x="764" y="40" width="228" height="480" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="764" y="460" width="228" height="60" fill="url(#capFade)"/>
+    <text x="776" y="508" font-size="13" fill="#F6F1E5">Rice milling equipment</text>
+  </g>
+  <g id="photo-packaging" data-pptx-bounds="1000 36 224 240">
+    <image id="ph13" href="../images/ph13_pau_packaging.jpg" x="1000" y="40" width="224" height="232" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="1000" y="212" width="224" height="60" fill="url(#capFade)"/>
+    <text x="1012" y="260" font-size="13" fill="#F6F1E5">Rice packaging</text>
+  </g>
+  <g id="photo-milling-line" data-pptx-bounds="1000 280 224 244">
+    <image id="ph14" href="../images/ph14_pau_milling.jpg" x="1000" y="280" width="224" height="240" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="1000" y="460" width="224" height="60" fill="url(#capFade)"/>
+    <text x="1012" y="508" font-size="13" fill="#F6F1E5">Milling line</text>
+  </g>
+  <g id="flow" data-pptx-bounds="56 532 1168 134">
+    <text x="56" y="546" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">HOW THE PIECES CONNECT · OUR READING</text>
+    <g id="p08-flow-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="56 556 286 52" fill="#103F30" stroke="none">
+      <path d="M 56 556 L 316 556 L 342 582 L 316 608 L 56 608 L 82 582 Z"/>
+    </g>
+    <g id="p08-flow-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="350 556 286 52" fill="#2E5A47" stroke="none">
+      <path d="M 350 556 L 610 556 L 636 582 L 610 608 L 350 608 L 376 582 Z"/>
+    </g>
+    <g id="p08-flow-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="644 556 286 52" fill="#795C43" stroke="none">
+      <path d="M 644 556 L 904 556 L 930 582 L 904 608 L 644 608 L 670 582 Z"/>
+    </g>
+    <g id="p08-flow-4" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="938 556 286 52" fill="#C6A65A" stroke="none">
+      <path d="M 938 556 L 1198 556 L 1224 582 L 1198 608 L 938 608 L 964 582 Z"/>
+    </g>
+    <g font-size="16" font-weight="600" text-anchor="middle">
+      <text x="202" y="588" fill="#F6F1E5">Agricultural research</text>
+      <text x="496" y="588" fill="#F6F1E5">Institutional support</text>
+      <text x="790" y="588" fill="#F6F1E5">Field-level adoption</text>
+      <text x="1084" y="588" fill="#103F30">Farmer livelihoods</text>
+    </g>
+    <g font-size="14" fill="#5F655F" text-anchor="middle">
+      <text x="202" y="636">Knowledge and technology</text>
+      <text x="496" y="636">Infrastructure, equipment, guidance</text>
+      <text x="790" y="636">What farmers can actually use</text>
+      <text x="1084" y="636">Income and resilience</text>
+    </g>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Team visit to Punjab Agricultural University, facilitated by MVS</text>
+    <text x="1224" y="692" text-anchor="end">08 / 22</text>
+  </g>
+</svg>

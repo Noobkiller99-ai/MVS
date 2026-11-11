@@ -1,0 +1,237 @@
+
+=== 2026-11-11T12:04:03.916Z NOTE id=9c83370102f7 ===
+Project initialized: profile=default; canvas=ppt169; path=/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+
+=== 2026-11-11T12:04:09.043Z PYTHON run=93557afd41ee ===
+cwd: /home/user/MVS/presentation
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/project_manager.py", "import-sources", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "/tmp/claude-0/-home-user-MVS/b45d4e16-34b0-5b07-8dd2-23e9c3526aae/scratchpad/src/Sangat_Project_Report.docx", "/tmp/claude-0/-home-user-MVS/b45d4e16-34b0-5b07-8dd2-23e9c3526aae/scratchpad/src/Sangat_Project_Report.md", "/home/user/MVS/brand/sangat/sources/srp-vs-non-srp.md"]
+stdout:
+  [OK] Imported sources into: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+=== 2026-11-11T12:04:09.587Z END run=93557afd41ee elapsed_ms=543 output_lines=13 retained=1 omitted=12 ===
+
+=== 2026-11-11T12:04:44.413Z PYTHON run=1525d189642c ===
+cwd: /home/user/MVS
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/analyze_images.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/images"]
+stdout:
+  [REPORT] Image analysis CSV: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/analysis/image_analysis.csv
+=== 2026-11-11T12:04:45.658Z END run=1525d189642c elapsed_ms=1245 output_lines=79 retained=1 omitted=78 ===
+
+=== 2026-11-11T12:08:44.080Z PYTHON run=91f7b8da7cac ===
+cwd: /home/user/MVS/assets/fonts
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/project_manager.py", "validate", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [WARN]
+  [OK] Project structure is valid, with warnings.
+=== 2026-11-11T12:08:44.682Z END run=91f7b8da7cac elapsed_ms=601 output_lines=5 retained=2 omitted=3 ===
+
+=== 2026-11-11T12:09:56.867Z PYTHON run=2b7d3078b772 ===
+cwd: /home/user/MVS/presentation/tools
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/text_measure.py", "calibrate", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "--outline"]
+=== 2026-11-11T12:09:57.188Z END run=2b7d3078b772 elapsed_ms=320 output_lines=18 retained=0 omitted=18 ===
+
+=== 2026-11-11T12:10:03.947Z PYTHON run=48266d7e1043 ===
+cwd: /home/user/MVS/presentation/tools
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_editor/server.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "--live", "--daemon"]
+stderr:
+  [12:10:04] [INFO] svg_editor: started live preview in background: http://127.0.0.1:6060 (pid=1665)
+  [12:10:04] [INFO] svg_editor: log: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/live_preview/server.log
+  [12:10:04] [WARNING] svg_editor: browser launch failed: no browser accepted the URL; open http://127.0.0.1:6060 manually
+  [12:10:04] [INFO] svg_editor: browser did not auto-open; open http://127.0.0.1:6060 manually
+=== 2026-11-11T12:10:04.548Z END run=48266d7e1043 elapsed_ms=600 output_lines=4 retained=4 omitted=0 ===
+
+=== 2026-11-11T12:11:00.472Z PYTHON run=fbadf9dda2b9 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/project_manager.py", "validate", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [WARN]
+  [OK] Project structure is valid, with warnings.
+=== 2026-11-11T12:11:00.984Z END run=fbadf9dda2b9 elapsed_ms=511 output_lines=5 retained=2 omitted=3 ===
+
+=== 2026-11-11T12:13:14.121Z PYTHON run=13850a34c6fb ===
+cwd: /home/user/MVS
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_quality_checker.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "--canonical-authoring", "--stage", "early", "--json"]
+stdout:
+  [WARN] 01_cover.svg - Passed (with warnings)
+     [WARN] Noncanonical compact authoring: Authoring SVG contains noncanonical or redundant inherited style declarations (3 change(s)); examples (group:attr None -> value hoists the shared value onto that group; child:attr value -> None drops the copy the child now inherits): team:text-anchor None -> 'middle'; text[19]:text-anchor 'middle' -> None; text[20]:text-anchor 'middle' -> None (advisory; normalize with `python3 scripts/compact_svg_styles.py <svg_output> --inplace`, re-stamp pages that carry Chart/Table fallbacks, and rerun the final gate, or leave the explicit form)
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+     [WARN] <text> (x=640, y=358; text='Launching a Sustaina…') exceeds <g id="title"> data-pptx-bounds on the vertical axis: content (325.9, 325.7)-(954.1, 417.3), container (240.0, 300.0)-(1040.0, 416.0), overflow horizontal 0.0%, vertical 1.1% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [ERROR] 02_our_journey.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] <text> (x=732, y=390; text='Stores, consumers, r…') exceeds <g id="stage-5"> data-pptx-bounds on the horizontal axis: content (732.0, 378.1)-(899.7, 414.9), container (728.0, 240.0)-(888.0, 436.0), overflow horizontal 7.3%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.0 px per Latin char at 14px incl. headroom; ≈20 chars fit in 160 px
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+     [WARN] <text> (x=228, y=390; text='Chandpur, Fatehgarh …') exceeds <g id="stage-2"> data-pptx-bounds on the horizontal axis: content (228.0, 378.1)-(385.3, 414.9), container (224.0, 240.0)-(384.0, 436.0), overflow horizontal 0.8%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈8.7 px per Latin char at 14px incl. headroom; ≈18 chars fit in 160 px
+  [ERROR] 03_understanding_mvs.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] <text> (x=56, y=382; text='Women empowerment · …') exceeds <g id="focus-areas"> data-pptx-bounds on the vertical axis: content (56.0, 366.7)-(583.7, 442.3), container (56.0, 326.0)-(696.0, 430.0), overflow horizontal 0.0%, vertical 11.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+     [WARN] <text> (x=232, y=284; text='States: Punjab, Hima…') exceeds <g id="stats"> data-pptx-bounds on the vertical axis: content (232.0, 272.1)-(554.5, 306.9), container (56.0, 200.0)-(696.0, 304.0), overflow horizontal 0.0%, vertical 2.8% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+  [WARN] 04_chandpur.svg - Passed (with warnings)
+     viewBox: 0 0 1280 720
+  [SUMMARY] Check Summary
+  Total files: 5
+    [OK] Fully passed: 0 (0%)
+    [WARN] With warnings: 3 (60%)
+    [ERROR] With errors: 2 (40%)
+  Provenance categories:
+    blocking: 2          hard findings; gate also requires exit 0
+    introduced: 9        advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 5 | text: 85 | images: 14 | icons: 0
+    Geometry: SVG elements 26 | native presets 10 | page-frame elements 6 | marker uses 0
+  [REPORT] JSON quality report exported: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/validation/svg_quality_early_report.json
+=== 2026-11-11T12:13:15.690Z END run=13850a34c6fb elapsed_ms=1569 output_lines=58 retained=30 omitted=28 ===
+
+=== 2026-11-11T12:15:20.687Z PYTHON run=9c041f640ce8 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+stderr:
+  Error: items[0] is missing: preset
+=== 2026-11-11T12:15:20.757Z END run=9c041f640ce8 elapsed_ms=69 output_lines=1 retained=1 omitted=0 ===
+
+=== 2026-11-11T12:15:25.486Z PYTHON run=e62319805cd6 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+=== 2026-11-11T12:15:25.550Z END run=e62319805cd6 elapsed_ms=64 output_lines=12 retained=0 omitted=12 ===
+
+=== 2026-11-11T12:16:01.323Z PYTHON run=012006df28dc ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+=== 2026-11-11T12:16:01.370Z END run=012006df28dc elapsed_ms=47 output_lines=12 retained=0 omitted=12 ===
+
+=== 2026-11-11T12:16:36.192Z PYTHON run=a5178521c3fa ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+=== 2026-11-11T12:16:36.235Z END run=a5178521c3fa elapsed_ms=43 output_lines=6 retained=0 omitted=6 ===
+
+=== 2026-11-11T12:19:59.765Z PYTHON run=df54a945b254 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+=== 2026-11-11T12:19:59.812Z END run=df54a945b254 elapsed_ms=46 output_lines=9 retained=0 omitted=9 ===
+
+=== 2026-11-11T12:20:57.371Z PYTHON run=769634373816 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "/tmp/claude-0/-home-user-MVS/b45d4e16-34b0-5b07-8dd2-23e9c3526aae/scratchpad/p18.json"]
+=== 2026-11-11T12:20:57.417Z END run=769634373816 elapsed_ms=46 output_lines=24 retained=0 omitted=24 ===
+
+=== 2026-11-11T12:21:03.368Z PYTHON run=10ae2195d187 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "/tmp/claude-0/-home-user-MVS/b45d4e16-34b0-5b07-8dd2-23e9c3526aae/scratchpad/p18.json"]
+=== 2026-11-11T12:21:03.419Z END run=10ae2195d187 elapsed_ms=51 output_lines=24 retained=0 omitted=24 ===
+
+=== 2026-11-11T12:21:47.416Z PYTHON run=860b0865f631 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/preset_shape_svg.py", "render-batch", "--input", "-"]
+=== 2026-11-11T12:21:47.462Z END run=860b0865f631 elapsed_ms=46 output_lines=12 retained=0 omitted=12 ===
+
+=== 2026-11-11T12:23:54.752Z PYTHON run=f20d7e71f52e ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_quality_checker.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [WARN] 01_cover.svg - Passed (with warnings)
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [WARN] 02_our_journey.svg - Passed (with warnings)
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [ERROR] 15_packaging.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] <text> (x=56, y=650; text='Concepts: specificat…') exceeds <g id="concept-note"> data-pptx-bounds on the vertical axis: content (56.0, 639.0)-(364.2, 671.5), container (56.0, 628.0)-(440.0, 668.0), overflow horizontal 0.0%, vertical 8.9% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [WARN] 16_digital_qr.svg - Passed (with warnings)
+     viewBox: 0 0 1280 720
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [ERROR] 17_go_to_market.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] spec_lock typography-size recurrence: undeclared font-size 30 (9 occurrences) exceeds the sparse-display limit of 2 occurrences. Structural text must return to its declared role band; a genuinely recurring display treatment needs a justified named role in the Design Spec and spec_lock.
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [WARN] 18_ecosystem.svg - Passed (with warnings)
+     viewBox: 0 0 1280 720
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [ERROR] 21_journey_lessons.svg - Failed
+     viewBox: 0 0 1280 720
+     [ERROR] spec_lock typography-size recurrence: undeclared font-size 30 (9 occurrences) exceeds the sparse-display limit of 2 occurrences. Structural text must return to its declared role band; a genuinely recurring display treatment needs a justified named role in the Design Spec and spec_lock.
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+     [WARN] <text> (x=104, y=606; text='A credible consumer …') exceeds <g id="lessons"> data-pptx-bounds on the horizontal axis: content (104.0, 589.0)-(850.9, 613.0), container (56.0, 156.0)-(848.0, 668.0), overflow horizontal 0.4%, vertical 0.0% (error above 5%); expand the root module bounds into available non-overlapping space; otherwise reflow the text; ≈12.0 px per Latin char at 20px incl. headroom; ≈65 chars fit in 792 px
+  [WARN] 22_closing.svg - Passed (with warnings)
+     viewBox: 0 0 1280 720
+  [SUMMARY] Check Summary
+  Total files: 22
+    [OK] Fully passed: 0 (0%)
+    [WARN] With warnings: 19 (86%)
+    [ERROR] With errors: 4 (18%)
+  Provenance categories:
+    blocking: 4          hard findings; gate also requires exit 0
+    introduced: 36       advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 22 | text: 499 | images: 39 | icons: 0
+    Geometry: SVG elements 192 | native presets 35 | page-frame elements 26 | marker uses 0
+  [REPORT] JSON quality report exported: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/validation/svg_quality_report.json
+=== 2026-11-11T12:23:58.911Z END run=f20d7e71f52e elapsed_ms=4159 output_lines=137 retained=39 omitted=98 ===
+
+=== 2026-11-11T12:24:25.686Z PYTHON run=c626da520371 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/project_manager.py", "validate", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [OK] Project structure is complete.
+=== 2026-11-11T12:24:26.188Z END run=c626da520371 elapsed_ms=502 output_lines=3 retained=1 omitted=2 ===
+
+=== 2026-11-11T12:24:26.390Z PYTHON run=275b56b9b975 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_quality_checker.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111", "--canonical-authoring", "--stage", "final", "--json"]
+stdout:
+  [WARN] 01_cover.svg - Passed (with warnings)
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [WARN] 02_our_journey.svg - Passed (with warnings)
+     [WARN] Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif
+  [SUMMARY] Check Summary
+  Total files: 22
+    [OK] Fully passed: 0 (0%)
+    [WARN] With warnings: 22 (100%)
+    [ERROR] With errors: 0 (0%)
+  Provenance categories:
+    blocking: 0          hard findings; gate also requires exit 0
+    introduced: 22       advisory; new or changed
+    inherited: 0         informational; prototype-identical
+    source-import: 0     informational; source-conversion loss
+  [CARRIERS] Actual-use receipt (informational; not a quota)
+    Pages: 22 | text: 499 | images: 39 | icons: 0
+    Geometry: SVG elements 192 | native presets 35 | page-frame elements 26 | marker uses 0
+  [REPORT] JSON quality report exported: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/validation/svg_quality_report.json
+=== 2026-11-11T12:24:29.814Z END run=275b56b9b975 elapsed_ms=3423 output_lines=111 retained=18 omitted=93 ===
+
+=== 2026-11-11T12:25:21.496Z PYTHON run=d509cc054a75 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/total_md_split.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [OK] SVG files and notes have one-to-one correspondence
+  [Done] Successfully generated 22/22 file(s)
+  [Done] Notes splitting complete
+=== 2026-11-11T12:25:21.505Z END run=d509cc054a75 elapsed_ms=8 output_lines=31 retained=3 omitted=28 ===
+
+=== 2026-11-11T12:25:25.519Z PYTHON run=64f020bd7d0b ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/finalize_svg.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [OK] Done!
+=== 2026-11-11T12:25:35.728Z END run=64f020bd7d0b elapsed_ms=10209 output_lines=12 retained=1 omitted=11 ===
+
+=== 2026-11-11T12:25:40.229Z PYTHON run=83902c5163f2 ===
+cwd: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_to_pptx.py", "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111"]
+stdout:
+  [Done] Saved: /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/exports/sangat_docc_20261111_122541.pptx
+    [POSTFLIGHT] status=passed-with-warnings quality_gate=passed slides=22 warning_categories=2
+    [POSTFLIGHT][WARNING] quality_introduced_warnings=22
+    [POSTFLIGHT][WARNING] unsafe_exported_font_faces=2
+    [PPTX] /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/exports/sangat_docc_20261111_122541.pptx
+    [REPORT] /home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/validation/sangat_docc_20261111_122541.report.json
+=== 2026-11-11T12:25:48.700Z END run=83902c5163f2 elapsed_ms=8470 output_lines=89 retained=6 omitted=83 ===
+
+=== 2026-11-11T12:28:23.369Z PYTHON run=4b276ba456b0 ===
+cwd: /home/user/MVS/presentation
+argv: ["/usr/local/bin/python3", "/home/user/MVS/.claude/skills/ppt-master/scripts/svg_editor/server.py", "projects/sangat_docc_ppt169_20261111", "--shutdown"]
+stderr:
+  [12:28:25] [INFO] svg_editor: live preview server stopped (pid=1665)
+=== 2026-11-11T12:28:25.330Z END run=4b276ba456b0 elapsed_ms=1960 output_lines=1 retained=1 omitted=0 ===

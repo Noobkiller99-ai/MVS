@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <defs>
+    <filter id="softShadow" x="-15%" y="-10%" width="130%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#13231C" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <rect id="shelf-field" data-pptx-role="decoration" x="456" y="300" width="824" height="340" fill="#EDE5D3"/>
+  <g id="header" data-pptx-bounds="56 36 384 236">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT IV · PACKAGING DESIGN</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="36" fill="#103F30">Packs that lead with
+      <tspan x="56" dy="44">the product —</tspan>
+      <tspan x="56" dy="44" font-style="italic" fill="#795C43">and invite</tspan>
+      <tspan x="56" dy="44" font-style="italic" fill="#795C43">the story.</tspan></text>
+  </g>
+  <g id="pack-notes" data-pptx-bounds="56 284 384 336">
+    <text x="56" y="300" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">FRONT PANEL</text>
+    <text x="56" y="326" font-size="15" fill="#292D2A">Wordmark, tagline and descriptor lead;
+      <tspan x="56" dy="21">a landscape illustration links to</tspan>
+      <tspan x="56" dy="21">cultivation; net quantity sits at the base.</tspan></text>
+    <line x1="56" y1="394" x2="420" y2="394" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="420" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">BACK PANEL</text>
+    <text x="56" y="446" font-size="15" fill="#292D2A">A short brand story, the QR invitation
+      <tspan x="56" dy="21">and space for product and statutory</tspan>
+      <tspan x="56" dy="21">information.</tspan></text>
+    <line x1="56" y1="514" x2="420" y2="514" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="540" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">TWO FORMATS, ONE HIERARCHY</text>
+    <text x="56" y="566" font-size="15" fill="#292D2A">A 1 kg trial pack and a 5 kg family pack
+      <tspan x="56" dy="21">keep the same information order.</tspan></text>
+  </g>
+  <g id="concept-note" data-pptx-bounds="56 624 384 50">
+    <text x="56" y="650" font-size="13" fill="#5F655F">Concepts: specifications and the QR code are
+      <tspan x="56" dy="17">placeholders until MVS confirms them.</tspan></text>
+  </g>
+  <g id="pack-range" data-pptx-bounds="470 96 754 532">
+    <image id="pack-back" href="../images/pack_v1-ivory-landscape-1kg-back.png" x="982" y="162" width="236" height="367" preserveAspectRatio="xMidYMid meet" filter="url(#softShadow)"/>
+    <image id="pack-1kg" href="../images/pack_v1-ivory-landscape-1kg-front-mock.png" x="482" y="150" width="244" height="380" preserveAspectRatio="xMidYMid meet" filter="url(#softShadow)"/>
+    <image id="pack-5kg" href="../images/pack_v1-ivory-landscape-5kg-front-mock.png" x="704" y="104" width="284" height="426" preserveAspectRatio="xMidYMid meet" filter="url(#softShadow)"/>
+    <g font-size="14" fill="#292D2A" text-anchor="middle">
+      <text x="604" y="570"><tspan font-weight="600" fill="#103F30">1 kg</tspan> trial pack · front</text>
+      <text x="846" y="570"><tspan font-weight="600" fill="#103F30">5 kg</tspan> family pack · front</text>
+      <text x="1100" y="570">Back panel with <tspan font-weight="600" fill="#103F30">QR story</tspan></text>
+    </g>
+    <text x="846" y="604" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="18" font-style="italic" fill="#795C43">Premium basmati first; the farming story on the back and the QR.</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="470 674 754 26" font-size="12" fill="#5F655F">
+    <text x="470" y="692">MVS project report §10.1–10.2; packaging concepts v3</text>
+    <text x="1224" y="692" text-anchor="end">15 / 22</text>
+  </g>
+</svg>

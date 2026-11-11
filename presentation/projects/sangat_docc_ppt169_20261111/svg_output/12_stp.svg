@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT III · SEGMENTATION, TARGETING AND POSITIONING</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Start with buyers who already pay
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">for premium basmati.</tspan></text>
+  </g>
+  <g id="segment-table" data-pptx-bounds="56 196 776 360">
+    <rect x="56" y="232" width="744" height="64" fill="#103F30" fill-opacity="0.10"/>
+    <rect x="56" y="360" width="744" height="64" fill="#C6A65A" fill-opacity="0.16"/>
+    <g font-size="12" font-weight="600" letter-spacing="1.5" fill="#795C43">
+      <text x="72" y="220">SEGMENT</text>
+      <text x="272" y="220">MAIN NEED</text>
+      <text x="572" y="220">ROLE FOR SANGAT</text>
+    </g>
+    <g stroke="#D6CDB8" stroke-width="1">
+      <line x1="56" y1="232" x2="800" y2="232" stroke="#795C43"/>
+      <line x1="56" y1="296" x2="800" y2="296"/>
+      <line x1="56" y1="360" x2="800" y2="360"/>
+      <line x1="56" y1="424" x2="800" y2="424"/>
+      <line x1="56" y1="488" x2="800" y2="488"/>
+      <line x1="56" y1="552" x2="800" y2="552"/>
+    </g>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="18" fill="#103F30">
+      <text x="72" y="268">Informed Providers</text>
+      <text x="72" y="332">Assured Regulars</text>
+      <text x="72" y="396">Gathering Hosts</text>
+      <text x="72" y="460" fill="#5F655F">Organic Purists</text>
+      <text x="72" y="524" fill="#5F655F">Everyday Value</text>
+      <text x="72" y="544" fill="#5F655F" font-size="14">Buyers</text>
+    </g>
+    <g font-size="15" fill="#292D2A">
+      <text x="272" y="258">Reliable aroma and texture with
+        <tspan x="272" dy="20">credible cultivation information</tspan></text>
+      <text x="272" y="322">Consistent results across repeated
+        <tspan x="272" dy="20">home meals</tspan></text>
+      <text x="272" y="386">Confidence for biryani, pulao,
+        <tspan x="272" dy="20">festivals and guests</tspan></text>
+      <text x="272" y="450" fill="#5F655F">A product meeting an explicit
+        <tspan x="272" dy="20">organic specification</tspan></text>
+      <text x="272" y="514" fill="#5F655F">Lowest acceptable cost per kg</text>
+    </g>
+    <g font-size="15" fill="#292D2A">
+      <text x="572" y="258"><tspan font-weight="600" fill="#103F30">Primary target</tspan> hypothesis;
+        <tspan x="572" dy="20">cooks at home, asks about origin</tspan></text>
+      <text x="572" y="322">Core premium pool; hard to win
+        <tspan x="572" dy="20">from trusted incumbents</tspan></text>
+      <text x="572" y="386"><tspan font-weight="600" fill="#795C43">Secondary</tspan>, occasion-led
+        <tspan x="572" dy="20">trial segment</tspan></text>
+      <text x="572" y="450" fill="#5F655F">Not targeted unless the product
+        <tspan x="572" dy="20">meets that specification</tspan></text>
+      <text x="572" y="514" fill="#5F655F">Not targeted at premium launch</text>
+    </g>
+  </g>
+  <g id="pilot" data-pptx-bounds="840 196 384 360">
+    <text x="840" y="220" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">PILOT GEOGRAPHY</text>
+    <line x1="840" y1="232" x2="1224" y2="232" stroke="#795C43" stroke-width="1"/>
+    <g stroke="#C6A65A" stroke-width="1.5">
+      <line x1="900" y1="300" x2="1032" y2="276"/>
+      <line x1="1032" y1="276" x2="1150" y2="318"/>
+      <line x1="900" y1="300" x2="1150" y2="318"/>
+    </g>
+    <circle cx="900" cy="300" r="12" fill="#103F30"/>
+    <circle cx="1032" cy="276" r="12" fill="#103F30"/>
+    <circle cx="1150" cy="318" r="12" fill="#103F30"/>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30" text-anchor="middle">
+      <text x="900" y="346">Mohali</text>
+      <text x="1032" y="260">Chandigarh</text>
+      <text x="1150" y="364">Panchkula</text>
+    </g>
+    <text x="840" y="408" font-size="15" fill="#292D2A">Chosen for feasibility: the team had local
+      <tspan x="840" dy="21">access and could learn closely. Not a claim</tspan>
+      <tspan x="840" dy="21">that these cities hold the largest demand.</tspan></text>
+    <text x="840" y="490" font-size="15" fill="#292D2A"><tspan font-weight="600" fill="#103F30">Next:</tspan> Delhi NCR, once quality, repeat
+      <tspan x="840" dy="21">purchase and service feasibility are shown.</tspan></text>
+  </g>
+  <g id="positioning" data-pptx-bounds="56 572 1168 94">
+    <rect x="56" y="572" width="1168" height="94" fill="#EDE5D3"/>
+    <rect x="56" y="572" width="4" height="94" fill="#C6A65A"/>
+    <text x="80" y="598" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">PROPOSED POSITIONING · CONDITIONAL ON A WRITTEN SPEC AND COOKING TESTS</text>
+    <text x="80" y="626" font-size="15" fill="#292D2A">For households that already buy premium basmati and care how their food is grown, <tspan font-weight="600" fill="#103F30">Sangat</tspan> is the premium basmati from farming
+      <tspan x="80" dy="22">communities, developed with MVS, that delivers dependable aroma, grain and cooking results — and lets you see how the rice was grown.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">MVS project report §7; segments are behavioural hypotheses, not sized markets</text>
+    <text x="1224" y="692" text-anchor="end">12 / 22</text>
+  </g>
+</svg>

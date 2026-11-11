@@ -1,0 +1,39 @@
+No,Filename,Width,Height,AspectRatio,PixelAspectRatio,SourceDisplayRatio,RatioSource,Format,HasTransparentPixels,UsageCount,DisplayRatioVariants,AssetKind,SvgRenderable,PptxNativeSupported,SizeKB,Category
+1,app_story_mobile.png,780,3178,0.25,0.25,,native,PNG,False,1,,bitmap,True,True,291.7,Portrait
+2,app_website_desktop.png,2700,840,3.21,3.21,,native,PNG,False,1,,bitmap,True,True,398.4,Ultra-wide
+3,app_website_mobile.png,2250,1200,1.88,1.88,,native,PNG,False,1,,bitmap,True,True,552.0,Wide landscape
+4,art_landscape.png,3548,1774,2.00,2.00,,native,PNG,False,1,,bitmap,True,True,3040.6,Wide landscape
+5,art_landscape_transparent.png,3548,1774,2.00,2.00,,native,PNG,True,1,,bitmap,True,True,3345.2,Wide landscape
+6,image_001.png,1920,1080,1.78,1.78,2.86,native,PNG,False,1,,bitmap,True,True,67.4,Wide landscape
+7,image_002.png,1920,1080,1.78,1.78,1.97,native,PNG,False,1,,bitmap,True,True,180.9,Wide landscape
+8,image_003.png,1920,1080,1.78,1.78,1.90,native,PNG,False,1,,bitmap,True,True,159.2,Wide landscape
+9,image_004.png,1800,1848,0.97,0.97,0.97,native,PNG,False,1,,bitmap,True,True,1744.5,Near square
+10,logo_horizontal_colour.png,2400,766,3.13,3.13,,native,PNG,True,1,,bitmap,True,True,146.7,Ultra-wide
+11,logo_primary_colour.png,2400,1237,1.94,1.94,,native,PNG,True,1,,bitmap,True,True,179.5,Wide landscape
+12,logo_primary_reversed.png,2400,1237,1.94,1.94,,native,PNG,True,1,,bitmap,True,True,176.5,Wide landscape
+13,logo_stacked_colour.png,2400,2309,1.04,1.04,,native,PNG,True,1,,bitmap,True,True,241.4,Near square
+14,logo_symbol_colour.png,1145,2400,0.48,0.48,,native,PNG,True,1,,bitmap,True,True,133.9,Portrait
+15,logo_symbol_gold.png,1145,2400,0.48,0.48,,native,PNG,True,1,,bitmap,True,True,133.0,Portrait
+16,logo_wordmark_colour.png,2400,1024,2.34,2.34,,native,PNG,True,1,,bitmap,True,True,140.7,Ultra-wide
+17,logo_wordmark_reversed.png,2400,1024,2.34,2.34,,native,PNG,True,1,,bitmap,True,True,137.7,Ultra-wide
+18,pack_v1-ivory-landscape-1kg-back.png,900,1400,0.64,0.64,,native,PNG,False,1,,bitmap,True,True,611.7,Portrait
+19,pack_v1-ivory-landscape-1kg-front-mock.png,900,1400,0.64,0.64,,native,PNG,False,1,,bitmap,True,True,763.2,Portrait
+20,pack_v1-ivory-landscape-1kg-guides.png,1800,1848,0.97,0.97,,native,PNG,False,1,,bitmap,True,True,1308.4,Near square
+21,pack_v1-ivory-landscape-5kg-back.png,933,1400,0.67,0.67,,native,PNG,False,1,,bitmap,True,True,644.4,Portrait
+22,pack_v1-ivory-landscape-5kg-front-mock.png,933,1400,0.67,0.67,,native,PNG,False,1,,bitmap,True,True,782.9,Portrait
+23,pack_v2-forest-edition-1kg-front-mock.png,900,1400,0.64,0.64,,native,PNG,False,1,,bitmap,True,True,762.7,Portrait
+24,ph01_field_immersion_household.jpg,1280,960,1.33,1.33,,native,JPEG,False,1,,bitmap,True,True,135.9,Standard landscape
+25,ph02_field_immersion_plantation.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,291.3,Portrait
+26,ph03_poplar_nursery.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,176.7,Portrait
+27,ph04_farmer_equipment.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,218.0,Portrait
+28,ph05_farmer_field_visit.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,212.1,Portrait
+29,ph06_rice_competition.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,140.8,Portrait
+30,ph07_premium_competition.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,154.1,Portrait
+31,ph08_farmer_group_discussion.jpg,1280,960,1.33,1.33,,native,JPEG,False,1,,bitmap,True,True,194.4,Standard landscape
+32,ph09_sustainable_practices.jpg,1280,960,1.33,1.33,,native,JPEG,False,1,,bitmap,True,True,193.2,Standard landscape
+33,ph10_farmer_discussion.jpg,1280,960,1.33,1.33,,native,JPEG,False,1,,bitmap,True,True,199.4,Standard landscape
+34,ph11_pau_gate.jpg,674,660,1.02,1.02,,native,JPEG,False,1,,bitmap,True,True,137.4,Near square
+35,ph12_pau_milling_equipment.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,130.4,Portrait
+36,ph13_pau_packaging.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,137.6,Portrait
+37,ph14_pau_milling.jpg,1280,960,1.33,1.33,,native,JPEG,False,1,,bitmap,True,True,151.0,Standard landscape
+38,ph15_pau_agro_processing.jpg,960,1280,0.75,0.75,,native,JPEG,False,1,,bitmap,True,True,129.0,Portrait

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT I · THE DoCC JOURNEY</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">From understanding communities to building
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">a market-linked opportunity.</tspan></text>
+  </g>
+  <g id="acts" data-pptx-bounds="56 200 1168 34" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">
+    <line x1="56" y1="226" x2="216" y2="226" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="56" y="216">ACT I</text>
+    <line x1="224" y1="226" x2="552" y2="226" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="224" y="216">ACT II · THE GROUND</text>
+    <line x1="560" y1="226" x2="888" y2="226" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="560" y="216">ACT III · THE MARKET</text>
+    <line x1="896" y1="226" x2="1056" y2="226" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="896" y="216">ACT IV · SANGAT</text>
+    <line x1="1064" y1="226" x2="1224" y2="226" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="1064" y="216">ACT V · PATHWAY</text>
+  </g>
+  <g id="stage-1" data-pptx-bounds="56 240 160 196">
+    <g id="p02-chev-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="56 244 160 52" fill="#103F30" stroke="none">
+      <path d="M 56 244 L 190 244 L 216 270 L 190 296 L 56 296 L 82 270 Z"/>
+    </g>
+    <text x="126" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#F6F1E5">01</text>
+    <text x="60" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Organisational
+      <tspan x="60" dy="24">immersion</tspan></text>
+    <text x="60" y="390" font-size="14" fill="#5F655F">MVS, its programmes
+      <tspan x="60" dy="20">and field teams</tspan></text>
+  </g>
+  <g id="stage-2" data-pptx-bounds="224 240 160 196">
+    <g id="p02-chev-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="224 244 160 52" fill="#103F30" stroke="none">
+      <path d="M 224 244 L 358 244 L 384 270 L 358 296 L 224 296 L 250 270 Z"/>
+    </g>
+    <text x="294" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#F6F1E5">02</text>
+    <text x="228" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Field
+      <tspan x="228" dy="24">immersion</tspan></text>
+    <text x="228" y="390" font-size="14" fill="#5F655F">Chandpur, Fatehgarh
+      <tspan x="228" dy="20">Sahib, farmers</tspan></text>
+  </g>
+  <g id="stage-3" data-pptx-bounds="392 240 160 196">
+    <g id="p02-chev-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="392 244 160 52" fill="#103F30" stroke="none">
+      <path d="M 392 244 L 526 244 L 552 270 L 526 296 L 392 296 L 418 270 Z"/>
+    </g>
+    <text x="462" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#F6F1E5">03</text>
+    <text x="396" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Institutional
+      <tspan x="396" dy="24">exposure</tspan></text>
+    <text x="396" y="390" font-size="14" fill="#5F655F">Punjab Agricultural
+      <tspan x="396" dy="20">University visit</tspan></text>
+  </g>
+  <g id="stage-4" data-pptx-bounds="560 240 160 196">
+    <g id="p02-chev-4" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="560 244 160 52" fill="#795C43" stroke="none">
+      <path d="M 560 244 L 694 244 L 720 270 L 694 296 L 560 296 L 586 270 Z"/>
+    </g>
+    <text x="630" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#F6F1E5">04</text>
+    <text x="564" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Problem
+      <tspan x="564" dy="24">discovery</tspan></text>
+    <text x="564" y="390" font-size="14" fill="#5F655F">Linking field insight
+      <tspan x="564" dy="20">to a market problem</tspan></text>
+  </g>
+  <g id="stage-5" data-pptx-bounds="728 240 160 196">
+    <g id="p02-chev-5" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="728 244 160 52" fill="#795C43" stroke="none">
+      <path d="M 728 244 L 862 244 L 888 270 L 862 296 L 728 296 L 754 270 Z"/>
+    </g>
+    <text x="798" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#F6F1E5">05</text>
+    <text x="732" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Market
+      <tspan x="732" dy="24">research</tspan></text>
+    <text x="732" y="390" font-size="14" fill="#5F655F">Stores, shoppers,
+      <tspan x="732" dy="20">retailers and rivals</tspan></text>
+  </g>
+  <g id="stage-6" data-pptx-bounds="896 240 160 196">
+    <g id="p02-chev-6" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="896 244 160 52" fill="#C6A65A" stroke="none">
+      <path d="M 896 244 L 1030 244 L 1056 270 L 1030 296 L 896 296 L 922 270 Z"/>
+    </g>
+    <text x="966" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#103F30">06</text>
+    <text x="900" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Brand
+      <tspan x="900" dy="24">development</tspan></text>
+    <text x="900" y="390" font-size="14" fill="#5F655F">Name, identity,
+      <tspan x="900" dy="20">packaging, QR story</tspan></text>
+  </g>
+  <g id="stage-7" data-pptx-bounds="1064 240 160 196">
+    <g id="p02-chev-7" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="1064 244 160 52" fill="#C6A65A" stroke="none">
+      <path d="M 1064 244 L 1198 244 L 1224 270 L 1198 296 L 1064 296 L 1090 270 Z"/>
+    </g>
+    <text x="1134" y="277" text-anchor="middle" font-size="16" font-weight="600" fill="#103F30">07</text>
+    <text x="1068" y="330" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">Implementation
+      <tspan x="1068" dy="24">blueprint</tspan></text>
+    <text x="1068" y="390" font-size="14" fill="#5F655F">GTM, operating model
+      <tspan x="1068" dy="20">and pilot roadmap</tspan></text>
+  </g>
+  <g id="evidence-strip" data-pptx-bounds="56 446 1168 214">
+    <text x="56" y="464" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">FROM THE FIELD</text>
+    <image href="../images/ph01_field_immersion_household.jpg" x="56" y="476" width="220" height="150" preserveAspectRatio="xMidYMid slice"/>
+    <image href="../images/ph03_poplar_nursery.jpg" x="293" y="476" width="220" height="150" preserveAspectRatio="xMidYMid slice"/>
+    <image href="../images/ph10_farmer_discussion.jpg" x="530" y="476" width="220" height="150" preserveAspectRatio="xMidYMid slice"/>
+    <image href="../images/ph11_pau_gate.jpg" x="767" y="476" width="220" height="150" preserveAspectRatio="xMidYMid slice"/>
+    <image href="../images/ph06_rice_competition.jpg" x="1004" y="476" width="220" height="150" preserveAspectRatio="xMidYMid slice"/>
+    <g font-size="14" fill="#5F655F">
+      <text x="56" y="648">Village household visit</text>
+      <text x="293" y="648">Poplar nursery, Fatehgarh Sahib</text>
+      <text x="530" y="648">Conversation with a farmer</text>
+      <text x="767" y="648">Punjab Agricultural University</text>
+      <text x="1004" y="648">Retail and competitor study</text>
+    </g>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Sangat · DoCC 2026 · SPJIMR × Manav Vikas Sansthan</text>
+    <text x="1224" y="692" text-anchor="end">02 / 22</text>
+  </g>
+</svg>

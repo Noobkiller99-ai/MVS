@@ -1,0 +1,411 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed-with-warnings",
+  "output": {
+    "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/exports/sangat_docc_20261111_122541.pptx",
+    "bytes": 11705353
+  },
+  "source": {
+    "svg_slide_count": 22,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "9b1f278553e46e3c0ab8d752eb81d35edcc08d586da87524242eed2cf8ec93a7",
+      "file_count": 22,
+      "files": [
+        {
+          "file": "01_cover.svg",
+          "sha256": "9f190138ae43432ed456616a26cb0285e40923a2ca43aac9ee683589fe56aed2"
+        },
+        {
+          "file": "02_our_journey.svg",
+          "sha256": "fef267a94201b605511d7ebfd429be6f4b6ba27e198596acfa764e585acfa53c"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "sha256": "21de6bd186d243200da41cd5d6f150a0bde352f980c6059712c7e4cd63789f9f"
+        },
+        {
+          "file": "04_chandpur.svg",
+          "sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+        },
+        {
+          "file": "05_fatehgarh_sahib.svg",
+          "sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+        },
+        {
+          "file": "06_farmer_perspective.svg",
+          "sha256": "597301a8ae27fde076d3d35bd4fded3e1d1abe955ad65f6f11c6d64c47b21322"
+        },
+        {
+          "file": "07_cultivation_economics.svg",
+          "sha256": "25c5465b287826b6568ba4b69b11088517d881cf6f64fbe674b07cf2ac3f0540"
+        },
+        {
+          "file": "08_pau_visit.svg",
+          "sha256": "51bd9fabc4139a1f0f74a798bf979f310c4cef5d286de48d896262cf1760ddcd"
+        },
+        {
+          "file": "09_community_livelihoods.svg",
+          "sha256": "3d6a3bd74c47954f6c2f7f7d7168042d4f45226722ef69c6a45661d589d6ad1a"
+        },
+        {
+          "file": "10_field_to_problem.svg",
+          "sha256": "457fe00e80691947c57fbac2b7629013a793be40240438fdeb540d3aa59c8ed4"
+        },
+        {
+          "file": "11_understanding_consumer.svg",
+          "sha256": "05c61bdc67b1c911960c7e069f3c8ffef6dd1fee3fdd6afe733dd706049854a0"
+        },
+        {
+          "file": "12_stp.svg",
+          "sha256": "d138a0ec854ad05e259c2901b37aa79f1508219e62ccb96b6ea562984a8a85e4"
+        },
+        {
+          "file": "13_brand_reveal.svg",
+          "sha256": "f793d6c24e9f644c0b1957626b5bc72af7d750a969ac6a1ef8e38f90857c3bfe"
+        },
+        {
+          "file": "14_visual_identity.svg",
+          "sha256": "ec94066dfdf084321cd7c6ce245f6f5070d89440d53b9867e0ca18b2c20de175"
+        },
+        {
+          "file": "15_packaging.svg",
+          "sha256": "b602389b54ff88bebc1fc6212a220050976e006acbc76a5d5163ee2afa4c722c"
+        },
+        {
+          "file": "16_digital_qr.svg",
+          "sha256": "741ec3d0ac52611c4c301405a96cc243098d439c6e8a38e562721895c39559ad"
+        },
+        {
+          "file": "17_go_to_market.svg",
+          "sha256": "af2187700ec0ffea3dda9e60368f1a1fd0eb81ff1dacea1cf1207398816f84b5"
+        },
+        {
+          "file": "18_ecosystem.svg",
+          "sha256": "1dcd1082c7fbd82f062188f3965b6c991eb857fef47cb020c88c65ee7304ae9d"
+        },
+        {
+          "file": "19_blueprint_to_pilot.svg",
+          "sha256": "fc1f4fc3b52f8a5b026cca9a7bf38005071e8c2af2587acf71d7848bf86e4626"
+        },
+        {
+          "file": "20_what_we_delivered.svg",
+          "sha256": "8bf0016cfdda1ebe3b4a51c4dba8fb4977d6d7cfdee4359b65a051520413fddc"
+        },
+        {
+          "file": "21_journey_lessons.svg",
+          "sha256": "ef7ec805eb3b248ee44717b6fa31858aff2078da722491f4be0cd1452f37b9df"
+        },
+        {
+          "file": "22_closing.svg",
+          "sha256": "921a15b7962fce0cdff55fa394de393bc5f30d1d7c32bf6eaec2b79320060a44"
+        }
+      ]
+    },
+    "authoring_roundtrip": null
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 22,
+    "notes": 22,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "project_svg_contract": "enforced-at-build",
+    "compatibility_normalization": "not-applicable",
+    "authoring_roundtrip": "not-applicable",
+    "quality_gate": "passed",
+    "quality_warnings": "warning",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "warning"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "passed",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "9b1f278553e46e3c0ab8d752eb81d35edcc08d586da87524242eed2cf8ec93a7",
+      "file_count": 22,
+      "files": [
+        {
+          "file": "01_cover.svg",
+          "sha256": "9f190138ae43432ed456616a26cb0285e40923a2ca43aac9ee683589fe56aed2"
+        },
+        {
+          "file": "02_our_journey.svg",
+          "sha256": "fef267a94201b605511d7ebfd429be6f4b6ba27e198596acfa764e585acfa53c"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "sha256": "21de6bd186d243200da41cd5d6f150a0bde352f980c6059712c7e4cd63789f9f"
+        },
+        {
+          "file": "04_chandpur.svg",
+          "sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+        },
+        {
+          "file": "05_fatehgarh_sahib.svg",
+          "sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+        },
+        {
+          "file": "06_farmer_perspective.svg",
+          "sha256": "597301a8ae27fde076d3d35bd4fded3e1d1abe955ad65f6f11c6d64c47b21322"
+        },
+        {
+          "file": "07_cultivation_economics.svg",
+          "sha256": "25c5465b287826b6568ba4b69b11088517d881cf6f64fbe674b07cf2ac3f0540"
+        },
+        {
+          "file": "08_pau_visit.svg",
+          "sha256": "51bd9fabc4139a1f0f74a798bf979f310c4cef5d286de48d896262cf1760ddcd"
+        },
+        {
+          "file": "09_community_livelihoods.svg",
+          "sha256": "3d6a3bd74c47954f6c2f7f7d7168042d4f45226722ef69c6a45661d589d6ad1a"
+        },
+        {
+          "file": "10_field_to_problem.svg",
+          "sha256": "457fe00e80691947c57fbac2b7629013a793be40240438fdeb540d3aa59c8ed4"
+        },
+        {
+          "file": "11_understanding_consumer.svg",
+          "sha256": "05c61bdc67b1c911960c7e069f3c8ffef6dd1fee3fdd6afe733dd706049854a0"
+        },
+        {
+          "file": "12_stp.svg",
+          "sha256": "d138a0ec854ad05e259c2901b37aa79f1508219e62ccb96b6ea562984a8a85e4"
+        },
+        {
+          "file": "13_brand_reveal.svg",
+          "sha256": "f793d6c24e9f644c0b1957626b5bc72af7d750a969ac6a1ef8e38f90857c3bfe"
+        },
+        {
+          "file": "14_visual_identity.svg",
+          "sha256": "ec94066dfdf084321cd7c6ce245f6f5070d89440d53b9867e0ca18b2c20de175"
+        },
+        {
+          "file": "15_packaging.svg",
+          "sha256": "b602389b54ff88bebc1fc6212a220050976e006acbc76a5d5163ee2afa4c722c"
+        },
+        {
+          "file": "16_digital_qr.svg",
+          "sha256": "741ec3d0ac52611c4c301405a96cc243098d439c6e8a38e562721895c39559ad"
+        },
+        {
+          "file": "17_go_to_market.svg",
+          "sha256": "af2187700ec0ffea3dda9e60368f1a1fd0eb81ff1dacea1cf1207398816f84b5"
+        },
+        {
+          "file": "18_ecosystem.svg",
+          "sha256": "1dcd1082c7fbd82f062188f3965b6c991eb857fef47cb020c88c65ee7304ae9d"
+        },
+        {
+          "file": "19_blueprint_to_pilot.svg",
+          "sha256": "fc1f4fc3b52f8a5b026cca9a7bf38005071e8c2af2587acf71d7848bf86e4626"
+        },
+        {
+          "file": "20_what_we_delivered.svg",
+          "sha256": "8bf0016cfdda1ebe3b4a51c4dba8fb4977d6d7cfdee4359b65a051520413fddc"
+        },
+        {
+          "file": "21_journey_lessons.svg",
+          "sha256": "ef7ec805eb3b248ee44717b6fa31858aff2078da722491f4be0cd1452f37b9df"
+        },
+        {
+          "file": "22_closing.svg",
+          "sha256": "921a15b7962fce0cdff55fa394de393bc5f30d1d7c32bf6eaec2b79320060a44"
+        }
+      ]
+    },
+    "summary": {
+      "total": 22,
+      "passed": 0,
+      "warnings": 22,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 22,
+        "issues": [
+          {
+            "file": "01_cover.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "02_our_journey.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "03_understanding_mvs.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "04_chandpur.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "05_fatehgarh_sahib.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "06_farmer_perspective.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "07_cultivation_economics.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "08_pau_visit.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "09_community_livelihoods.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "10_field_to_problem.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "11_understanding_consumer.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "12_stp.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "13_brand_reveal.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "14_visual_identity.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "15_packaging.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "16_digital_qr.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "17_go_to_market.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "18_ecosystem.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "19_blueprint_to_pilot.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "20_what_we_delivered.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "21_journey_lessons.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          },
+          {
+            "file": "22_closing.svg",
+            "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+          }
+        ]
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "'Playfair Display', Georgia, serif",
+        "Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "generic_only_stacks": [],
+      "unsafe_exported_faces": [
+        {
+          "stack": "'Playfair Display', Georgia, serif",
+          "role": "latin",
+          "typeface": "Playfair Display"
+        },
+        {
+          "stack": "Inter, 'Segoe UI', Arial, sans-serif",
+          "role": "latin",
+          "typeface": "Inter"
+        }
+      ]
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 39,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "export_policy": {
+    "project_svg_contract": "strict",
+    "dangerous_normalization_count": 0
+  },
+  "deck_motion": {
+    "transition": {
+      "effect": "fade",
+      "effect_options": {},
+      "duration": 0.4,
+      "auto_advance": null,
+      "sound": null
+    },
+    "animation": {
+      "effect": "none",
+      "effect_request": null,
+      "duration": 0.4,
+      "stagger": 0.5,
+      "trigger": "after-previous"
+    },
+    "cli_overrides": {
+      "transition": false,
+      "transition_duration": false,
+      "auto_advance": false,
+      "transition_sound": false,
+      "animation": false,
+      "animation_duration": false,
+      "animation_stagger": false,
+      "animation_trigger": false
+    },
+    "narration_timings": false
+  },
+  "backup_path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/backup/20261111_122541/svg_output",
+  "conversion_trace_path": null
+}

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT V · CONNECTING THE ECOSYSTEM</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">A brand is a chain of people
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">that must work together.</tspan></text>
+  </g>
+  <g id="mvs-layer" data-pptx-bounds="56 196 1168 128">
+    <rect x="56" y="200" width="1163" height="76" fill="#103F30"/>
+    <text x="80" y="232" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">MVS · COORDINATION, GOVERNANCE AND BRAND OVERSIGHT</text>
+    <text x="80" y="260" font-size="16" fill="#F6F1E5">Programme coordination · evidence governance · brand oversight · claim approvals · grievance escalation · clear ownership</text>
+    <g stroke="#C6A65A" stroke-width="1.5" stroke-dasharray="4,4">
+      <line x1="123" y1="276" x2="123" y2="326"/>
+      <line x1="270" y1="276" x2="270" y2="326"/>
+      <line x1="417" y1="276" x2="417" y2="326"/>
+      <line x1="564" y1="276" x2="564" y2="326"/>
+      <line x1="711" y1="276" x2="711" y2="326"/>
+      <line x1="858" y1="276" x2="858" y2="326"/>
+      <line x1="1005" y1="276" x2="1005" y2="326"/>
+      <line x1="1152" y1="276" x2="1152" y2="326"/>
+    </g>
+  </g>
+  <g id="chain" data-pptx-bounds="56 328 1168 210">
+    <g id="p18-node-1" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="homePlate" data-pptx-frame="56 330 134 52" fill="#103F30" stroke="none">
+      <path d="M 56 330 L 164 330 L 190 356 L 164 382 L 56 382 Z"/>
+    </g>
+    <g id="p18-node-2" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="203 330 134 52" fill="#103F30" stroke="none">
+      <path d="M 203 330 L 311 330 L 337 356 L 311 382 L 203 382 L 229 356 Z"/>
+    </g>
+    <g id="p18-node-3" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="350 330 134 52" fill="#2E5A47" stroke="none">
+      <path d="M 350 330 L 458 330 L 484 356 L 458 382 L 350 382 L 376 356 Z"/>
+    </g>
+    <g id="p18-node-4" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="497 330 134 52" fill="#2E5A47" stroke="none">
+      <path d="M 497 330 L 605 330 L 631 356 L 605 382 L 497 382 L 523 356 Z"/>
+    </g>
+    <g id="p18-node-5" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="644 330 134 52" fill="#795C43" stroke="none">
+      <path d="M 644 330 L 752 330 L 778 356 L 752 382 L 644 382 L 670 356 Z"/>
+    </g>
+    <g id="p18-node-6" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="791 330 134 52" fill="#795C43" stroke="none">
+      <path d="M 791 330 L 899 330 L 925 356 L 899 382 L 791 382 L 817 356 Z"/>
+    </g>
+    <g id="p18-node-7" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="938 330 134 52" fill="#C6A65A" stroke="none">
+      <path d="M 938 330 L 1046 330 L 1072 356 L 1046 382 L 938 382 L 964 356 Z"/>
+    </g>
+    <g id="p18-node-8" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="chevron" data-pptx-frame="1085 330 134 52" fill="#C6A65A" stroke="none">
+      <path d="M 1085 330 L 1193 330 L 1219 356 L 1193 382 L 1085 382 L 1111 356 Z"/>
+    </g>
+    <g font-size="16" font-weight="600" text-anchor="middle">
+      <text x="120" y="362" fill="#F6F1E5">01</text>
+      <text x="273" y="362" fill="#F6F1E5">02</text>
+      <text x="420" y="362" fill="#F6F1E5">03</text>
+      <text x="567" y="362" fill="#F6F1E5">04</text>
+      <text x="714" y="362" fill="#F6F1E5">05</text>
+      <text x="861" y="362" fill="#F6F1E5">06</text>
+      <text x="1008" y="362" fill="#103F30">07</text>
+      <text x="1155" y="362" fill="#103F30">08</text>
+    </g>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="17" fill="#103F30">
+      <text x="56" y="414">Farmers</text>
+      <text x="203" y="414">Farmer groups /
+        <tspan x="203" dy="21">arthiyas</tspan></text>
+      <text x="350" y="414">Processors /
+        <tspan x="350" dy="21">millers</tspan></text>
+      <text x="497" y="414">Quality lead /
+        <tspan x="497" dy="21">laboratory</tspan></text>
+      <text x="644" y="414">Packaging
+        <tspan x="644" dy="21">vendor</tspan></text>
+      <text x="791" y="414">Logistics
+        <tspan x="791" dy="21">partner</tspan></text>
+      <text x="938" y="414">Retailers /
+        <tspan x="938" dy="21">online channels</tspan></text>
+      <text x="1085" y="414">Consumers</text>
+    </g>
+    <g font-size="13" fill="#5F655F">
+      <text x="56" y="462">Cultivation, field
+        <tspan x="56" dy="18">records, agreed</tspan>
+        <tspan x="56" dy="18">practices</tspan></text>
+      <text x="203" y="462">Aggregation,
+        <tspan x="203" dy="18">volumes, lot IDs,</tspan>
+        <tspan x="203" dy="18">primary records</tspan></text>
+      <text x="350" y="462">Milling, grading,
+        <tspan x="350" dy="18">sorting, batch</tspan>
+        <tspan x="350" dy="18">consistency</tspan></text>
+      <text x="497" y="462">Testing and
+        <tspan x="497" dy="18">release checks to</tspan>
+        <tspan x="497" dy="18">a written standard</tspan></text>
+      <text x="644" y="462">Food-contact packs,
+        <tspan x="644" dy="18">approved artwork,</tspan>
+        <tspan x="644" dy="18">quality checks</tspan></text>
+      <text x="791" y="462">Storage and
+        <tspan x="791" dy="18">movement of</tspan>
+        <tspan x="791" dy="18">finished packs</tspan></text>
+      <text x="938" y="462">Availability,
+        <tspan x="938" dy="18">display, feedback,</tspan>
+        <tspan x="938" dy="18">sell-through data</tspan></text>
+      <text x="1085" y="462">Buy, cook and
+        <tspan x="1085" dy="18">judge — and decide</tspan>
+        <tspan x="1085" dy="18">whether to repeat</tspan></text>
+    </g>
+  </g>
+  <g id="takeaway" data-pptx-bounds="56 556 1168 104">
+    <line x1="56" y1="560" x2="1224" y2="560" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="56" y="600" font-family="'Playfair Display', Georgia, serif" font-size="22" font-style="italic" fill="#103F30">What the shopper sees as one pack is a sequence of hand-offs that must connect reliably.</text>
+    <text x="56" y="634" font-size="14" fill="#5F655F">Each hand-off needs clear guidance, written specifications, lot identification and reconciliation — the coordination MVS would own.</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Proposed operating framework, MVS project report §12</text>
+    <text x="1224" y="692" text-anchor="end">18 / 22</text>
+  </g>
+</svg>

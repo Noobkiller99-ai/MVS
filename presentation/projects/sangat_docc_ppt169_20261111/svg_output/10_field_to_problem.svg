@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT III · DISCOVERING THE MARKET OPPORTUNITY</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">An existing farmer ecosystem.
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">An opportunity to build a consumer-facing proposition.</tspan></text>
+  </g>
+  <g id="field-insights" data-pptx-bounds="56 200 344 362">
+    <text x="56" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">WHAT THE FIELD SHOWED</text>
+    <g font-size="16" font-weight="600" fill="#103F30">
+      <text x="56" y="262">Agricultural sustainability</text>
+      <text x="56" y="316">Farmer economics</text>
+      <text x="56" y="370">Supply-chain coordination</text>
+      <text x="56" y="424">Consumer trust</text>
+      <text x="56" y="478">Product consistency</text>
+      <text x="56" y="532">Market access</text>
+    </g>
+    <g font-size="13" fill="#5F655F">
+      <text x="56" y="281">Nursery, farms, PAU</text>
+      <text x="56" y="335">Farmer discussions</text>
+      <text x="56" y="389">Milling and packing at PAU</text>
+      <text x="56" y="443">Store and consumer visits</text>
+      <text x="56" y="497">The premium buyer’s first test</text>
+      <text x="56" y="551">Chandpur and SHG interactions</text>
+    </g>
+    <g stroke="#D6CDB8" stroke-width="1">
+      <line x1="56" y1="236" x2="400" y2="236"/>
+      <line x1="56" y1="292" x2="400" y2="292"/>
+      <line x1="56" y1="346" x2="400" y2="346"/>
+      <line x1="56" y1="400" x2="400" y2="400"/>
+      <line x1="56" y1="454" x2="400" y2="454"/>
+      <line x1="56" y1="508" x2="400" y2="508"/>
+    </g>
+  </g>
+  <g id="p10-arrow-in" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="rightArrow" data-pptx-frame="410 362 32 44" fill="#C6A65A" stroke="none">
+<path d="M 410 373 L 426 373 L 426 362 L 442 384 L 426 406 L 426 395 L 410 395 Z"/>
+</g>
+  <g id="problem" data-pptx-bounds="452 200 380 360">
+    <rect x="452" y="204" width="380" height="352" fill="#103F30"/>
+    <text x="480" y="244" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">THE PROBLEM WE WORKED ON</text>
+    <text x="480" y="290" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#F6F1E5">How can MVS translate its
+      <tspan x="480" dy="31">engagement with farmers and</tspan>
+      <tspan x="480" dy="31">sustainable cultivation into a</tspan>
+      <tspan x="480" dy="31" font-style="italic" fill="#E2CB97">credible premium basmati</tspan>
+      <tspan x="480" dy="31"><tspan font-style="italic" fill="#E2CB97">brand</tspan> — with product,</tspan>
+      <tspan x="480" dy="31">sourcing story, operating</tspan>
+      <tspan x="480" dy="31">model and proposition aligned?</tspan></text>
+    <text x="480" y="530" font-size="12" fill="#C9C3B0">Problem statement, MVS project report §1.2</text>
+  </g>
+  <g id="p10-arrow-out" data-pptx-authoring="preset" data-pptx-object="shape" data-pptx-prst="rightArrow" data-pptx-frame="842 362 32 44" fill="#C6A65A" stroke="none">
+<path d="M 842 373 L 858 373 L 858 362 L 874 384 L 858 406 L 858 395 L 842 395 Z"/>
+</g>
+  <g id="requirements" data-pptx-bounds="884 200 340 360">
+    <text x="884" y="218" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">THREE REQUIREMENTS</text>
+    <rect x="884" y="232" width="340" height="100" fill="#EDE5D3"/>
+    <rect x="884" y="232" width="4" height="100" fill="#C6A65A"/>
+    <text x="904" y="262" font-size="16" font-weight="600" fill="#103F30">Product reliability</text>
+    <text x="904" y="286" font-size="14" fill="#292D2A">Can the same quality be supplied
+      <tspan x="904" dy="20">across batches?</tspan></text>
+    <rect x="884" y="344" width="340" height="100" fill="#EDE5D3"/>
+    <rect x="884" y="344" width="4" height="100" fill="#C6A65A"/>
+    <text x="904" y="374" font-size="16" font-weight="600" fill="#103F30">Evidence and communication</text>
+    <text x="904" y="398" font-size="14" fill="#292D2A">Can the cultivation story be backed by
+      <tspan x="904" dy="20">farm, season and sourcing records?</tspan></text>
+    <rect x="884" y="456" width="340" height="100" fill="#EDE5D3"/>
+    <rect x="884" y="456" width="4" height="100" fill="#C6A65A"/>
+    <text x="904" y="486" font-size="16" font-weight="600" fill="#103F30">Operating viability</text>
+    <text x="904" y="510" font-size="14" fill="#292D2A">Can supply, processing, packing and
+      <tspan x="904" dy="20">selling costs support the price?</tspan></text>
+  </g>
+  <g id="takeaway" data-pptx-bounds="56 584 1168 76">
+    <line x1="56" y1="588" x2="1224" y2="588" stroke="#C6A65A" stroke-width="1.5"/>
+    <text x="56" y="630" font-family="'Playfair Display', Georgia, serif" font-size="22" font-style="italic" fill="#103F30">A brand can make MVS’s farming work visible — but only if product, evidence and operations align.</text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Synthesis of field immersion; problem and requirements from MVS project report §1.2 and §5.2</text>
+    <text x="1224" y="692" text-anchor="end">10 / 22</text>
+  </g>
+</svg>

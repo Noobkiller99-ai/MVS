@@ -1,0 +1,1857 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "9b1f278553e46e3c0ab8d752eb81d35edcc08d586da87524242eed2cf8ec93a7",
+    "file_count": 22,
+    "files": [
+      {
+        "file": "01_cover.svg",
+        "sha256": "9f190138ae43432ed456616a26cb0285e40923a2ca43aac9ee683589fe56aed2"
+      },
+      {
+        "file": "02_our_journey.svg",
+        "sha256": "fef267a94201b605511d7ebfd429be6f4b6ba27e198596acfa764e585acfa53c"
+      },
+      {
+        "file": "03_understanding_mvs.svg",
+        "sha256": "21de6bd186d243200da41cd5d6f150a0bde352f980c6059712c7e4cd63789f9f"
+      },
+      {
+        "file": "04_chandpur.svg",
+        "sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+      },
+      {
+        "file": "05_fatehgarh_sahib.svg",
+        "sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+      },
+      {
+        "file": "06_farmer_perspective.svg",
+        "sha256": "597301a8ae27fde076d3d35bd4fded3e1d1abe955ad65f6f11c6d64c47b21322"
+      },
+      {
+        "file": "07_cultivation_economics.svg",
+        "sha256": "25c5465b287826b6568ba4b69b11088517d881cf6f64fbe674b07cf2ac3f0540"
+      },
+      {
+        "file": "08_pau_visit.svg",
+        "sha256": "51bd9fabc4139a1f0f74a798bf979f310c4cef5d286de48d896262cf1760ddcd"
+      },
+      {
+        "file": "09_community_livelihoods.svg",
+        "sha256": "3d6a3bd74c47954f6c2f7f7d7168042d4f45226722ef69c6a45661d589d6ad1a"
+      },
+      {
+        "file": "10_field_to_problem.svg",
+        "sha256": "457fe00e80691947c57fbac2b7629013a793be40240438fdeb540d3aa59c8ed4"
+      },
+      {
+        "file": "11_understanding_consumer.svg",
+        "sha256": "05c61bdc67b1c911960c7e069f3c8ffef6dd1fee3fdd6afe733dd706049854a0"
+      },
+      {
+        "file": "12_stp.svg",
+        "sha256": "d138a0ec854ad05e259c2901b37aa79f1508219e62ccb96b6ea562984a8a85e4"
+      },
+      {
+        "file": "13_brand_reveal.svg",
+        "sha256": "f793d6c24e9f644c0b1957626b5bc72af7d750a969ac6a1ef8e38f90857c3bfe"
+      },
+      {
+        "file": "14_visual_identity.svg",
+        "sha256": "ec94066dfdf084321cd7c6ce245f6f5070d89440d53b9867e0ca18b2c20de175"
+      },
+      {
+        "file": "15_packaging.svg",
+        "sha256": "b602389b54ff88bebc1fc6212a220050976e006acbc76a5d5163ee2afa4c722c"
+      },
+      {
+        "file": "16_digital_qr.svg",
+        "sha256": "741ec3d0ac52611c4c301405a96cc243098d439c6e8a38e562721895c39559ad"
+      },
+      {
+        "file": "17_go_to_market.svg",
+        "sha256": "af2187700ec0ffea3dda9e60368f1a1fd0eb81ff1dacea1cf1207398816f84b5"
+      },
+      {
+        "file": "18_ecosystem.svg",
+        "sha256": "1dcd1082c7fbd82f062188f3965b6c991eb857fef47cb020c88c65ee7304ae9d"
+      },
+      {
+        "file": "19_blueprint_to_pilot.svg",
+        "sha256": "fc1f4fc3b52f8a5b026cca9a7bf38005071e8c2af2587acf71d7848bf86e4626"
+      },
+      {
+        "file": "20_what_we_delivered.svg",
+        "sha256": "8bf0016cfdda1ebe3b4a51c4dba8fb4977d6d7cfdee4359b65a051520413fddc"
+      },
+      {
+        "file": "21_journey_lessons.svg",
+        "sha256": "ef7ec805eb3b248ee44717b6fa31858aff2078da722491f4be0cd1452f37b9df"
+      },
+      {
+        "file": "22_closing.svg",
+        "sha256": "921a15b7962fce0cdff55fa394de393bc5f30d1d7c32bf6eaec2b79320060a44"
+      }
+    ]
+  },
+  "summary": {
+    "total": 22,
+    "passed": 0,
+    "warnings": 22,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 22,
+      "issues": [
+        {
+          "file": "01_cover.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "02_our_journey.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "03_understanding_mvs.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "04_chandpur.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "05_fatehgarh_sahib.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "06_farmer_perspective.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "07_cultivation_economics.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "08_pau_visit.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "09_community_livelihoods.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "10_field_to_problem.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "11_understanding_consumer.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "12_stp.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "13_brand_reveal.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "14_visual_identity.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "15_packaging.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "16_digital_qr.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "17_go_to_market.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "18_ecosystem.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "19_blueprint_to_pilot.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "20_what_we_delivered.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "21_journey_lessons.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        },
+        {
+          "file": "22_closing.svg",
+          "message": "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {
+      "#0A2E22": [
+        "07_cultivation_economics.svg",
+        "08_pau_visit.svg"
+      ],
+      "#0F3D2E": [
+        "14_visual_identity.svg"
+      ],
+      "#13231C": [
+        "15_packaging.svg"
+      ],
+      "#2E5A47": [
+        "03_understanding_mvs.svg",
+        "08_pau_visit.svg",
+        "09_community_livelihoods.svg",
+        "14_visual_identity.svg",
+        "16_digital_qr.svg",
+        "18_ecosystem.svg"
+      ],
+      "#8B6F47": [
+        "14_visual_identity.svg"
+      ],
+      "#A7B89F": [
+        "14_visual_identity.svg"
+      ],
+      "#C9A96B": [
+        "14_visual_identity.svg"
+      ],
+      "#C9C3B0": [
+        "01_cover.svg",
+        "06_farmer_perspective.svg",
+        "10_field_to_problem.svg",
+        "22_closing.svg"
+      ],
+      "#CFC5AE": [
+        "07_cultivation_economics.svg",
+        "13_brand_reveal.svg"
+      ],
+      "#E2CB97": [
+        "01_cover.svg",
+        "04_chandpur.svg",
+        "06_farmer_perspective.svg",
+        "07_cultivation_economics.svg",
+        "09_community_livelihoods.svg",
+        "10_field_to_problem.svg",
+        "11_understanding_consumer.svg",
+        "14_visual_identity.svg",
+        "22_closing.svg"
+      ],
+      "#E9E3D3": [
+        "14_visual_identity.svg",
+        "16_digital_qr.svg"
+      ],
+      "#F9F6EE": [
+        "14_visual_identity.svg"
+      ],
+      "#FBF8F1": [
+        "13_brand_reveal.svg"
+      ]
+    },
+    "fonts": {},
+    "sizes": {}
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 22,
+    "totals": {
+      "text_elements": 499,
+      "image_placements": 39,
+      "icons": 0,
+      "svg_geometry_elements": 192,
+      "preset_shapes": 35,
+      "page_frame_elements": 26,
+      "marker_uses": 0,
+      "inline_emphasis_runs": 32,
+      "gradient_uses": 9,
+      "filter_uses": 3,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 17,
+      "icons": 0,
+      "presets": 8,
+      "charts": 0,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 14,
+      "gradient_uses": 4,
+      "filter_uses": 1,
+      "text_effects": 0
+    },
+    "relationship_pages": 16,
+    "geometry_elements": {
+      "circle": 3,
+      "ellipse": 0,
+      "line": 78,
+      "path": 0,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 111
+    },
+    "preset_names": {
+      "chevron": 25,
+      "flowChartDecision": 1,
+      "homePlate": 4,
+      "rightArrow": 5
+    },
+    "native_objects": {
+      "chart": 0,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 0
+    },
+    "image_page_max_frame_share_range": [
+      0.0358,
+      0.375
+    ]
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_cover.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/01_cover.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 4,
+          "images": {
+            "placements": 2,
+            "files": [
+              "art_landscape.png",
+              "logo_primary_reversed.png"
+            ],
+            "max_frame_share": 0.325
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 1,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#C9C3B0",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "9f190138ae43432ed456616a26cb0285e40923a2ca43aac9ee683589fe56aed2"
+    },
+    {
+      "file": "02_our_journey.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/02_our_journey.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 36,
+          "images": {
+            "placements": 5,
+            "files": [
+              "ph01_field_immersion_household.jpg",
+              "ph03_poplar_nursery.jpg",
+              "ph06_rice_competition.jpg",
+              "ph10_farmer_discussion.jpg",
+              "ph11_pau_gate.jpg"
+            ],
+            "max_frame_share": 0.0358
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 5,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 7,
+            "preset_names": {
+              "chevron": 7
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 36,
+        "tspan_elements": 15
+      },
+      "passed": true,
+      "source_sha256": "fef267a94201b605511d7ebfd429be6f4b6ba27e198596acfa764e585acfa53c"
+    },
+    {
+      "file": "03_understanding_mvs.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/03_understanding_mvs.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 18,
+          "images": {
+            "placements": 1,
+            "files": [
+              "phx_s03_mvs_orientation.png"
+            ],
+            "max_frame_share": 0.1875
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 5,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 3,
+            "preset_names": {
+              "chevron": 2,
+              "homePlate": 1
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 18,
+        "tspan_elements": 6,
+        "contextual_values": {
+          "colors": [
+            "#2E5A47"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "21de6bd186d243200da41cd5d6f150a0bde352f980c6059712c7e4cd63789f9f"
+    },
+    {
+      "file": "04_chandpur.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/04_chandpur.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 3,
+            "files": [
+              "ph01_field_immersion_household.jpg",
+              "phx_s04_beauty_parlour.png",
+              "phx_s04_pickle_maker.png"
+            ],
+            "max_frame_share": 0.2552
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 4,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 6,
+        "contextual_values": {
+          "colors": [
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "9510f39ce017ffa1f1dd7d295a8e3f00ee50db98d009919d4aebbbcb1afd9490"
+    },
+    {
+      "file": "05_fatehgarh_sahib.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/05_fatehgarh_sahib.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 16,
+          "images": {
+            "placements": 3,
+            "files": [
+              "ph02_field_immersion_plantation.jpg",
+              "ph03_poplar_nursery.jpg",
+              "phx_s05_akshay_sir.png"
+            ],
+            "max_frame_share": 0.2089
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 16,
+        "tspan_elements": 8
+      },
+      "passed": true,
+      "source_sha256": "8ffc08bf1c99afb629e1693ca6c4aab6ace7a8001b7ac0c9c6d84a136851ac90"
+    },
+    {
+      "file": "06_farmer_perspective.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/06_farmer_perspective.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 17,
+          "images": {
+            "placements": 2,
+            "files": [
+              "ph04_farmer_equipment.jpg",
+              "ph10_farmer_discussion.jpg"
+            ],
+            "max_frame_share": 0.375
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 3,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 17,
+        "tspan_elements": 13,
+        "contextual_values": {
+          "colors": [
+            "#C9C3B0",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "597301a8ae27fde076d3d35bd4fded3e1d1abe955ad65f6f11c6d64c47b21322"
+    },
+    {
+      "file": "07_cultivation_economics.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/07_cultivation_economics.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 40,
+          "images": {
+            "placements": 2,
+            "files": [
+              "ph08_farmer_group_discussion.jpg",
+              "ph09_sustainable_practices.jpg"
+            ],
+            "max_frame_share": 0.0972
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 2,
+            "gradient_uses": 2,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 15,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 40,
+        "tspan_elements": 3,
+        "contextual_values": {
+          "colors": [
+            "#0A2E22",
+            "#CFC5AE",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "25c5465b287826b6568ba4b69b11088517d881cf6f64fbe674b07cf2ac3f0540"
+    },
+    {
+      "file": "08_pau_visit.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/08_pau_visit.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 21,
+          "images": {
+            "placements": 5,
+            "files": [
+              "ph11_pau_gate.jpg",
+              "ph12_pau_milling_equipment.jpg",
+              "ph13_pau_packaging.jpg",
+              "ph14_pau_milling.jpg",
+              "ph15_pau_agro_processing.jpg"
+            ],
+            "max_frame_share": 0.1187
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 5,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 8,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 4,
+            "preset_names": {
+              "chevron": 4
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 21,
+        "tspan_elements": 7,
+        "contextual_values": {
+          "colors": [
+            "#0A2E22",
+            "#2E5A47"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "51bd9fabc4139a1f0f74a798bf979f310c4cef5d286de48d896262cf1760ddcd"
+    },
+    {
+      "file": "09_community_livelihoods.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/09_community_livelihoods.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 30,
+          "images": {
+            "placements": 2,
+            "files": [
+              "phx_s09_shg_meeting.png",
+              "phx_s09_women_entrepreneur.png"
+            ],
+            "max_frame_share": 0.0897
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 4,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 4,
+            "preset_names": {
+              "chevron": 3,
+              "homePlate": 1
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 30,
+        "tspan_elements": 4,
+        "contextual_values": {
+          "colors": [
+            "#2E5A47",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "3d6a3bd74c47954f6c2f7f7d7168042d4f45226722ef69c6a45661d589d6ad1a"
+    },
+    {
+      "file": "10_field_to_problem.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/10_field_to_problem.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 28,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 9,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 7,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 2,
+            "preset_names": {
+              "rightArrow": 2
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 28,
+        "tspan_elements": 11,
+        "contextual_values": {
+          "colors": [
+            "#C9C3B0",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "457fe00e80691947c57fbac2b7629013a793be40240438fdeb540d3aa59c8ed4"
+    },
+    {
+      "file": "11_understanding_consumer.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/11_understanding_consumer.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 20,
+          "images": {
+            "placements": 3,
+            "files": [
+              "ph06_rice_competition.jpg",
+              "ph07_premium_competition.jpg",
+              "phx_s11_consumer_interview.png"
+            ],
+            "max_frame_share": 0.0501
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 9,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 20,
+        "tspan_elements": 10,
+        "contextual_values": {
+          "colors": [
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "05c61bdc67b1c911960c7e069f3c8ffef6dd1fee3fdd6afe733dd706049854a0"
+    },
+    {
+      "file": "12_stp.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/12_stp.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 31,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 4,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 6,
+              "circle": 3,
+              "ellipse": 0,
+              "line": 10,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 31,
+        "tspan_elements": 17
+      },
+      "passed": true,
+      "source_sha256": "d138a0ec854ad05e259c2901b37aa79f1508219e62ccb96b6ea562984a8a85e4"
+    },
+    {
+      "file": "13_brand_reveal.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/13_brand_reveal.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 26,
+          "images": {
+            "placements": 1,
+            "files": [
+              "logo_primary_colour.png"
+            ],
+            "max_frame_share": 0.1084
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 3,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 11,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 26,
+        "tspan_elements": 8,
+        "contextual_values": {
+          "colors": [
+            "#CFC5AE",
+            "#FBF8F1"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "f793d6c24e9f644c0b1957626b5bc72af7d750a969ac6a1ef8e38f90857c3bfe"
+    },
+    {
+      "file": "14_visual_identity.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/14_visual_identity.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 27,
+          "images": {
+            "placements": 2,
+            "files": [
+              "image_003.png",
+              "logo_symbol_gold.png"
+            ],
+            "max_frame_share": 0.2377
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 4,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 7,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 5,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 27,
+        "tspan_elements": 9,
+        "contextual_values": {
+          "colors": [
+            "#0F3D2E",
+            "#2E5A47",
+            "#8B6F47",
+            "#A7B89F",
+            "#C9A96B",
+            "#E2CB97",
+            "#E9E3D3",
+            "#F9F6EE"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "ec94066dfdf084321cd7c6ce245f6f5070d89440d53b9867e0ca18b2c20de175"
+    },
+    {
+      "file": "15_packaging.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/15_packaging.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 15,
+          "images": {
+            "placements": 3,
+            "files": [
+              "pack_v1-ivory-landscape-1kg-back.png",
+              "pack_v1-ivory-landscape-1kg-front-mock.png",
+              "pack_v1-ivory-landscape-5kg-front-mock.png"
+            ],
+            "max_frame_share": 0.1313
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 3,
+            "gradient_uses": 0,
+            "filter_uses": 3,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 15,
+        "tspan_elements": 12,
+        "contextual_values": {
+          "colors": [
+            "#13231C"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "b602389b54ff88bebc1fc6212a220050976e006acbc76a5d5163ee2afa4c722c"
+    },
+    {
+      "file": "16_digital_qr.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/16_digital_qr.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 19,
+          "images": {
+            "placements": 1,
+            "files": [
+              "app_website_mobile.png"
+            ],
+            "max_frame_share": 0.2283
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 4,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 3,
+            "preset_names": {
+              "chevron": 2,
+              "homePlate": 1
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 19,
+        "tspan_elements": 10,
+        "contextual_values": {
+          "colors": [
+            "#2E5A47",
+            "#E9E3D3"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "741ec3d0ac52611c4c301405a96cc243098d439c6e8a38e562721895c39559ad"
+    },
+    {
+      "file": "17_go_to_market.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/17_go_to_market.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 17,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 4,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 4,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 17,
+        "tspan_elements": 13
+      },
+      "passed": true,
+      "source_sha256": "af2187700ec0ffea3dda9e60368f1a1fd0eb81ff1dacea1cf1207398816f84b5"
+    },
+    {
+      "file": "18_ecosystem.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/18_ecosystem.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 32,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 9,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 8,
+            "preset_names": {
+              "chevron": 7,
+              "homePlate": 1
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 32,
+        "tspan_elements": 23,
+        "contextual_values": {
+          "colors": [
+            "#2E5A47"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "1dcd1082c7fbd82f062188f3965b6c991eb857fef47cb020c88c65ee7304ae9d"
+    },
+    {
+      "file": "19_blueprint_to_pilot.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/19_blueprint_to_pilot.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 30,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 3,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 4,
+            "preset_names": {
+              "flowChartDecision": 1,
+              "rightArrow": 3
+            },
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 30,
+        "tspan_elements": 16
+      },
+      "passed": true,
+      "source_sha256": "fc1f4fc3b52f8a5b026cca9a7bf38005071e8c2af2587acf71d7848bf86e4626"
+    },
+    {
+      "file": "20_what_we_delivered.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/20_what_we_delivered.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 38,
+          "images": {
+            "placements": 1,
+            "files": [
+              "phx_s20_team_session.png"
+            ],
+            "max_frame_share": 0.1302
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 4,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 10,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 38,
+        "tspan_elements": 4
+      },
+      "passed": true,
+      "source_sha256": "8bf0016cfdda1ebe3b4a51c4dba8fb4977d6d7cfdee4359b65a051520413fddc"
+    },
+    {
+      "file": "21_journey_lessons.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/21_journey_lessons.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 19,
+          "images": {
+            "placements": 1,
+            "files": [
+              "ph05_farmer_field_visit.jpg"
+            ],
+            "max_frame_share": 0.3125
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 1,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 5,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 19,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "ef7ec805eb3b248ee44717b6fa31858aff2078da722491f4be0cd1452f37b9df"
+    },
+    {
+      "file": "22_closing.svg",
+      "path": "/home/user/MVS/presentation/projects/sangat_docc_ppt169_20261111/svg_output/22_closing.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Font stack exports non-PPT-safe typeface(s) to PPTX (latin=Inter): Inter, 'Segoe UI', Arial, sans-serif"
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 4,
+          "images": {
+            "placements": 2,
+            "files": [
+              "art_landscape.png",
+              "logo_symbol_gold.png"
+            ],
+            "max_frame_share": 0.3056
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 1,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 2,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "'Playfair Display', Georgia, serif",
+          "Inter, 'Segoe UI', Arial, sans-serif"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 2,
+        "contextual_values": {
+          "colors": [
+            "#C9C3B0",
+            "#E2CB97"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "921a15b7962fce0cdff55fa394de393bc5f30d1d7c32bf6eaec2b79320060a44"
+    }
+  ]
+}

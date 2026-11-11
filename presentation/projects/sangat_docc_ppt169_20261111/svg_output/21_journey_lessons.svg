@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="photo-field" data-pptx-bounds="880 0 400 720">
+    <image id="ph05" href="../images/ph05_farmer_field_visit.jpg" x="880" y="0" width="400" height="720" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <g id="header" data-pptx-bounds="56 36 816 104">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT V · REFLECTIONS</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">What the journey <tspan font-style="italic" fill="#795C43">taught us.</tspan></text>
+  </g>
+  <g id="lessons" data-pptx-bounds="56 156 816 512">
+    <g stroke="#D6CDB8" stroke-width="1">
+      <line x1="56" y1="166" x2="840" y2="166"/>
+      <line x1="56" y1="266" x2="840" y2="266"/>
+      <line x1="56" y1="366" x2="840" y2="366"/>
+      <line x1="56" y1="466" x2="840" y2="466"/>
+      <line x1="56" y1="566" x2="840" y2="566"/>
+    </g>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="30" fill="#C6A65A">
+      <text x="56" y="214">1</text>
+      <text x="56" y="314">2</text>
+      <text x="56" y="414">3</text>
+      <text x="56" y="514">4</text>
+      <text x="56" y="614">5</text>
+    </g>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#103F30">
+      <text x="104" y="206">Development cannot be understood entirely from a desk.</text>
+      <text x="104" y="306">Farmer adoption depends on economic viability and practical realities.</text>
+      <text x="104" y="406">Local capabilities need market access to become livelihoods.</text>
+      <text x="104" y="506">Institutions, communities and markets must work together.</text>
+      <text x="104" y="606">A credible consumer proposition needs evidence, consistency and trust.</text>
+    </g>
+    <g font-size="14" fill="#5F655F">
+      <text x="104" y="236">Learned in village homes, nurseries and fields — not in meetings alone.</text>
+      <text x="104" y="336">Learned from farmers weighing costs, prices, arthiyas and risk.</text>
+      <text x="104" y="436">Learned in Chandpur and in our interactions with SHG members.</text>
+      <text x="104" y="536">Learned at PAU and through MVS’s programme and field teams.</text>
+      <text x="104" y="636">Learned from shoppers, retailers and the work of building Sangat.</text>
+    </g>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 792 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Team reflections</text>
+    <text x="840" y="692" text-anchor="end">21 / 22</text>
+  </g>
+</svg>

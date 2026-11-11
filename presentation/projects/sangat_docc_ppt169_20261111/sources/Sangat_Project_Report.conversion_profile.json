@@ -1,0 +1,31 @@
+{
+  "schema": "ppt-master.source_to_md.profile.v1",
+  "converter": "doc_to_md.py",
+  "conversion_type": "docx",
+  "source": {
+    "path": "Sangat_Project_Report.docx",
+    "name": "Sangat_Project_Report.docx",
+    "suffix": ".docx",
+    "kind": "file",
+    "exists": true,
+    "size_bytes": 2244619
+  },
+  "outputs": {
+    "markdown": "Sangat_Project_Report.md",
+    "asset_dir": "Sangat_Project_Report_files",
+    "image_manifest": "Sangat_Project_Report_files/image_manifest.json",
+    "image_count": 4
+  },
+  "markdown": {
+    "line_count": 378,
+    "char_count": 29747,
+    "heading_count": 51,
+    "table_count": 9,
+    "image_ref_count": 4,
+    "link_count": 0
+  },
+  "warnings": [
+    "Unrecognised paragraph style: List Bullet (Style ID: ListBullet)",
+    "Unrecognised paragraph style: List Number (Style ID: ListNumber)"
+  ]
+}

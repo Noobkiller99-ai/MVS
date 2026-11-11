@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="photo-hero" data-pptx-bounds="0 0 720 480">
+    <image id="ph10" href="../images/ph10_farmer_discussion.jpg" x="0" y="0" width="720" height="480" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <g id="photo-machinery" data-pptx-bounds="0 488 232 232">
+    <image id="ph04" href="../images/ph04_farmer_equipment.jpg" x="0" y="488" width="232" height="232" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <g id="quote-panel" data-pptx-bounds="240 488 480 232">
+    <rect x="240" y="488" width="480" height="232" fill="#103F30"/>
+    <text x="268" y="528" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">WHAT WE TOOK AWAY</text>
+    <text x="268" y="570" font-family="'Playfair Display', Georgia, serif" font-size="24" fill="#F6F1E5">Sustainable adoption sits
+      <tspan x="268" dy="32">inside a business: land,</tspan>
+      <tspan x="268" dy="32" font-style="italic" fill="#E2CB97">machinery, investment, risk.</tspan></text>
+    <text x="268" y="690" font-size="13" fill="#C9C3B0">Discussion with a basmati farmer · farm machinery</text>
+  </g>
+  <g id="header" data-pptx-bounds="768 36 456 200">
+    <text x="768" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · THE FARMER’S PERSPECTIVE</text>
+    <rect x="768" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="768" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Gurdeep Singh:
+      <tspan x="768" dy="46" font-style="italic" fill="#795C43">farming as an</tspan>
+      <tspan x="768" dy="46" font-style="italic" fill="#795C43">enterprise.</tspan></text>
+  </g>
+  <g id="facts" data-pptx-bounds="768 244 456 236">
+    <line x1="768" y1="248" x2="1224" y2="248" stroke="#D6CDB8" stroke-width="1"/>
+    <g font-family="'Playfair Display', Georgia, serif" font-size="46" fill="#103F30">
+      <text x="768" y="304">~15</text>
+      <text x="1000" y="304">~5</text>
+      <text x="768" y="420"><tspan font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="40">₹</tspan>60 lakh</text>
+      <text x="1000" y="420" font-style="italic">Leases</text>
+    </g>
+    <g font-size="14" fill="#5F655F">
+      <text x="768" y="330">acres of basmati, on owned
+        <tspan x="768" dy="19">and leased land</tspan></text>
+      <text x="1000" y="330">years working with MVS</text>
+      <text x="768" y="446">invested in agricultural
+        <tspan x="768" dy="19">machinery</tspan></text>
+      <text x="1000" y="446">machinery to other
+        <tspan x="1000" dy="19">farmers in the area</tspan></text>
+    </g>
+    <line x1="768" y1="364" x2="1224" y2="364" stroke="#D6CDB8" stroke-width="1"/>
+  </g>
+  <g id="practice" data-pptx-bounds="768 496 456 116">
+    <line x1="768" y1="500" x2="1224" y2="500" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="768" y="536" font-size="18" fill="#292D2A">Has <tspan font-weight="600" fill="#103F30">progressively adopted sustainable</tspan>
+      <tspan x="768" dy="27"><tspan font-weight="600" fill="#103F30">farming practices</tspan> over his years</tspan>
+      <tspan x="768" dy="27">of working with MVS.</tspan></text>
+  </g>
+  <g id="attribution" data-pptx-bounds="768 620 456 46">
+    <text x="768" y="640" font-size="13" fill="#5F655F">Approximate, farmer-reported figures shared during
+      <tspan x="768" dy="18">field discussions; not independently verified.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="768 674 456 26" font-size="12" fill="#5F655F">
+    <text x="768" y="692">Field discussion, Punjab</text>
+    <text x="1224" y="692" text-anchor="end">06 / 22</text>
+  </g>
+</svg>

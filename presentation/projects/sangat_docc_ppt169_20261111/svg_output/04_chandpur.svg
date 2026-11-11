@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT II · LEARNING FROM THE GROUND · CHANDPUR</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Chandpur: the skills are there —
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">market access is the gap.</tspan></text>
+  </g>
+  <g id="hero-photo" data-pptx-bounds="56 196 560 470">
+    <image id="ph01" href="../images/ph01_field_immersion_household.jpg" x="56" y="200" width="560" height="420" preserveAspectRatio="xMidYMid slice"/>
+    <rect x="56" y="634" width="24" height="2" fill="#C6A65A"/>
+    <text x="56" y="658" font-size="14" fill="#5F655F">Field immersion: conversations in a village home, beyond formal meetings</text>
+  </g>
+  <g id="encounter-parlour" data-pptx-bounds="656 196 568 172">
+    <image id="phx-s04-parlour" href="../images/phx_s04_beauty_parlour.png" x="656" y="200" width="120" height="160" preserveAspectRatio="xMidYMid slice"/>
+    <text x="800" y="226" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">A beauty-parlour owner</text>
+    <text x="800" y="258" font-size="16" fill="#292D2A">A local service business run from
+      <tspan x="800" dy="23">the village: women’s entrepreneurship</tspan>
+      <tspan x="800" dy="23">and income generation already at work.</tspan></text>
+  </g>
+  <g id="encounter-pickles" data-pptx-bounds="656 380 568 172">
+    <image id="phx-s04-pickles" href="../images/phx_s04_pickle_maker.png" x="656" y="384" width="120" height="160" preserveAspectRatio="xMidYMid slice"/>
+    <text x="800" y="410" font-family="'Playfair Display', Georgia, serif" font-size="22" fill="#103F30">A grandmother and pickle-maker</text>
+    <text x="800" y="442" font-size="16" fill="#292D2A">Highly skilled; her pickles have been
+      <tspan x="800" dy="23">supplied for corporate events. Skill like</tspan>
+      <tspan x="800" dy="23">this needs steady market access to last.</tspan></text>
+  </g>
+  <g id="insight" data-pptx-bounds="656 568 568 98">
+    <rect x="656" y="568" width="568" height="98" fill="#103F30"/>
+    <text x="680" y="596" font-size="12" font-weight="600" letter-spacing="2" fill="#C6A65A">WHAT CHANDPUR TAUGHT US</text>
+    <text x="680" y="626" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#F6F1E5">Capability is not the constraint — the link between
+      <tspan x="680" dy="26" font-style="italic" fill="#E2CB97">skills, markets and steady income is.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Team field observations, Chandpur</text>
+    <text x="1224" y="692" text-anchor="end">04 / 22</text>
+  </g>
+</svg>

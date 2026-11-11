@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" lang="en-IN" data-pptx-page-role="content" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect id="bg" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F6F1E5"/>
+  <g id="header" data-pptx-bounds="56 36 1168 150">
+    <text x="56" y="60" font-size="12" font-weight="600" letter-spacing="2" fill="#795C43">ACT IV · GO-TO-MARKET STRATEGY</text>
+    <rect x="56" y="72" width="40" height="2" fill="#C6A65A"/>
+    <text x="56" y="122" font-family="'Playfair Display', Georgia, serif" font-size="38" fill="#103F30">Go-to-market: prove the rice first,
+      <tspan x="56" dy="46" font-style="italic" fill="#795C43">then build trust in the story.</tspan></text>
+  </g>
+  <g id="p-product" data-pptx-bounds="56 196 1168 112">
+    <line x1="56" y1="200" x2="1224" y2="200" stroke="#795C43" stroke-width="1"/>
+    <text x="56" y="250" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">01</text>
+    <text x="100" y="250" font-family="'Playfair Display', Georgia, serif" font-size="30" fill="#103F30">Product</text>
+    <text x="330" y="236" font-size="16" fill="#292D2A">A <tspan font-weight="600" fill="#103F30">written specification</tspan> — grain length, ageing period, moisture, broken grain and purity limits —
+      <tspan x="330" dy="24">with processing and batch controls held constant across batches, plus cooking guidance for the</tspan>
+      <tspan x="330" dy="24">dishes buyers actually make.</tspan></text>
+  </g>
+  <g id="p-price" data-pptx-bounds="56 316 1168 112">
+    <line x1="56" y1="320" x2="1224" y2="320" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="370" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">02</text>
+    <text x="100" y="370" font-family="'Playfair Display', Georgia, serif" font-size="30" fill="#103F30">Price</text>
+    <text x="100" y="400" font-size="15" font-weight="600" fill="#795C43">~₹180–₹220 per kg</text>
+    <text x="330" y="356" font-size="16" fill="#292D2A">Indicative range from point-in-time retail listings, which vary by platform, city and pack size.
+      <tspan x="330" dy="24">Stay at competitor level: <tspan font-weight="600" fill="#103F30">the same quality at the same price</tspan>. Recheck listings before fixing</tspan>
+      <tspan x="330" dy="24">the price.</tspan></text>
+  </g>
+  <g id="p-place" data-pptx-bounds="56 436 1168 112">
+    <line x1="56" y1="440" x2="1224" y2="440" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="490" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">03</text>
+    <text x="100" y="490" font-family="'Playfair Display', Georgia, serif" font-size="30" fill="#103F30">Place</text>
+    <text x="330" y="476" font-size="16" fill="#292D2A">Pilot in <tspan font-weight="600" fill="#103F30">Chandigarh, Mohali and Panchkula</tspan>: selected premium grocery and modern trade;
+      <tspan x="330" dy="24">e-commerce and quick-commerce where feasible; direct ordering through the website or messaging;</tspan>
+      <tspan x="330" dy="24">early sampling through MVS’s community networks. General trade later.</tspan></text>
+  </g>
+  <g id="p-promotion" data-pptx-bounds="56 556 1168 112">
+    <line x1="56" y1="560" x2="1224" y2="560" stroke="#D6CDB8" stroke-width="1"/>
+    <text x="56" y="610" font-family="'Playfair Display', Georgia, serif" font-size="20" fill="#C6A65A">04</text>
+    <text x="100" y="610" font-family="'Playfair Display', Georgia, serif" font-size="30" fill="#103F30">Promotion</text>
+    <text x="330" y="596" font-size="16" fill="#292D2A"><tspan font-weight="600" fill="#103F30">Cooking demonstrations and blind sampling</tspan>; retailer education; recipe-led content for
+      <tspan x="330" dy="24">biryani and pulao; the QR story; hoardings, banners and leaflets in popular areas. The front of</tspan>
+      <tspan x="330" dy="24">pack stays focused on the product.</tspan></text>
+  </g>
+  <g id="footer" data-pptx-role="footer" data-pptx-bounds="56 674 1168 26" font-size="12" fill="#5F655F">
+    <text x="56" y="692">Recommendations, MVS project report §11; prices are directional and time-sensitive</text>
+    <text x="1224" y="692" text-anchor="end">17 / 22</text>
+  </g>
+</svg>
